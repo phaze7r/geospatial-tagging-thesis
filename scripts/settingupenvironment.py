@@ -1,4 +1,5 @@
-# Core Data Processing
+# Create requirements.txt with all necessary dependencies
+requirements_content = """# Core Data Processing
 pandas>=1.5.0
 numpy>=1.21.0
 requests>=2.28.0
@@ -46,3 +47,9 @@ seaborn>=0.11.0
 pytest>=7.1.0
 black>=22.0.0
 flake8>=5.0.0
+"""
+
+with open('../requirements.txt', 'w', encoding='utf-8') as f:
+    f.write(requirements_content)
+
+print("✅ requirements.txt created")
