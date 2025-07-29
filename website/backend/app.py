@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template, redirect, url_for, session
+from flask import Flask, jsonify, request, render_template, redirect, url_for, session, send_from_directory
 from flask_cors import CORS
 import json
 import os
@@ -19,7 +19,7 @@ ADMIN_CREDENTIALS = {
 }
 
 # Notes admin password (change this!)
-NOTES_ADMIN_PASSWORD = 'CHANGE_THIS_PASSWORD_FOR_NOTES_ADMIN'
+NOTES_ADMIN_PASSWORD = 'superadmin2025'
 
 def ensure_data_files():
     os.makedirs('data', exist_ok=True)
@@ -163,6 +163,9 @@ def delete_message(message_id):
     except:
         pass
     return redirect(url_for('notes_dashboard'))
+@app.route('/')
+def serve_frontend():
+    return send_from_directory('../frontend', 'index.html')
 
 @app.route('/logout')
 def logout():
