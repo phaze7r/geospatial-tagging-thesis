@@ -1,0 +1,7 @@
+City,Function Name,"Coordinates (South, West, North, East)",Example OSM Tags,Summary
+Islamabad,collect_osm_data_islamabad,"33.4734, 72.8397, 33.7480, 73.2047","amenity, tourism, leisure, shop, building, landuse","Capital city, planned, government, embassies, parks, markets"
+Lahore,collect_osm_data_lahore,"31.3673, 74.1667, 31.6200, 74.4100","amenity, tourism, leisure, shop, historic, highway, place_of_worship","Punjab’s capital, historic, mosques, gardens, bazaars, food streets"
+Karachi,collect_osm_data_karachi,"24.7922, 66.8250, 25.0700, 67.2150","amenity, tourism, leisure, shop, port, place_of_worship, highway","Pakistan’s largest city, port, beaches, markets, diverse communities"
+Quetta,collect_osm_data_quetta,"30.1300, 66.8800, 30.3300, 67.1800","amenity, tourism, leisure, shop, place_of_worship, bazaar, highway","Balochistan’s capital, bazaars, mosques, mountainous, cultural centers"
+Peshawar,collect_osm_data_peshawar,"33.9500, 71.4000, 34.1000, 71.6000","amenity, tourism, leisure, shop, bazaar, place_of_worship, historic","Khyber Pakhtunkhwa’s capital, bazaars, mosques, historic gates, markets"
+Skardu,collect_osm_data_skardu,"35.2700, 75.5400, 35.4000, 75.7000","amenity, tourism, leisure, shop, hotel, place_of_worship, natural","Gilgit-Baltistan, tourism, lakes, hotels, mosques, natural attractions"
