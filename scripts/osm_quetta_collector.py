@@ -1,4 +1,4 @@
-# OSM Data Collection Script for Karachi
+# OSM Data Collection Script for Quetta
 import os
 import overpy
 import pandas as pd
@@ -8,27 +8,27 @@ from datetime import datetime
 import time
 
 
-def collect_osm_data_karachi():
+def collect_osm_data_quetta():
     """
-    Collect OSM data for Karachi with place descriptions and tags
+    Collect OSM data for Quetta with place descriptions and tags
     Focus on places that have names, descriptions, or other text attributes
     """
 
     # Initialize Overpass API
     api = overpy.Overpass()
 
-    # Karachi bounding box coordinates (approximate)
+    # Quetta bounding box coordinates (approximate)
     # [south, west, north, east]
-    karachi_bbox = "24.7922, 66.8250, 25.0700, 67.2150"
+    quetta_bbox = "30.1300, 66.8800, 30.3300, 67.1800"
 
     # Define queries for different types of places with descriptions
     queries = {
         'amenities': f"""
         [out:json][timeout:60];
         (
-          node["amenity"](bbox:{karachi_bbox});
-          way["amenity"](bbox:{karachi_bbox});
-          relation["amenity"](bbox:{karachi_bbox});
+          node["amenity"](bbox:{quetta_bbox});
+          way["amenity"](bbox:{quetta_bbox});
+          relation["amenity"](bbox:{quetta_bbox});
         );
         out body;
         >;
@@ -38,9 +38,9 @@ def collect_osm_data_karachi():
         'tourism': f"""
         [out:json][timeout:60];
         (
-          node["tourism"](bbox:{karachi_bbox});
-          way["tourism"](bbox:{karachi_bbox});
-          relation["tourism"](bbox:{karachi_bbox});
+          node["tourism"](bbox:{quetta_bbox});
+          way["tourism"](bbox:{quetta_bbox});
+          relation["tourism"](bbox:{quetta_bbox});
         );
         out body;
         >;
@@ -50,9 +50,9 @@ def collect_osm_data_karachi():
         'leisure': f"""
         [out:json][timeout:60];
         (
-          node["leisure"](bbox:{karachi_bbox});
-          way["leisure"](bbox:{karachi_bbox});
-          relation["leisure"](bbox:{karachi_bbox});
+          node["leisure"](bbox:{quetta_bbox});
+          way["leisure"](bbox:{quetta_bbox});
+          relation["leisure"](bbox:{quetta_bbox});
         );
         out body;
         >;
@@ -62,24 +62,24 @@ def collect_osm_data_karachi():
         'shop': f"""
         [out:json][timeout:60];
         (
-          node["shop"](bbox:{karachi_bbox});
-          way["shop"](bbox:{karachi_bbox});
-          relation["shop"](bbox:{karachi_bbox});
+          node["shop"](bbox:{quetta_bbox});
+          way["shop"](bbox:{quetta_bbox});
+          relation["shop"](bbox:{quetta_bbox});
         );
         out body;
         >;
         out skel qt;
         """,
 
-        'port': f"""
+        'bazaar': f"""
         [out:json][timeout:60];
         (
-          node["harbour"](bbox:{karachi_bbox});
-          way["harbour"](bbox:{karachi_bbox});
-          relation["harbour"](bbox:{karachi_bbox});
-          node["port"](bbox:{karachi_bbox});
-          way["port"](bbox:{karachi_bbox});
-          relation["port"](bbox:{karachi_bbox});
+          node["shop"="bazaar"](bbox:{quetta_bbox});
+          way["shop"="bazaar"](bbox:{quetta_bbox});
+          relation["shop"="bazaar"](bbox:{quetta_bbox});
+          node["amenity"="marketplace"](bbox:{quetta_bbox});
+          way["amenity"="marketplace"](bbox:{quetta_bbox});
+          relation["amenity"="marketplace"](bbox:{quetta_bbox});
         );
         out body;
         >;
@@ -89,9 +89,9 @@ def collect_osm_data_karachi():
         'place_of_worship': f"""
         [out:json][timeout:60];
         (
-          node["amenity"="place_of_worship"](bbox:{karachi_bbox});
-          way["amenity"="place_of_worship"](bbox:{karachi_bbox});
-          relation["amenity"="place_of_worship"](bbox:{karachi_bbox});
+          node["amenity"="place_of_worship"](bbox:{quetta_bbox});
+          way["amenity"="place_of_worship"](bbox:{quetta_bbox});
+          relation["amenity"="place_of_worship"](bbox:{quetta_bbox});
         );
         out body;
         >;
@@ -101,8 +101,8 @@ def collect_osm_data_karachi():
 
     all_data = []
 
-    print("🚀 Starting OSM data collection for Karachi...")
-    print(f"📍 Bounding box: {karachi_bbox}")
+    print("🚀 Starting OSM data collection for Quetta...")
+    print(f"📍 Bounding box: {quetta_bbox}")
 
     for category, query in queries.items():
         print(f"\n📊 Collecting {category} data...")
@@ -113,19 +113,19 @@ def collect_osm_data_karachi():
 
             # Process nodes
             for node in result.nodes:
-                data_entry = process_osm_element(node, 'node', category, 'Karachi')
+                data_entry = process_osm_element(node, 'node', category, 'Quetta')
                 if data_entry:
                     all_data.append(data_entry)
 
             # Process ways
             for way in result.ways:
-                data_entry = process_osm_element(way, 'way', category, 'Karachi')
+                data_entry = process_osm_element(way, 'way', category, 'Quetta')
                 if data_entry:
                     all_data.append(data_entry)
 
             # Process relations
             for relation in result.relations:
-                data_entry = process_osm_element(relation, 'relation', category, 'Karachi')
+                data_entry = process_osm_element(relation, 'relation', category, 'Quetta')
                 if data_entry:
                     all_data.append(data_entry)
 
@@ -185,7 +185,7 @@ def process_osm_element(element, element_type, category, city_name):
     primary_value = None
 
     # Priority order for main tags
-    priority_tags = ['amenity', 'tourism', 'leisure', 'shop', 'harbour', 'port', 'building', 'landuse']
+    priority_tags = ['amenity', 'tourism', 'leisure', 'shop', 'building', 'landuse']
     for tag in priority_tags:
         if tag in tags:
             primary_key = tag
@@ -258,8 +258,8 @@ def convert_decimals(obj):
 
 
 # Run the collection
-print("Starting OSM data collection for Karachi...")
-osm_data = collect_osm_data_karachi()
+print("Starting OSM data collection for Quetta...")
+osm_data = collect_osm_data_quetta()
 
 print(f"\n🎉 Collection complete! Found {len(osm_data)} entries with descriptions.")
 
@@ -284,8 +284,8 @@ if len(df) > 0:
     # Ensure the data directory exists
     os.makedirs('../data', exist_ok=True)
 
-    output_file = '../data/karachi_osm_data.csv'
-    raw_json_file = '../data/karachi_osm_raw.json'
+    output_file = '../data/quetta_osm_data.csv'
+    raw_json_file = '../data/quetta_osm_raw.json'
 
     # Save CSV
     df.to_csv(output_file, index=False, encoding='utf-8')
