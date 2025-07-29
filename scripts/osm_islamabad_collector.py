@@ -1,4 +1,5 @@
 # OSM Data Collection Script for Islamabad
+import os
 import overpy
 import pandas as pd
 import decimal
@@ -242,15 +243,31 @@ if len(df) > 0:
         print(f"   Language: {row['language']}, Location: {row['coordinates']}")
         print()
 
-    # Save to CSV
-    output_file = 'islamabad_osm_data.csv'
-    df.to_csv(output_file, index=False, encoding='utf-8')
-    print(f" Data saved to: {output_file}")
 
-    # Save raw data as JSON for backup
-    with open('islamabad_osm_raw.json', 'w', encoding='utf-8') as f:
-        json.dump(osm_data, f, ensure_ascii=False, indent=2)
-    print(f" Raw data saved to: islamabad_osm_raw.json")
+    def convert_decimals(obj):
+        if isinstance(obj, list):
+            return [convert_decimals(i) for i in obj]
+        elif isinstance(obj, dict):
+            return {k: convert_decimals(v) for k, v in obj.items()}
+        elif isinstance(obj, decimal.Decimal):
+            return float(obj)
+        else:
+            return obj
+
+    # Ensure the data directory exists
+    os.makedirs('../data', exist_ok=True)
+
+    output_file = '../data/islamabad_osm_data.csv'
+    raw_json_file = '../data/islamabad_osm_raw.json'
+
+    # Save CSV
+    df.to_csv(output_file, index=False, encoding='utf-8')
+    print(f"💾 Data saved to: {output_file}")
+
+    # Save JSON (with decimal fix)
+    with open(raw_json_file, 'w', encoding='utf-8') as f:
+        json.dump(convert_decimals(osm_data), f, ensure_ascii=False, indent=2)
+    print(f"💾 Raw data saved to: {raw_json_file}")
 
 else:
     print("⚠️ No data collected. This might be due to network issues or API limits.")
