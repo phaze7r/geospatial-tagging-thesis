@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thesis Progress Tracker </title>
+  <title>Thesis Progress Tracker</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
@@ -54,7 +54,7 @@ function App() {
   const fetchProgress = async () => {
     try {
       // Replace with your actual backend URL if not running locally
-      const response = await fetch('https://phaze7r.pythonanywhere.com/api/progress');
+      const response = await fetch('http://localhost:5000/api/progress');
       const data = await response.json();
       const newProgress = data.progress || 0;
       if (newProgress > progress && newProgress % 10 === 0) {
@@ -70,7 +70,7 @@ function App() {
   // Fetch messages from backend
   const fetchMessages = async () => {
     try {
-      const response = await fetch('https://phaze7r.pythonanywhere.com/api/messages');
+      const response = await fetch('http://localhost:5000/api/messages');
       const data = await response.json();
       setMessages(data.messages || []);
     } catch (error) {
