@@ -218,5 +218,12 @@
         renderHeatmap(activity);
       });
   </script>
+<script>
+  fetch('https://osm-dynamic-api-0506da85fcea.herokuapp.com/api/current-task')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('current-task').textContent = data.task;
+    });
+</script>
 </body>
 </html>
