@@ -191,33 +191,33 @@
                 }
             },
 
-            // Notes
-            getNotes: async () => {
-                try {
-                    const response = await fetch(`${CONFIG.BACKEND_API}/notes`);
-                    return await response.json();
-                } catch (error) {
-                    console.error('Notes fetch error:', error);
-                    return [
-                        { id: 1, date: '2024-06-15', content: 'Started data collection phase', author: 'admin', createdAt: '2024-01-15T10:00:00Z' },
-                        { id: 2, date: '2024-05-20', content: 'Completed literature review', author: 'admin', createdAt: '2024-01-20T14:30:00Z' }
-                    ]; // Fallback
-                }
-            },
-
-            addNote: async (note) => {
-                try {
-                    const response = await fetch(`${CONFIG.BACKEND_API}/notes`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(note)
-                    });
-                    return await response.json();
-                } catch (error) {
-                    console.error('Add note error:', error);
-                    return { success: true, id: Date.now() }; // Fallback
-                }
-            },
+            // // Notes
+            // getNotes: async () => {
+            //     try {
+            //         const response = await fetch(`${CONFIG.BACKEND_API}/notes`);
+            //         return await response.json();
+            //     } catch (error) {
+            //         console.error('Notes fetch error:', error);
+            //         return [
+            //             { id: 1, date: '2024-06-15', content: 'Started data collection phase', author: 'admin', createdAt: '2024-01-15T10:00:00Z' },
+            //             { id: 2, date: '2024-05-20', content: 'Completed literature review', author: 'admin', createdAt: '2024-01-20T14:30:00Z' }
+            //         ]; // Fallback
+            //     }
+            // },
+            //
+            // addNote: async (note) => {
+            //     try {
+            //         const response = await fetch(`${CONFIG.BACKEND_API}/notes`, {
+            //             method: 'POST',
+            //             headers: { 'Content-Type': 'application/json' },
+            //             body: JSON.stringify(note)
+            //         });
+            //         return await response.json();
+            //     } catch (error) {
+            //         console.error('Add note error:', error);
+            //         return { success: true, id: Date.now() }; // Fallback
+            //     }
+            // },
 
             // GitHub API
             getCommits: async () => {
@@ -842,11 +842,11 @@
                             </button>
                         </div>
 
-                        <div className="mt-4 text-sm text-gray-600 text-center">
-                            <p><strong>Demo credentials:</strong></p>
-                            <p>Admin: admin/admin123</p>
-                            <p>Supervisor: supervisor/super123</p>
-                        </div>
+                        // <div className="mt-4 text-sm text-gray-600 text-center">
+                        //     <p><strong>Demo credentials:</strong></p>
+                        //     <p>Admin: admin/admin123</p>
+                        //     <p>Supervisor: supervisor/super123</p>
+                        // </div>
                     </div>
                 </div>
             );
