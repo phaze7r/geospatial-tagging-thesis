@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to my Thesis Repo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 <span id="repo-name">Loading...</span></h1>
+    <p id="repo-desc"></p>
+    <div class="stats">
+      <span id="stars"></span>
+      <span id="forks"></span>
+      <span id="updated"></span>
+    </div>
+    <h2>Recent Commits</h2>
+    <ul id="commits"></ul>
+    <footer>
+      <p>Made with ❤️ using GitHub Pages</p>
+    </footer>
+  </div>
+  <script>
+    // Replace with your username and repo
+    const username = "phaze7r";
+    const repo = "geospatial-tagging-thesis";
+
+    // Fetch repo info
+    fetch(`https://api.github.com/repos/${username}/${repo}`)
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('repo-name').textContent = data.name;
+        document.getElementById('repo-desc').textContent = data.description;
+        document.getElementById('stars').textContent = `⭐ Stars: ${data.stargazers_count}`;
+        document.getElementById('forks').textContent = `🍴 Forks: ${data.forks_count}`;
+        document.getElementById('updated').textContent = `🕒 Updated: ${new Date(data.updated_at).toLocaleDateString()}`;
+      });
+
+    // Fetch recent commits
+    fetch(`https://api.github.com/repos/${username}/${repo}/commits`)
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('commits').innerHTML = data.slice(0, 5).map(
+          c => `<li>
+                  <strong>${c.commit.message}</strong>
+                  <br>
+                  <small>${c.commit.author.name} – ${new Date(c.commit.author.date).toLocaleString()}</small>
+                </li>`
+        ).join('');
+      });
+  </script>
+</body>
+</html>

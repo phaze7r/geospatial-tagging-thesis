@@ -1,0 +1,53 @@
+body {
+  background: linear-gradient(135deg, #0f2027, #2c5364, #1a2980);
+  color: #fff;
+  font-family: 'Orbitron', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgba(20, 20, 40, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 32px;
+  backdrop-filter: blur(4px);
+}
+
+h1, h2 {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 16px 0;
+  font-size: 1.1em;
+}
+
+ul#commits {
+  list-style: none;
+  padding: 0;
+}
+
+ul#commits li {
+  background: rgba(255,255,255,0.05);
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+ul#commits li:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+footer {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 0.9em;
+  color: #aaa;
+}
