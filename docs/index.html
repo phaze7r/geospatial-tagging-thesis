@@ -76,12 +76,120 @@
       color: #ffd8c2;
       margin-bottom: 4px;
     }
+
+    /* New Dynamic Sections Styles */
+    .progress-section, .notes-section, .repo-activity-section {
+      background: #1a1a1a;
+      border: 2px solid #ff6e40;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 24px auto;
+      max-width: 600px;
+      color: #fff;
+    }
+
+    .progress-section label, .notes-section label, .repo-activity-section label {
+      color: #ff6e40;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .progress-section progress {
+      width: 100%;
+      height: 24px;
+      border-radius: 12px;
+      background: #333;
+    }
+
+    .progress-section progress::-webkit-progress-bar {
+      background: #333;
+      border-radius: 12px;
+    }
+
+    .progress-section progress::-webkit-progress-value {
+      background: linear-gradient(90deg, #ff6e40, #ff3d00);
+      border-radius: 12px;
+    }
+
+    .admin-form {
+      margin-top: 15px;
+      padding: 15px;
+      background: #2a2a2a;
+      border-radius: 8px;
+      border: 1px solid #444;
+    }
+
+    .admin-form input, .admin-form textarea, .admin-form button {
+      margin: 5px;
+      padding: 8px 12px;
+      border: 1px solid #555;
+      border-radius: 6px;
+      background: #333;
+      color: #fff;
+    }
+
+    .admin-form button {
+      background: #ff6e40;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .admin-form button:hover {
+      background: #ff3d00;
+    }
+
+    .update-msg {
+      margin-left: 10px;
+      font-weight: bold;
+    }
+
+    .update-msg.success {
+      color: #4caf50;
+    }
+
+    .update-msg.error {
+      color: #f44336;
+    }
+
+    #repo-activity-box {
+      background: #222;
+      color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    #repo-activity-box a {
+      color: #ff6e40;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #repo-activity-box a:hover {
+      text-decoration: underline;
+    }
+
+    .commit-item {
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #444;
+    }
+
+    .commit-meta {
+      font-size: 0.9em;
+      color: #aaa;
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
   <!-- Robot with Multilingual Bubble -->
   <div class="robot-section">
-    <!-- Simple SVG robot, you can replace with a fancier one if you want -->
     <svg class="robot-svg" viewBox="0 0 64 64">
       <circle cx="32" cy="32" r="30" fill="#222"/>
       <rect x="16" y="24" width="32" height="24" rx="8" fill="#ff6e40"/>
@@ -94,10 +202,46 @@
     </div>
   </div>
 
-  <!-- Currently Working On Section -->
+  <!-- Progress Bar Section (Admin Update) -->
+  <div class="progress-section">
+    <label for="progress-bar">Project Progress:</label>
+    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+      <progress id="progress-bar" value="0" max="100"></progress>
+      <span id="progress-value" style="margin-left: 15px; font-weight: bold; color: #ff6e40;">0%</span>
+    </div>
+    <div class="admin-form" id="progress-update-form">
+      <input type="number" id="progress-input" min="0" max="100" placeholder="Set progress (0-100)" style="width: 150px;">
+      <input type="password" id="progress-password" placeholder="Admin password" style="width: 150px;">
+      <button onclick="updateProgress()">Update Progress</button>
+      <span id="progress-update-msg" class="update-msg"></span>
+    </div>
+  </div>
+
+  <!-- Currently Working On Section (Dynamic) -->
   <div class="current-work" id="current-work">
     <strong>Currently Working On:</strong>
-    <span id="current-task">Preprocessing Datasets</span>
+    <span id="current-task">Loading...</span>
+  </div>
+
+  <!-- Notes/Message Section (Admin & Supervisor Update) -->
+  <div class="notes-section">
+    <label>Notes / Message:</label>
+    <div id="notes-text" style="background: #333; padding: 15px; border-radius: 8px; margin-bottom: 15px; min-height: 50px;">Loading...</div>
+    <div class="admin-form" id="notes-update-form">
+      <textarea id="notes-input" rows="3" placeholder="Update notes/message" style="width: 100%; resize: vertical;"></textarea>
+      <br>
+      <input type="password" id="notes-password" placeholder="Admin/Supervisor password" style="width: 200px;">
+      <button onclick="updateNotes()">Update Notes</button>
+      <span id="notes-update-msg" class="update-msg"></span>
+    </div>
+  </div>
+
+  <!-- Repository Activity Section (Dynamic) -->
+  <div class="repo-activity-section">
+    <label>Recent Repository Activity:</label>
+    <div id="repo-activity-box">
+      Loading activity...
+    </div>
   </div>
 
   <!-- Activity Heatmap Section -->
@@ -128,6 +272,7 @@
       <p>Made with ❤️ using GitHub Pages</p>
     </footer>
   </div>
+
   <script>
     // --- Robot Bubble Multilingual Motivation ---
     const motivationalPhrases = [
@@ -146,12 +291,149 @@
     setInterval(updateRobotBubble, 3500);
     updateRobotBubble();
 
-    // --- Currently Working On (you can update the text in HTML or here) ---
-    // document.getElementById('current-task').textContent = "Your new task here";
+    // --- Dynamic Progress Bar Functions ---
+    function loadProgress() {
+      fetch('https://osm-dynamic-api-0506da85fcea.herokuapp.com/api/progress')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('progress-bar').value = data.value;
+          document.getElementById('progress-value').textContent = data.value + '%';
+        })
+        .catch(() => {
+          document.getElementById('progress-value').textContent = 'Error loading';
+        });
+    }
 
-    // --- GitHub Repo Info and Commits (as before) ---
-    const username = "phaze7r"; // <-- replace with your username
-    const repo = "geospatial-tagging-thesis";         // <-- replace with your repo
+    function updateProgress() {
+      const value = document.getElementById('progress-input').value;
+      const password = document.getElementById('progress-password').value;
+      const msgElement = document.getElementById('progress-update-msg');
+
+      if (!value || !password) {
+        msgElement.textContent = 'Please fill all fields';
+        msgElement.className = 'update-msg error';
+        return;
+      }
+
+      fetch('https://osm-dynamic-api-0506da85fcea.herokuapp.com/api/progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ value: parseInt(value), password })
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.success) {
+            msgElement.textContent = 'Updated successfully!';
+            msgElement.className = 'update-msg success';
+            loadProgress();
+            document.getElementById('progress-input').value = '';
+            document.getElementById('progress-password').value = '';
+          } else {
+            msgElement.textContent = data.error || 'Update failed!';
+            msgElement.className = 'update-msg error';
+          }
+        })
+        .catch(() => {
+          msgElement.textContent = 'Network error';
+          msgElement.className = 'update-msg error';
+        });
+    }
+
+    // --- Dynamic Currently Working On ---
+    function loadCurrentTask() {
+      fetch('https://osm-dynamic-api-0506da85fcea.herokuapp.com/api/current-task')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('current-task').textContent = data.task;
+        })
+        .catch(() => {
+          document.getElementById('current-task').textContent = 'Unable to load task';
+        });
+    }
+
+    // --- Dynamic Notes Functions ---
+    function loadNotes() {
+      fetch('https://osm-dynamic-api-0506da85fcea.herokuapp.com/api/notes')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('notes-text').textContent = data.text || 'No notes yet.';
+        })
+        .catch(() => {
+          document.getElementById('notes-text').textContent = 'Unable to load notes';
+        });
+    }
+
+    function updateNotes() {
+      const text = document.getElementById('notes-input').value;
+      const password = document.getElementById('notes-password').value;
+      const msgElement = document.getElementById('notes-update-msg');
+
+      if (!text || !password) {
+        msgElement.textContent = 'Please fill all fields';
+        msgElement.className = 'update-msg error';
+        return;
+      }
+
+      fetch('https://osm-dynamic-api-0506da85fcea.herokuapp.com/api/notes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text, password })
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.success) {
+            msgElement.textContent = 'Updated successfully!';
+            msgElement.className = 'update-msg success';
+            loadNotes();
+            document.getElementById('notes-input').value = '';
+            document.getElementById('notes-password').value = '';
+          } else {
+            msgElement.textContent = data.error || 'Update failed!';
+            msgElement.className = 'update-msg error';
+          }
+        })
+        .catch(() => {
+          msgElement.textContent = 'Network error';
+          msgElement.className = 'update-msg error';
+        });
+    }
+
+    // --- Dynamic Repo Activity ---
+    function loadRepoActivity() {
+      fetch('https://osm-dynamic-api-0506da85fcea.herokuapp.com/api/repo-activity')
+        .then(res => res.json())
+        .then(commits => {
+          let html = '';
+          if (Array.isArray(commits) && commits.length > 0) {
+            commits.slice(0, 10).forEach(commit => {
+              html += `<div class="commit-item">
+                <a href="${commit.html_url}" target="_blank">
+                  ${commit.commit.message}
+                </a>
+                <div class="commit-meta">
+                  by ${commit.commit.author.name} • ${new Date(commit.commit.author.date).toLocaleString()}
+                </div>
+              </div>`;
+            });
+          } else {
+            html = '<div style="color: #aaa;">No recent activity found.</div>';
+          }
+          document.getElementById('repo-activity-box').innerHTML = html;
+        })
+        .catch(() => {
+          document.getElementById('repo-activity-box').innerHTML = '<div style="color: #f44336;">Unable to load repository activity.</div>';
+        });
+    }
+
+    // --- Load all dynamic content on page load ---
+    loadProgress();
+    loadCurrentTask();
+    loadNotes();
+    loadRepoActivity();
+
+    // --- GitHub Repo Info and Commits (existing code) ---
+    const username = "phaze7r";
+    const repo = "geospatial-tagging-thesis";
 
     fetch(`https://api.github.com/repos/${username}/${repo}`)
       .then(res => res.json())
@@ -168,16 +450,14 @@
       .then(data => {
         document.getElementById('commits').innerHTML = data.slice(0, 5).map(
           c => `<li>
-                  <strong>${c.commit.message}</strong>
-                  <br>
-                  <small>${c.commit.author.name} – ${new Date(c.commit.author.date).toLocaleString()}</small>
-                </li>`
+            <strong>${c.commit.message}</strong>
+            <br>
+            <small>${c.commit.author.name} – ${new Date(c.commit.author.date).toLocaleString()}</small>
+          </li>`
         ).join('');
       });
 
-    // --- Hourly Activity Heatmap (last 10 days) ---
-    // This is a simple simulation. For real data, you'd need to process commit timestamps.
-    // We'll fetch the last 100 commits and build a 10x24 grid (10 days, 24 hours).
+    // --- Hourly Activity Heatmap (existing code) ---
     function buildHeatmapGrid(activity) {
       const grid = [];
       for (let day = 0; day < 10; day++) {
@@ -187,6 +467,7 @@
       }
       return grid;
     }
+
     function renderHeatmap(activity) {
       const container = document.getElementById('activity-heatmap');
       container.className = 'activity-heatmap';
@@ -200,11 +481,10 @@
         }
       }
     }
-    // Fetch commits and build activity array
+
     fetch(`https://api.github.com/repos/${username}/${repo}/commits?per_page=100`)
       .then(res => res.json())
       .then(commits => {
-        // Build a 10x24 array: activity[day][hour]
         const activity = Array.from({length: 10}, () => Array(24).fill(0));
         const now = new Date();
         commits.forEach(commit => {
@@ -218,12 +498,5 @@
         renderHeatmap(activity);
       });
   </script>
-<script>
-  fetch('https://osm-dynamic-api-0506da85fcea.herokuapp.com/api/current-task')
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById('current-task').textContent = data.task;
-    });
-</script>
 </body>
 </html>
