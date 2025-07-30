@@ -1,0 +1,84 @@
+@media (max-width: 640px) {
+    body {
+        background: linear-gradient(135deg, #F28C38 0%, #F5A962 100%);
+        color: #222;
+        font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    }
+
+    header, footer {
+        background: rgba(255,255,255,0.95);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        border-radius: 0 0 16px 16px;
+    }
+
+    .rounded-lg, .rounded, .rounded-full {
+        border-radius: 16px !important;
+    }
+
+    .shadow-lg, .shadow, .hover-lift {
+        box-shadow: 0 4px 24px rgba(242,140,56,0.12) !important;
+    }
+
+    .bg-white {
+        background: rgba(255,255,255,0.98) !important;
+    }
+
+    .text-sunset-orange {
+        color: #F28C38 !important;
+    }
+
+    .bg-sunset-orange {
+        background: #F28C38 !important;
+        color: #fff !important;
+    }
+
+    .bg-sunset-dark {
+        background: #E67E22 !important;
+        color: #fff !important;
+    }
+
+    .progress-bar {
+        background: linear-gradient(90deg, #F28C38 0%, #F5A962 100%) !important;
+        box-shadow: 0 2px 8px rgba(242,140,56,0.15);
+    }
+
+    .robot-animation {
+        font-size: 3rem !important;
+        margin-bottom: 1rem !important;
+        animation: bounceGentle 2s infinite;
+    }
+
+    .activity-cell {
+        border-radius: 12px !important;
+        border: 1px solid #F28C38 !important;
+        background: #F5A96222 !important;
+    }
+
+    .tooltip:hover::after {
+        font-size: 11px !important;
+        padding: 4px 8px !important;
+    }
+
+    .table-auto th, .table-auto td {
+        padding: 8px !important;
+        font-size: 13px !important;
+    }
+
+    .max-w-7xl, .max-w-6xl, .max-w-md {
+        max-width: 98vw !important;
+    }
+
+    .p-6, .p-8, .px-4, .py-8 {
+        padding: 1rem !important;
+    }
+
+    .mb-8, .mt-8 {
+        margin-bottom: 1.5rem !important;
+        margin-top: 1.5rem !important;
+    }
+
+    .text-2xl, .text-xl, .text-lg {
+        font-size: 1.2rem !important;
+    }
+}
+
