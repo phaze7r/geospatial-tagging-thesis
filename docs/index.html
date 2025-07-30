@@ -1,285 +1,1079 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thesis Progress Tracker</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS Thesis Progress Tracker - Geospatial Tagging</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+
+    <!-- External Libraries -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sunset-orange': '#F28C38',
+                        'sunset-light': '#F5A962',
+                        'sunset-dark': '#E67E22'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'bounce-gentle': 'bounceGentle 2s infinite',
+                        'pulse-orange': 'pulseOrange 2s infinite'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes bounceGentle {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        @keyframes pulseOrange {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(242, 140, 56, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(242, 140, 56, 0); }
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #F28C38 0%, #F5A962 100%);
+        }
+
+        .robot-animation {
+            animation: bounceGentle 2s infinite;
+        }
+
+        .tooltip {
+            position: relative;
+        }
+
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            z-index: 1000;
+        }
+
+        .activity-cell {
+            transition: all 0.2s ease;
+        }
+
+        .activity-cell:hover {
+            transform: scale(1.1);
+            z-index: 10;
+        }
+    </style>
 </head>
-<body class="bg-white">
-  <div id="root"></div>
-  <script type="text/babel">
-// --- Confetti Component ---
-function Confetti({ show }) {
-  if (!show) return null;
-  const confetti = Array.from({ length: 30 }, (_, i) => (
-    <span key={i} style={{
-      position: 'absolute',
-      left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 100}%`,
-      fontSize: `${24 + Math.random() * 24}px`,
-      animation: `fall 2.5s linear ${Math.random()}s 1`,
-      pointerEvents: 'none',
-    }}>
-      {['🎉','✨','🔥','🎊','🥳','🧡'][Math.floor(Math.random()*6)]}
-    </span>
-  ));
-  return (
-    <div className="fixed inset-0 z-50 pointer-events-none" style={{overflow:'hidden'}}>
-      {confetti}
-      <style>{`
-        @keyframes fall {
-          0% { transform: translateY(-40px) rotate(0deg); opacity: 1; }
-          100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
-        }
-      `}</style>
-    </div>
-  );
-}
+<body class="bg-white min-h-screen">
+    <div id="root"></div>
 
-// --- Rotating Robot Messages ---
-const robotMessages = [
-  { msg: "Keep going, you're making great progress!", lang: "English" },
-  { msg: "آگے بڑھو، تم بہت اچھا کر رہے ہو!", lang: "Urdu" },
-  { msg: "¡Sigue adelante, lo estás haciendo genial!", lang: "Spanish" },
-  { msg: "تم محنت کر رہے ہو، کامیابی قریب ہے!", lang: "Roman Urdu" },
-  { msg: "Push through! Every step counts.", lang: "English" },
-];
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
 
-function RobotMotivation() {
-  const [idx, setIdx] = React.useState(0);
-  React.useEffect(() => {
-    const t = setInterval(() => setIdx(i => (i+1)%robotMessages.length), 4000);
-    return () => clearInterval(t);
-  }, []);
-  return (
-    <div className="flex flex-col items-center mb-10">
-      <div className="w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center mb-4">
-        <div className="text-4xl">🤖</div>
-      </div>
-      <div className="px-6 py-4 rounded-lg max-w-md bg-white border border-gray-200 shadow-none text-center">
-        <p className="font-bold text-black text-lg">{robotMessages[idx].msg}</p>
-        <p className="text-xs text-gray-600 mt-1">({robotMessages[idx].lang})</p>
-      </div>
-    </div>
-  );
-}
+        // Configuration - UPDATE THESE WITH YOUR ACTUAL ENDPOINTS
+        const CONFIG = {
+            GITHUB_REPO: 'phaze7r/geospatial-tagging-thesis',
+            BACKEND_API: 'https://your-heroku-backend.herokuapp.com/api', // UPDATE THIS
+            MONGODB_URI: 'mongodb+srv://phaze7r:UBlzckErSAKPnwID@osm-cluster.scxgk9j.mongodb.net/?retryWrites=true&w=majority&appName=osm-cluster'
+        };
 
-// --- Rotating AI Wisdom ---
-const aiQuotes = [
-  "The best way to predict the future is to invent it. – Alan Kay",
-  "Data is the new oil, but insight is the new gold.",
-  "Simplicity is the soul of efficiency. – Austin Freeman",
-  "AI is not magic, it’s math.",
-  "Progress, not perfection!",
-];
-function AIWisdom() {
-  const [idx, setIdx] = React.useState(0);
-  React.useEffect(() => {
-    const t = setInterval(() => setIdx(i => (i+1)%aiQuotes.length), 5000);
-    return () => clearInterval(t);
-  }, []);
-  return (
-    <div className="bg-gradient-to-r from-orange-100 to-yellow-100 rounded-xl p-8 mb-8 text-center">
-      <h3 className="text-2xl font-black text-black mb-4">💡 AI Wisdom</h3>
-      <p className="text-lg text-gray-800 font-medium italic transition-all duration-500">
-        {aiQuotes[idx]}
-      </p>
-    </div>
-  );
-}
+        // Motivational quotes
+        const MOTIVATIONAL_QUOTES = [
+            "Keep exploring the geospatial frontier! 🌍",
+            "Every commit brings you closer to success! 🚀",
+            "Data is the new oil, and you're the refiner! ⛽",
+            "Mapping the world, one tag at a time! 🗺️",
+            "Your research will change how we see places! 👁️",
+            "Geospatial intelligence is the future! 🔮",
+            "Every dataset tells a story! 📊",
+            "Innovation happens at the intersection of data and geography! 🌐"
+        ];
 
-// --- Progress Bar Section (dynamic, admin-editable) ---
-function ProgressBarSection() {
-  const [progress, setProgress] = React.useState(0);
-  const [showConfetti, setShowConfetti] = React.useState(false);
-  const [adminMode, setAdminMode] = React.useState(false);
-  const [adminPass, setAdminPass] = React.useState("");
-  const [newProgress, setNewProgress] = React.useState("");
-  const [error, setError] = React.useState("");
+        // Multilingual greetings
+        const GREETINGS = {
+            en: "Welcome to my thesis journey! 🤖",
+            ur: "میری تھیسس کے سفر میں خوش آمدید! 🤖",
+            ps: "زموږ د تیسس سفر ته ښه راغلاست! 🤖",
+            es: "¡Bienvenido a mi viaje de tesis! 🤖"
+        };
 
-  // Fetch progress from backend
-  React.useEffect(() => {
-    fetch('/api/progress')
-      .then(res => res.json())
-      .then(data => setProgress(data.progress || 0));
-  }, []);
+        // API functions - REPLACE WITH ACTUAL API CALLS
+        const api = {
+            // Authentication
+            login: async (username, password) => {
+                try {
+                    const response = await fetch(`${CONFIG.BACKEND_API}/auth/login`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ username, password })
+                    });
+                    return await response.json();
+                } catch (error) {
+                    console.error('Login error:', error);
+                    // Fallback for demo
+                    if (username === 'admin' && password === 'admin123') {
+                        return { success: true, user: { username, role: 'admin' } };
+                    } else if (username === 'supervisor' && password === 'super123') {
+                        return { success: true, user: { username, role: 'editor' } };
+                    }
+                    return { success: false, message: 'Invalid credentials' };
+                }
+            },
 
-  // Handle admin update
-  const handleAdmin = (e) => {
-    e.preventDefault();
-    fetch('/api/progress', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-admin-password': adminPass },
-      body: JSON.stringify({ progress: parseInt(newProgress) })
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.success) {
-          setProgress(parseInt(newProgress));
-          setShowConfetti(true);
-          setTimeout(()=>setShowConfetti(false), 2500);
-          setAdminMode(false);
-          setError("");
-        } else {
-          setError(data.error || "Update failed");
-        }
-      });
-  };
+            // Progress
+            getProgress: async () => {
+                try {
+                    const response = await fetch(`${CONFIG.BACKEND_API}/progress`);
+                    return await response.json();
+                } catch (error) {
+                    console.error('Progress fetch error:', error);
+                    return { progress: 65 }; // Fallback
+                }
+            },
 
-  return (
-    <div className="bg-white rounded-2xl p-12 mb-8 relative">
-      <Confetti show={showConfetti} />
-      <h2 className="text-4xl font-black text-black mb-8">Research Progress</h2>
-      <div className="mb-8">
-        <div className="text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600 mb-4">
-          {progress}%
-        </div>
-        <div className="relative w-full h-8 bg-gray-200 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-gradient-to-r from-orange-500 to-orange-600 transition-all duration-1000 ease-out"
-            style={{ width: `${progress}%` }}
-          ></div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-black font-bold text-sm">
-              {progress}% Complete
+            updateProgress: async (progress) => {
+                try {
+                    const response = await fetch(`${CONFIG.BACKEND_API}/progress`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ progress })
+                    });
+                    return await response.json();
+                } catch (error) {
+                    console.error('Progress update error:', error);
+                    return { success: true }; // Fallback
+                }
+            },
+
+            // Notes
+            getNotes: async () => {
+                try {
+                    const response = await fetch(`${CONFIG.BACKEND_API}/notes`);
+                    return await response.json();
+                } catch (error) {
+                    console.error('Notes fetch error:', error);
+                    return [
+                        { id: 1, date: '2024-01-15', content: 'Started data collection phase', author: 'admin', createdAt: '2024-01-15T10:00:00Z' },
+                        { id: 2, date: '2024-01-20', content: 'Completed literature review', author: 'admin', createdAt: '2024-01-20T14:30:00Z' }
+                    ]; // Fallback
+                }
+            },
+
+            addNote: async (note) => {
+                try {
+                    const response = await fetch(`${CONFIG.BACKEND_API}/notes`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(note)
+                    });
+                    return await response.json();
+                } catch (error) {
+                    console.error('Add note error:', error);
+                    return { success: true, id: Date.now() }; // Fallback
+                }
+            },
+
+            // GitHub API
+            getCommits: async () => {
+                try {
+                    const response = await fetch(`https://api.github.com/repos/${CONFIG.GITHUB_REPO}/commits?per_page=50`);
+                    return await response.json();
+                } catch (error) {
+                    console.error('Error fetching commits:', error);
+                    return [];
+                }
+            },
+
+            getRepoTree: async () => {
+                try {
+                    const response = await fetch(`https://api.github.com/repos/${CONFIG.GITHUB_REPO}/git/trees/main?recursive=1`);
+                    return await response.json();
+                } catch (error) {
+                    console.error('Error fetching repo tree:', error);
+                    return { tree: [] };
+                }
+            },
+
+            getFileContent: async (path) => {
+                try {
+                    const response = await fetch(`https://api.github.com/repos/${CONFIG.GITHUB_REPO}/contents/${path}`);
+                    const data = await response.json();
+                    return atob(data.content);
+                } catch (error) {
+                    console.error('Error fetching file content:', error);
+                    return '';
+                }
+            }
+        };
+
+        // Utility functions
+        const getDateString = (date) => {
+            return date.toISOString().split('T')[0];
+        };
+
+        const getDayName = (date) => {
+            return date.toLocaleDateString('en-US', { weekday: 'short' });
+        };
+
+        const getLast7Days = () => {
+            const days = [];
+            for (let i = 6; i >= 0; i--) {
+                const date = new Date();
+                date.setDate(date.getDate() - i);
+                days.push(date);
+            }
+            return days;
+        };
+
+        // Components
+        const LoadingSpinner = () => (
+            <div className="flex justify-center items-center p-4">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-sunset-orange"></div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="p-6 rounded-xl mb-8 bg-gradient-to-r from-orange-200 to-yellow-100">
-        <p className="text-xl font-bold text-orange-900">
-          {progress < 50 ? '💡 Keep going! Every step counts.' : progress < 100 ? '🚀 Almost there! Your insights are illuminating new paths!' : '🎉 Congratulations! Thesis milestone achieved!'}
-        </p>
-      </div>
-      <button
-        className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-bold text-lg transition-colors disabled:opacity-50 shadow-none mr-4"
-        onClick={()=>setAdminMode(true)}
-        title="Admin Update Progress"
-      >
-        <span className="inline-block mr-2">🔒</span>
-        Admin Update
-      </button>
-      {adminMode && (
-        <div className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50">
-          <div className="bg-white rounded-xl p-8 w-full max-w-sm">
-            <h2 className="text-2xl font-bold mb-4">Admin Progress Update</h2>
-            <form onSubmit={handleAdmin}>
-              <input type="password" value={adminPass} onChange={e=>setAdminPass(e.target.value)} placeholder="Admin Password" className="w-full mb-3 px-3 py-2 rounded border border-gray-300" />
-              <input type="number" min="0" max="100" value={newProgress} onChange={e=>setNewProgress(e.target.value)} placeholder="New Progress %" className="w-full mb-3 px-3 py-2 rounded border border-gray-300" />
-              <button type="submit" className="w-full bg-orange-500 text-white py-2 rounded font-bold">Update</button>
-            </form>
-            {error && <div className="text-red-600 mt-2">{error}</div>}
-            <button className="mt-4 text-orange-600 hover:underline text-sm" onClick={()=>setAdminMode(false)}>Close</button>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
+        );
 
-// --- Latest Updates Section (dynamic) ---
-function LatestUpdates() {
-  const [updates, setUpdates] = React.useState([]);
-  React.useEffect(() => {
-    fetch('/api/updates')
-      .then(res => res.json())
-      .then(data => setUpdates(data.updates || []));
-  }, []);
-  return (
-    <div className="mb-8">
-      <h3 className="text-3xl font-black text-black mb-6">📢 Latest Updates</h3>
-      <div className="grid gap-6 md:grid-cols-2">
-        {updates.length === 0 && <div className="text-gray-500">No updates yet.</div>}
-        {updates.map((u,i) => (
-          <div key={i} className="bg-white rounded-xl p-6 border border-gray-200 shadow-none">
-            <p className="text-gray-800 font-medium mb-3">{u.message}</p>
-            <div className="flex justify-between items-center text-sm text-gray-600">
-              <span className="font-bold">by {u.author}</span>
-              <span>{u.date}</span>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+        const RobotGreeting = () => {
+            const [currentLang, setCurrentLang] = useState('en');
+            const [currentQuote, setCurrentQuote] = useState('');
 
-// --- Commit Timeline Section (dynamic) ---
-function CommitTimeline() {
-  const [commits, setCommits] = React.useState([]);
-  React.useEffect(() => {
-    fetch('/api/commits')
-      .then(res => res.json())
-      .then(data => setCommits(data.commits || []));
-  }, []);
-  return (
-    <div className="bg-white rounded-xl p-8 mb-8">
-      <div className="flex justify-between items-center mb-6">
-        <h3 className="text-2xl font-black text-black">🕒 Commit Timeline (Last 10 Days)</h3>
-      </div>
-      <div className="overflow-x-auto">
-        {commits.length === 0 ? (
-          <p className="text-gray-500">No commits yet.</p>
-        ) : (
-          <ul className="space-y-2">
-            {commits.map((c,i) => (
-              <li key={i} className={`flex items-center gap-3 ${i===0?'text-orange-600 font-bold':''}`}>
-                <span className="text-xl">{i===0?'🔥':'⏺️'}</span>
-                <span>{c.message}</span>
-                <span className="text-xs text-gray-500">{c.date}</span>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </div>
-  );
-}
+            useEffect(() => {
+                // Cycle through languages
+                const langInterval = setInterval(() => {
+                    const langs = Object.keys(GREETINGS);
+                    const currentIndex = langs.indexOf(currentLang);
+                    const nextIndex = (currentIndex + 1) % langs.length;
+                    setCurrentLang(langs[nextIndex]);
+                }, 3000);
 
-// --- Dataset Section (already dynamic, see previous code) ---
-// ... (reuse DatasetSection from previous code) ...
+                // Random quote
+                setCurrentQuote(MOTIVATIONAL_QUOTES[Math.floor(Math.random() * MOTIVATIONAL_QUOTES.length)]);
 
-// --- Main App ---
-function App() {
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="flex items-center justify-between px-6 py-6">
-        <div>
-          <h1 className="text-4xl font-black text-black mb-1">
-            Geospatial Tagging Thesis Progress
-          </h1>
-          <p className="text-lg text-gray-700 font-bold">
-            Bayesian Elastic Net and Extended FP-Growth Approach
-          </p>
-        </div>
-        <div className="flex items-center gap-4">
-          <span className="text-3xl">🧑‍🏫</span>
-          <span className="text-3xl">👤</span>
-        </div>
-      </header>
-      <div className="max-w-6xl mx-auto px-6 py-10">
-        <RobotMotivation />
-        <ProgressBarSection />
-        <AIWisdom />
-        <LatestUpdates />
-        <CommitTimeline />
-        <DatasetSection />
-        {/* Footer */}
-        <footer className="text-center py-8">
-          <p className="text-xl font-bold text-black">🎓 Thesis Progress Tracker • Built for Academic Excellence</p>
-          <p className="text-gray-600 mt-2">Copyrights Batman of AI</p>
-        </footer>
-      </div>
-    </div>
-  );
-}
+                return () => clearInterval(langInterval);
+            }, [currentLang]);
 
-ReactDOM.render(<App />, document.getElementById('root'));
-  </script>
+            return (
+                <div className="text-center mb-8 animate-fade-in">
+                    <div className="robot-animation text-6xl mb-4">🤖</div>
+                    <h2 className="text-2xl font-bold text-gray-800 mb-2">
+                        {GREETINGS[currentLang]}
+                    </h2>
+                    <p className="text-sunset-orange font-medium">{currentQuote}</p>
+                </div>
+            );
+        };
+
+        // NEW: GitHub Activity Chart Component
+        const GitHubActivityChart = ({ commits }) => {
+            const [activityData, setActivityData] = useState({});
+            const [hoveredDay, setHoveredDay] = useState(null);
+
+            useEffect(() => {
+                if (commits.length > 0) {
+                    const last7Days = getLast7Days();
+                    const activity = {};
+
+                    // Initialize all days with 0 commits
+                    last7Days.forEach(date => {
+                        activity[getDateString(date)] = {
+                            count: 0,
+                            commits: [],
+                            date: date
+                        };
+                    });
+
+                    // Count commits for each day
+                    commits.forEach(commit => {
+                        const commitDate = getDateString(new Date(commit.commit.author.date));
+                        if (activity[commitDate]) {
+                            activity[commitDate].count++;
+                            activity[commitDate].commits.push(commit);
+                        }
+                    });
+
+                    setActivityData(activity);
+                }
+            }, [commits]);
+
+            const getIntensityColor = (count) => {
+                if (count === 0) return 'bg-gray-100';
+                if (count <= 2) return 'bg-sunset-orange bg-opacity-30';
+                if (count <= 4) return 'bg-sunset-orange bg-opacity-60';
+                return 'bg-sunset-orange';
+            };
+
+            const last7Days = getLast7Days();
+
+            return (
+                <div className="bg-white rounded-lg shadow-lg p-6 hover-lift">
+                    <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        📈 Weekly Activity
+                    </h3>
+
+                    <div className="flex justify-between items-center mb-4">
+                        {last7Days.map((date, index) => {
+                            const dateStr = getDateString(date);
+                            const dayData = activityData[dateStr] || { count: 0, commits: [] };
+
+                            return (
+                                <div key={dateStr} className="flex flex-col items-center">
+                                    <div className="text-xs text-gray-600 mb-2 font-medium">
+                                        {getDayName(date)}
+                                    </div>
+                                    <div
+                                        className={`w-8 h-8 rounded-lg activity-cell cursor-pointer tooltip ${getIntensityColor(dayData.count)} border border-gray-200`}
+                                        data-tooltip={`${dayData.count} commits on ${date.toLocaleDateString()}`}
+                                        onMouseEnter={() => setHoveredDay(dateStr)}
+                                        onMouseLeave={() => setHoveredDay(null)}
+                                    >
+                                        <div className="w-full h-full flex items-center justify-center text-xs font-bold text-gray-700">
+                                            {dayData.count > 0 ? dayData.count : ''}
+                                        </div>
+                                    </div>
+                                    <div className="text-xs text-gray-500 mt-1">
+                                        {date.getDate()}
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    {/* Hover details */}
+                    {hoveredDay && activityData[hoveredDay] && (
+                        <div className="mt-4 p-3 bg-gray-50 rounded-lg animate-fade-in">
+                            <h4 className="font-semibold text-gray-800 mb-2">
+                                {activityData[hoveredDay].date.toLocaleDateString('en-US', {
+                                    weekday: 'long',
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric'
+                                })}
+                            </h4>
+                            {activityData[hoveredDay].commits.length > 0 ? (
+                                <div className="space-y-1">
+                                    {activityData[hoveredDay].commits.slice(0, 3).map(commit => (
+                                        <div key={commit.sha} className="text-sm text-gray-600">
+                                            • {commit.commit.message.split('\n')[0]}
+                                        </div>
+                                    ))}
+                                    {activityData[hoveredDay].commits.length > 3 && (
+                                        <div className="text-xs text-gray-500">
+                                            +{activityData[hoveredDay].commits.length - 3} more commits
+                                        </div>
+                                    )}
+                                </div>
+                            ) : (
+                                <div className="text-sm text-gray-500">No commits this day</div>
+                            )}
+                        </div>
+                    )}
+
+                    <div className="flex justify-between items-center mt-4 text-xs text-gray-500">
+                        <span>Less</span>
+                        <div className="flex space-x-1">
+                            <div className="w-3 h-3 bg-gray-100 rounded"></div>
+                            <div className="w-3 h-3 bg-sunset-orange bg-opacity-30 rounded"></div>
+                            <div className="w-3 h-3 bg-sunset-orange bg-opacity-60 rounded"></div>
+                            <div className="w-3 h-3 bg-sunset-orange rounded"></div>
+                        </div>
+                        <span>More</span>
+                    </div>
+                </div>
+            );
+        };
+
+        const ProgressBar = ({ progress, canEdit, onUpdate }) => {
+            const [editing, setEditing] = useState(false);
+            const [newProgress, setNewProgress] = useState(progress);
+
+            const handleUpdate = async () => {
+                await onUpdate(newProgress);
+                setEditing(false);
+            };
+
+            return (
+                <div className="bg-white rounded-lg shadow-lg p-6 hover-lift">
+                    <div className="flex justify-between items-center mb-4">
+                        <h3 className="text-xl font-bold text-gray-800 flex items-center">
+                            📊 Thesis Progress
+                        </h3>
+                        {canEdit && (
+                            <button
+                                onClick={() => setEditing(!editing)}
+                                className="tooltip bg-sunset-orange text-white px-3 py-1 rounded-full text-sm hover:bg-sunset-dark transition-colors"
+                                data-tooltip="Edit Progress"
+                            >
+                                <i className="fas fa-edit"></i>
+                            </button>
+                        )}
+                    </div>
+
+                    {editing ? (
+                        <div className="space-y-4">
+                            <input
+                                type="range"
+                                min="0"
+                                max="100"
+                                value={newProgress}
+                                onChange={(e) => setNewProgress(parseInt(e.target.value))}
+                                className="w-full"
+                            />
+                            <div className="flex justify-between">
+                                <span className="text-lg font-semibold">{newProgress}%</span>
+                                <div className="space-x-2">
+                                    <button
+                                        onClick={handleUpdate}
+                                        className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors"
+                                    >
+                                        Save
+                                    </button>
+                                    <button
+                                        onClick={() => setEditing(false)}
+                                        className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors"
+                                    >
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    ) : (
+                        <>
+                            <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
+                                <div
+                                    className="progress-bar h-4 rounded-full transition-all duration-500 animate-pulse-orange"
+                                    style={{ width: `${progress}%` }}
+                                ></div>
+                            </div>
+                            <div className="text-right">
+                                <span className="text-2xl font-bold text-sunset-orange">{progress}%</span>
+                                <span className="text-gray-600 ml-2">Complete</span>
+                            </div>
+                        </>
+                    )}
+                </div>
+            );
+        };
+
+        const ActivityFeed = ({ commits }) => {
+            const [expandedCommit, setExpandedCommit] = useState(null);
+
+            return (
+                <div className="bg-white rounded-lg shadow-lg p-6 hover-lift">
+                    <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i className="fab fa-github mr-2"></i>
+                        Recent Commits
+                    </h3>
+                    <div className="space-y-4 max-h-96 overflow-y-auto">
+                        {commits.slice(0, 10).map((commit, index) => (
+                            <div key={commit.sha} className="border-l-4 border-sunset-orange pl-4 animate-slide-up" style={{animationDelay: `${index * 0.1}s`}}>
+                                <div className="flex justify-between items-start">
+                                    <div className="flex-1">
+                                        <p className="font-medium text-gray-800">
+                                            {commit.commit.message.split('\n')[0]}
+                                        </p>
+                                        <p className="text-sm text-gray-600">
+                                            by {commit.commit.author.name} • {new Date(commit.commit.author.date).toLocaleDateString()}
+                                        </p>
+                                        {expandedCommit === commit.sha && commit.commit.message.length > commit.commit.message.split('\n')[0].length && (
+                                            <p className="text-sm text-gray-700 mt-2 bg-gray-50 p-2 rounded">
+                                                {commit.commit.message.split('\n').slice(1).join('\n') || 'No description'}
+                                            </p>
+                                        )}
+                                    </div>
+                                    <div className="flex space-x-2 ml-4">
+                                        {commit.commit.message.split('\n').length > 1 && (
+                                            <button
+                                                onClick={() => setExpandedCommit(expandedCommit === commit.sha ? null : commit.sha)}
+                                                className="tooltip text-sunset-orange hover:text-sunset-dark transition-colors"
+                                                data-tooltip="Toggle Description"
+                                            >
+                                                <i className={`fas fa-chevron-${expandedCommit === commit.sha ? 'up' : 'down'}`}></i>
+                                            </button>
+                                        )}
+                                        <a
+                                            href={commit.html_url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="tooltip bg-sunset-orange text-white px-3 py-1 rounded text-sm hover:bg-sunset-dark transition-colors"
+                                            data-tooltip="View on GitHub"
+                                        >
+                                            View
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            );
+        };
+
+        // UPDATED: Repository Tree Component (Main folders + Data with CSV only)
+        const RepoTree = ({ tree, onFileClick }) => {
+            const getFileIcon = (path, type) => {
+                if (type === 'tree') return '📂';
+                if (path.endsWith('.csv')) return '📊';
+                if (path.endsWith('.py')) return '🐍';
+                if (path.endsWith('.md')) return '📝';
+                if (path.endsWith('.json')) return '🔧';
+                return '📄';
+            };
+
+            // Filter and organize tree structure
+            const organizeTree = (items) => {
+                const mainFolders = {};
+                const dataFiles = [];
+
+                items.forEach(item => {
+                    const pathParts = item.path.split('/');
+                    const topLevel = pathParts[0];
+
+                    if (topLevel === 'data' && item.path.endsWith('.csv')) {
+                        dataFiles.push(item);
+                    } else if (pathParts.length === 1 && item.type === 'tree') {
+                        // Only show main folders
+                        mainFolders[topLevel] = item;
+                    }
+                });
+
+                return { mainFolders, dataFiles };
+            };
+
+            const { mainFolders, dataFiles } = organizeTree(tree);
+
+            return (
+                <div className="bg-white rounded-lg shadow-lg p-6 hover-lift">
+                    <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        🌳 Repository Structure
+                    </h3>
+
+                    <div className="space-y-2">
+                        {/* Main Folders (Non-interactive) */}
+                        {Object.entries(mainFolders).map(([name, item]) => (
+                            <div key={name} className="flex items-center py-2 px-3 bg-gray-50 rounded animate-slide-up">
+                                <span className="mr-3 text-lg">📂</span>
+                                <span className="text-gray-700 font-medium">{name}</span>
+                                {name !== 'data' && (
+                                    <span className="ml-auto text-xs text-gray-500">Non-interactive</span>
+                                )}
+                            </div>
+                        ))}
+
+                        {/* Data Folder with CSV Files */}
+                        {dataFiles.length > 0 && (
+                            <div className="mt-4">
+                                <div className="flex items-center py-2 px-3 bg-sunset-orange bg-opacity-10 rounded-t">
+                                    <span className="mr-3 text-lg">📊</span>
+                                    <span className="text-gray-800 font-semibold">Datasets</span>
+                                    <span className="ml-auto text-xs text-sunset-orange font-medium">
+                                        {dataFiles.length} CSV files
+                                    </span>
+                                </div>
+                                <div className="bg-gray-50 rounded-b p-2 space-y-1">
+                                    {dataFiles.map((file, index) => (
+                                        <div
+                                            key={file.path}
+                                            className="flex items-center py-2 px-3 hover:bg-white rounded cursor-pointer transition-colors animate-slide-up"
+                                            style={{animationDelay: `${index * 0.1}s`}}
+                                            onClick={() => onFileClick(file.path)}
+                                        >
+                                            <span className="mr-3">📊</span>
+                                            <span className="text-gray-700">{file.path.split('/').pop()}</span>
+                                            <span className="ml-auto text-xs bg-sunset-orange text-white px-2 py-1 rounded">
+                                                Preview
+                                            </span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Instructions */}
+                        <div className="mt-4 p-3 bg-blue-50 rounded-lg">
+                            <p className="text-sm text-blue-800">
+                                <i className="fas fa-info-circle mr-2"></i>
+                                <strong>Instructions:</strong> Click on CSV files in the Datasets section to preview data.
+                                Other folders are for reference only.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const CSVPreview = ({ csvData, fileName, canExpand }) => {
+            const [expanded, setExpanded] = useState(false);
+            const [rows, setRows] = useState([]);
+
+            useEffect(() => {
+                if (csvData) {
+                    const lines = csvData.split('\n').filter(line => line.trim());
+                    const headers = lines[0].split(',');
+                    const dataRows = lines.slice(1, expanded ? 51 : 6).map(line => line.split(','));
+                    setRows([headers, ...dataRows]);
+                }
+            }, [csvData, expanded]);
+
+            return (
+                <div className="bg-white rounded-lg shadow-lg p-6">
+                    <div className="flex justify-between items-center mb-4">
+                        <h3 className="text-xl font-bold text-gray-800 flex items-center">
+                            📊 {fileName}
+                        </h3>
+                        {canExpand && (
+                            <button
+                                onClick={() => setExpanded(!expanded)}
+                                className="bg-sunset-orange text-white px-4 py-2 rounded hover:bg-sunset-dark transition-colors"
+                            >
+                                {expanded ? 'Show Less' : 'Show More (50 rows)'}
+                            </button>
+                        )}
+                    </div>
+                    <div className="overflow-x-auto">
+                        <table className="min-w-full table-auto">
+                            <thead>
+                                <tr className="bg-gray-50">
+                                    {rows[0]?.map((header, index) => (
+                                        <th key={index} className="px-4 py-2 text-left text-sm font-medium text-gray-700 border-b">
+                                            {header}
+                                        </th>
+                                    ))}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {rows.slice(1).map((row, index) => (
+                                    <tr key={index} className="hover:bg-gray-50">
+                                        {row.map((cell, cellIndex) => (
+                                            <td key={cellIndex} className="px-4 py-2 text-sm text-gray-600 border-b">
+                                                {cell}
+                                            </td>
+                                        ))}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            );
+        };
+
+        // UPDATED: Notes Section (Public display + Admin editing)
+        const NotesSection = ({ notes, onAddNote, canEdit, isPublic = false }) => {
+            const [showAddForm, setShowAddForm] = useState(false);
+            const [newNote, setNewNote] = useState('');
+
+            const handleAddNote = async () => {
+                if (newNote.trim()) {
+                    await onAddNote({
+                        content: newNote,
+                        date: new Date().toISOString().split('T')[0]
+                    });
+                    setNewNote('');
+                    setShowAddForm(false);
+                }
+            };
+
+            return (
+                <div className="bg-white rounded-lg shadow-lg p-6 hover-lift">
+                    <div className="flex justify-between items-center mb-4">
+                        <h3 className="text-xl font-bold text-gray-800 flex items-center">
+                            📝 {isPublic ? 'Latest Updates' : 'Notes & Updates'}
+                        </h3>
+                        {canEdit && !isPublic && (
+                            <button
+                                onClick={() => setShowAddForm(!showAddForm)}
+                                className="tooltip bg-sunset-orange text-white px-4 py-2 rounded hover:bg-sunset-dark transition-colors"
+                                data-tooltip="Add Note"
+                            >
+                                <i className="fas fa-plus mr-2"></i>
+                                Add Note
+                            </button>
+                        )}
+                    </div>
+
+                    {showAddForm && !isPublic && (
+                        <div className="mb-4 p-4 bg-gray-50 rounded-lg animate-slide-up">
+                            <textarea
+                                value={newNote}
+                                onChange={(e) => setNewNote(e.target.value)}
+                                placeholder="Enter your note..."
+                                className="w-full p-3 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-sunset-orange focus:border-transparent"
+                                rows="3"
+                            />
+                            <div className="flex justify-end space-x-2 mt-2">
+                                <button
+                                    onClick={handleAddNote}
+                                    className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors"
+                                >
+                                    Save
+                                </button>
+                                <button
+                                    onClick={() => setShowAddForm(false)}
+                                    className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors"
+                                >
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+                    )}
+
+                    <div className="space-y-4 max-h-64 overflow-y-auto">
+                        {notes.slice(0, isPublic ? 5 : notes.length).map((note, index) => (
+                            <div key={note.id} className="border-l-4 border-sunset-orange pl-4 animate-slide-up" style={{animationDelay: `${index * 0.1}s`}}>
+                                <p className="text-gray-800">{note.content}</p>
+                                <p className="text-sm text-gray-600 mt-1">
+                                    {new Date(note.date).toLocaleDateString()} • by {note.author}
+                                </p>
+                            </div>
+                        ))}
+                        {notes.length === 0 && (
+                            <div className="text-center text-gray-500 py-8">
+                                <i className="fas fa-sticky-note text-4xl mb-2 opacity-50"></i>
+                                <p>No updates yet</p>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        };
+
+        const LoginForm = ({ onLogin }) => {
+            const [username, setUsername] = useState('');
+            const [password, setPassword] = useState('');
+            const [loading, setLoading] = useState(false);
+            const [error, setError] = useState('');
+
+            const handleLogin = async () => {
+                setLoading(true);
+                setError('');
+                try {
+                    const result = await api.login(username, password);
+                    if (result.success) {
+                        onLogin(result.user);
+                    } else {
+                        setError(result.message);
+                    }
+                } catch (err) {
+                    setError('Login failed. Please try again.');
+                } finally {
+                    setLoading(false);
+                }
+            };
+
+            return (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div className="bg-white rounded-lg p-8 max-w-md w-full mx-4 animate-slide-up">
+                        <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+                            🔐 Login to Dashboard
+                        </h2>
+
+                        {error && (
+                            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                                {error}
+                            </div>
+                        )}
+
+                        <div className="space-y-4">
+                            <input
+                                type="text"
+                                placeholder="Username"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sunset-orange focus:border-transparent"
+                            />
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sunset-orange focus:border-transparent"
+                            />
+                            <button
+                                onClick={handleLogin}
+                                disabled={loading}
+                                className="w-full bg-sunset-orange text-white py-3 rounded-lg hover:bg-sunset-dark transition-colors disabled:opacity-50"
+                            >
+                                {loading ? 'Logging in...' : 'Login'}
+                            </button>
+                        </div>
+
+                        <div className="mt-4 text-sm text-gray-600 text-center">
+                            <p><strong>Demo credentials:</strong></p>
+                            <p>Admin: admin/admin123</p>
+                            <p>Supervisor: supervisor/super123</p>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        // Main App Component
+        const App = () => {
+            const [user, setUser] = useState(null);
+            const [showLogin, setShowLogin] = useState(false);
+            const [progress, setProgress] = useState(0);
+            const [commits, setCommits] = useState([]);
+            const [repoTree, setRepoTree] = useState([]);
+            const [notes, setNotes] = useState([]);
+            const [selectedFile, setSelectedFile] = useState(null);
+            const [csvData, setCsvData] = useState('');
+            const [loading, setLoading] = useState(true);
+
+            useEffect(() => {
+                loadInitialData();
+            }, []);
+
+            const loadInitialData = async () => {
+                try {
+                    const [progressData, commitsData, treeData, notesData] = await Promise.all([
+                        api.getProgress(),
+                        api.getCommits(),
+                        api.getRepoTree(),
+                        api.getNotes()
+                    ]);
+
+                    setProgress(progressData.progress);
+                    setCommits(commitsData);
+                    setRepoTree(treeData.tree || []);
+                    setNotes(notesData);
+                } catch (error) {
+                    console.error('Error loading initial data:', error);
+                } finally {
+                    setLoading(false);
+                }
+            };
+
+            const handleLogin = (userData) => {
+                setUser(userData);
+                setShowLogin(false);
+            };
+
+            const handleLogout = () => {
+                setUser(null);
+            };
+
+            const handleProgressUpdate = async (newProgress) => {
+                await api.updateProgress(newProgress);
+                setProgress(newProgress);
+            };
+
+            const handleAddNote = async (note) => {
+                const result = await api.addNote(note);
+                if (result.success) {
+                    setNotes([...notes, { ...note, id: result.id, author: user.username }]);
+                }
+            };
+
+            const handleFileClick = async (path) => {
+                if (path.includes('data/') && path.endsWith('.csv')) {
+                    setSelectedFile(path);
+                    const content = await api.getFileContent(path);
+                    setCsvData(content);
+                } else {
+                    window.open(`https://github.com/${CONFIG.GITHUB_REPO}/blob/main/${path}`, '_blank');
+                }
+            };
+
+            const canEdit = user && (user.role === 'admin' || user.role === 'editor');
+            const isAdmin = user && user.role === 'admin';
+
+            if (loading) {
+                return (
+                    <div className="min-h-screen flex items-center justify-center">
+                        <LoadingSpinner />
+                    </div>
+                );
+            }
+
+            return (
+                <div className="min-h-screen bg-gray-50">
+                    {/* Header */}
+                    <header className="bg-white shadow-sm border-b-2 border-sunset-orange">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className="flex justify-between items-center py-4">
+                                <div className="flex items-center space-x-3">
+                                    <div className="text-3xl">🤖</div>
+                                    <div>
+                                        <h1 className="text-2xl font-bold text-gray-900">
+                                            Geospatial Tagging Thesis
+                                        </h1>
+                                        <p className="text-sm text-gray-600">
+                                            MS-AI Thesis by Faizan Shah Ahmad
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center space-x-4">
+                                    {user ? (
+                                        <div className="flex items-center space-x-3">
+                                            <span className="text-sm text-gray-600">
+                                                Welcome, {user.username} ({user.role})
+                                            </span>
+                                            <button
+                                                onClick={handleLogout}
+                                                className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors"
+                                            >
+                                                Logout
+                                            </button>
+                                        </div>
+                                    ) : (
+                                        <button
+                                            onClick={() => setShowLogin(true)}
+                                            className="bg-sunset-orange text-white px-4 py-2 rounded hover:bg-sunset-dark transition-colors"
+                                        >
+                                            Login
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+
+                    {/* Main Content */}
+                    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                        {/* Robot Greeting */}
+                        <RobotGreeting />
+
+                        {/* Progress Section */}
+                        <div className="mb-8">
+                            <ProgressBar
+                                progress={progress}
+                                canEdit={isAdmin}
+                                onUpdate={handleProgressUpdate}
+                            />
+                        </div>
+
+                        {/* Activity Chart */}
+                        <div className="mb-8">
+                            <GitHubActivityChart commits={commits} />
+                        </div>
+
+                        {/* Main Grid */}
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                            {/* Activity Feed */}
+                            <ActivityFeed commits={commits} />
+
+                            {/* Notes Section - Always visible, but editing only for logged in users */}
+                            <NotesSection
+                                notes={notes}
+                                onAddNote={handleAddNote}
+                                canEdit={canEdit}
+                                isPublic={!user}
+                            />
+                        </div>
+
+                        {/* Repository Tree */}
+                        <div className="mb-8">
+                            <RepoTree tree={repoTree} onFileClick={handleFileClick} />
+                        </div>
+
+                        {/* CSV Preview Modal */}
+                        {selectedFile && csvData && (
+                            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                                <div className="bg-white rounded-lg max-w-6xl w-full max-h-[90vh] overflow-hidden">
+                                    <div className="flex justify-between items-center p-4 border-b">
+                                        <h3 className="text-lg font-bold">CSV Preview: {selectedFile}</h3>
+                                        <button
+                                            onClick={() => {
+                                                setSelectedFile(null);
+                                                setCsvData('');
+                                            }}
+                                            className="text-gray-500 hover:text-gray-700"
+                                        >
+                                            <i className="fas fa-times text-xl"></i>
+                                        </button>
+                                    </div>
+                                    <div className="p-4 overflow-auto max-h-[80vh]">
+                                        <CSVPreview
+                                            csvData={csvData}
+                                            fileName={selectedFile.split('/').pop()}
+                                            canExpand={canEdit}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </main>
+
+                    {/* Footer */}
+                    <footer className="bg-white border-t border-gray-200 mt-16">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                            <div className="text-center">
+                                <p className="text-gray-600">
+                                    © 2024 Faizan Shah Ahmad • Air University, Islamabad
+                                </p>
+                                <div className="flex justify-center space-x-4 mt-4">
+                                    <a
+                                        href={`https://github.com/${CONFIG.GITHUB_REPO}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-sunset-orange hover:text-sunset-dark transition-colors"
+                                    >
+                                        <i className="fab fa-github text-xl"></i>
+                                    </a>
+                                    <a
+                                        href="https://github.com/phaze7r/osm-dynamic-api"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-sunset-orange hover:text-sunset-dark transition-colors"
+                                    >
+                                        <i className="fas fa-server text-xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+                    {/* Login Modal */}
+                    {showLogin && <LoginForm onLogin={handleLogin} />}
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
 </body>
 </html>
