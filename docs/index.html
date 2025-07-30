@@ -40,119 +40,140 @@ function Confetti({ show }) {
   );
 }
 
-// --- Dataset Section ---
-function DatasetSection() {
-  const [files, setFiles] = React.useState([]);
-  const [selected, setSelected] = React.useState(null);
-  const [preview, setPreview] = React.useState({ headers: [], rows: [] });
-  const [showMore, setShowMore] = React.useState(false);
-  const [showModal, setShowModal] = React.useState(false);
-  const [adminPass, setAdminPass] = React.useState('');
-  const [error, setError] = React.useState('');
-  const [isAdmin, setIsAdmin] = React.useState(false);
+// --- Rotating Robot Messages ---
+const robotMessages = [
+  { msg: "Keep going, you're making great progress!", lang: "English" },
+  { msg: "آگے بڑھو، تم بہت اچھا کر رہے ہو!", lang: "Urdu" },
+  { msg: "¡Sigue adelante, lo estás haciendo genial!", lang: "Spanish" },
+  { msg: "تم محنت کر رہے ہو، کامیابی قریب ہے!", lang: "Roman Urdu" },
+  { msg: "Push through! Every step counts.", lang: "English" },
+];
 
-  // Fetch CSV file list
+function RobotMotivation() {
+  const [idx, setIdx] = React.useState(0);
   React.useEffect(() => {
-    fetch('/api/datasets')
+    const t = setInterval(() => setIdx(i => (i+1)%robotMessages.length), 4000);
+    return () => clearInterval(t);
+  }, []);
+  return (
+    <div className="flex flex-col items-center mb-10">
+      <div className="w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center mb-4">
+        <div className="text-4xl">🤖</div>
+      </div>
+      <div className="px-6 py-4 rounded-lg max-w-md bg-white border border-gray-200 shadow-none text-center">
+        <p className="font-bold text-black text-lg">{robotMessages[idx].msg}</p>
+        <p className="text-xs text-gray-600 mt-1">({robotMessages[idx].lang})</p>
+      </div>
+    </div>
+  );
+}
+
+// --- Rotating AI Wisdom ---
+const aiQuotes = [
+  "The best way to predict the future is to invent it. – Alan Kay",
+  "Data is the new oil, but insight is the new gold.",
+  "Simplicity is the soul of efficiency. – Austin Freeman",
+  "AI is not magic, it’s math.",
+  "Progress, not perfection!",
+];
+function AIWisdom() {
+  const [idx, setIdx] = React.useState(0);
+  React.useEffect(() => {
+    const t = setInterval(() => setIdx(i => (i+1)%aiQuotes.length), 5000);
+    return () => clearInterval(t);
+  }, []);
+  return (
+    <div className="bg-gradient-to-r from-orange-100 to-yellow-100 rounded-xl p-8 mb-8 text-center">
+      <h3 className="text-2xl font-black text-black mb-4">💡 AI Wisdom</h3>
+      <p className="text-lg text-gray-800 font-medium italic transition-all duration-500">
+        {aiQuotes[idx]}
+      </p>
+    </div>
+  );
+}
+
+// --- Progress Bar Section (dynamic, admin-editable) ---
+function ProgressBarSection() {
+  const [progress, setProgress] = React.useState(0);
+  const [showConfetti, setShowConfetti] = React.useState(false);
+  const [adminMode, setAdminMode] = React.useState(false);
+  const [adminPass, setAdminPass] = React.useState("");
+  const [newProgress, setNewProgress] = React.useState("");
+  const [error, setError] = React.useState("");
+
+  // Fetch progress from backend
+  React.useEffect(() => {
+    fetch('/api/progress')
       .then(res => res.json())
-      .then(data => setFiles(data.files || []));
+      .then(data => setProgress(data.progress || 0));
   }, []);
 
-  // Fetch preview rows
-  const fetchPreview = (filename, rows = 5, password = null) => {
-    setPreview({ headers: [], rows: [] });
-    let headers = {};
-    if (password) headers['x-admin-password'] = password;
-    fetch(`/api/datasets/${filename}?rows=${rows}`, { headers })
+  // Handle admin update
+  const handleAdmin = (e) => {
+    e.preventDefault();
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-admin-password': adminPass },
+      body: JSON.stringify({ progress: parseInt(newProgress) })
+    })
       .then(res => res.json())
       .then(data => {
-        setPreview({ headers: data.headers || [], rows: data.rows || [] });
-        setIsAdmin(data.isAdmin || false);
+        if (data.success) {
+          setProgress(parseInt(newProgress));
+          setShowConfetti(true);
+          setTimeout(()=>setShowConfetti(false), 2500);
+          setAdminMode(false);
+          setError("");
+        } else {
+          setError(data.error || "Update failed");
+        }
       });
   };
 
-  // Handle file click
-  const handleFileClick = (f) => {
-    setSelected(f);
-    setShowMore(false);
-    setIsAdmin(false);
-    fetchPreview(f, 5);
-  };
-
-  // Handle show more
-  const handleShowMore = () => setShowModal(true);
-
-  // Handle admin login
-  const handleAdminLogin = (e) => {
-    e.preventDefault();
-    fetchPreview(selected, 50, adminPass);
-    setShowModal(false);
-    setShowMore(true);
-    setAdminPass('');
-    setError('');
-  };
-
   return (
-    <div className="mb-16">
-      <h3 className="text-3xl font-black text-black mb-6">📂 Dataset Preview</h3>
-      <ul className="mb-6">
-        {files.map(f => (
-          <li key={f}>
-            <button
-              className={`flex items-center gap-2 py-2 text-lg font-bold text-black hover:text-orange-600 focus:outline-none bg-transparent ${selected===f?'text-orange-600':''}`}
-              style={{background:'none',border:'none',outline:'none'}}
-              onClick={()=>handleFileClick(f)}
-            >
-              <span className="text-2xl">📊</span> {f}
-            </button>
-          </li>
-        ))}
-      </ul>
-      {selected && preview.headers.length > 0 && (
-        <div className="bg-white p-0 rounded-xl">
-          <div className="overflow-x-auto">
-            <table className="min-w-max text-left">
-              <thead>
-                <tr>
-                  {preview.headers.map((h,i)=>(
-                    <th key={i} className="font-bold text-black px-3 py-2">{h}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {preview.rows.map((row,i)=>(
-                  <tr key={i} className="border-b border-gray-100">
-                    {preview.headers.map((h,j)=>(
-                      <td key={j} className="px-3 py-2 text-gray-800">{row[h]}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <div className="mt-2">
-            {!showMore && (
-              <button className="text-orange-600 font-bold text-sm hover:underline bg-transparent px-0 py-0" onClick={handleShowMore}>
-                🔒 Show 50 Rows
-              </button>
-            )}
-            {showMore && isAdmin && (
-              <span className="text-green-600 font-bold text-sm">Showing 50 rows (admin)</span>
-            )}
+    <div className="bg-white rounded-2xl p-12 mb-8 relative">
+      <Confetti show={showConfetti} />
+      <h2 className="text-4xl font-black text-black mb-8">Research Progress</h2>
+      <div className="mb-8">
+        <div className="text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600 mb-4">
+          {progress}%
+        </div>
+        <div className="relative w-full h-8 bg-gray-200 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-gradient-to-r from-orange-500 to-orange-600 transition-all duration-1000 ease-out"
+            style={{ width: `${progress}%` }}
+          ></div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-black font-bold text-sm">
+              {progress}% Complete
+            </div>
           </div>
         </div>
-      )}
-      {/* Modal for admin password */}
-      {showModal && (
+      </div>
+      <div className="p-6 rounded-xl mb-8 bg-gradient-to-r from-orange-200 to-yellow-100">
+        <p className="text-xl font-bold text-orange-900">
+          {progress < 50 ? '💡 Keep going! Every step counts.' : progress < 100 ? '🚀 Almost there! Your insights are illuminating new paths!' : '🎉 Congratulations! Thesis milestone achieved!'}
+        </p>
+      </div>
+      <button
+        className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-bold text-lg transition-colors disabled:opacity-50 shadow-none mr-4"
+        onClick={()=>setAdminMode(true)}
+        title="Admin Update Progress"
+      >
+        <span className="inline-block mr-2">🔒</span>
+        Admin Update
+      </button>
+      {adminMode && (
         <div className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50">
           <div className="bg-white rounded-xl p-8 w-full max-w-sm">
-            <h2 className="text-2xl font-bold mb-4">Admin Access</h2>
-            <form onSubmit={handleAdminLogin}>
+            <h2 className="text-2xl font-bold mb-4">Admin Progress Update</h2>
+            <form onSubmit={handleAdmin}>
               <input type="password" value={adminPass} onChange={e=>setAdminPass(e.target.value)} placeholder="Admin Password" className="w-full mb-3 px-3 py-2 rounded border border-gray-300" />
-              <button type="submit" className="w-full bg-orange-500 text-white py-2 rounded font-bold">Unlock</button>
+              <input type="number" min="0" max="100" value={newProgress} onChange={e=>setNewProgress(e.target.value)} placeholder="New Progress %" className="w-full mb-3 px-3 py-2 rounded border border-gray-300" />
+              <button type="submit" className="w-full bg-orange-500 text-white py-2 rounded font-bold">Update</button>
             </form>
             {error && <div className="text-red-600 mt-2">{error}</div>}
-            <button className="mt-4 text-orange-600 hover:underline text-sm" onClick={()=>setShowModal(false)}>Close</button>
+            <button className="mt-4 text-orange-600 hover:underline text-sm" onClick={()=>setAdminMode(false)}>Close</button>
           </div>
         </div>
       )}
@@ -160,10 +181,70 @@ function DatasetSection() {
   );
 }
 
+// --- Latest Updates Section (dynamic) ---
+function LatestUpdates() {
+  const [updates, setUpdates] = React.useState([]);
+  React.useEffect(() => {
+    fetch('/api/updates')
+      .then(res => res.json())
+      .then(data => setUpdates(data.updates || []));
+  }, []);
+  return (
+    <div className="mb-8">
+      <h3 className="text-3xl font-black text-black mb-6">📢 Latest Updates</h3>
+      <div className="grid gap-6 md:grid-cols-2">
+        {updates.length === 0 && <div className="text-gray-500">No updates yet.</div>}
+        {updates.map((u,i) => (
+          <div key={i} className="bg-white rounded-xl p-6 border border-gray-200 shadow-none">
+            <p className="text-gray-800 font-medium mb-3">{u.message}</p>
+            <div className="flex justify-between items-center text-sm text-gray-600">
+              <span className="font-bold">by {u.author}</span>
+              <span>{u.date}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// --- Commit Timeline Section (dynamic) ---
+function CommitTimeline() {
+  const [commits, setCommits] = React.useState([]);
+  React.useEffect(() => {
+    fetch('/api/commits')
+      .then(res => res.json())
+      .then(data => setCommits(data.commits || []));
+  }, []);
+  return (
+    <div className="bg-white rounded-xl p-8 mb-8">
+      <div className="flex justify-between items-center mb-6">
+        <h3 className="text-2xl font-black text-black">🕒 Commit Timeline (Last 10 Days)</h3>
+      </div>
+      <div className="overflow-x-auto">
+        {commits.length === 0 ? (
+          <p className="text-gray-500">No commits yet.</p>
+        ) : (
+          <ul className="space-y-2">
+            {commits.map((c,i) => (
+              <li key={i} className={`flex items-center gap-3 ${i===0?'text-orange-600 font-bold':''}`}>
+                <span className="text-xl">{i===0?'🔥':'⏺️'}</span>
+                <span>{c.message}</span>
+                <span className="text-xs text-gray-500">{c.date}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// --- Dataset Section (already dynamic, see previous code) ---
+// ... (reuse DatasetSection from previous code) ...
+
 // --- Main App ---
 function App() {
-  // --- All your sections here ---
-  // For brevity, I'll add placeholders for each section. You can fill in your logic as needed.
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -182,94 +263,11 @@ function App() {
         </div>
       </header>
       <div className="max-w-6xl mx-auto px-6 py-10">
-        {/* Motivational Robot & Rotating Message */}
-        <div className="text-center mb-16">
-          <div className="flex justify-center items-center mb-8">
-            <div className="relative">
-              <div className="px-6 py-4 rounded-lg mb-4 max-w-sm bg-white border border-gray-200 shadow-none">
-                <p className="font-bold text-black">
-                  😊 ¡Hola! ¡Buena suerte con tu tesis!
-                </p>
-                <p className="text-sm text-gray-600 mt-1">
-                  (Spanish)
-                </p>
-              </div>
-              <div className="w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center mx-auto">
-                <div className="text-3xl">🤖</div>
-              </div>
-            </div>
-          </div>
-          {/* Progress Bar */}
-          <div className="bg-white rounded-2xl p-12 mb-8">
-            <h2 className="text-4xl font-black text-black mb-8">Research Progress</h2>
-            <div className="mb-8">
-              <div className="text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600 mb-4">
-                45%
-              </div>
-              <div className="relative w-full h-8 bg-gray-200 rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-gradient-to-r from-orange-500 to-orange-600 transition-all duration-1000 ease-out"
-                  style={{ width: `45%` }}
-                ></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-black font-bold text-sm">
-                    45% Complete
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="p-6 rounded-xl mb-8 bg-gradient-to-r from-orange-200 to-yellow-100">
-              <p className="text-xl font-bold text-orange-900">
-                💡 Halfway there! Your insights are illuminating new paths!
-              </p>
-            </div>
-            <button
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-bold text-lg transition-colors disabled:opacity-50 shadow-none"
-              title="Refresh Data"
-            >
-              <span className="inline-block mr-2">🔄</span>
-              Refresh
-            </button>
-          </div>
-        </div>
-        {/* AI Wisdom */}
-        <div className="bg-gradient-to-r from-orange-100 to-yellow-100 rounded-xl p-8 mb-8">
-          <h3 className="text-2xl font-black text-black mb-4">💡 AI Wisdom</h3>
-          <p className="text-lg text-gray-800 font-medium italic">
-            "The best way to predict the future is to invent it." - Alan Kay
-          </p>
-        </div>
-        {/* Latest Updates */}
-        <div className="mb-8">
-          <h3 className="text-3xl font-black text-black mb-6">📢 Latest Updates</h3>
-          <div className="grid gap-6 md:grid-cols-2">
-            <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-none">
-              <p className="text-gray-800 font-medium mb-3">Started data collection phase</p>
-              <div className="flex justify-between items-center text-sm text-gray-600">
-                <span className="font-bold">by Faizan</span>
-                <span>2025-01-15</span>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-none">
-              <p className="text-gray-800 font-medium mb-3">Completed literature review</p>
-              <div className="flex justify-between items-center text-sm text-gray-600">
-                <span className="font-bold">by Supervisor</span>
-                <span>2025-01-10</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Commit Timeline (placeholder) */}
-        <div className="bg-white rounded-xl p-8 mb-8">
-          <div className="flex justify-between items-center mb-6">
-            <h3 className="text-2xl font-black text-black">🕒 Commit Timeline (Last 10 Days)</h3>
-            <button className="text-black hover:text-gray-600 text-2xl font-bold">✕</button>
-          </div>
-          <div className="overflow-x-auto">
-            <p className="text-gray-500">[Commit grid will go here]</p>
-          </div>
-        </div>
-        {/* Dataset Section */}
+        <RobotMotivation />
+        <ProgressBarSection />
+        <AIWisdom />
+        <LatestUpdates />
+        <CommitTimeline />
         <DatasetSection />
         {/* Footer */}
         <footer className="text-center py-8">
