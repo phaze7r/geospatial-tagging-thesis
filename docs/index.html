@@ -2,16 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Your Repo Showcase</title>
+  <title>My Thesis Repo == YES</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Orbitron:700&display=swap" rel="stylesheet">
+  <style>
+    /* Add these styles to your style.css or here for demo */
+    .robot-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 32px 0 24px 0;
+    }
+    .robot-svg {
+      width: 80px;
+      height: 80px;
+      margin-right: 24px;
+    }
+    .speech-bubble {
+      background: #222;
+      color: #ff6e40;
+      border-radius: 16px;
+      padding: 18px 28px;
+      font-size: 1.2em;
+      position: relative;
+      min-width: 180px;
+      box-shadow: 0 2px 12px rgba(255,110,64,0.12);
+    }
+    .speech-bubble:after {
+      content: '';
+      position: absolute;
+      left: -20px;
+      top: 30px;
+      width: 0;
+      height: 0;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-right: 20px solid #222;
+    }
+    .current-work {
+      background: linear-gradient(90deg, #ff6e40 60%, #ff3d00 100%);
+      color: #fff;
+      border-radius: 14px;
+      padding: 18px 28px;
+      margin: 24px auto;
+      max-width: 420px;
+      font-size: 1.1em;
+      box-shadow: 0 2px 12px rgba(255,110,64,0.18);
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .activity-heatmap {
+      display: grid;
+      grid-template-columns: repeat(24, 1fr);
+      gap: 2px;
+      margin: 18px 0;
+      overflow-x: auto;
+    }
+    .activity-cell {
+      width: 16px;
+      height: 16px;
+      background: #222;
+      border-radius: 3px;
+      transition: background 0.3s;
+    }
+    .activity-cell.active {
+      background: #ff6e40;
+    }
+    .activity-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8em;
+      color: #ffd8c2;
+      margin-bottom: 4px;
+    }
+  </style>
 </head>
 <body>
-  <div class="progress-container">
-    <!-- Change the value below (e.g., 70) to update progress -->
-    <div class="progress-bar" style="width: 27%;">27%</div>
+  <!-- Robot with Multilingual Bubble -->
+  <div class="robot-section">
+    <!-- Simple SVG robot, you can replace with a fancier one if you want -->
+    <svg class="robot-svg" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="30" fill="#222"/>
+      <rect x="16" y="24" width="32" height="24" rx="8" fill="#ff6e40"/>
+      <circle cx="24" cy="36" r="4" fill="#fff"/>
+      <circle cx="40" cy="36" r="4" fill="#fff"/>
+      <rect x="28" y="44" width="8" height="4" rx="2" fill="#fff"/>
+    </svg>
+    <div class="speech-bubble" id="robot-bubble">
+      Loading motivation...
+    </div>
   </div>
+
+  <!-- Currently Working On Section -->
+  <div class="current-work" id="current-work">
+    <strong>Currently Working On:</strong>
+    <span id="current-task">Preprocessing Datasets</span>
+  </div>
+
+  <!-- Activity Heatmap Section -->
+  <div>
+    <h2 style="text-align:center;color:#ff6e40;">Hourly GitHub Activity (Last 10 Days)</h2>
+    <div class="activity-labels">
+      <span>0h</span>
+      <span>6h</span>
+      <span>12h</span>
+      <span>18h</span>
+      <span>23h</span>
+    </div>
+    <div id="activity-heatmap"></div>
+  </div>
+
+  <!-- Your existing content below (repo info, commits, etc.) -->
   <div class="container">
     <h1>🚀 <span id="repo-name">Loading...</span></h1>
     <p id="repo-desc"></p>
@@ -27,11 +129,30 @@
     </footer>
   </div>
   <script>
-    // Replace with your username and repo
-    const username = "phaze7r";
-    const repo = "geospatial-tagging-thesis";
+    // --- Robot Bubble Multilingual Motivation ---
+    const motivationalPhrases = [
+      { lang: "Pashto", text: "تاسو کولی شئ! مخکې لاړ شئ!" },
+      { lang: "English", text: "You can do it! Keep going!" },
+      { lang: "Urdu", text: "آپ یہ کر سکتے ہیں! آگے بڑھیں!" },
+      { lang: "Spanish", text: "¡Tú puedes hacerlo! ¡Sigue adelante!" }
+    ];
+    let phraseIndex = 0;
+    function updateRobotBubble() {
+      const bubble = document.getElementById('robot-bubble');
+      const phrase = motivationalPhrases[phraseIndex];
+      bubble.innerHTML = `<strong>[${phrase.lang}]</strong> ${phrase.text}`;
+      phraseIndex = (phraseIndex + 1) % motivationalPhrases.length;
+    }
+    setInterval(updateRobotBubble, 3500);
+    updateRobotBubble();
 
-    // Fetch repo info
+    // --- Currently Working On (you can update the text in HTML or here) ---
+    // document.getElementById('current-task').textContent = "Your new task here";
+
+    // --- GitHub Repo Info and Commits (as before) ---
+    const username = "phaze7r"; // <-- replace with your username
+    const repo = "geospatial-tagging-thesis";         // <-- replace with your repo
+
     fetch(`https://api.github.com/repos/${username}/${repo}`)
       .then(res => res.json())
       .then(data => {
@@ -42,7 +163,6 @@
         document.getElementById('updated').textContent = `🕒 Updated: ${new Date(data.updated_at).toLocaleDateString()}`;
       });
 
-    // Fetch recent commits
     fetch(`https://api.github.com/repos/${username}/${repo}/commits`)
       .then(res => res.json())
       .then(data => {
@@ -53,6 +173,49 @@
                   <small>${c.commit.author.name} – ${new Date(c.commit.author.date).toLocaleString()}</small>
                 </li>`
         ).join('');
+      });
+
+    // --- Hourly Activity Heatmap (last 10 days) ---
+    // This is a simple simulation. For real data, you'd need to process commit timestamps.
+    // We'll fetch the last 100 commits and build a 10x24 grid (10 days, 24 hours).
+    function buildHeatmapGrid(activity) {
+      const grid = [];
+      for (let day = 0; day < 10; day++) {
+        for (let hour = 0; hour < 24; hour++) {
+          grid.push(activity[day] && activity[day][hour] ? 1 : 0);
+        }
+      }
+      return grid;
+    }
+    function renderHeatmap(activity) {
+      const container = document.getElementById('activity-heatmap');
+      container.className = 'activity-heatmap';
+      container.innerHTML = '';
+      for (let day = 0; day < 10; day++) {
+        for (let hour = 0; hour < 24; hour++) {
+          const cell = document.createElement('div');
+          cell.className = 'activity-cell' + (activity[day][hour] ? ' active' : '');
+          cell.title = `Day ${10-day}, Hour ${hour}: ${activity[day][hour] || 0} commits`;
+          container.appendChild(cell);
+        }
+      }
+    }
+    // Fetch commits and build activity array
+    fetch(`https://api.github.com/repos/${username}/${repo}/commits?per_page=100`)
+      .then(res => res.json())
+      .then(commits => {
+        // Build a 10x24 array: activity[day][hour]
+        const activity = Array.from({length: 10}, () => Array(24).fill(0));
+        const now = new Date();
+        commits.forEach(commit => {
+          const date = new Date(commit.commit.author.date);
+          const diffDays = Math.floor((now - date) / (1000*60*60*24));
+          if (diffDays < 10) {
+            const hour = date.getHours();
+            activity[9 - diffDays][hour] += 1;
+          }
+        });
+        renderHeatmap(activity);
       });
   </script>
 </body>
