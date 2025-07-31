@@ -1,4 +1,4 @@
-###geospatial-tagging-thesis
+### geospatial-tagging-thesis
 
 ## Visit this link for complete GUI of the documentation of my thesis and the progress.
 ## https://osm.texodus.tech/
