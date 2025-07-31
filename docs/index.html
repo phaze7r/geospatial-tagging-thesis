@@ -144,26 +144,75 @@
 
         // API functions - REPLACE WITH ACTUAL API CALLS
         const api = {
-            // Authentication
-            login: async (username, password) => {
-                try {
-                    const response = await fetch(`${CONFIG.BACKEND_API}/auth/login`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ username, password })
-                    });
-                    return await response.json();
-                } catch (error) {
-                    console.error('Login error:', error);
-                    // Fallback for demo
-                    if (username === 'admin' && password === 'admin123') {
-                        return { success: true, user: { username, role: 'admin' } };
-                    } else if (username === 'supervisor' && password === 'super123') {
-                        return { success: true, user: { username, role: 'editor' } };
-                    }
-                    return { success: false, message: 'Invalid credentials' };
+    // Authentication with caching and optimized error handling
+    login: async (username, password) => {
+        const cacheKey = `auth_${username}`;
+
+        // Check if we have a cached session
+        const cachedAuth = sessionStorage.getItem(cacheKey);
+        if (cachedAuth) {
+            try {
+                const parsed = JSON.parse(cachedAuth);
+                if (parsed.expiry > Date.now()) {
+                    return parsed.data;
                 }
-            },
+                sessionStorage.removeItem(cacheKey); // Clear expired cache
+            } catch (e) {
+                sessionStorage.removeItem(cacheKey); // Clear invalid cache
+            }
+        }
+
+        try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
+
+            const response = await fetch(`${CONFIG.BACKEND_API}/auth/login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Cache-Control': 'no-cache'
+                },
+                body: JSON.stringify({ username, password }),
+                signal: controller.signal
+            });
+
+            clearTimeout(timeoutId);
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            // Cache successful login for 30 minutes
+            if (data.success) {
+                sessionStorage.setItem(cacheKey, JSON.stringify({
+                    data,
+                    expiry: Date.now() + (30 * 60 * 1000)
+                }));
+            }
+
+            return data;
+        } catch (error) {
+            console.error('Login error:', error.message);
+
+            // Offline fallback for demo
+            if (!navigator.onLine) {
+                if (username === 'admin' && password === 'admin123') {
+                    return { success: true, user: { username, role: 'admin' } };
+                } else if (username === 'supervisor' && password === 'super123') {
+                    return { success: true, user: { username, role: 'editor' } };
+                }
+            }
+
+            return {
+                success: false,
+                message: error.name === 'AbortError'
+                    ? 'Login request timed out. Please try again.'
+                    : 'Login failed. Please check your connection and try again.'
+            };
+        }
+    },
 
             // Progress
             getProgress: async () => {

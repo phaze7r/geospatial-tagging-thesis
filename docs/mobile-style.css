@@ -1,3 +1,67 @@
+/* mobile-style.css */
+@media (max-width: 768px) {
+    /* Container adjustments */
+    .section-container {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+    /* Text size adjustments */
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.25rem; }
+    h3 { font-size: 1.1rem; }
+
+    /* Button adjustments */
+    .button {
+        width: 100%;
+        margin: 0.25rem 0;
+        padding: 0.75rem;
+    }
+
+    /* Table adjustments */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Stack grid items */
+    .grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Adjust spacing */
+    .space-y-4 > * + * {
+        margin-top: 0.75rem;
+    }
+
+    /* Header adjustments */
+    header .flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    /* Activity chart adjustments */
+    .activity-cell {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+/* Fix loading and performance */
+.animate-fade-in,
+.animate-slide-up {
+    will-change: transform, opacity;
+}
+
+/* Reduce animation complexity on mobile */
+@media (max-width: 768px) {
+    .animate-slide-up {
+        animation: none;
+        opacity: 1;
+    }
+}
 @media (max-width: 640px) {
     /* General Body Styling */
     body {
