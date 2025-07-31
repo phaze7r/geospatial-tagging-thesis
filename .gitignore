@@ -2,10 +2,11 @@
 __pycache__/
 *.py[codz]
 *$py.class
-.env
+
 # C extensions
 *.so
-
+#.evn for MONGO
+.env
 # Distribution / packaging
 .Python
 build/
