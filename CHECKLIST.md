@@ -223,5 +223,3 @@ Deliverables: Files, plots, or outputs to produce.
 Risks/Blocks: Any challenges or dependencies.
 
 Definition of Done: Clear criteria for completion.
-
-This checklist ensures you stay on track and complete both the methodology and thesis writing within 4 weeks. Update it daily and commit progress to your GitHub repo.
