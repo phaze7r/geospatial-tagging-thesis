@@ -1,4 +1,4 @@
-# **Thesis Completion Checklist**
+Thesis Completion Checklist
 
 This checklist outlines the daily tasks and deliverables for completing the thesis methodology and writing within 4 weeks. Each task is tied to a specific goal and deliverable to ensure steady progress.
 
@@ -105,6 +105,14 @@ Run Bayesian Elastic Net (or ElasticNetCV as a proxy) to select features.
 
 Deliverable: notebooks/02_feature_selection_ben.ipynb and selected_features.json.
 
+Day 12.1: Train-test split for dataset
+
+Split the dataset into training (70%), validation (15%), and testing (15%) sets.
+
+Ensure stratified sampling by OSM tags to maintain class balance.
+
+Deliverable: data/processed/train.csv, data/processed/val.csv, data/processed/test.csv.
+
 Day 12: Baseline classifier (patterns only)
 
 Train a simple classifier (e.g., Logistic Regression) using selected patterns.
@@ -120,6 +128,18 @@ Extract embeddings for description_final using DistilBERT or a multilingual vari
 Combine embeddings with selected patterns (feature fusion).
 
 Deliverable: notebooks/04_fusion_model.ipynb and results_fusion.json.
+
+Day 14.1: Final testing and ablation studies
+
+Re-run the final model on the test set for all metrics (accuracy, F1, confusion matrix).
+
+Perform ablation studies:
+
+Patterns-only vs. embeddings-only vs. fusion.
+
+Impact of FP-Growth thresholds (minsup, minlift).
+
+Deliverable: notebooks/06_final_testing.ipynb and ablation plots.
 
 Day 14: Fusion model training
 
@@ -204,4 +224,4 @@ Risks/Blocks: Any challenges or dependencies.
 
 Definition of Done: Clear criteria for completion.
 
-This checklist ensures I stay on track and complete both the methodology and thesis writing within 4 weeks. I will update it daily and commit progress to your GitHub repo.
+This checklist ensures you stay on track and complete both the methodology and thesis writing within 4 weeks. Update it daily and commit progress to your GitHub repo.
