@@ -312,10 +312,10 @@
         const getDayName = (date) => {
             return date.toLocaleDateString('en-US', { weekday: 'short' });
         };
-
+        // last 30 days Github's commit Activity
         const getLast7Days = () => {
             const days = [];
-            for (let i = 14; i >= 0; i--) {
+            for (let i = 30; i >= 0; i--) {
                 const date = new Date();
                 date.setDate(date.getDate() - i);
                 days.push(date);
@@ -404,7 +404,7 @@
             return (
                 <div className="bg-white rounded-lg shadow-lg p-6 hover-lift">
                     <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                        📈 Weekly Commit Activity
+                        📈 Updated Commit Activity
                     </h3>
 
                     <div className="flex justify-between items-center mb-4">
