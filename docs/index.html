@@ -1000,28 +1000,28 @@
                                         </p>
                                     </div>
                                 </div>
-                                // <div className="flex items-center space-x-4">
-                                //     {user ? (
-                                //         <div className="flex items-center space-x-3">
-                                //             <span className="text-sm text-gray-600">
-                                //                 Welcome, {user.username} ({user.role})
-                                //             </span>
-                                //             <button
-                                //                 onClick={handleLogout}
-                                //                 className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors"
-                                //             >
-                                //                 Logout
-                                //             </button>
-                                //         </div>
-                                //     ) : (
-                                //         <button
-                                //             onClick={() => setShowLogin(true)}
-                                //             className="bg-sunset-orange text-white px-4 py-2 rounded hover:bg-sunset-dark transition-colors"
-                                //         >
-                                //             Login
-                                //         </button>
-                                //     )}
-                                // </div>
+                                <div className="flex items-center space-x-4">
+                                    {user ? (
+                                        <div className="flex items-center space-x-3">
+                                            <span className="text-sm text-gray-600">
+                                                Welcome, {user.username} ({user.role})
+                                            </span>
+                                            <button
+                                                onClick={handleLogout}
+                                                className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition-colors"
+                                            >
+                                                Logout
+                                            </button>
+                                        </div>
+                                    ) : (
+                                        <button
+                                            onClick={() => setShowLogin(true)}
+                                            className="bg-sunset-orange text-white px-4 py-2 rounded hover:bg-sunset-dark transition-colors"
+                                        >
+                                            Login
+                                        </button>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </header>
