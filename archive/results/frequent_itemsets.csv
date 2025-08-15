@@ -1,0 +1,8 @@
+itemset,length,support
+"('city:islamabad',)",1,1.0
+"('osm_hint:shop=mall',)",1,0.6667
+"('city:islamabad', 'osm_hint:shop=mall')",2,0.6667
+"('osm_hint:amenity=park',)",1,0.3333
+"('osm_hint:amenity=park', 'osm_hint:shop=mall')",2,0.3333
+"('city:islamabad', 'osm_hint:amenity=park')",2,0.3333
+"('city:islamabad', 'osm_hint:amenity=park', 'osm_hint:shop=mall')",3,0.3333

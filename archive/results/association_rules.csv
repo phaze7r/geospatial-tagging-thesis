@@ -1,0 +1,9 @@
+antecedent,consequent,support,confidence,lift,antecedent_len
+"('osm_hint:amenity=park',)",amenity=park,0.3333,1.0,3.0,1
+"('osm_hint:amenity=park', 'osm_hint:shop=mall')",amenity=park,0.3333,1.0,3.0,2
+"('city:islamabad', 'osm_hint:amenity=park')",amenity=park,0.3333,1.0,3.0,2
+"('city:islamabad', 'osm_hint:amenity=park', 'osm_hint:shop=mall')",amenity=park,0.3333,1.0,3.0,3
+"('osm_hint:shop=mall',)",amenity=park,0.3333,0.5,1.5,1
+"('osm_hint:shop=mall',)",shop=mall,0.3333,0.5,1.5,1
+"('city:islamabad', 'osm_hint:shop=mall')",amenity=park,0.3333,0.5,1.5,2
+"('city:islamabad', 'osm_hint:shop=mall')",shop=mall,0.3333,0.5,1.5,2
