@@ -172,7 +172,6 @@
 
     /* Buttons */
     button, a.bg-sunset-orange, a.bg-gray-500, button.bg-green-500, button.bg-gray-500 {
-        display:none;
         font-size: 0.85rem !important;
         padding: 0.5rem 1rem !important;
         width: auto;
