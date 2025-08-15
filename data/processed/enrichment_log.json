@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-08-15T06:48:48.774548Z",
+  "input_rows": 1636,
+  "used_wikipedia_title": 22,
+  "used_wikidata": 9,
+  "used_geosearch": 1605,
+  "enriched_rows": 923,
+  "errors": 0,
+  "input_csv": "data/processed\\descriptions_raw.csv",
+  "output_csv": "data/processed\\descriptions_enriched.csv"
+}
