@@ -697,6 +697,13 @@
                                     </span>
                                 </div>
                                 <div className="bg-gray-50 rounded-b p-2 space-y-2">
+                                    </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        };
                                     {/* Root data files */}
                                     {rootDataFiles.map((file, index) => (
                                         <div
@@ -737,6 +744,7 @@
                                     <span className="ml-auto text-xs bg-sunset-orange text-white px-2 py-1 rounded">
                                         Preview
                                     </span>
+
                                 </div>
                             ))}
                         </div>
@@ -746,41 +754,6 @@
         </div>
     </div>
 )}
-
-
-                        {/* Data Folder with CSV Files OLD */}
-
-
-
-                        // {dataFiles.length > 0 && (
-                        //     <div className="mt-4">
-                        //         <div className="flex items-center py-2 px-3 bg-sunset-orange bg-opacity-10 rounded-t">
-                        //             <span className="mr-3 text-lg">📂</span>
-                        //             <span className="text-gray-800 font-semibold">Data
-                        //               <span className="ml-2 text-xs italic text-gray-500">datasets</span>
-                        //             </span>
-                        //             <span className="ml-auto text-xs text-sunset-orange font-medium">
-                        //                 {dataFiles.length} CSV files
-                        //             </span>
-                        //         </div>
-                        //         <div className="bg-gray-50 rounded-b p-2 space-y-1">
-                        //             {dataFiles.map((file, index) => (
-                        //                 <div
-                        //                     key={file.path}
-                        //                     className="flex items-center py-2 px-3 hover:bg-white rounded cursor-pointer transition-colors animate-slide-up"
-                        //                     style={{animationDelay: `${index * 0.1}s`}}
-                        //                     onClick={() => onFileClick(file.path)}
-                        //                 >
-                        //                     <span className="mr-3">📊</span>
-                        //                     <span className="text-gray-700">{file.path.split('/').pop()}</span>
-                        //                     <span className="ml-auto text-xs bg-sunset-orange text-white px-2 py-1 rounded">
-                        //                         Preview
-                        //                     </span>
-                        //                 </div>
-                        //             ))}
-                        //         </div>
-                        //     </div>
-                        // )}
 
                         {/* Instructions */}
                         <div className="mt-4 p-3 bg-blue-50 rounded-lg">
