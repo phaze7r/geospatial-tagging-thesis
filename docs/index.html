@@ -616,26 +616,59 @@
             };
 
             // Filter and organize tree structure
+
             const organizeTree = (items) => {
                 const mainFolders = {};
-                const dataFiles = [];
+                const dataFolders = {
+                    train: [],
+                    test: [],
+                    processed: [],
+                    raw: []
+                };
+                const rootDataFiles = [];
 
-                items.forEach(item => {
-                    const pathParts = item.path.split('/');
-                    const topLevel = pathParts[0];
+            items.forEach(item => {
+                const pathParts = item.path.split('/');
+                const topLevel = pathParts[0];
 
-                    if (topLevel === 'data' && item.path.endsWith('.csv')) {
-                        dataFiles.push(item);
-                    } else if (pathParts.length === 1 && item.type === 'tree') {
-                        // Only show main folders
-                        mainFolders[topLevel] = item;
+                if (topLevel === 'data') {
+                    if (pathParts.length === 2 && item.path.endsWith('.csv')) {
+                        // CSV files directly in data folder
+                        rootDataFiles.push(item);
+                    } else if (pathParts.length > 2) {
+                        // Files in data subfolders
+                        const subfolder = pathParts[1];
+                        if (dataFolders.hasOwnProperty(subfolder) && item.path.endsWith('.csv')) {
+                            dataFolders[subfolder].push(item);
+                        }
                     }
-                });
+                } else if (pathParts.length === 1 && item.type === 'tree') {
+                    mainFolders[topLevel] = item;
+        }
+    });
+            return { mainFolders, dataFolders, rootDataFiles };
+};
 
-                return { mainFolders, dataFiles };
-            };
+            // const organizeTree = (items) => {
+            //     const mainFolders = {};
+            //     const dataFiles = [];
+            //
+            //     items.forEach(item => {
+            //         const pathParts = item.path.split('/');
+            //         const topLevel = pathParts[0];
+            //
+            //         if (topLevel === 'data' && item.path.endsWith('.csv')) {
+            //             dataFiles.push(item);
+            //         } else if (pathParts.length === 1 && item.type === 'tree') {
+            //             // Only show main folders
+            //             mainFolders[topLevel] = item;
+            //         }
+            //     });
+            //
+            //     return { mainFolders, dataFiles };
+            // };
 
-            const { mainFolders, dataFiles } = organizeTree(tree);
+            const { mainFolders, dataFolders, rootDataFiles } = organizeTree(tree);
 
             return (
                 <div className="bg-white rounded-lg shadow-lg p-6 hover-lift">
@@ -654,21 +687,18 @@
                                 )}
                             </div>
                         ))}
-
                         {/* Data Folder with CSV Files */}
-                        {dataFiles.length > 0 && (
+                        {(rootDataFiles.length > 0 || Object.values(dataFolders).some(files => files.length > 0)) && (
                             <div className="mt-4">
                                 <div className="flex items-center py-2 px-3 bg-sunset-orange bg-opacity-10 rounded-t">
                                     <span className="mr-3 text-lg">📂</span>
                                     <span className="text-gray-800 font-semibold">Data
-                                      <span className="ml-2 text-xs italic text-gray-500">datasets</span>
-                                    </span>
-                                    <span className="ml-auto text-xs text-sunset-orange font-medium">
-                                        {dataFiles.length} CSV files
+                                        <span className="ml-2 text-xs italic text-gray-500">datasets</span>
                                     </span>
                                 </div>
-                                <div className="bg-gray-50 rounded-b p-2 space-y-1">
-                                    {dataFiles.map((file, index) => (
+                                <div className="bg-gray-50 rounded-b p-2 space-y-2">
+                                    {/* Root data files */}
+                                    {rootDataFiles.map((file, index) => (
                                         <div
                                             key={file.path}
                                             className="flex items-center py-2 px-3 hover:bg-white rounded cursor-pointer transition-colors animate-slide-up"
@@ -682,9 +712,75 @@
                                             </span>
                                         </div>
                                     ))}
+
+            {/* Data subfolders */}
+            {Object.entries(dataFolders).map(([folderName, files]) =>
+                files.length > 0 && (
+                    <div key={folderName} className="border-t border-gray-200 pt-2">
+                        <div className="flex items-center py-2 px-3 bg-gray-100 rounded-t mb-1">
+                            <span className="mr-3 text-lg">📂</span>
+                            <span className="text-gray-700 font-medium capitalize">{folderName}</span>
+                            <span className="ml-auto text-xs text-gray-500">
+                                {files.length} files
+                            </span>
+                        </div>
+                        <div className="space-y-1 pl-4">
+                            {files.map((file, index) => (
+                                <div
+                                    key={file.path}
+                                    className="flex items-center py-2 px-3 hover:bg-white rounded cursor-pointer transition-colors animate-slide-up"
+                                    style={{animationDelay: `${index * 0.1}s`}}
+                                    onClick={() => onFileClick(file.path)}
+                                >
+                                    <span className="mr-3">📊</span>
+                                    <span className="text-gray-700">{file.path.split('/').pop()}</span>
+                                    <span className="ml-auto text-xs bg-sunset-orange text-white px-2 py-1 rounded">
+                                        Preview
+                                    </span>
                                 </div>
-                            </div>
-                        )}
+                            ))}
+                        </div>
+                    </div>
+                )
+            )}
+        </div>
+    </div>
+)}
+
+
+                        {/* Data Folder with CSV Files OLD */}
+
+
+
+                        // {dataFiles.length > 0 && (
+                        //     <div className="mt-4">
+                        //         <div className="flex items-center py-2 px-3 bg-sunset-orange bg-opacity-10 rounded-t">
+                        //             <span className="mr-3 text-lg">📂</span>
+                        //             <span className="text-gray-800 font-semibold">Data
+                        //               <span className="ml-2 text-xs italic text-gray-500">datasets</span>
+                        //             </span>
+                        //             <span className="ml-auto text-xs text-sunset-orange font-medium">
+                        //                 {dataFiles.length} CSV files
+                        //             </span>
+                        //         </div>
+                        //         <div className="bg-gray-50 rounded-b p-2 space-y-1">
+                        //             {dataFiles.map((file, index) => (
+                        //                 <div
+                        //                     key={file.path}
+                        //                     className="flex items-center py-2 px-3 hover:bg-white rounded cursor-pointer transition-colors animate-slide-up"
+                        //                     style={{animationDelay: `${index * 0.1}s`}}
+                        //                     onClick={() => onFileClick(file.path)}
+                        //                 >
+                        //                     <span className="mr-3">📊</span>
+                        //                     <span className="text-gray-700">{file.path.split('/').pop()}</span>
+                        //                     <span className="ml-auto text-xs bg-sunset-orange text-white px-2 py-1 rounded">
+                        //                         Preview
+                        //                     </span>
+                        //                 </div>
+                        //             ))}
+                        //         </div>
+                        //     </div>
+                        // )}
 
                         {/* Instructions */}
                         <div className="mt-4 p-3 bg-blue-50 rounded-lg">
