@@ -1,0 +1,34 @@
+{
+  "pattern_vocab": [
+    "city:islamabad",
+    "osm_hint:amenity=park",
+    "osm_hint:shop=mall"
+  ],
+  "embed_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "fused_shapes": {
+    "norm": [
+      3,
+      387
+    ],
+    "std": [
+      3,
+      387
+    ]
+  },
+  "pattern_shape": [
+    3,
+    3
+  ],
+  "embed_dim": 384,
+  "label_to_id": {
+    "amenity=park": 0,
+    "amenity=place_of_worship": 1,
+    "shop=mall": 2
+  },
+  "id_to_label": {
+    "0": "amenity=park",
+    "1": "amenity=place_of_worship",
+    "2": "shop=mall"
+  },
+  "timestamp": "2025-08-15 04:07:26 UTC"
+}
