@@ -1,0 +1,6 @@
+scope,token,tag,count_pair,count_token,count_tag,support,conf_tag_given_token,conf_token_given_tag,lift
+amenity:cafe,جینز_amenity,tag:shop=coffee,5,5,5,0.083333,1.0,1.0,12.0
+amenity:cafe,جینز,tag:shop=coffee,5,5,5,0.083333,1.0,1.0,12.0
+amenity:cafe,گلوریا_جینز,tag:shop=coffee,5,5,5,0.083333,1.0,1.0,12.0
+amenity:cafe,گلوریا,tag:shop=coffee,5,5,5,0.083333,1.0,1.0,12.0
+amenity:mosque,mosque_amenity,tag:building=yes,7,14,35,0.051471,0.5,0.2,1.942857
