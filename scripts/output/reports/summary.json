@@ -1,0 +1,91 @@
+{
+  "input_csv": "E:\\Github\\repo-phaze7r\\geospatial-tagging-thesis\\scripts\\output\\osm_isb_preprocessed.csv",
+  "n_rows": 926,
+  "n_cols": 24,
+  "n_classes": 18,
+  "classes": [
+    "amenity:bank",
+    "amenity:cafe",
+    "amenity:hospital",
+    "amenity:marketplace",
+    "amenity:mosque",
+    "amenity:restaurant",
+    "amenity:school",
+    "building:residential",
+    "highway:bus_stop",
+    "historic:monument",
+    "leisure:park",
+    "natural:tree",
+    "natural:water",
+    "place:locality",
+    "shop:bakery",
+    "shop:clothes",
+    "shop:supermarket",
+    "tourism:hotel"
+  ],
+  "bbox_used": {
+    "south": 33.66,
+    "west": 72.96,
+    "north": 33.78,
+    "east": 73.18
+  },
+  "rows_outside_bbox": 0,
+  "duplicate_osm_rows": 0,
+  "near_duplicate_rows": 0,
+  "null_rates_top5": [
+    {
+      "column": "place",
+      "null_rate": 0.9935205183585313
+    },
+    {
+      "column": "historic",
+      "null_rate": 0.9892008639308856
+    },
+    {
+      "column": "leisure",
+      "null_rate": 0.937365010799136
+    },
+    {
+      "column": "tourism",
+      "null_rate": 0.9352051835853131
+    },
+    {
+      "column": "highway",
+      "null_rate": 0.9244060475161987
+    }
+  ],
+  "class_top5": [
+    {
+      "class_label": "amenity:mosque",
+      "count": 136
+    },
+    {
+      "class_label": "amenity:school",
+      "count": 100
+    },
+    {
+      "class_label": "amenity:restaurant",
+      "count": 74
+    },
+    {
+      "class_label": "highway:bus_stop",
+      "count": 70
+    },
+    {
+      "class_label": "amenity:cafe",
+      "count": 60
+    }
+  ],
+  "text_len_stats": {
+    "min": 21,
+    "max": 134,
+    "median": 53.0,
+    "mean": 54.74406047516199,
+    "pct_lt_20_chars": 0.0,
+    "pct_has_urdu_script": 0.4557235421166307
+  },
+  "plots": {
+    "class_counts_png": null,
+    "text_length_hist_png": null
+  }
+}
