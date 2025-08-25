@@ -1,0 +1,2057 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0570403,
+          33.7383666
+        ]
+      },
+      "properties": {
+        "osm_id": 211325636,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "restaurant",
+        "name": "Daman-e-Koh",
+        "addr_full": "Damn-i-koh Road",
+        "all_tags_json": "{\"addr:street\": \"Damn-i-koh Road\", \"amenity\": \"restaurant\", \"cuisine\": \"burger;tea;coffee_shop;asian\", \"is_in\": \"Islamabad\", \"name\": \"Daman-e-Koh\", \"opening_hours\": \"24/7\", \"tourism\": \"viewpoint\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0577749,
+          33.7263387
+        ]
+      },
+      "properties": {
+        "osm_id": 254976251,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "restaurant",
+        "name": "Golden Dragon",
+        "addr_full": "Street 4, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Street 4\", \"amenity\": \"restaurant\", \"name\": \"Golden Dragon\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0749265,
+          33.7294496
+        ]
+      },
+      "properties": {
+        "osm_id": 660960200,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "restaurant",
+        "name": "Islamabad Vintage Quisine",
+        "addr_full": "School Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"School Road\", \"amenity\": \"restaurant\", \"cuisine\": \"regional\", \"name\": \"Islamabad Vintage Quisine\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0617424,
+          33.721965
+        ]
+      },
+      "properties": {
+        "osm_id": 660960870,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "restaurant",
+        "name": "Kitchen Cusine Grill",
+        "addr_full": "Bhitai Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Bhitai Road\", \"amenity\": \"restaurant\", \"name\": \"Kitchen Cusine Grill\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0621813,
+          33.7217479
+        ]
+      },
+      "properties": {
+        "osm_id": 660960871,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "restaurant",
+        "name": "Zefra Restaurant",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"restaurant\", \"is_in\": \"F-7/4, Islamabad\", \"name\": \"Zefra Restaurant\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.075362,
+          33.7303805
+        ]
+      },
+      "properties": {
+        "osm_id": 800039814,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "restaurant",
+        "name": "Luna Caprese",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"restaurant\", \"name\": \"Luna Caprese\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0587849,
+          33.7221222
+        ]
+      },
+      "properties": {
+        "osm_id": 977855824,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "restaurant",
+        "name": "پیزا ہٹ",
+        "addr_full": "اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"amenity\": \"restaurant\", \"brand\": \"پیزا ہٹ\", \"brand:ar\": \"بيتزا هت\", \"brand:en\": \"Pizza Hut\", \"brand:fa\": \"پیتزا هات\", \"brand:pnb\": \"پزا ہٹ\", \"brand:ur\": \"پیزا ہٹ\", \"brand:wikidata\": \"Q191615\", \"brand:wikipedia\": \"ur:پیزا ہٹ\", \"brand:wikipedia:ar\": \"بيتزا هت\", \"brand:wikipedia:fa\": \"پیتزا هات\", \"brand:wikipedia:pnb\": \"پزا ہٹ\", \"brand:wikipedia:ur\": \"پیزا ہٹ\", \"name\": \"پیزا ہٹ\", \"name:ar\": \"بيتزا هت\", \"name:en\": \"Pizza Hut\", \"name:fa\": \"پیتزا هات\", \"name:pnb\": \"پزا ہٹ\", \"name:ur\": \"پیزا ہٹ\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.1123473,
+          33.7209943
+        ]
+      },
+      "properties": {
+        "osm_id": 1089595055,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "restaurant",
+        "name": "Canadian Club",
+        "addr_full": "Street 12, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Street 12\", \"amenity\": \"restaurant\", \"name\": \"Canadian Club\", \"name:es\": \"Club Canadiense\", \"name:fr\": \"Club Canadien\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0576782,
+          33.7259475
+        ]
+      },
+      "properties": {
+        "osm_id": 254975704,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "cafe",
+        "name": "The Hot Spot",
+        "addr_full": "Street 3, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Street 3\", \"amenity\": \"cafe\", \"name\": \"The Hot Spot\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0578027,
+          33.7259527
+        ]
+      },
+      "properties": {
+        "osm_id": 254975815,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "cafe",
+        "name": "The Gelato Affair",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"cafe\", \"is_in\": \"Gol Market, F-7/3, Islamabad\", \"name\": \"The Gelato Affair\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.05794,
+          33.7260597
+        ]
+      },
+      "properties": {
+        "osm_id": 254975882,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "cafe",
+        "name": "گلوریا جینز",
+        "addr_full": "Street 6, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Street 6\", \"amenity\": \"cafe\", \"brand\": \"گلوریا جینز\", \"brand:ar\": \"قلوريا جينز\", \"brand:ur\": \"گلوریا جینز\", \"brand:website\": \"https://gloriajeanscoffees.com.pk\", \"brand:wikidata\": \"Q2666365\", \"brand:wikipedia\": \"ar:قلوريا جينز كافيه\", \"brand:wikipedia:ar\": \"قلوريا جينز كافيه\", \"cuisine\": \"coffee_shop\", \"name\": \"گلوریا جینز\", \"name:ar\": \"قلوريا جينز\", \"name:en\": \"Gloria Jean's\", \"name:ur\": \"گلوریا جینز\", \"official_name\": \"گلوریا جینز کافیز\", \"official_name:ar\": \"قلوريا جينز كافيه\", \"official_name:ur\": \"گلوریا جینز کافیز\", \"shop\": \"coffee\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0813998,
+          33.7364262
+        ]
+      },
+      "properties": {
+        "osm_id": 254979635,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "cafe",
+        "name": "The Hot Spot Cafe",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"cafe\", \"is_in\": \"F-6/3, Islamabad\", \"name\": \"The Hot Spot Cafe\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0780948,
+          33.7354098
+        ]
+      },
+      "properties": {
+        "osm_id": 659727643,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "cafe",
+        "name": "Table Talk",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"cafe\", \"is_in\": \"Kohsar Market, F-6/3, Islamabad\", \"name\": \"Table Talk\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0579305,
+          33.7262071
+        ]
+      },
+      "properties": {
+        "osm_id": 659730873,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "cafe",
+        "name": "Howdy",
+        "addr_full": "Street 3, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Street 3\", \"amenity\": \"cafe\", \"name\": \"Howdy\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0779705,
+          33.7356049
+        ]
+      },
+      "properties": {
+        "osm_id": 821664342,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "cafe",
+        "name": "Mocca",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"cafe\", \"is_in\": \"Kohsar Market, F-6/3, Islamabad\", \"name\": \"Mocca\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0730755,
+          33.688351
+        ]
+      },
+      "properties": {
+        "osm_id": 2247180648,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "cafe",
+        "name": "کیفے",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"cafe\", \"name\": \"کیفے\", \"name:ar\": \"مقهى\", \"name:en\": \"Cafe\", \"name:ur\": \"کیفے\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0728704,
+          33.7302916
+        ]
+      },
+      "properties": {
+        "osm_id": 247682428,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "school",
+        "name": "Islamabad Model College for Girls F-6/2",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"school\", \"is_in\": \"F-6/2, Islamabad\", \"name\": \"Islamabad Model College for Girls F-6/2\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0202663,
+          33.684807
+        ]
+      },
+      "properties": {
+        "osm_id": 248864319,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "school",
+        "name": "FG Boys Model School",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"school\", \"is_in\": \"G-10/3, Islamabad\", \"name\": \"FG Boys Model School\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0541945,
+          33.6963847
+        ]
+      },
+      "properties": {
+        "osm_id": 255910264,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "school",
+        "name": null,
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"school\", \"created_by\": \"Potlatch 0.8a\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.066608,
+          33.6823327
+        ]
+      },
+      "properties": {
+        "osm_id": 256371663,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "school",
+        "name": "Beaconhouse Margalla Campus",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"school\", \"created_by\": \"Potlatch 0.8a\", \"is_in\": \"H-8/4, Islamabad\", \"name\": \"Beaconhouse Margalla Campus\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0531003,
+          33.722589
+        ]
+      },
+      "properties": {
+        "osm_id": 256825235,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "school",
+        "name": "Froebel's International School",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"school\", \"created_by\": \"Potlatch 0.8b\", \"is_in\": \"F-7/2, Islamabad\", \"name\": \"Froebel's International School\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0703332,
+          33.6823018
+        ]
+      },
+      "properties": {
+        "osm_id": 271785889,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "school",
+        "name": "OPF Boys College",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"school\", \"name\": \"OPF Boys College\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0712068,
+          33.6817039
+        ]
+      },
+      "properties": {
+        "osm_id": 271786131,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "school",
+        "name": "Islamabad Convent",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"school\", \"created_by\": \"Potlatch 0.9c\", \"is_in\": \"H-8/4, Islamabad\", \"name\": \"Islamabad Convent\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9801959,
+          33.6783486
+        ]
+      },
+      "properties": {
+        "osm_id": 652425201,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "school",
+        "name": "International Islamic Grammer School",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"school\", \"is_in\": \"F-11/2, Islamabad\", \"name\": \"International Islamic Grammer School\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0417644,
+          33.7104738
+        ]
+      },
+      "properties": {
+        "osm_id": 240218764,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "hospital",
+        "name": "Ali Medical Centre",
+        "addr_full": "Kohistan Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Kohistan Road\", \"amenity\": \"hospital\", \"healthcare\": \"hospital\", \"name\": \"Ali Medical Centre\", \"name:en\": \"Ali Medical Centre\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0828053,
+          33.7211006
+        ]
+      },
+      "properties": {
+        "osm_id": 253018400,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "hospital",
+        "name": "Poly Clinic Hospital",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"hospital\", \"healthcare\": \"hospital\", \"is_in\": \"G-6, Islamabad\", \"name\": \"Poly Clinic Hospital\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0794388,
+          33.7054375
+        ]
+      },
+      "properties": {
+        "osm_id": 297648462,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "hospital",
+        "name": "Islamabad International َDental Hospital and College",
+        "addr_full": "Service Road East G-7, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Service Road East G-7\", \"amenity\": \"hospital\", \"name\": \"Islamabad International َDental Hospital and College\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0170436,
+          33.7156183
+        ]
+      },
+      "properties": {
+        "osm_id": 312719028,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "hospital",
+        "name": "PAF Hospital",
+        "addr_full": "Rashid Minhas Boulevard, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Rashid Minhas Boulevard\", \"amenity\": \"hospital\", \"emergency\": \"yes\", \"name\": \"PAF Hospital\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0780754,
+          33.7070214
+        ]
+      },
+      "properties": {
+        "osm_id": 1707177004,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "hospital",
+        "name": "International Islamic Medical Centre",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"hospital\", \"emergency\": \"yes\", \"name\": \"International Islamic Medical Centre\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.030179,
+          33.6924791
+        ]
+      },
+      "properties": {
+        "osm_id": 2147104935,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "hospital",
+        "name": "Bilquis Memorial Hospital",
+        "addr_full": "Local path, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Local path\", \"amenity\": \"hospital\", \"emergency\": \"yes\", \"name\": \"Bilquis Memorial Hospital\", \"source\": \"Survey\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9981512,
+          33.6677207
+        ]
+      },
+      "properties": {
+        "osm_id": 4880197909,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "hospital",
+        "name": "Maryam Hospital and Diagnostic Center",
+        "addr_full": "Shabir Sharif Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Shabir Sharif Road\", \"amenity\": \"hospital\", \"name\": \"Maryam Hospital and Diagnostic Center\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0208068,
+          33.6863031
+        ]
+      },
+      "properties": {
+        "osm_id": 4889677808,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "hospital",
+        "name": "Al Ain International Specialist Eye Hospital",
+        "addr_full": "Service Road East G-10, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Service Road East G-10\", \"amenity\": \"hospital\", \"name\": \"Al Ain International Specialist Eye Hospital\", \"phone\": \"03005319353\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0112954,
+          33.698086
+        ]
+      },
+      "properties": {
+        "osm_id": 61146664,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "bank",
+        "name": "عسکری بینک",
+        "addr_full": "Street 65, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Street 65\", \"amenity\": \"bank\", \"atm\": \"yes\", \"brand\": \"عسکری بینک\", \"brand:ar\": \"بنك العسكري\", \"brand:en\": \"Askari Bank\", \"brand:ur\": \"عسکری بینک\", \"brand:website\": \"https://askaribank.com/urdu/?lang=ur\", \"brand:wikidata\": \"Q4807137\", \"brand:wikipedia\": \"ur:عسکری بینک\", \"brand:wikipedia:ur\": \"عسکری بینک\", \"name\": \"عسکری بینک\", \"name:ar\": \"بنك العسكري\", \"name:en\": \"Askari Bank\", \"name:ur\": \"عسکری بینک\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0105887,
+          33.6976525
+        ]
+      },
+      "properties": {
+        "osm_id": 61146673,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "bank",
+        "name": "الائیڈ بینک لمیٹڈ",
+        "addr_full": "Street 65, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Street 65\", \"amenity\": \"bank\", \"atm\": \"yes\", \"brand\": \"الائیڈ بینک لمیٹڈ\", \"brand:ar\": \"بنك الحلفاء المحدود\", \"brand:en\": \"Allied Bank Limited\", \"brand:ur\": \"الائیڈ بینک لمیٹڈ\", \"brand:website\": \"https://www.abl.com/?lang=ur\", \"brand:wikidata\": \"Q4732553\", \"brand:wikipedia\": \"ur:الائیڈ بینک لمیٹڈ\", \"brand:wikipedia:ar\": \"بنك الحلفاء المحدود\", \"brand:wikipedia:ur\": \"الائیڈ بینک لمیٹڈ\", \"name\": \"الائیڈ بینک لمیٹڈ\", \"name:ar\": \"بنك الحلفاء المحدود\", \"name:en\": \"ABL\", \"name:ur\": \"الائیڈ بینک لمیٹڈ\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0118772,
+          33.6960411
+        ]
+      },
+      "properties": {
+        "osm_id": 61146691,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "bank",
+        "name": "United Bank Ltd",
+        "addr_full": "Street 54, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Street 54\", \"amenity\": \"bank\", \"atm\": \"yes\", \"name\": \"United Bank Ltd\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.986826,
+          33.683766
+        ]
+      },
+      "properties": {
+        "osm_id": 212538228,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "bank",
+        "name": "اسٹینڈرڈ چارٹرڈ",
+        "addr_full": "Hilal Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Hilal Road\", \"amenity\": \"bank\", \"atm\": \"yes\", \"brand\": \"اسٹینڈرڈ چارٹرڈ\", \"brand:ur\": \"اسٹینڈرڈ چارٹرڈ\", \"brand:website\": \"https://www.sc.com/pk/ur/\", \"brand:wikidata\": \"Q7598200\", \"brand:wikipedia\": \"ur:سٹینڈرڈ چارٹرڈ پاکستان\", \"brand:wikipedia:ur\": \"سٹینڈرڈ چارٹرڈ پاکستان\", \"long_name\": \"اسٹینڈرڈ چارٹرڈ پاکستان\", \"long_name:ur\": \"اسٹینڈرڈ چارٹرڈ پاکستان\", \"name\": \"اسٹینڈرڈ چارٹرڈ\", \"name:en\": \"Standard Chartered\", \"name:ur\": \"اسٹینڈرڈ چارٹرڈ\", \"operator\": \"اسٹینڈرڈ چارٹرڈ\", \"operator:ur\": \"اسٹینڈرڈ چارٹرڈ\", \"operator:website\": \"https://www.sc.com/pk/ur/\", \"operator:wikidata\": \"Q7598200\", \"operator:wikipedia\": \"ur:سٹینڈرڈ چارٹرڈ پاکستان\", \"operator:wikipedia:ur\": \"سٹینڈرڈ چارٹرڈ پاکستان\", \"short_name\": \"ایس سی بی\", \"short_name:ur\": \"ایس سی بی\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0113365,
+          33.6966838
+        ]
+      },
+      "properties": {
+        "osm_id": 234511823,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "bank",
+        "name": "اسٹینڈرڈ چارٹرڈ",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"bank\", \"atm\": \"yes\", \"brand\": \"اسٹینڈرڈ چارٹرڈ\", \"brand:ur\": \"اسٹینڈرڈ چارٹرڈ\", \"brand:website\": \"https://www.sc.com/pk/ur/\", \"brand:wikidata\": \"Q7598200\", \"brand:wikipedia\": \"ur:سٹینڈرڈ چارٹرڈ پاکستان\", \"brand:wikipedia:ur\": \"سٹینڈرڈ چارٹرڈ پاکستان\", \"long_name\": \"اسٹینڈرڈ چارٹرڈ پاکستان\", \"long_name:ur\": \"اسٹینڈرڈ چارٹرڈ پاکستان\", \"name\": \"اسٹینڈرڈ چارٹرڈ\", \"name:en\": \"Standard Chartered\", \"name:ur\": \"اسٹینڈرڈ چارٹرڈ\", \"operator\": \"اسٹینڈرڈ چارٹرڈ\", \"operator:ur\": \"اسٹینڈرڈ چارٹرڈ\", \"operator:website\": \"https://www.sc.com/pk/ur/\", \"operator:wikidata\": \"Q7598200\", \"operator:wikipedia\": \"ur:سٹینڈرڈ چارٹرڈ پاکستان\", \"operator:wikipedia:ur\": \"سٹینڈرڈ چارٹرڈ پاکستان\", \"short_name\": \"ایس سی بی\", \"short_name:ur\": \"ایس سی بی\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9887772,
+          33.684909
+        ]
+      },
+      "properties": {
+        "osm_id": 237459304,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "bank",
+        "name": "City Bank",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"bank\", \"atm\": \"yes\", \"is_in\": \"F-11 Markaz, F-11, Islamabad\", \"name\": \"City Bank\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9868747,
+          33.6838147
+        ]
+      },
+      "properties": {
+        "osm_id": 237492791,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "bank",
+        "name": "Saudi Pak Commercial Bank",
+        "addr_full": "Hilal Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Hilal Road\", \"amenity\": \"bank\", \"atm\": \"yes\", \"name\": \"Saudi Pak Commercial Bank\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9860121,
+          33.6843984
+        ]
+      },
+      "properties": {
+        "osm_id": 237495339,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "bank",
+        "name": "عسکری بینک",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"bank\", \"atm\": \"yes\", \"brand\": \"عسکری بینک\", \"brand:ar\": \"بنك العسكري\", \"brand:en\": \"Askari Bank\", \"brand:ur\": \"عسکری بینک\", \"brand:website\": \"https://askaribank.com/urdu/?lang=ur\", \"brand:wikidata\": \"Q4807137\", \"brand:wikipedia\": \"ur:عسکری بینک\", \"brand:wikipedia:ur\": \"عسکری بینک\", \"name\": \"عسکری بینک\", \"name:ar\": \"بنك العسكري\", \"name:en\": \"Askari Bank\", \"name:ur\": \"عسکری بینک\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0755121,
+          33.7297173
+        ]
+      },
+      "properties": {
+        "osm_id": 660956958,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "pharmacy",
+        "name": "Shaheen Pharmacy",
+        "addr_full": "School Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"School Road\", \"amenity\": \"pharmacy\", \"healthcare\": \"pharmacy\", \"name\": \"Shaheen Pharmacy\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0753504,
+          33.7296318
+        ]
+      },
+      "properties": {
+        "osm_id": 663128024,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "pharmacy",
+        "name": "Watsons",
+        "addr_full": "School Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"School Road\", \"amenity\": \"pharmacy\", \"brand\": \"Watsons\", \"brand:wikidata\": \"Q7974785\", \"brand:wikipedia\": \"en:Watsons\", \"healthcare\": \"pharmacy\", \"name\": \"Watsons\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0790634,
+          33.7316274
+        ]
+      },
+      "properties": {
+        "osm_id": 800042361,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "pharmacy",
+        "name": "GNC",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"pharmacy\", \"healthcare\": \"pharmacy\", \"name\": \"GNC\", \"operator\": \"GNC\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0822723,
+          33.7225704
+        ]
+      },
+      "properties": {
+        "osm_id": 1140767607,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "pharmacy",
+        "name": "Goodwill Pharmacy",
+        "addr_full": "Shaheed-e-Millat Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Shaheed-e-Millat Road\", \"amenity\": \"pharmacy\", \"healthcare\": \"pharmacy\", \"name\": \"Goodwill Pharmacy\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0702433,
+          33.7001979
+        ]
+      },
+      "properties": {
+        "osm_id": 1707143902,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "pharmacy",
+        "name": "FGD- G7/1 Dispensary",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"pharmacy\", \"dispensing\": \"yes\", \"name\": \"FGD- G7/1 Dispensary\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0714557,
+          33.7004344
+        ]
+      },
+      "properties": {
+        "osm_id": 1707143912,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "pharmacy",
+        "name": "Federal Government Dispensary - G-7/1",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"pharmacy\", \"dispensing\": \"yes\", \"name\": \"Federal Government Dispensary - G-7/1\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0747389,
+          33.6721651
+        ]
+      },
+      "properties": {
+        "osm_id": 4562011451,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "pharmacy",
+        "name": null,
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"pharmacy\", \"healthcare\": \"pharmacy\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0753908,
+          33.6673746
+        ]
+      },
+      "properties": {
+        "osm_id": 4562014739,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "pharmacy",
+        "name": "Shaheen Chemist",
+        "addr_full": "Tipu Sultan Road, I 8, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:housenumber\": \"I 8\", \"addr:street\": \"Tipu Sultan Road\", \"amenity\": \"pharmacy\", \"name\": \"Shaheen Chemist\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0112495,
+          33.6988403
+        ]
+      },
+      "properties": {
+        "osm_id": 61146835,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "fuel",
+        "name": "Total Parco , F-10 Markaz",
+        "addr_full": "10th Avenue, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"10th Avenue\", \"amenity\": \"fuel\", \"fuel:cng\": \"yes\", \"name\": \"Total Parco , F-10 Markaz\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0833662,
+          33.7173095
+        ]
+      },
+      "properties": {
+        "osm_id": 104694747,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "fuel",
+        "name": null,
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"fuel\", \"fuel:cng\": \"yes\", \"is_in\": \"Melody Market, G-6, Islamabad\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0389002,
+          33.7100027
+        ]
+      },
+      "properties": {
+        "osm_id": 225578480,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "fuel",
+        "name": "پاکستان اسٹیٹ آئل",
+        "addr_full": "F8 markaz, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"F8 markaz\", \"amenity\": \"fuel\", \"brand\": \"پاکستان اسٹیٹ آئل\", \"brand:ar\": \"النفط الحكومية الباكستانية\", \"brand:ks\": \"پاکستان اسٹیٹ آئل\", \"brand:ur\": \"پاکستان اسٹیٹ آئل\", \"brand:wikidata\": \"Q2741455\", \"brand:wikipedia\": \"ur:پاکستان اسٹیٹ آئل\", \"brand:wikipedia:ur\": \"پاکستان اسٹیٹ آئل\", \"fuel:HSD\": \"yes\", \"fuel:Hi_octane\": \"yes\", \"fuel:cng\": \"yes\", \"fuel:diesel\": \"yes\", \"fuel:regular\": \"yes\", \"fuel:super\": \"yes\", \"name\": \"پاکستان اسٹیٹ آئل\", \"name:ar\": \"النفط الحكومية الباكستانية\", \"name:en\": \"Pakistan State Oil\", \"name:ks\": \"پاکستان اسٹیٹ آئل\", \"name:pnb\": \"پاکستان سٹیٹ آئل\", \"name:sd\": \"پاڪستان اسٽيٽ آئل\", \"name:ur\": \"پاکستان اسٹیٹ آئل\", \"short_name\": \"پی ایس او\", \"short_name:ur\": \"پی ایس او\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.033746,
+          33.6893963
+        ]
+      },
+      "properties": {
+        "osm_id": 232641948,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "fuel",
+        "name": "PSO Pump G-9 Markez",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"fuel\", \"brand\": \"پاکستان اسٹیٹ آئل\", \"brand:en\": \"Pakistan State Oil\", \"brand:pa\": \"ਪਾਕਸਤਾਨ ਸਟੇਟ ਆਇਲ\", \"brand:pnb\": \"پاکستان سٹیٹ آئیل\", \"brand:ur\": \"پاکستان اسٹیٹ آئل\", \"brand:wikidata\": \"Q2741455\", \"fuel:cng\": \"yes\", \"is_in\": \"G-9 Markaz, G-9, Islamabad\", \"name\": \"PSO Pump G-9 Markez\", \"name:en\": \"Pakistan State Oil\", \"name:pa\": \"ਪਾਕਸਤਾਨ ਸਟੇਟ ਆਇਲ\", \"name:pnb\": \"پاکستان سٹیٹ آئیل\", \"name:ur\": \"پاکستان اسٹیٹ آئل\", \"operator\": \"PSO Pump G-9 Markez\", \"short_name:en\": \"PSO\", \"source\": \"Yahoo + Local Knowledge\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.040259,
+          33.7132584
+        ]
+      },
+      "properties": {
+        "osm_id": 243495585,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "fuel",
+        "name": "Total Station",
+        "addr_full": "Kohistan Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Kohistan Road\", \"amenity\": \"fuel\", \"brand\": \"Caltex\", \"fuel:cng\": \"yes\", \"name\": \"Total Station\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0501914,
+          33.6985338
+        ]
+      },
+      "properties": {
+        "osm_id": 244393698,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "fuel",
+        "name": "پاکستان اسٹیٹ آئل",
+        "addr_full": "Hanna Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Hanna Road\", \"amenity\": \"fuel\", \"brand\": \"پاکستان اسٹیٹ آئل\", \"brand:ar\": \"النفط الحكومية الباكستانية\", \"brand:ks\": \"پاکستان اسٹیٹ آئل\", \"brand:ur\": \"پاکستان اسٹیٹ آئل\", \"brand:wikidata\": \"Q2741455\", \"brand:wikipedia\": \"ur:پاکستان اسٹیٹ آئل\", \"brand:wikipedia:ur\": \"پاکستان اسٹیٹ آئل\", \"fuel:cng\": \"yes\", \"name\": \"پاکستان اسٹیٹ آئل\", \"name:ar\": \"النفط الحكومية الباكستانية\", \"name:en\": \"Pakistan State Oil\", \"name:ks\": \"پاکستان اسٹیٹ آئل\", \"name:pnb\": \"پاکستان سٹیٹ آئل\", \"name:sd\": \"پاڪستان اسٽيٽ آئل\", \"name:ur\": \"پاکستان اسٹیٹ آئل\", \"short_name\": \"پی ایس او\", \"short_name:ur\": \"پی ایس او\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.1048122,
+          33.7086323
+        ]
+      },
+      "properties": {
+        "osm_id": 249166537,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "fuel",
+        "name": "Shell Pump",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"fuel\", \"is_in\": \"Islamabad\", \"name\": \"Shell Pump\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0783391,
+          33.7282215
+        ]
+      },
+      "properties": {
+        "osm_id": 253127769,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "fuel",
+        "name": "پاکستان اسٹیٹ آئل",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"fuel\", \"brand\": \"پاکستان اسٹیٹ آئل\", \"brand:ar\": \"النفط الحكومية الباكستانية\", \"brand:en\": \"Pakistan State Oil\", \"brand:ks\": \"پاکستان اسٹیٹ آئل\", \"brand:pa\": \"ਪਾਕਸਤਾਨ ਸਟੇਟ ਆਇਲ\", \"brand:pnb\": \"پاکستان سٹیٹ آئیل\", \"brand:ur\": \"پاکستان اسٹیٹ آئل\", \"brand:wikidata\": \"Q2741455\", \"brand:wikipedia\": \"ur:پاکستان اسٹیٹ آئل\", \"brand:wikipedia:ur\": \"پاکستان اسٹیٹ آئل\", \"name\": \"پاکستان اسٹیٹ آئل\", \"name:ar\": \"النفط الحكومية الباكستانية\", \"name:en\": \"Pakistan State Oil\", \"name:ks\": \"پاکستان اسٹیٹ آئل\", \"name:pa\": \"ਪਾਕਸਤਾਨ ਸਟੇਟ ਆਇਲ\", \"name:pnb\": \"پاکستان سٹیٹ آئل\", \"name:sd\": \"پاڪستان اسٽيٽ آئل\", \"name:ur\": \"پاکستان اسٹیٹ آئل\", \"short_name\": \"پی ایس او\", \"short_name:en\": \"PSO\", \"short_name:ur\": \"پی ایس او\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0057153,
+          33.6804943
+        ]
+      },
+      "properties": {
+        "osm_id": 244186616,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "place_of_worship",
+        "name": "Masjid Al Qasim",
+        "addr_full": "Street 14, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Street 14\", \"amenity\": \"place_of_worship\", \"denomination\": \"sunni\", \"name\": \"Masjid Al Qasim\", \"religion\": \"muslim\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0452355,
+          33.7110561
+        ]
+      },
+      "properties": {
+        "osm_id": 245441172,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "place_of_worship",
+        "name": "ایف-8 چرچ",
+        "addr_full": "اسٹریٹ 55, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"اسٹریٹ 55\", \"amenity\": \"place_of_worship\", \"denomination\": \"catholic\", \"name\": \"ایف-8 چرچ\", \"name:ar\": \"كنيسة إف-8\", \"name:en\": \"F-8 Church\", \"name:ur\": \"ایف-8 چرچ\", \"religion\": \"christian\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0480234,
+          33.7275661
+        ]
+      },
+      "properties": {
+        "osm_id": 246850955,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "place_of_worship",
+        "name": "Masjid Alfurqan",
+        "addr_full": "Street 11, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Street 11\", \"amenity\": \"place_of_worship\", \"denomination\": \"sunni\", \"name\": \"Masjid Alfurqan\", \"religion\": \"muslim\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0743635,
+          33.7241547
+        ]
+      },
+      "properties": {
+        "osm_id": 247876724,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "place_of_worship",
+        "name": null,
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"place_of_worship\", \"created_by\": \"Potlatch 0.7b\", \"denomination\": \"sunni\", \"religion\": \"muslim\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.990963,
+          33.6704887
+        ]
+      },
+      "properties": {
+        "osm_id": 255263515,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "place_of_worship",
+        "name": "Jamia masjid Mai reshman",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"place_of_worship\", \"denomination\": \"sunni\", \"name\": \"Jamia masjid Mai reshman\", \"religion\": \"muslim\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0681513,
+          33.699839
+        ]
+      },
+      "properties": {
+        "osm_id": 256052672,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "place_of_worship",
+        "name": "Jama Masjid-e-Murtaza",
+        "addr_full": "Street 33, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Street 33\", \"amenity\": \"place_of_worship\", \"denomination\": \"sunni\", \"name\": \"Jama Masjid-e-Murtaza\", \"religion\": \"muslim\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0744925,
+          33.7304298
+        ]
+      },
+      "properties": {
+        "osm_id": 256218900,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "place_of_worship",
+        "name": null,
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"place_of_worship\", \"created_by\": \"Potlatch 0.8a\", \"denomination\": \"sunni\", \"is_in\": \"F-6/3, Islamabad\", \"religion\": \"muslim\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0790074,
+          33.7358736
+        ]
+      },
+      "properties": {
+        "osm_id": 256219017,
+        "osm_type": "node",
+        "primary_key": "amenity",
+        "primary_value": "place_of_worship",
+        "name": null,
+        "addr_full": "Street 10, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Street 10\", \"amenity\": \"place_of_worship\", \"denomination\": \"sunni\", \"religion\": \"muslim\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.1397655,
+          33.672493
+        ]
+      },
+      "properties": {
+        "osm_id": 242106656,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "supermarket",
+        "name": "شہزاد ٹاؤن Shehzad Town Chak Shehzad islamabad",
+        "addr_full": "Chak shehzad, Shehzad Town, islamabad, 46000",
+        "all_tags_json": "{\"addr:city\": \"islamabad\", \"addr:housenumber\": \"Shehzad Town\", \"addr:postcode\": \"46000\", \"addr:street\": \"Chak shehzad\", \"name\": \"شہزاد ٹاؤن Shehzad Town Chak Shehzad islamabad\", \"name:en\": \"Shehzad Town Chak Shehzad islamabad\", \"name:ur\": \"شہزاد ٹاؤن\", \"shop\": \"supermarket\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9871111,
+          33.6834934
+        ]
+      },
+      "properties": {
+        "osm_id": 659736441,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "supermarket",
+        "name": "Food 24 Hours",
+        "addr_full": null,
+        "all_tags_json": "{\"amenity\": \"fast_food\", \"is_in\": \"F-11 Markaz, Islamabad\", \"name\": \"Food 24 Hours\", \"shop\": \"supermarket\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0340171,
+          33.687286
+        ]
+      },
+      "properties": {
+        "osm_id": 4254679193,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "supermarket",
+        "name": "Punjab Cash & Carry ",
+        "addr_full": null,
+        "all_tags_json": "{\"name\": \"Punjab Cash & Carry \", \"opening_hours\": \"Mo-Su 09:30-23:00\", \"phone\": \"0512285678\", \"shop\": \"supermarket\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0404178,
+          33.7126976
+        ]
+      },
+      "properties": {
+        "osm_id": 4261721890,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "supermarket",
+        "name": "M&S Store",
+        "addr_full": "Kohistan Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Kohistan Road\", \"name\": \"M&S Store\", \"shop\": \"supermarket\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0695947,
+          33.7115228
+        ]
+      },
+      "properties": {
+        "osm_id": 4515463994,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "supermarket",
+        "name": "Al-Habib Market",
+        "addr_full": null,
+        "all_tags_json": "{\"name\": \"Al-Habib Market\", \"name:en\": \"Al-Habib Market\", \"shop\": \"supermarket\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0755462,
+          33.6690857
+        ]
+      },
+      "properties": {
+        "osm_id": 4561972037,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "supermarket",
+        "name": "Buy Best",
+        "addr_full": null,
+        "all_tags_json": "{\"name\": \"Buy Best\", \"shop\": \"supermarket\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0750903,
+          33.6691639
+        ]
+      },
+      "properties": {
+        "osm_id": 4561973637,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "supermarket",
+        "name": "Madina Cash & Carry MCC",
+        "addr_full": null,
+        "all_tags_json": "{\"name\": \"Madina Cash & Carry MCC\", \"shop\": \"supermarket\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0398803,
+          33.6893093
+        ]
+      },
+      "properties": {
+        "osm_id": 4571538592,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "supermarket",
+        "name": "Taqwa Market",
+        "addr_full": "Gali 109",
+        "all_tags_json": "{\"addr:street\": \"Gali 109\", \"name\": \"Taqwa Market\", \"name:en\": \"Taqwa Market\", \"shop\": \"supermarket\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9988425,
+          33.6905349
+        ]
+      },
+      "properties": {
+        "osm_id": 241905500,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "convenience",
+        "name": "Tariq Market",
+        "addr_full": "اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:place\": \"F - 10/2\", \"name\": \"Tariq Market\", \"shop\": \"convenience\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9803484,
+          33.6822808
+        ]
+      },
+      "properties": {
+        "osm_id": 258067338,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "convenience",
+        "name": "Salman Market",
+        "addr_full": "Street 24, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Street 24\", \"landuse\": \"retail\", \"name\": \"Salman Market\", \"shop\": \"convenience\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.04055,
+          33.7127752
+        ]
+      },
+      "properties": {
+        "osm_id": 920248536,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "convenience",
+        "name": "Bakeman",
+        "addr_full": "Kohistan Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Kohistan Road\", \"name\": \"Bakeman\", \"shop\": \"convenience\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0786378,
+          33.7356596
+        ]
+      },
+      "properties": {
+        "osm_id": 1089417190,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "convenience",
+        "name": null,
+        "addr_full": null,
+        "all_tags_json": "{\"is_in\": \"Kohsar Market, F-6/3, Islamabad\", \"shop\": \"convenience\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0743875,
+          33.7291957
+        ]
+      },
+      "properties": {
+        "osm_id": 1230663592,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "convenience",
+        "name": "Sham's",
+        "addr_full": "School Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"School Road\", \"name\": \"Sham's\", \"shop\": \"convenience\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.062723,
+          33.712981
+        ]
+      },
+      "properties": {
+        "osm_id": 1240999870,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "convenience",
+        "name": "Am-Pm grocery",
+        "addr_full": null,
+        "all_tags_json": "{\"cmt\": \"25-DEC-09 11:17:57\", \"description\": \"25-DEC-09 11:17:57\", \"ele\": \"551.197510\", \"name\": \"Am-Pm grocery\", \"shop\": \"convenience\", \"source\": \"GPS\", \"sym\": \"Shopping Center\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0428007,
+          33.7161266
+        ]
+      },
+      "properties": {
+        "osm_id": 1425890636,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "convenience",
+        "name": "Abbasi Market",
+        "addr_full": null,
+        "all_tags_json": "{\"name\": \"Abbasi Market\", \"shop\": \"convenience\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0437969,
+          33.6675584
+        ]
+      },
+      "properties": {
+        "osm_id": 3438923548,
+        "osm_type": "node",
+        "primary_key": "shop",
+        "primary_value": "convenience",
+        "name": "Khokaa",
+        "addr_full": null,
+        "all_tags_json": "{\"alt_name\": \"guddu's khokaa\", \"designation\": \"tuck shop\", \"name\": \"Khokaa\", \"shop\": \"convenience\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0010898,
+          33.689973
+        ]
+      },
+      "properties": {
+        "osm_id": 3761388557,
+        "osm_type": "node",
+        "primary_key": "leisure",
+        "primary_value": "park",
+        "name": null,
+        "addr_full": null,
+        "all_tags_json": "{\"leisure\": \"park\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.1523582,
+          33.681986
+        ]
+      },
+      "properties": {
+        "osm_id": 4735701885,
+        "osm_type": "node",
+        "primary_key": "leisure",
+        "primary_value": "park",
+        "name": "sfafd",
+        "addr_full": null,
+        "all_tags_json": "{\"leisure\": \"park\", \"name\": \"sfafd\", \"name:ace\": \"fds\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0505992,
+          33.7081004
+        ]
+      },
+      "properties": {
+        "osm_id": 4956514624,
+        "osm_type": "node",
+        "primary_key": "leisure",
+        "primary_value": "park",
+        "name": "Fun City",
+        "addr_full": "Nazim ud Din Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Nazim ud Din Road\", \"leisure\": \"park\", \"name\": \"Fun City\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0509441,
+          33.7414923
+        ]
+      },
+      "properties": {
+        "osm_id": 5365964605,
+        "osm_type": "node",
+        "primary_key": "leisure",
+        "primary_value": "park",
+        "name": "Airblue Crash Monument",
+        "addr_full": null,
+        "all_tags_json": "{\"leisure\": \"park\", \"name\": \"Airblue Crash Monument\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0184542,
+          33.672375
+        ]
+      },
+      "properties": {
+        "osm_id": 6452831180,
+        "osm_type": "node",
+        "primary_key": "leisure",
+        "primary_value": "park",
+        "name": "FG",
+        "addr_full": null,
+        "all_tags_json": "{\"leisure\": \"park\", \"name\": \"FG\", \"operator\": \"DSF\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0133624,
+          33.6760059
+        ]
+      },
+      "properties": {
+        "osm_id": 6452832189,
+        "osm_type": "node",
+        "primary_key": "leisure",
+        "primary_value": "park",
+        "name": "F;LKL;MKKM;",
+        "addr_full": null,
+        "all_tags_json": "{\"leisure\": \"park\", \"name\": \"F;LKL;MKKM;\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0209926,
+          33.7021194
+        ]
+      },
+      "properties": {
+        "osm_id": 7577900885,
+        "osm_type": "node",
+        "primary_key": "leisure",
+        "primary_value": "park",
+        "name": "فاطمہ جناح پارک",
+        "addr_full": "اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"alt_name\": \"ایف-9 پارک;ایف-9\", \"alt_name:ar\": \"متنزه إف-9;إف-9\", \"alt_name:ur\": \"ایف-9 پارک;ایف-9\", \"alt_name:zh-Hans\": \"F9公园\", \"leisure\": \"park\", \"name\": \"فاطمہ جناح پارک\", \"name:ar\": \"متنزه فاطمة جناح\", \"name:en\": \"Fatima Jinnah Park\", \"name:etymology\": \"فاطمة جناح\", \"name:etymology:wikidata\": \"Q464947\", \"name:etymology:wikipedia\": \"ar:فاطمة جناح\", \"name:hi\": \"फातिमा जिन्ना पार्क\", \"name:pnb\": \"کیپیٹل پارک اسلام آباد\", \"name:ur\": \"فاطمہ جناح پارک\", \"tourism\": \"attraction\", \"wikidata\": \"Q3305506\", \"wikimedia_commons\": \"Category:Fatima Jinnah Park\", \"wikipedia\": \"pnb:کیپیٹل پارک اسلام آباد\", \"wikipedia:pnb\": \"کیپیٹل پارک اسلام آباد\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0456919,
+          33.6638036
+        ]
+      },
+      "properties": {
+        "osm_id": 9287056961,
+        "osm_type": "node",
+        "primary_key": "leisure",
+        "primary_value": "park",
+        "name": null,
+        "addr_full": null,
+        "all_tags_json": "{\"leisure\": \"park\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0362653,
+          33.6822331
+        ]
+      },
+      "properties": {
+        "osm_id": 275772610,
+        "osm_type": "node",
+        "primary_key": "tourism",
+        "primary_value": "hotel",
+        "name": "Laraib Inn",
+        "addr_full": "Rohtas Road",
+        "all_tags_json": "{\"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Rohtas Road\", \"name\": \"Laraib Inn\", \"source\": \"Yahoo + Local Knowledge\", \"tourism\": \"hotel\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0565451,
+          33.7211151
+        ]
+      },
+      "properties": {
+        "osm_id": 977852301,
+        "osm_type": "node",
+        "primary_key": "tourism",
+        "primary_value": "hotel",
+        "name": "Hill View Hotel",
+        "addr_full": "F 7 Markaz, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"F 7 Markaz\", \"email\": \"info@hotelhillview.net\", \"fax\": \"+92-51-2608520\", \"internet_access\": \"yes\", \"name\": \"Hill View Hotel\", \"phone\": \"+92-51-8319000\", \"stars\": \"2\", \"tourism\": \"hotel\", \"website\": \"https://hotelhillview.net/\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.068271,
+          33.728561
+        ]
+      },
+      "properties": {
+        "osm_id": 2142192669,
+        "osm_type": "node",
+        "primary_key": "tourism",
+        "primary_value": "hotel",
+        "name": "Fortalice Koshar",
+        "addr_full": "26, F-6/2, 18, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:housenumber\": \"18\", \"addr:street\": \"26, F-6/2\", \"internet_access\": \"wlan\", \"internet_access:fee\": \"yes\", \"name\": \"Fortalice Koshar\", \"note\": \"kohsar@fortalice.com.pk\", \"phone\": \"+92 51 2820304\", \"smoking\": \"separated\", \"tourism\": \"hotel\", \"website\": \"www.fortalice.com.pk\", \"wheelchair\": \"limited\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0520807,
+          33.7195965
+        ]
+      },
+      "properties": {
+        "osm_id": 2169733225,
+        "osm_type": "node",
+        "primary_key": "tourism",
+        "primary_value": "hotel",
+        "name": "Comfort Residency",
+        "addr_full": "College Road, Street 16, F-7/2, 47, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:housenumber\": \"47\", \"addr:province\": \"Punjab\", \"addr:street\": \"College Road, Street 16, F-7/2\", \"internet_access\": \"wlan\", \"internet_access:fee\": \"no\", \"name\": \"Comfort Residency\", \"note\": \"Very good accomondation in Islamabad close the shops and restaurants.\", \"phone\": \"+92 51 2609301\", \"smoking\": \"separated\", \"source\": \"local_knowledge\", \"tourism\": \"hotel\", \"website\": \"www.comfortresidencyisb.com\", \"wheelchair\": \"limited\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0596301,
+          33.7107225
+        ]
+      },
+      "properties": {
+        "osm_id": 2247154027,
+        "osm_type": "node",
+        "primary_key": "tourism",
+        "primary_value": "hotel",
+        "name": "ایلچی کانٹی نینٹل ہوٹل",
+        "addr_full": "اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"name\": \"ایلچی کانٹی نینٹل ہوٹل\", \"name:en\": \"Envoy Continental Hotel\", \"name:ur\": \"ایلچی کانٹی نینٹل ہوٹل\", \"tourism\": \"hotel\", \"wikidata\": \"Q112002432\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0861695,
+          33.7326104
+        ]
+      },
+      "properties": {
+        "osm_id": 3517205624,
+        "osm_type": "node",
+        "primary_key": "tourism",
+        "primary_value": "hotel",
+        "name": "Marriott Hotel",
+        "addr_full": "Service Road West G5;Service Road West F5, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Service Road West G5;Service Road West F5\", \"name\": \"Marriott Hotel\", \"tourism\": \"hotel\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0690439,
+          33.7051387
+        ]
+      },
+      "properties": {
+        "osm_id": 3810190427,
+        "osm_type": "node",
+        "primary_key": "tourism",
+        "primary_value": "hotel",
+        "name": "Heaven Heights Hotel",
+        "addr_full": null,
+        "all_tags_json": "{\"name\": \"Heaven Heights Hotel\", \"tourism\": \"hotel\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0714023,
+          33.703488
+        ]
+      },
+      "properties": {
+        "osm_id": 4338385491,
+        "osm_type": "node",
+        "primary_key": "tourism",
+        "primary_value": "hotel",
+        "name": "Hotel Al-Habib",
+        "addr_full": "Muhammad Buksh Road",
+        "all_tags_json": "{\"addr:street\": \"Muhammad Buksh Road\", \"air_conditioning\": \"yes\", \"check_date\": \"2023-03-26\", \"internet_access\": \"wlan\", \"name\": \"Hotel Al-Habib\", \"opening_hours\": \"24/7\", \"phone\": \"923004137171\", \"reservation\": \"yes\", \"stars\": \"2\", \"tourism\": \"hotel\", \"wheelchair\": \"no\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0969569,
+          33.7301179
+        ]
+      },
+      "properties": {
+        "osm_id": 256192615,
+        "osm_type": "node",
+        "primary_key": "office",
+        "primary_value": "government",
+        "name": "پارلیمنٹ ہاؤس",
+        "addr_full": "اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"name\": \"پارلیمنٹ ہاؤس\", \"name:ar\": \"مبنى البرلمان\", \"name:en\": \"Parliament House\", \"name:es\": \"Casa del Parlamento\", \"name:ur\": \"پارلیمنٹ ہاؤس\", \"office\": \"government\", \"wikidata\": \"Q2665089\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0803143,
+          33.7034525
+        ]
+      },
+      "properties": {
+        "osm_id": 297648116,
+        "osm_type": "node",
+        "primary_key": "office",
+        "primary_value": "government",
+        "name": "Directorate General ISI",
+        "addr_full": "Khayaban-e-Suhrwardy, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Khayaban-e-Suhrwardy\", \"name\": \"Directorate General ISI\", \"office\": \"government\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.1024313,
+          33.7186686
+        ]
+      },
+      "properties": {
+        "osm_id": 1089612315,
+        "osm_type": "node",
+        "primary_key": "office",
+        "primary_value": "government",
+        "name": "وزارت خارجہ",
+        "addr_full": "بائیسکل روڈ, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"بائیسکل روڈ\", \"name\": \"وزارت خارجہ\", \"name:ar\": \"وزارة الشئون الخارجية\", \"name:de\": \"Ministerium für Auswärtige Angelegenheiten\", \"name:en\": \"Ministry of Foreign Affairs\", \"name:es\": \"Ministerio de Relaciones Exteriores\", \"name:ur\": \"وزارت خارجہ\", \"office\": \"government\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0654703,
+          33.7153307
+        ]
+      },
+      "properties": {
+        "osm_id": 1164635860,
+        "osm_type": "node",
+        "primary_key": "office",
+        "primary_value": "government",
+        "name": "Securities and Exchange Commission of Pakistan (SECP)",
+        "addr_full": "Jinnah Avenue, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Jinnah Avenue\", \"name\": \"Securities and Exchange Commission of Pakistan (SECP)\", \"office\": \"government\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0957686,
+          33.7248284
+        ]
+      },
+      "properties": {
+        "osm_id": 2346585366,
+        "osm_type": "node",
+        "primary_key": "office",
+        "primary_value": "government",
+        "name": "Intellectual Property Organization Of Pakistan",
+        "addr_full": "Service Road West G5;Service Road West F5, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Service Road West G5;Service Road West F5\", \"name\": \"Intellectual Property Organization Of Pakistan\", \"office\": \"government\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0850972,
+          33.7185423
+        ]
+      },
+      "properties": {
+        "osm_id": 3517204507,
+        "osm_type": "node",
+        "primary_key": "office",
+        "primary_value": "government",
+        "name": "Ministry of Religious Affairs",
+        "addr_full": "Post Office Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Post Office Road\", \"name\": \"Ministry of Religious Affairs\", \"office\": \"government\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.1405125,
+          33.6877951
+        ]
+      },
+      "properties": {
+        "osm_id": 3661923073,
+        "osm_type": "node",
+        "primary_key": "office",
+        "primary_value": "government",
+        "name": "National Emergency Operations Centre for Polio Eradication",
+        "addr_full": null,
+        "all_tags_json": "{\"name\": \"National Emergency Operations Centre for Polio Eradication\", \"office\": \"government\", \"ref\": \"D\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0319203,
+          33.6778276
+        ]
+      },
+      "properties": {
+        "osm_id": 4322683090,
+        "osm_type": "node",
+        "primary_key": "office",
+        "primary_value": "government",
+        "name": "IRSA",
+        "addr_full": "Service Road South G9",
+        "all_tags_json": "{\"addr:street\": \"Service Road South G9\", \"name\": \"IRSA\", \"office\": \"government\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0649213,
+          33.7174231
+        ]
+      },
+      "properties": {
+        "osm_id": 4261349011,
+        "osm_type": "node",
+        "primary_key": "healthcare",
+        "primary_value": "clinic",
+        "name": "Dr Salma Kafeel Clinic",
+        "addr_full": "Street 54, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Street 54\", \"amenity\": \"clinic\", \"healthcare\": \"clinic\", \"name\": \"Dr Salma Kafeel Clinic\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0800905,
+          33.7308751
+        ]
+      },
+      "properties": {
+        "osm_id": 4406908789,
+        "osm_type": "node",
+        "primary_key": "healthcare",
+        "primary_value": "clinic",
+        "name": "Aziz Medical Center",
+        "addr_full": "Street 16, اسلام آباد, 4400",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:postcode\": \"4400\", \"addr:street\": \"Street 16\", \"amenity\": \"clinic\", \"healthcare\": \"clinic\", \"name\": \"Aziz Medical Center\", \"opening_hours\": \"Mo-Fr 09:30-16:30\", \"phone\": \"+92512873191\", \"website\": \"http://amcpk.com\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0821087,
+          33.7224927
+        ]
+      },
+      "properties": {
+        "osm_id": 4954642831,
+        "osm_type": "node",
+        "primary_key": "healthcare",
+        "primary_value": "clinic",
+        "name": "Hadi Jor Clinic",
+        "addr_full": "AKM Fazul Haq Road, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"AKM Fazul Haq Road\", \"amenity\": \"clinic\", \"healthcare\": \"clinic\", \"name\": \"Hadi Jor Clinic\"}"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0941091,
+          33.7188404
+        ]
+      },
+      "properties": {
+        "osm_id": 4956663343,
+        "osm_type": "node",
+        "primary_key": "healthcare",
+        "primary_value": "clinic",
+        "name": "Haider Clinic",
+        "addr_full": "Ataturk Avenue (Embassy Road);Ataturk Avenue, اسلام آباد",
+        "all_tags_json": "{\"addr:city\": \"اسلام آباد\", \"addr:city:ar\": \"إسلام آباد\", \"addr:city:en\": \"Islamabad\", \"addr:city:ks\": \"اِسلام آبادٖ\", \"addr:city:pnb\": \"اسلام آباد\", \"addr:city:ps\": \"اسلام آباد\", \"addr:city:sd\": \"اسلام آباد\", \"addr:city:ur\": \"اسلام آباد\", \"addr:street\": \"Ataturk Avenue (Embassy Road);Ataturk Avenue\", \"amenity\": \"clinic\", \"healthcare\": \"clinic\", \"name\": \"Haider Clinic\"}"
+      }
+    }
+  ]
+}

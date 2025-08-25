@@ -1,0 +1,91 @@
+class_label,name,addr_full,text,lat,lon
+amenity:bank,Al Baraka,"Jinnah Avenue, اسلام آباد","Al Baraka — amenity:bank in Islamabad, Jinnah Avenue, اسلام آباد",33.7205139,73.07718
+amenity:bank,AlBaraka bank Pakistan,"Jinnah Avenue, اسلام آباد","AlBaraka bank Pakistan — amenity:bank in Islamabad, Jinnah Avenue, اسلام آباد",33.7120483,73.0613958
+amenity:bank,"Allied Bank Limitted G-8/1, Islamabad","Street 12, اسلام آباد","Allied Bank Limitted G-8/1, Islamabad — amenity:bank in Islamabad, Street 12, اسلام آباد",33.6892285,73.0518067
+amenity:bank,Askari Bank,,Askari Bank — amenity:bank in Islamabad,33.7457042,73.1378716
+amenity:bank,Bank Al-Habib,"Kurram Road, اسلام آباد","Bank Al-Habib — amenity:bank in Islamabad, Kurram Road, اسلام آباد",33.6882075,73.0319696
+amenity:cafe,Beverage stall Trail 5,,Beverage stall Trail 5 — amenity:cafe in Islamabad,33.7444678,73.0868784
+amenity:cafe,Bilal Cafe,"Ravi Road, اسلام آباد","Bilal Cafe — amenity:cafe in Islamabad, Ravi Road, اسلام آباد",33.6992011,73.0497318
+amenity:cafe,Burning Brownie,"Service Road South F-6;Service Road West F-6, اسلام آباد","Burning Brownie — amenity:cafe in Islamabad, Service Road South F-6;Service Road West F-6, اسلام آباد",33.7205159,73.0737842
+amenity:cafe,Cafe Behbud,"School Road, اسلام آباد","Cafe Behbud — amenity:cafe in Islamabad, School Road, اسلام آباد",33.7302643,73.0761811
+amenity:cafe,Cafe Paprika,"Street 54, اسلام آباد","Cafe Paprika — amenity:cafe in Islamabad, Street 54, اسلام آباد",33.6968332,73.0109527
+amenity:hospital,Abid Hospital,,Abid Hospital — amenity:hospital in Islamabad,33.7191069,73.0755159
+amenity:hospital,Advanced International Hospital G-8 Markaz,G-8 Markaz,"Advanced International Hospital G-8 Markaz — amenity:hospital in Islamabad, G-8 Markaz",33.6963846,73.0502887
+amenity:hospital,Al Ain International Specialist Eye Hospital,"Service Road East G-10, اسلام آباد","Al Ain International Specialist Eye Hospital — amenity:hospital in Islamabad, Service Road East G-10, اسلام آباد",33.6863031,73.0208068
+amenity:hospital,Ali Hospital,,Ali Hospital — amenity:hospital in Islamabad,33.6794571,73.0333924
+amenity:hospital,Ali Medical Centre,"Kohistan Road, اسلام آباد","Ali Medical Centre — amenity:hospital in Islamabad, Kohistan Road, اسلام آباد",33.7104738,73.0417644
+amenity:marketplace,Abu Huraira Market,,Abu Huraira Market — market/bazaar in Islamabad,33.6683204,73.066015
+amenity:marketplace,Adnan Market,,Adnan Market — market/bazaar in Islamabad,33.6720741,72.9914188
+amenity:marketplace,Ayesha Plaza,"Jinnah Avenue, اسلام آباد","Ayesha Plaza — market/bazaar in Islamabad, Jinnah Avenue, اسلام آباد",33.7200044,73.0761819
+amenity:marketplace,CDA Market,"Street 27, اسلام آباد","CDA Market — market/bazaar in Islamabad, Street 27, اسلام آباد",33.7239258,73.0401171
+amenity:marketplace,Darbar Market,,Darbar Market — market/bazaar in Islamabad,33.6627324,73.070088
+amenity:mosque,Abdullah bin Masood Masjid,,Abdullah bin Masood Masjid — amenity:mosque in Islamabad,33.6905163,73.0315227
+amenity:mosque,Abu Huraira Mosque,,Abu Huraira Mosque — amenity:mosque in Islamabad,33.6682847,73.0656274
+amenity:mosque,Admin Mosque,,Admin Mosque — amenity:mosque in Islamabad,33.7482976,73.1501805
+amenity:mosque,Al-Fateh mosque,"Street 3, اسلام آباد","Al-Fateh mosque — amenity:mosque in Islamabad, Street 3, اسلام آباد",33.6958779,73.034178
+amenity:mosque,Al-huda Mosque,"Street 39, اسلام آباد","Al-huda Mosque — amenity:mosque in Islamabad, Street 39, اسلام آباد",33.6689342,72.9890919
+amenity:restaurant,Ali Baba Restaurant,"Sachal Sarmast Road (G-11), اسلام آباد","Ali Baba Restaurant — amenity:restaurant in Islamabad, Sachal Sarmast Road (G-11), اسلام آباد",33.6696362,72.9990054
+amenity:restaurant,Amigos Cuisine,"Shabir Sharif Road, اسلام آباد","Amigos Cuisine — amenity:restaurant in Islamabad, Shabir Sharif Road, اسلام آباد",33.6679723,72.9986473
+amenity:restaurant,Atrio Cafe & Grill,"College Road, اسلام آباد","Atrio Cafe & Grill — amenity:restaurant in Islamabad, College Road, اسلام آباد",33.7221913,73.057977
+amenity:restaurant,Awami Hotel & Restaurant,"Service Road West G-11, اسلام آباد","Awami Hotel & Restaurant — amenity:restaurant in Islamabad, Service Road West G-11, اسلام آباد",33.6629875,72.9914468
+amenity:restaurant,Best Western,,Best Western — amenity:restaurant in Islamabad,33.6868444,73.1070966
+amenity:school,Air University Islamabad,"Service Road E8/E9, اسلام آباد, 44000","Air University Islamabad — amenity:school in Islamabad, Service Road E8/E9, اسلام آباد, 44000",33.713944,73.025864
+amenity:school,Angelique School,"Street 81, اسلام آباد","Angelique School — amenity:school in Islamabad, Street 81, اسلام آباد",33.7131347,73.0980122
+amenity:school,Bahria Foundation School,"Street 1, اسلام آباد","Bahria Foundation School — amenity:school in Islamabad, Street 1, اسلام آباد",33.6737367,72.9856982
+amenity:school,Bahria Foundation School,"Street 1, اسلام آباد","Bahria Foundation School — amenity:school in Islamabad, Street 1, اسلام آباد",33.6739514,72.9861955
+amenity:school,Beaconhouse Margalla Campus,,Beaconhouse Margalla Campus — amenity:school in Islamabad,33.6818516,73.0660698
+building:residential,Fazal Plaza,"AKM Fazul Haq Road, اسلام آباد","Fazal Plaza — building:residential in Islamabad, AKM Fazul Haq Road, اسلام آباد",33.7185449,73.0742028
+building:residential,Imran Khan's Residence,Bani Gala Islamabad,"Imran Khan's Residence — building:residential in Islamabad, Bani Gala Islamabad",33.7164655,73.1772222
+building:residential,Parliament Lodges,"Service Road West G5;Service Road West F5, اسلام آباد","Parliament Lodges — building:residential in Islamabad, Service Road West G5;Service Road West F5, اسلام آباد",33.7258838,73.0937191
+building:residential,Parliament Lodges,"AKM Fazul Haq Road, اسلام آباد","Parliament Lodges — building:residential in Islamabad, AKM Fazul Haq Road, اسلام آباد",33.7271071,73.0927403
+building:residential,President NDU House,,President NDU House — building:residential in Islamabad,33.7228178,73.0205347
+highway:bus_stop,7th Avenue Station,,7th Avenue Station — bus stop in Islamabad,33.7181576,73.0718909
+highway:bus_stop,7th Avenue Station,,7th Avenue Station — bus stop in Islamabad,33.7182752,73.0718246
+highway:bus_stop,Aabpara Bus Stop,,Aabpara Bus Stop — bus stop in Islamabad,33.7084243,73.0901733
+highway:bus_stop,Asian Broadcasting Pvt. Ltd,,Asian Broadcasting Pvt. Ltd — bus stop in Islamabad,33.7040562,72.9792223
+highway:bus_stop,Bilal Travels Bus Service,,Bilal Travels Bus Service — bus stop in Islamabad,33.6853129,73.0336663
+historic:monument,Aabpara Chowk,,Aabpara Chowk — historic:monument in Islamabad,33.7078709,73.0899838
+historic:monument,Baradaré,,Baradaré — historic:monument in Islamabad,33.6968877,73.0174852
+historic:monument,Federal Directorate of Education (FDE)‎,,Federal Directorate of Education (FDE)‎ — historic:monument in Islamabad,33.68174,73.0365669
+historic:monument,Greek Monument,,Greek Monument — historic:monument in Islamabad,33.7060166,73.0178605
+historic:monument,Monument,,Monument — historic:monument in Islamabad,33.7038345,73.0118488
+leisure:park,Airblue Crash Monument,,Airblue Crash Monument — leisure:park in Islamabad,33.7414923,73.0509441
+leisure:park,Ankara Park,,Ankara Park — leisure:park in Islamabad,33.6939986,73.113006
+leisure:park,Argentina Park,,Argentina Park — leisure:park in Islamabad,33.7196297,73.0838947
+leisure:park,Bara Park,"Street 54, اسلام آباد","Bara Park — leisure:park in Islamabad, Street 54, اسلام آباد",33.686248,73.0197034
+leisure:park,CDA G-11/2 Park,"Street 51, اسلام آباد","CDA G-11/2 Park — leisure:park in Islamabad, Street 51, اسلام آباد",33.6709137,72.9877916
+natural:tree,,,natural:tree in Islamabad,33.683513,72.9864254
+natural:tree,,,natural:tree in Islamabad,33.6836178,72.9863285
+natural:tree,,,natural:tree in Islamabad,33.6835633,72.9863789
+natural:tree,,,natural:tree in Islamabad,33.6837454,72.9862088
+natural:tree,,,natural:tree in Islamabad,33.6836843,72.9862671
+natural:water,راول جھیل,,راول جھیل — natural:water in Islamabad,33.7052244,73.1263505
+natural:water,کورنگ ندی,,کورنگ ندی — natural:water in Islamabad,33.7299764,73.1696802
+natural:water,,,natural:water in Islamabad,33.6612382,72.9732729
+natural:water,,,natural:water in Islamabad,33.6636411,73.1092046
+natural:water,,,natural:water in Islamabad,33.666414,73.1018858
+place:locality,Karwali,,Karwali — place:locality in Islamabad,33.7768138,73.0076206
+place:locality,Rajdani,,Rajdani — place:locality in Islamabad,33.7725432,72.9751078
+place:locality,Rumli,,Rumli — place:locality in Islamabad,33.7701394,73.1349336
+place:locality,Shahdara,,Shahdara — place:locality in Islamabad,33.7780043,73.1694967
+place:locality,صفر نقطہ,,صفر نقطہ — place:locality in Islamabad,33.694332,73.0654376
+shop:bakery,Aslam Bakers,,Aslam Bakers — shop:bakery in Islamabad,33.6805786,73.0223584
+shop:bakery,Bake Well,"10th Avenue, اسلام آباد","Bake Well — shop:bakery in Islamabad, 10th Avenue, اسلام آباد",33.6955112,73.0125634
+shop:bakery,Bakeman Bakers & Sweets,"Sawan Road, اسلام آباد","Bakeman Bakers & Sweets — shop:bakery in Islamabad, Sawan Road, اسلام آباد",33.6769845,73.0154483
+shop:bakery,Bakery,,Bakery — shop:bakery in Islamabad,33.7179463,73.0854336
+shop:bakery,Fresco Sweets,"Jinnah Avenue, اسلام آباد","Fresco Sweets — shop:bakery in Islamabad, Jinnah Avenue, اسلام آباد",33.7147642,73.0663098
+shop:clothes,Ahmed Fabrics,,Ahmed Fabrics — shop:clothes in Islamabad,33.676304,73.0142109
+shop:clothes,Akharam Studio,,Akharam Studio — shop:clothes in Islamabad,33.7228003,73.0593617
+shop:clothes,Al-Rehman Uniform,"Sachal Sarmast Road (G-11), اسلام آباد","Al-Rehman Uniform — shop:clothes in Islamabad, Sachal Sarmast Road (G-11), اسلام آباد",33.668689,72.9966674
+shop:clothes,Beechtree,,Beechtree — shop:clothes in Islamabad,33.7223243,73.0581993
+shop:clothes,Bonanza,"Agha Khan Road, اسلام آباد","Bonanza — shop:clothes in Islamabad, Agha Khan Road, اسلام آباد",33.730187,73.0779181
+shop:supermarket,Aabpara Market,Muncipal Road,"Aabpara Market — shop:supermarket in Islamabad, Muncipal Road",33.7063395,73.0861558
+shop:supermarket,Adnan Market,,Adnan Market — shop:supermarket in Islamabad,33.6721457,72.9914267
+shop:supermarket,Akhbar Market,"Shaheed-e-Millat Road, اسلام آباد","Akhbar Market — shop:supermarket in Islamabad, Shaheed-e-Millat Road, اسلام آباد",33.7094012,73.0915774
+shop:supermarket,Al Fatah,"Nazim ud Din Road, اسلام آباد","Al Fatah — shop:supermarket in Islamabad, Nazim ud Din Road, اسلام آباد",33.7079866,73.0503632
+shop:supermarket,Al-Fateh Market,,Al-Fateh Market — shop:supermarket in Islamabad,33.6956165,73.0344312
+tourism:hotel,AL Waqqas Hotel,"IJP Road, راولپنڈی","AL Waqqas Hotel — tourism:hotel in Islamabad, IJP Road, راولپنڈی",33.6623472,73.0842589
+tourism:hotel,Al Feroz Hotel,"Street 12, اسلام آباد","Al Feroz Hotel — tourism:hotel in Islamabad, Street 12, اسلام آباد",33.6893182,73.051873
+tourism:hotel,Al Madinah Hotel,"Service Road West F11, اسلام آباد","Al Madinah Hotel — tourism:hotel in Islamabad, Service Road West F11, اسلام آباد",33.6723263,72.9843179
+tourism:hotel,Al-Umer,,Al-Umer — tourism:hotel in Islamabad,33.703573,73.0718268
+tourism:hotel,Avari,,Avari — tourism:hotel in Islamabad,33.7246898,73.0677445

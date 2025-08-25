@@ -1,0 +1,15 @@
+[out:json][timeout:60];
+node["amenity"="restaurant"](33.66,72.96,33.78,73.18); out body 8;
+node["amenity"="cafe"](33.66,72.96,33.78,73.18); out body 8;
+node["amenity"="school"](33.66,72.96,33.78,73.18); out body 8;
+node["amenity"="hospital"](33.66,72.96,33.78,73.18); out body 8;
+node["amenity"="bank"](33.66,72.96,33.78,73.18); out body 8;
+node["amenity"="pharmacy"](33.66,72.96,33.78,73.18); out body 8;
+node["amenity"="fuel"](33.66,72.96,33.78,73.18); out body 8;
+node["amenity"="place_of_worship"](33.66,72.96,33.78,73.18); out body 8;
+node["shop"="supermarket"](33.66,72.96,33.78,73.18); out body 8;
+node["shop"="convenience"](33.66,72.96,33.78,73.18); out body 8;
+node["leisure"="park"](33.66,72.96,33.78,73.18); out body 8;
+node["tourism"="hotel"](33.66,72.96,33.78,73.18); out body 8;
+node["office"="government"](33.66,72.96,33.78,73.18); out body 8;
+node["healthcare"="clinic"](33.66,72.96,33.78,73.18); out body 8;
