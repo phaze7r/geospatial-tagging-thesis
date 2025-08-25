@@ -1,0 +1,24 @@
+                      precision    recall  f1-score   support
+
+        amenity:bank      1.000     1.000     1.000        46
+        amenity:cafe      1.000     1.000     1.000        60
+    amenity:hospital      1.000     1.000     1.000        45
+ amenity:marketplace      1.000     1.000     1.000        25
+      amenity:mosque      1.000     1.000     1.000       136
+  amenity:restaurant      1.000     1.000     1.000        74
+      amenity:school      1.000     1.000     1.000       100
+building:residential      1.000     1.000     1.000        24
+    highway:bus_stop      1.000     1.000     1.000        70
+   historic:monument      1.000     1.000     1.000        10
+        leisure:park      1.000     1.000     1.000        58
+        natural:tree      1.000     1.000     1.000        54
+       natural:water      1.000     1.000     1.000        44
+      place:locality      1.000     1.000     1.000         6
+         shop:bakery      1.000     1.000     1.000        36
+        shop:clothes      1.000     1.000     1.000        39
+    shop:supermarket      1.000     1.000     1.000        42
+       tourism:hotel      1.000     1.000     1.000        57
+
+            accuracy                          1.000       926
+           macro avg      1.000     1.000     1.000       926
+        weighted avg      1.000     1.000     1.000       926
