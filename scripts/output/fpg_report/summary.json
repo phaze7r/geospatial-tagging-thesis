@@ -1,0 +1,43 @@
+{
+  "n_docs": 926,
+  "n_classes": 18,
+  "classes": [
+    "amenity:bank",
+    "amenity:cafe",
+    "amenity:hospital",
+    "amenity:marketplace",
+    "amenity:mosque",
+    "amenity:restaurant",
+    "amenity:school",
+    "building:residential",
+    "highway:bus_stop",
+    "historic:monument",
+    "leisure:park",
+    "natural:tree",
+    "natural:water",
+    "place:locality",
+    "shop:bakery",
+    "shop:clothes",
+    "shop:supermarket",
+    "tourism:hotel"
+  ],
+  "thresholds": {
+    "per_class": {
+      "min_pair_count": 3,
+      "min_conf": 0.4,
+      "min_lift": 1.2
+    },
+    "global": {
+      "min_pair_count": 5,
+      "min_conf": 0.35,
+      "min_lift": 1.15
+    }
+  },
+  "paths": {
+    "top_itemsets_by_class": "E:\\Github\\repo-phaze7r\\geospatial-tagging-thesis\\scripts\\output\\fpg_report\\top_itemsets_by_class.csv",
+    "mixed_itemsets_by_class": "E:\\Github\\repo-phaze7r\\geospatial-tagging-thesis\\scripts\\output\\fpg_report\\mixed_itemsets_by_class.csv",
+    "token_tag_rules_by_class": "E:\\Github\\repo-phaze7r\\geospatial-tagging-thesis\\scripts\\output\\fpg_report\\token_tag_rules_by_class.csv",
+    "global_token_tag_rules": "E:\\Github\\repo-phaze7r\\geospatial-tagging-thesis\\scripts\\output\\fpg_report\\global_token_tag_rules.csv",
+    "items_per_class": "E:\\Github\\repo-phaze7r\\geospatial-tagging-thesis\\scripts\\output\\fpg_report\\items_per_class.csv"
+  }
+}

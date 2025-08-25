@@ -1,0 +1,20 @@
+{
+  "amenity:bank": 0,
+  "amenity:cafe": 1,
+  "amenity:hospital": 2,
+  "amenity:marketplace": 3,
+  "amenity:mosque": 4,
+  "amenity:restaurant": 5,
+  "amenity:school": 6,
+  "building:residential": 7,
+  "highway:bus_stop": 8,
+  "historic:monument": 9,
+  "leisure:park": 10,
+  "natural:tree": 11,
+  "natural:water": 12,
+  "place:locality": 13,
+  "shop:bakery": 14,
+  "shop:clothes": 15,
+  "shop:supermarket": 16,
+  "tourism:hotel": 17
+}

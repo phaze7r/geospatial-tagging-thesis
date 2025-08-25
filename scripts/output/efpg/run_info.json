@@ -1,0 +1,15 @@
+{
+  "tx": "E:\\Github\\repo-phaze7r\\geospatial-tagging-thesis\\scripts\\output\\fpg\\transactions.csv",
+  "itemsets": "E:\\Github\\repo-phaze7r\\geospatial-tagging-thesis\\scripts\\output\\fpg\\fpg_by_class_itemsets.csv",
+  "out_dir": "E:\\Github\\repo-phaze7r\\geospatial-tagging-thesis\\scripts\\output\\efpg",
+  "params": {
+    "require_mixed": true,
+    "min_len": 1,
+    "max_len": 3,
+    "min_support_total": 0.01,
+    "min_support_count": 5,
+    "top_k_per_class": 200,
+    "score": "wracc",
+    "have_scipy": true
+  }
+}

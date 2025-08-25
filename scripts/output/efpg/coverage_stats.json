@@ -1,0 +1,25 @@
+{
+  "n_docs": 926,
+  "n_patterns": 126,
+  "avg_density": 0.027117830573554116,
+  "class_sizes": {
+    "amenity:bank": 46,
+    "amenity:cafe": 60,
+    "amenity:hospital": 45,
+    "amenity:marketplace": 25,
+    "amenity:mosque": 136,
+    "amenity:restaurant": 74,
+    "amenity:school": 100,
+    "building:residential": 24,
+    "highway:bus_stop": 70,
+    "historic:monument": 10,
+    "leisure:park": 58,
+    "natural:tree": 54,
+    "natural:water": 44,
+    "place:locality": 6,
+    "shop:bakery": 36,
+    "shop:clothes": 39,
+    "shop:supermarket": 42,
+    "tourism:hotel": 57
+  }
+}
