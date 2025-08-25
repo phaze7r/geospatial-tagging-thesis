@@ -192,9 +192,9 @@ def main():
     ap.add_argument("--require_mixed", type=str, default="true", help="Require both token and tag:* in pattern")
     ap.add_argument("--min_len", type=int, default=1, help="Min itemset size")
     ap.add_argument("--max_len", type=int, default=3, help="Max itemset size")
-    ap.add_argument("--min_support_total", type=float, default=0.01, help="Min global support fraction")
-    ap.add_argument("--min_support_count", type=int, default=5, help="Absolute min global support count")
-    ap.add_argument("--top_k_per_class", type=int, default=200, help="Select at most K patterns per class")
+    ap.add_argument("--min_support_total", type=float, default=0.002, help="Min global support fraction")
+    ap.add_argument("--min_support_count", type=int, default=3, help="Absolute min global support count")
+    ap.add_argument("--top_k_per_class", type=int, default=800, help="Select at most K patterns per class")
     ap.add_argument("--score", default="wracc", choices=["wracc", "lift", "growth", "ig", "chi2"],
                     help="Ranking metric for selection")
     args = ap.parse_args()

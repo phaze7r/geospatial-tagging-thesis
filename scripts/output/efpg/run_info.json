@@ -6,9 +6,9 @@
     "require_mixed": true,
     "min_len": 1,
     "max_len": 3,
-    "min_support_total": 0.01,
-    "min_support_count": 5,
-    "top_k_per_class": 200,
+    "min_support_total": 0.002,
+    "min_support_count": 3,
+    "top_k_per_class": 800,
     "score": "wracc",
     "have_scipy": true
   }

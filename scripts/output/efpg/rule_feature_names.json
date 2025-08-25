@@ -1,0 +1,12 @@
+[
+  "amenity:cafe|count",
+  "amenity:cafe|sum_conf",
+  "amenity:cafe|sum_lift",
+  "amenity:cafe|max_conf",
+  "amenity:cafe|max_lift",
+  "amenity:mosque|count",
+  "amenity:mosque|sum_conf",
+  "amenity:mosque|sum_lift",
+  "amenity:mosque|max_conf",
+  "amenity:mosque|max_lift"
+]

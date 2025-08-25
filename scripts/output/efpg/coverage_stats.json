@@ -1,7 +1,7 @@
 {
   "n_docs": 926,
-  "n_patterns": 126,
-  "avg_density": 0.027117830573554116,
+  "n_patterns": 287,
+  "avg_density": 0.013485750408260022,
   "class_sizes": {
     "amenity:bank": 46,
     "amenity:cafe": 60,
