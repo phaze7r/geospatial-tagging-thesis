@@ -1,5 +1,5 @@
 ### Thesis Title: 
-# Geospatial Tagging of Volunteered Place Descriptions: Bayesian Elastic Net and Extended FP-Growth Approach
+# Geospatial Tagging of Volunteered Place Descriptions: Bayesian Elastic Net and Extended FP-Growth Approaches
 
 ### Visit this link for complete GUI of the documentation of my thesis and the progress.
 ## https://osm.texodus.tech/
