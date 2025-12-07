@@ -1,0 +1,105 @@
+{
+  "timestamp": "2025-12-07T01:02:19.241268Z",
+  "embedding_type": "SBERT",
+  "model": "LogisticRegression",
+  "accuracy": 0.9970149253731343,
+  "classification_report": {
+    "atm": {
+      "precision": 0.9285714285714286,
+      "recall": 1.0,
+      "f1-score": 0.9629629629629629,
+      "support": 13.0
+    },
+    "bank": {
+      "precision": 1.0,
+      "recall": 0.9882352941176471,
+      "f1-score": 0.9940828402366864,
+      "support": 85.0
+    },
+    "cemetery": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 22.0
+    },
+    "clinic": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "fire_station": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "hospital": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 11.0
+    },
+    "marketplace": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 16.0
+    },
+    "museum": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "neighbourhood": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 21.0
+    },
+    "park": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 108.0
+    },
+    "pharmacy": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 6.0
+    },
+    "police": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 11.0
+    },
+    "station": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3.0
+    },
+    "water": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 33.0
+    },
+    "accuracy": 0.9970149253731343,
+    "macro avg": {
+      "precision": 0.9948979591836735,
+      "recall": 0.9991596638655462,
+      "f1-score": 0.9969318430856893,
+      "support": 335.0
+    },
+    "weighted avg": {
+      "precision": 0.997228144989339,
+      "recall": 0.9970149253731343,
+      "f1-score": 0.9970613729511547,
+      "support": 335.0
+    }
+  }
+}
