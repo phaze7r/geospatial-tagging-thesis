@@ -240,3 +240,14 @@ results/*
 # Cache
 *.cache
 .cache/
+
+# User-requested Safety Rules
+secrets.yaml
+config/secrets.yaml
+*.key
+*.pem
+*.p12
+
+# Large/Binary Data Artifacts
+data/processed/*.pkl
+data/processed/*.npy
