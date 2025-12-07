@@ -1,0 +1,10 @@
+cities:
+  - name: Islamabad
+    bbox: [72.8, 33.5, 73.4, 33.9]
+    province: Islamabad Capital Territory
+  - name: Lahore
+    bbox: [74.2, 31.4, 74.5, 31.7]
+    province: Punjab
+  - name: Karachi
+    bbox: [66.8, 24.7, 67.2, 25.0]
+    province: Sindh
