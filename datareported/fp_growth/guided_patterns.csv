@@ -1,0 +1,518 @@
+support,itemsets,is_relevant
+0.14515581328527022,frozenset({'worship_amenity'}),True
+0.14515581328527022,"frozenset({'worship_amenity', 'TAG_KEY:amenity'})",True
+0.11253036595878066,frozenset({'residential_landuse'}),True
+0.11253036595878066,"frozenset({'residential_landuse', 'TAG_KEY:landuse'})",True
+0.0516678421231356,"frozenset({'TAG_KEY:amenity', 'restaurant_amenity'})",True
+0.0516678421231356,frozenset({'restaurant_amenity'}),True
+0.03884230598437949,"frozenset({'neighbourhood_place', 'TAG_KEY:place'})",True
+0.03884230598437949,frozenset({'neighbourhood_place'}),True
+0.03581224042002978,"frozenset({'clothes_shop', 'TAG_KEY:shop'})",True
+0.03581224042002978,frozenset({'clothes_shop'}),True
+0.03484575399002168,"frozenset({'park_leisure', 'TAG_KEY:leisure'})",True
+0.03484575399002168,frozenset({'park_leisure'}),True
+0.03442781391218034,frozenset({'food_amenity'}),True
+0.03442781391218034,"frozenset({'TAG_KEY:amenity', 'food_amenity'})",True
+0.03348744873703733,frozenset({'fast_food'}),True
+0.033461327482172246,"frozenset({'fast_food', 'TAG_KEY:amenity'})",True
+0.0319201734451323,"frozenset({'fast_food', 'TAG_KEY:amenity', 'food_amenity'})",True
+0.0319201734451323,"frozenset({'fast_food', 'food_amenity'})",True
+0.02669592247211556,"frozenset({'TAG_KEY:amenity', 'fuel_amenity'})",True
+0.02669592247211556,frozenset({'fuel_amenity'}),True
+0.023587493143170598,frozenset({'pitch_leisure'}),True
+0.023587493143170598,"frozenset({'pitch_leisure', 'TAG_KEY:leisure'})",True
+0.02303894679100384,"frozenset({'company_office', 'TAG_KEY:office'})",True
+0.02303894679100384,frozenset({'company_office'}),True
+0.023012825536138756,"frozenset({'worship_amenity', 'TAG_KEY:amenity', 'mosque_place'})",True
+0.023012825536138756,"frozenset({'TAG_KEY:amenity', 'mosque_place'})",True
+0.023012825536138756,"frozenset({'worship_amenity', 'mosque_place'})",True
+0.023012825536138756,frozenset({'mosque_place'}),True
+0.020818640127471724,frozenset({'bakery_shop'}),True
+0.020818640127471724,"frozenset({'bakery_shop', 'TAG_KEY:shop'})",True
+0.0203745787947653,frozenset({'supermarket_shop'}),True
+0.0203745787947653,"frozenset({'TAG_KEY:shop', 'supermarket_shop'})",True
+0.019408092364757202,frozenset({'electronics_shop'}),True
+0.019408092364757202,"frozenset({'electronics_shop', 'TAG_KEY:shop'})",True
+0.01880730350286028,frozenset({'government_office'}),True
+0.01880730350286028,"frozenset({'government_office', 'TAG_KEY:office'})",True
+0.018650575973669776,"frozenset({'repair_shop', 'TAG_KEY:shop'})",True
+0.018650575973669776,frozenset({'repair_shop'}),True
+0.017997544602042684,frozenset({'suburb_place'}),True
+0.017997544602042684,"frozenset({'suburb_place', 'TAG_KEY:place'})",True
+0.017893059582582346,"frozenset({'TAG_KEY:place', 'village_place'})",True
+0.017893059582582346,frozenset({'village_place'}),True
+0.017605725779066425,frozenset({'restaurant_tourism'}),True
+0.017605725779066425,"frozenset({'TAG_KEY:tourism', 'restaurant_tourism'})",True
+0.01755348326933626,"frozenset({'repair_shop', 'car_repair', 'TAG_KEY:shop'})",True
+0.01755348326933626,frozenset({'car_repair'}),True
+0.01755348326933626,"frozenset({'car_repair', 'TAG_KEY:shop'})",True
+0.01755348326933626,"frozenset({'repair_shop', 'car_repair'})",True
+0.016351905545542406,"frozenset({'commercial_landuse', 'TAG_KEY:landuse'})",True
+0.016351905545542406,frozenset({'commercial_landuse'}),True
+0.015359297860669226,"frozenset({'park_leisure', 'park_park'})",True
+0.015359297860669226,"frozenset({'TAG_KEY:leisure', 'park_park'})",True
+0.015359297860669226,"frozenset({'park_leisure', 'TAG_KEY:leisure', 'park_park'})",True
+0.015359297860669226,frozenset({'park_park'}),True
+0.01355693127497845,"frozenset({'cemetery_landuse', 'TAG_KEY:landuse'})",True
+0.01355693127497845,frozenset({'cemetery_landuse'}),True
+0.013530810020113367,"frozenset({'TAG_KEY:public_transport', 'public_transport'})",True
+0.013530810020113367,frozenset({'public_transport'}),True
+0.013295718726327612,"frozenset({'beauty_shop', 'TAG_KEY:shop'})",True
+0.013295718726327612,frozenset({'beauty_shop'}),True
+0.013243476216597445,"frozenset({'agent_office', 'TAG_KEY:office'})",True
+0.013243476216597445,frozenset({'agent_office'}),True
+0.01193741347334326,frozenset({'mall_shop'}),True
+0.011911292218478175,"frozenset({'mall_shop', 'TAG_KEY:shop'})",True
+0.011545594650367004,frozenset({'centre_leisure'}),True
+0.011545594650367004,"frozenset({'centre_leisure', 'TAG_KEY:leisure'})",True
+0.011388867121176502,"frozenset({'furniture_shop', 'TAG_KEY:shop'})",True
+0.011388867121176502,frozenset({'furniture_shop'}),True
+0.011206018337120916,frozenset({'industrial_landuse'}),True
+0.011206018337120916,"frozenset({'industrial_landuse', 'TAG_KEY:landuse'})",True
+0.010291774416842986,"frozenset({'phone_shop', 'TAG_KEY:shop'})",True
+0.010291774416842986,frozenset({'phone_shop'}),True
+0.010239531907112819,"frozenset({'jewelry_shop', 'TAG_KEY:shop'})",True
+0.010239531907112819,frozenset({'jewelry_shop'}),True
+0.009508136770890473,"frozenset({'phone_shop', 'mobile_phone', 'TAG_KEY:shop'})",True
+0.009508136770890473,frozenset({'mobile_phone'}),True
+0.009508136770890473,"frozenset({'mobile_phone', 'TAG_KEY:shop'})",True
+0.009508136770890473,"frozenset({'mobile_phone', 'phone_shop'})",True
+0.008933469163858631,"frozenset({'computer_shop', 'TAG_KEY:shop'})",True
+0.008933469163858631,frozenset({'computer_shop'}),True
+0.008437165321422042,"frozenset({'estate_agent', 'agent_office', 'TAG_KEY:office'})",True
+0.008437165321422042,"frozenset({'estate_agent', 'agent_office'})",True
+0.008437165321422042,frozenset({'estate_agent'}),True
+0.008437165321422042,"frozenset({'estate_agent', 'TAG_KEY:office'})",True
+0.008254316537366455,frozenset({'attraction_tourism'}),True
+0.008254316537366455,"frozenset({'TAG_KEY:tourism', 'attraction_tourism'})",True
+0.007731891440064781,frozenset({'restaurant_restaurant'}),True
+0.007627406420604446,"frozenset({'shoes_shop', 'TAG_KEY:shop'})",True
+0.007627406420604446,frozenset({'shoes_shop'}),True
+0.0076012851657393625,frozenset({'police_amenity'}),True
+0.0076012851657393625,"frozenset({'TAG_KEY:amenity', 'police_amenity'})",True
+0.007496800146279028,"frozenset({'TAG_KEY:shop', 'convenience_shop'})",True
+0.007496800146279028,frozenset({'convenience_shop'}),True
+0.007418436381683776,"frozenset({'parts_shop', 'TAG_KEY:shop'})",True
+0.007418436381683776,"frozenset({'car_parts', 'TAG_KEY:shop'})",True
+0.007418436381683776,frozenset({'car_parts'}),True
+0.007418436381683776,frozenset({'parts_shop'}),True
+0.007392315126818693,"frozenset({'parts_shop', 'car_parts'})",True
+0.007392315126818693,"frozenset({'parts_shop', 'car_parts', 'TAG_KEY:shop'})",True
+0.007183345087898023,frozenset({'tailor_shop'}),True
+0.007183345087898023,"frozenset({'tailor_shop', 'TAG_KEY:shop'})",True
+0.006843768774651935,frozenset({'construction_landuse'}),True
+0.006843768774651935,"frozenset({'construction_landuse', 'TAG_KEY:landuse'})",True
+0.006791526264921767,frozenset({'garden_leisure'}),True
+0.006791526264921767,"frozenset({'garden_leisure', 'TAG_KEY:leisure'})",True
+0.00653031371627093,"frozenset({'TAG_KEY:amenity', 'office_amenity'})",True
+0.00653031371627093,frozenset({'office_amenity'}),True
+0.006347464932215344,frozenset({'pharmacy_healthcare'}),True
+0.006347464932215344,"frozenset({'pharmacy_healthcare', 'TAG_KEY:healthcare'})",True
+0.006138494893294674,"frozenset({'hostel_tourism', 'TAG_KEY:tourism'})",True
+0.006138494893294674,frozenset({'hostel_tourism'}),True
+0.00611237363842959,frozenset({'autos_car'}),True
+0.00611237363842959,"frozenset({'autos_car', 'TAG_KEY:shop'})",True
+0.0060078886189692555,frozenset({'general_store'}),True
+0.005929524854374004,"frozenset({'fitness_centre', 'TAG_KEY:leisure'})",True
+0.005929524854374004,"frozenset({'fitness_centre', 'centre_leisure', 'TAG_KEY:leisure'})",True
+0.005929524854374004,"frozenset({'fitness_centre', 'centre_leisure'})",True
+0.005929524854374004,frozenset({'fitness_centre'}),True
+0.005903403599508921,"frozenset({'store_supermarket', 'supermarket_shop'})",True
+0.005903403599508921,"frozenset({'TAG_KEY:shop', 'store_supermarket', 'supermarket_shop'})",True
+0.005903403599508921,frozenset({'store_supermarket'}),True
+0.005903403599508921,"frozenset({'store_supermarket', 'TAG_KEY:shop'})",True
+0.005772797325183502,frozenset({'hospital_healthcare'}),True
+0.005772797325183502,"frozenset({'playground_leisure', 'TAG_KEY:leisure'})",True
+0.005772797325183502,frozenset({'playground_leisure'}),True
+0.005772797325183502,"frozenset({'hospital_healthcare', 'TAG_KEY:healthcare'})",True
+0.00498915967923099,frozenset({'post_office'}),True
+0.00498915967923099,"frozenset({'TAG_KEY:amenity', 'post_office', 'office_amenity'})",True
+0.00498915967923099,"frozenset({'TAG_KEY:amenity', 'post_office'})",True
+0.00498915967923099,"frozenset({'post_office', 'office_amenity'})",True
+0.0049630384243659065,"frozenset({'general_store', 'TAG_KEY:shop'})",True
+0.0048063108951754046,frozenset({'hardware_shop'}),True
+0.0048063108951754046,"frozenset({'hardware_shop', 'TAG_KEY:shop'})",True
+0.004727947130580153,"frozenset({'TAG_KEY:amenity', 'parking_amenity'})",True
+0.004727947130580153,frozenset({'parking_amenity'}),True
+0.004518977091659483,frozenset({'station_fuel'}),True
+0.004518977091659483,"frozenset({'TAG_KEY:amenity', 'station_fuel', 'fuel_amenity'})",True
+0.004518977091659483,"frozenset({'station_fuel', 'fuel_amenity'})",True
+0.004518977091659483,"frozenset({'TAG_KEY:amenity', 'station_fuel'})",True
+0.0044667345819293155,"frozenset({'TAG_KEY:shop', 'books_shop'})",True
+0.0044667345819293155,frozenset({'books_shop'}),True
+0.004440613327064232,frozenset({'stationery_shop'}),True
+0.004440613327064232,"frozenset({'stationery_shop', 'TAG_KEY:shop'})",True
+0.004388370817334065,"frozenset({'bakery_bakery', 'TAG_KEY:shop'})",True
+0.004388370817334065,frozenset({'bakery_bakery'}),True
+0.004388370817334065,"frozenset({'bakery_shop', 'bakery_bakery'})",True
+0.004388370817334065,"frozenset({'bakery_shop', 'bakery_bakery', 'TAG_KEY:shop'})",True
+0.004231643288143562,"frozenset({'retail_landuse', 'TAG_KEY:landuse'})",True
+0.004231643288143562,frozenset({'retail_landuse'}),True
+0.004179400778413395,"frozenset({'TAG_KEY:amenity', 'restaurant_restaurant'})",True
+0.00407491575895306,"frozenset({'restaurant_amenity', 'restaurant_restaurant'})",True
+0.00407491575895306,"frozenset({'TAG_KEY:amenity', 'restaurant_amenity', 'restaurant_restaurant'})",True
+0.004048794504087977,frozenset({'police_station'}),True
+0.003944309484627642,"frozenset({'police_station', 'TAG_KEY:amenity'})",True
+0.0038659457200323905,"frozenset({'repair_shop', 'autos_car', 'TAG_KEY:shop'})",True
+0.0038659457200323905,"frozenset({'repair_shop', 'car_repair', 'autos_car'})",True
+0.0038659457200323905,"frozenset({'car_repair', 'autos_car'})",True
+0.0038659457200323905,"frozenset({'repair_shop', 'autos_car'})",True
+0.0038659457200323905,"frozenset({'autos_car', 'car_repair', 'TAG_KEY:shop'})",True
+0.0038659457200323905,"frozenset({'repair_shop', 'autos_car', 'car_repair', 'TAG_KEY:shop'})",True
+0.003813703210302223,frozenset({'sports_centre'}),True
+0.003813703210302223,"frozenset({'sports_centre', 'centre_leisure'})",True
+0.003813703210302223,"frozenset({'sports_centre', 'TAG_KEY:leisure'})",True
+0.003813703210302223,"frozenset({'sports_centre', 'centre_leisure', 'TAG_KEY:leisure'})",True
+0.0037614607005720556,"frozenset({'police_station', 'police_amenity'})",True
+0.0037614607005720556,"frozenset({'police_station', 'TAG_KEY:amenity', 'police_amenity'})",True
+0.0037353394457069716,frozenset({'station_police'}),True
+0.0037353394457069716,"frozenset({'station_police', 'police_amenity'})",True
+0.0037353394457069716,"frozenset({'TAG_KEY:amenity', 'station_police'})",True
+0.0037353394457069716,"frozenset({'TAG_KEY:amenity', 'station_police', 'police_amenity'})",True
+0.0036569756811117207,"frozenset({'store_convenience', 'convenience_shop'})",True
+0.0036569756811117207,"frozenset({'store_convenience', 'TAG_KEY:shop'})",True
+0.0036569756811117207,"frozenset({'TAG_KEY:shop', 'store_convenience', 'convenience_shop'})",True
+0.0036569756811117207,frozenset({'store_convenience'}),True
+0.003604733171381553,"frozenset({'mall_shop', 'mall_mall'})",True
+0.003604733171381553,frozenset({'mall_mall'}),True
+0.003604733171381553,"frozenset({'mall_mall', 'TAG_KEY:shop'})",True
+0.003604733171381553,"frozenset({'mall_shop', 'mall_mall', 'TAG_KEY:shop'})",True
+0.0035524906616513858,"frozenset({'TAG_KEY:tourism', 'restaurant_restaurant'})",True
+0.0035524906616513858,"frozenset({'restaurant_restaurant', 'restaurant_tourism'})",True
+0.0035524906616513858,"frozenset({'TAG_KEY:tourism', 'restaurant_restaurant', 'restaurant_tourism'})",True
+0.0033696418775958,"frozenset({'TAG_KEY:amenity', 'cafe_amenity'})",True
+0.0033696418775958,frozenset({'cafe_amenity'}),True
+0.0032912781130005485,"frozenset({'jewelry_shop', 'jewellers_jewelry'})",True
+0.0032912781130005485,"frozenset({'jewelry_shop', 'jewellers_jewelry', 'TAG_KEY:shop'})",True
+0.0032912781130005485,frozenset({'jewellers_jewelry'}),True
+0.0032912781130005485,"frozenset({'jewellers_jewelry', 'TAG_KEY:shop'})",True
+0.00316067183867513,frozenset({'furniture_furniture'}),True
+0.00316067183867513,"frozenset({'furniture_shop', 'furniture_furniture'})",True
+0.00316067183867513,"frozenset({'furniture_furniture', 'TAG_KEY:shop'})",True
+0.00316067183867513,"frozenset({'furniture_shop', 'furniture_furniture', 'TAG_KEY:shop'})",True
+0.003134550583810046,frozenset({'gift_shop'}),True
+0.003134550583810046,"frozenset({'gift_shop', 'TAG_KEY:shop'})",True
+0.003056186819214795,frozenset({'real_estate'}),True
+0.0030300655643497112,"frozenset({'police_station', 'station_police', 'police_amenity'})",True
+0.0030300655643497112,"frozenset({'police_station', 'station_police'})",True
+0.0030300655643497112,"frozenset({'police_station', 'TAG_KEY:amenity', 'station_police'})",True
+0.0030300655643497112,"frozenset({'police_station', 'TAG_KEY:amenity', 'station_police', 'police_amenity'})",True
+0.0030039443094846277,"frozenset({'real_estate', 'TAG_KEY:office'})",True
+0.0030039443094846277,frozenset({'butcher_shop'}),True
+0.0030039443094846277,"frozenset({'butcher_shop', 'TAG_KEY:shop'})",True
+0.002899459290024293,"frozenset({'store_pharmacy', 'TAG_KEY:healthcare'})",True
+0.002899459290024293,"frozenset({'store_pharmacy', 'pharmacy_healthcare', 'TAG_KEY:healthcare'})",True
+0.002899459290024293,frozenset({'store_pharmacy'}),True
+0.002899459290024293,"frozenset({'TAG_KEY:amenity', 'ice_cream'})",True
+0.002899459290024293,frozenset({'ice_cream'}),True
+0.002899459290024293,"frozenset({'store_pharmacy', 'pharmacy_healthcare'})",True
+0.002873338035159209,"frozenset({'TAG_KEY:shop', 'salon_beauty'})",True
+0.002873338035159209,"frozenset({'real_estate', 'agent_office'})",True
+0.002873338035159209,"frozenset({'real_estate', 'agent_office', 'TAG_KEY:office'})",True
+0.002873338035159209,frozenset({'salon_beauty'}),True
+0.002873338035159209,"frozenset({'beauty_shop', 'salon_beauty'})",True
+0.002873338035159209,"frozenset({'beauty_shop', 'salon_beauty', 'TAG_KEY:shop'})",True
+0.0028210955254290414,"frozenset({'pump_fuel', 'fuel_amenity'})",True
+0.0028210955254290414,"frozenset({'TAG_KEY:amenity', 'pump_fuel', 'fuel_amenity'})",True
+0.0028210955254290414,frozenset({'pump_fuel'}),True
+0.0028210955254290414,"frozenset({'TAG_KEY:amenity', 'pump_fuel'})",True
+0.002768853015698874,"frozenset({'estate_estate', 'agent_office'})",True
+0.002768853015698874,"frozenset({'estate_estate', 'agent_office', 'TAG_KEY:office'})",True
+0.002768853015698874,"frozenset({'estate_agent', 'estate_estate', 'TAG_KEY:office'})",True
+0.002768853015698874,frozenset({'estate_estate'}),True
+0.002768853015698874,"frozenset({'estate_estate', 'estate_agent', 'agent_office'})",True
+0.002768853015698874,"frozenset({'estate_estate', 'TAG_KEY:office'})",True
+0.002768853015698874,"frozenset({'estate_estate', 'estate_agent', 'agent_office', 'TAG_KEY:office'})",True
+0.002768853015698874,"frozenset({'estate_agent', 'estate_estate'})",True
+0.0027427317608337905,frozenset({'housing_society'}),True
+0.002690489251103623,"frozenset({'pitch_leisure', 'park_pitch', 'TAG_KEY:leisure'})",True
+0.002690489251103623,frozenset({'park_pitch'}),True
+0.002690489251103623,"frozenset({'pitch_leisure', 'park_pitch'})",True
+0.002690489251103623,"frozenset({'park_pitch', 'TAG_KEY:leisure'})",True
+0.002664367996238539,"frozenset({'office_government', 'government_office'})",True
+0.002664367996238539,"frozenset({'office_government', 'government_office', 'TAG_KEY:office'})",True
+0.002664367996238539,"frozenset({'office_government', 'TAG_KEY:office'})",True
+0.002664367996238539,frozenset({'office_government'}),True
+0.002586004231643288,frozenset({'society_neighbourhood'}),True
+0.002586004231643288,"frozenset({'society_neighbourhood', 'neighbourhood_place'})",True
+0.002586004231643288,"frozenset({'society_neighbourhood', 'TAG_KEY:place'})",True
+0.002586004231643288,"frozenset({'society_neighbourhood', 'neighbourhood_place', 'TAG_KEY:place'})",True
+0.0025598829767782046,"frozenset({'store_shop', 'TAG_KEY:shop'})",True
+0.0025598829767782046,"frozenset({'TAG_KEY:shop', 'market_supermarket', 'supermarket_shop'})",True
+0.0025598829767782046,"frozenset({'market_supermarket', 'supermarket_shop'})",True
+0.0025598829767782046,"frozenset({'market_supermarket', 'TAG_KEY:shop'})",True
+0.0025598829767782046,frozenset({'market_supermarket'}),True
+0.0025598829767782046,frozenset({'store_shop'}),True
+0.002507640467048037,"frozenset({'estate_agent', 'real_estate', 'agent_office', 'TAG_KEY:office'})",True
+0.002507640467048037,"frozenset({'estate_agent', 'real_estate', 'agent_office'})",True
+0.002507640467048037,"frozenset({'estate_agent', 'real_estate', 'TAG_KEY:office'})",True
+0.002507640467048037,"frozenset({'estate_agent', 'real_estate'})",True
+0.0024815192121829532,"frozenset({'electronics_electronics', 'TAG_KEY:shop'})",True
+0.0024815192121829532,"frozenset({'electronics_shop', 'TAG_KEY:shop', 'electronics_electronics'})",True
+0.0024815192121829532,"frozenset({'electronics_shop', 'electronics_electronics'})",True
+0.0024815192121829532,frozenset({'electronics_electronics'}),True
+0.002429276702452786,frozenset({'beauty_salon'}),True
+0.0023770341927226183,frozenset({'town_place'}),True
+0.002324791682992451,"frozenset({'beauty_salon', 'TAG_KEY:shop'})",True
+0.002324791682992451,"frozenset({'TAG_KEY:shop', 'general_store', 'supermarket_shop'})",True
+0.002324791682992451,"frozenset({'general_store', 'supermarket_shop'})",True
+0.0022986704281273674,"frozenset({'beauty_salon', 'beauty_shop', 'TAG_KEY:shop'})",True
+0.0022986704281273674,"frozenset({'beauty_salon', 'beauty_shop'})",True
+0.0022986704281273674,frozenset({'pool_leisure'}),True
+0.0022986704281273674,"frozenset({'TAG_KEY:leisure', 'pool_leisure'})",True
+0.0022725491732622834,"frozenset({'neighborhood_neighbourhood', 'neighbourhood_place', 'TAG_KEY:place'})",True
+0.0022725491732622834,frozenset({'neighborhood_neighbourhood'}),True
+0.0022725491732622834,frozenset({'station_railway'}),True
+0.0022725491732622834,"frozenset({'store_supermarket', 'general_store'})",True
+0.0022725491732622834,"frozenset({'store_supermarket', 'general_store', 'supermarket_shop'})",True
+0.0022725491732622834,"frozenset({'store_supermarket', 'general_store', 'TAG_KEY:shop'})",True
+0.0022725491732622834,"frozenset({'TAG_KEY:shop', 'store_supermarket', 'general_store', 'supermarket_shop'})",True
+0.0022725491732622834,"frozenset({'station_railway', 'TAG_KEY:railway'})",True
+0.0022725491732622834,"frozenset({'neighborhood_neighbourhood', 'TAG_KEY:place'})",True
+0.0022725491732622834,"frozenset({'neighborhood_neighbourhood', 'neighbourhood_place'})",True
+0.0022464279183972,"frozenset({'autos_car', 'parts_shop', 'TAG_KEY:shop'})",True
+0.0022464279183972,"frozenset({'car_parts', 'autos_car'})",True
+0.0022464279183972,"frozenset({'autos_car', 'car_parts', 'TAG_KEY:shop'})",True
+0.0022464279183972,"frozenset({'autos_car', 'parts_shop', 'car_parts', 'TAG_KEY:shop'})",True
+0.0022464279183972,"frozenset({'parts_shop', 'autos_car'})",True
+0.0022464279183972,"frozenset({'parts_shop', 'car_parts', 'autos_car'})",True
+0.002220306663532116,"frozenset({'tailor_shop', 'TAG_KEY:shop', 'tailor_tailor'})",True
+0.002220306663532116,"frozenset({'TAG_KEY:shop', 'tailor_tailor'})",True
+0.002220306663532116,"frozenset({'tailor_shop', 'tailor_tailor'})",True
+0.002220306663532116,frozenset({'tailor_tailor'}),True
+0.0021941854086670325,"frozenset({'playground_leisure', 'park_playground', 'TAG_KEY:leisure'})",True
+0.0021941854086670325,"frozenset({'park_playground', 'TAG_KEY:leisure'})",True
+0.0021941854086670325,"frozenset({'playground_leisure', 'park_playground'})",True
+0.0021941854086670325,frozenset({'park_playground'}),True
+0.0021680641538019485,"frozenset({'parking_amenity', 'parking_parking'})",True
+0.0021680641538019485,frozenset({'parking_parking'}),True
+0.0021680641538019485,"frozenset({'TAG_KEY:amenity', 'parking_parking'})",True
+0.0021680641538019485,"frozenset({'TAG_KEY:amenity', 'parking_amenity', 'parking_parking'})",True
+0.002115821644071781,frozenset({'shoes_shoes'}),True
+0.002115821644071781,"frozenset({'shoes_shop', 'shoes_shoes', 'TAG_KEY:shop'})",True
+0.002115821644071781,"frozenset({'shoes_shop', 'shoes_shoes'})",True
+0.002115821644071781,"frozenset({'shoes_shoes', 'TAG_KEY:shop'})",True
+0.0020635791343416136,"frozenset({'TAG_KEY:shop', 'general_store', 'convenience_shop'})",True
+0.0020635791343416136,"frozenset({'general_store', 'convenience_shop'})",True
+0.0020635791343416136,"frozenset({'town_place', 'TAG_KEY:place'})",True
+0.00203745787947653,"frozenset({'TAG_KEY:shop', 'store_convenience', 'general_store', 'convenience_shop'})",True
+0.00203745787947653,"frozenset({'store_convenience', 'general_store', 'TAG_KEY:shop'})",True
+0.00203745787947653,"frozenset({'store_convenience', 'general_store'})",True
+0.00203745787947653,"frozenset({'store_convenience', 'general_store', 'convenience_shop'})",True
+0.001854609095420944,"frozenset({'housing_society', 'TAG_KEY:place'})",True
+0.0018284878405558603,frozenset({'store_electronics'}),True
+0.0018284878405558603,"frozenset({'electronics_shop', 'store_electronics', 'TAG_KEY:shop'})",True
+0.0018284878405558603,"frozenset({'store_electronics', 'TAG_KEY:shop'})",True
+0.0018284878405558603,"frozenset({'electronics_shop', 'store_electronics'})",True
+0.0017501240759606092,"frozenset({'estate_estate', 'real_estate'})",True
+0.0017501240759606092,frozenset({'motorcycle_shop'}),True
+0.0017501240759606092,"frozenset({'TAG_KEY:amenity', 'bank_amenity'})",True
+0.0017501240759606092,"frozenset({'estate_estate', 'estate_agent', 'real_estate', 'agent_office'})",True
+0.0017501240759606092,"frozenset({'estate_estate', 'real_estate', 'TAG_KEY:office'})",True
+0.0017501240759606092,"frozenset({'estate_agent', 'real_estate', 'estate_estate', 'TAG_KEY:office'})",True
+0.0017501240759606092,"frozenset({'estate_estate', 'real_estate', 'agent_office'})",True
+0.0017501240759606092,"frozenset({'estate_agent', 'real_estate', 'estate_estate'})",True
+0.0017501240759606092,frozenset({'bank_amenity'}),True
+0.0017501240759606092,"frozenset({'estate_estate', 'real_estate', 'agent_office', 'TAG_KEY:office'})",True
+0.0017501240759606092,"frozenset({'estate_estate', 'estate_agent', 'real_estate', 'agent_office', 'TAG_KEY:office'})",True
+0.0017501240759606092,"frozenset({'motorcycle_shop', 'TAG_KEY:shop'})",True
+0.0017501240759606092,"frozenset({'neighbourhood_place', 'housing_society'})",True
+0.0017501240759606092,"frozenset({'neighbourhood_place', 'housing_society', 'TAG_KEY:place'})",True
+0.0017501240759606092,frozenset({'cooperative_housing'}),True
+0.0017240028210955254,frozenset({'medical_store'}),True
+0.0016978815662304417,"frozenset({'housing_society', 'cooperative_housing'})",True
+0.0016978815662304417,frozenset({'stadium_leisure'}),True
+0.0016978815662304417,"frozenset({'TAG_KEY:leisure', 'stadium_leisure'})",True
+0.001671760311365358,frozenset({'food_restaurant'}),True
+0.001671760311365358,"frozenset({'medical_store', 'TAG_KEY:healthcare'})",True
+0.001671760311365358,"frozenset({'beauty_salon', 'salon_beauty'})",True
+0.001671760311365358,"frozenset({'beauty_salon', 'TAG_KEY:shop', 'beauty_shop', 'salon_beauty'})",True
+0.001671760311365358,"frozenset({'beauty_salon', 'beauty_shop', 'salon_beauty'})",True
+0.001671760311365358,"frozenset({'beauty_salon', 'salon_beauty', 'TAG_KEY:shop'})",True
+0.0016456390565002743,"frozenset({'society_neighbourhood', 'housing_society', 'TAG_KEY:place'})",True
+0.0016456390565002743,"frozenset({'TAG_KEY:public_transport', 'public_transport', 'station_platform'})",True
+0.0016456390565002743,"frozenset({'TAG_KEY:public_transport', 'station_platform'})",True
+0.0016456390565002743,"frozenset({'public_transport', 'station_platform'})",True
+0.0016456390565002743,"frozenset({'society_neighbourhood', 'neighbourhood_place', 'housing_society'})",True
+0.0016456390565002743,frozenset({'station_platform'}),True
+0.0016456390565002743,"frozenset({'society_neighbourhood', 'neighbourhood_place', 'housing_society', 'TAG_KEY:place'})",True
+0.0016456390565002743,"frozenset({'society_neighbourhood', 'housing_society'})",True
+0.0016456390565002743,"frozenset({'TAG_KEY:amenity', 'food_restaurant'})",True
+0.0016195178016351905,"frozenset({'TAG_KEY:amenity', 'cream_amenity'})",True
+0.0016195178016351905,frozenset({'cream_amenity'}),True
+0.0016195178016351905,"frozenset({'TAG_KEY:amenity', 'ice_cream', 'cream_amenity'})",True
+0.0016195178016351905,"frozenset({'ice_cream', 'cream_amenity'})",True
+0.0015933965467701068,frozenset({'shopping_mall'}),True
+0.0015933965467701068,"frozenset({'TAG_KEY:amenity', 'restaurant_amenity', 'food_restaurant'})",True
+0.0015933965467701068,"frozenset({'restaurant_amenity', 'food_restaurant'})",True
+0.001567275291905023,"frozenset({'shopping_mall', 'TAG_KEY:shop'})",True
+0.001567275291905023,"frozenset({'TAG_KEY:tourism', 'house_tourism'})",True
+0.001567275291905023,frozenset({'house_tourism'}),True
+0.0015411540370399393,"frozenset({'hostel_tourism', 'hostel_hostel'})",True
+0.0015411540370399393,"frozenset({'pharmacy_healthcare', 'medical_store', 'TAG_KEY:healthcare'})",True
+0.0015411540370399393,"frozenset({'hostel_tourism', 'TAG_KEY:tourism', 'hostel_hostel'})",True
+0.0015411540370399393,"frozenset({'TAG_KEY:tourism', 'hostel_hostel'})",True
+0.0015411540370399393,"frozenset({'pharmacy_healthcare', 'medical_store'})",True
+0.0015411540370399393,frozenset({'hostel_hostel'}),True
+0.0015150327821748556,"frozenset({'store_pharmacy', 'medical_store'})",True
+0.0015150327821748556,"frozenset({'store_pharmacy', 'pharmacy_healthcare', 'medical_store'})",True
+0.0015150327821748556,"frozenset({'store_pharmacy', 'medical_store', 'TAG_KEY:healthcare'})",True
+0.0015150327821748556,frozenset({'cng_station'}),True
+0.0015150327821748556,"frozenset({'TAG_KEY:amenity', 'cng_station'})",True
+0.0015150327821748556,"frozenset({'cng_station', 'fuel_amenity'})",True
+0.0015150327821748556,"frozenset({'store_pharmacy', 'pharmacy_healthcare', 'medical_store', 'TAG_KEY:healthcare'})",True
+0.0015150327821748556,"frozenset({'TAG_KEY:amenity', 'cng_station', 'fuel_amenity'})",True
+0.001488911527309772,frozenset({'department_store'}),True
+0.001488911527309772,frozenset({'parts_car'}),True
+0.001488911527309772,"frozenset({'parts_car', 'TAG_KEY:shop'})",True
+0.001488911527309772,frozenset({'lawyer_office'}),True
+0.001488911527309772,"frozenset({'lawyer_office', 'TAG_KEY:office'})",True
+0.001488911527309772,"frozenset({'department_store', 'TAG_KEY:shop'})",True
+0.0014627902724446882,frozenset({'petrol_pump'}),True
+0.0014627902724446882,"frozenset({'cng_station', 'station_fuel', 'fuel_amenity'})",True
+0.0014627902724446882,"frozenset({'cng_station', 'station_fuel'})",True
+0.0014627902724446882,"frozenset({'petrol_pump', 'TAG_KEY:amenity'})",True
+0.0014627902724446882,"frozenset({'store_shop', 'department_store'})",True
+0.0014627902724446882,"frozenset({'sector_neighbourhood', 'neighbourhood_place', 'TAG_KEY:place'})",True
+0.0014627902724446882,"frozenset({'petrol_pump', 'TAG_KEY:amenity', 'fuel_amenity'})",True
+0.0014627902724446882,"frozenset({'petrol_pump', 'fuel_amenity'})",True
+0.0014627902724446882,"frozenset({'store_shop', 'department_store', 'TAG_KEY:shop'})",True
+0.0014627902724446882,frozenset({'sector_neighbourhood'}),True
+0.0014627902724446882,"frozenset({'sector_neighbourhood', 'neighbourhood_place'})",True
+0.0014627902724446882,"frozenset({'sector_neighbourhood', 'TAG_KEY:place'})",True
+0.0014627902724446882,"frozenset({'TAG_KEY:amenity', 'cng_station', 'station_fuel', 'fuel_amenity'})",True
+0.0014627902724446882,"frozenset({'TAG_KEY:amenity', 'cng_station', 'station_fuel'})",True
+0.0014366690175796044,"frozenset({'mall_shop', 'shopping_mall', 'TAG_KEY:shop'})",True
+0.0014366690175796044,"frozenset({'mall_shop', 'shopping_mall'})",True
+0.0014366690175796044,frozenset({'family_park'}),True
+0.0014366690175796044,"frozenset({'family_park', 'TAG_KEY:leisure'})",True
+0.0014105477627145207,"frozenset({'petrol_pump', 'TAG_KEY:amenity', 'pump_fuel'})",True
+0.0014105477627145207,"frozenset({'petrol_pump', 'TAG_KEY:amenity', 'pump_fuel', 'fuel_amenity'})",True
+0.0014105477627145207,"frozenset({'petrol_pump', 'pump_fuel', 'fuel_amenity'})",True
+0.0014105477627145207,"frozenset({'park_leisure', 'family_park'})",True
+0.0014105477627145207,"frozenset({'park_leisure', 'family_park', 'TAG_KEY:leisure'})",True
+0.0014105477627145207,"frozenset({'petrol_pump', 'pump_fuel'})",True
+0.001384426507849437,"frozenset({'cemetery_landuse', 'cemetery_cemetery', 'TAG_KEY:landuse'})",True
+0.001384426507849437,"frozenset({'cemetery_cemetery', 'TAG_KEY:landuse'})",True
+0.001384426507849437,"frozenset({'cemetery_landuse', 'cemetery_cemetery'})",True
+0.001384426507849437,"frozenset({'TAG_KEY:place', 'cooperative_housing'})",True
+0.001384426507849437,"frozenset({'fast_food', 'TAG_KEY:amenity', 'restaurant_amenity'})",True
+0.001384426507849437,frozenset({'cemetery_cemetery'}),True
+0.001384426507849437,"frozenset({'fast_food', 'restaurant_amenity'})",True
+0.0013583052529843533,"frozenset({'neighbourhood_place', 'cooperative_housing'})",True
+0.0013583052529843533,"frozenset({'bakers_bakery', 'bakery_shop', 'TAG_KEY:shop'})",True
+0.0013583052529843533,frozenset({'bakers_bakery'}),True
+0.0013583052529843533,"frozenset({'housing_society', 'TAG_KEY:place', 'cooperative_housing'})",True
+0.0013583052529843533,"frozenset({'bakers_bakery', 'TAG_KEY:shop'})",True
+0.0013583052529843533,"frozenset({'bakers_bakery', 'bakery_shop'})",True
+0.0013583052529843533,"frozenset({'neighbourhood_place', 'TAG_KEY:place', 'cooperative_housing'})",True
+0.0013321839981192695,frozenset({'garments_clothes'}),True
+0.0013321839981192695,"frozenset({'clothes_shop', 'garments_clothes', 'TAG_KEY:shop'})",True
+0.0013321839981192695,"frozenset({'garments_clothes', 'TAG_KEY:shop'})",True
+0.0013321839981192695,"frozenset({'TAG_KEY:amenity', 'office_post'})",True
+0.0013321839981192695,"frozenset({'clothes_shop', 'garments_clothes'})",True
+0.0013321839981192695,frozenset({'office_post'}),True
+0.0013321839981192695,"frozenset({'post_office', 'office_post', 'office_amenity'})",True
+0.0013321839981192695,"frozenset({'TAG_KEY:amenity', 'post_office', 'office_post', 'office_amenity'})",True
+0.0013321839981192695,"frozenset({'neighbourhood_place', 'housing_society', 'TAG_KEY:place', 'cooperative_housing'})",True
+0.0013321839981192695,"frozenset({'office_post', 'office_amenity'})",True
+0.0013321839981192695,"frozenset({'TAG_KEY:amenity', 'office_post', 'office_amenity'})",True
+0.0013321839981192695,"frozenset({'neighbourhood_place', 'housing_society', 'cooperative_housing'})",True
+0.0013321839981192695,frozenset({'cricket_park'}),True
+0.0013321839981192695,"frozenset({'post_office', 'office_post'})",True
+0.0013321839981192695,"frozenset({'cricket_park', 'TAG_KEY:leisure'})",True
+0.0013321839981192695,"frozenset({'TAG_KEY:amenity', 'post_office', 'office_post'})",True
+0.0013060627432541858,frozenset({'store_hardware'}),True
+0.0013060627432541858,frozenset({'townhall_amenity'}),True
+0.0013060627432541858,frozenset({'collection_clothes'}),True
+0.0013060627432541858,"frozenset({'mall_mall', 'shopping_mall'})",True
+0.0013060627432541858,"frozenset({'TAG_KEY:amenity', 'townhall_amenity'})",True
+0.0013060627432541858,"frozenset({'mall_mall', 'shopping_mall', 'TAG_KEY:shop'})",True
+0.0013060627432541858,"frozenset({'clothes_shop', 'collection_clothes'})",True
+0.0013060627432541858,"frozenset({'TAG_KEY:shop', 'store_hardware'})",True
+0.0013060627432541858,"frozenset({'mall_shop', 'mall_mall', 'shopping_mall'})",True
+0.0013060627432541858,"frozenset({'mall_shop', 'mall_mall', 'shopping_mall', 'TAG_KEY:shop'})",True
+0.0013060627432541858,"frozenset({'hardware_shop', 'store_hardware'})",True
+0.0013060627432541858,"frozenset({'clothes_shop', 'collection_clothes', 'TAG_KEY:shop'})",True
+0.0013060627432541858,"frozenset({'collection_clothes', 'TAG_KEY:shop'})",True
+0.0013060627432541858,"frozenset({'TAG_KEY:shop', 'hardware_shop', 'store_hardware'})",True
+0.0012799414883891023,"frozenset({'graveyard_cemetery', 'cemetery_landuse', 'TAG_KEY:landuse'})",True
+0.0012799414883891023,"frozenset({'mall_clothes', 'TAG_KEY:shop'})",True
+0.0012799414883891023,"frozenset({'clothes_shop', 'mall_clothes', 'TAG_KEY:shop'})",True
+0.0012799414883891023,frozenset({'mall_clothes'}),True
+0.0012799414883891023,"frozenset({'graveyard_cemetery', 'TAG_KEY:landuse'})",True
+0.0012799414883891023,"frozenset({'graveyard_cemetery', 'cemetery_landuse'})",True
+0.0012799414883891023,frozenset({'graveyard_cemetery'}),True
+0.0012799414883891023,frozenset({'fabric_shop'}),True
+0.0012799414883891023,frozenset({'church_place'}),True
+0.0012799414883891023,"frozenset({'clothes_shop', 'mall_clothes'})",True
+0.0012799414883891023,"frozenset({'worship_amenity', 'church_place'})",True
+0.0012799414883891023,"frozenset({'TAG_KEY:amenity', 'church_place'})",True
+0.0012799414883891023,"frozenset({'fabric_shop', 'TAG_KEY:shop'})",True
+0.0012799414883891023,"frozenset({'religious_landuse', 'TAG_KEY:landuse'})",True
+0.0012799414883891023,"frozenset({'worship_amenity', 'TAG_KEY:amenity', 'church_place'})",True
+0.0012799414883891023,frozenset({'religious_landuse'}),True
+0.0012276989786589349,"frozenset({'society_neighbourhood', 'housing_society', 'TAG_KEY:place', 'cooperative_housing'})",True
+0.0012276989786589349,"frozenset({'society_neighbourhood', 'neighbourhood_place', 'TAG_KEY:place', 'cooperative_housing'})",True
+0.0012276989786589349,"frozenset({'market_retail', 'TAG_KEY:landuse'})",True
+0.0012276989786589349,"frozenset({'retail_landuse', 'market_retail', 'TAG_KEY:landuse'})",True
+0.0012276989786589349,"frozenset({'worship_amenity', 'TAG_KEY:amenity', 'madina_place'})",True
+0.0012276989786589349,"frozenset({'TAG_KEY:amenity', 'madina_place'})",True
+0.0012276989786589349,"frozenset({'worship_amenity', 'madina_place'})",True
+0.0012276989786589349,"frozenset({'neighbourhood_place', 'cooperative_housing', 'society_neighbourhood', 'housing_society', 'TAG_KEY:place'})",True
+0.0012276989786589349,"frozenset({'society_neighbourhood', 'neighbourhood_place', 'housing_society', 'cooperative_housing'})",True
+0.0012276989786589349,"frozenset({'retail_landuse', 'market_retail'})",True
+0.0012276989786589349,"frozenset({'society_neighbourhood', 'housing_society', 'cooperative_housing'})",True
+0.0012276989786589349,"frozenset({'society_neighbourhood', 'cooperative_housing'})",True
+0.0012276989786589349,"frozenset({'society_neighbourhood', 'neighbourhood_place', 'cooperative_housing'})",True
+0.0012276989786589349,frozenset({'madina_place'}),True
+0.0012276989786589349,frozenset({'market_retail'}),True
+0.0012276989786589349,"frozenset({'society_neighbourhood', 'TAG_KEY:place', 'cooperative_housing'})",True
+0.0012015777237938511,frozenset({'garden_park'}),True
+0.0012015777237938511,"frozenset({'park_leisure', 'garden_park'})",True
+0.0012015777237938511,"frozenset({'garden_park', 'TAG_KEY:leisure'})",True
+0.0012015777237938511,"frozenset({'park_leisure', 'garden_park', 'TAG_KEY:leisure'})",True
+0.0012015777237938511,"frozenset({'family_park', 'park_park'})",True
+0.0012015777237938511,"frozenset({'company_office', 'office_company'})",True
+0.0012015777237938511,"frozenset({'office_company', 'TAG_KEY:office'})",True
+0.0012015777237938511,"frozenset({'company_office', 'office_company', 'TAG_KEY:office'})",True
+0.0012015777237938511,"frozenset({'park_leisure', 'family_park', 'park_park'})",True
+0.0012015777237938511,frozenset({'office_company'}),True
+0.0012015777237938511,"frozenset({'TAG_KEY:leisure', 'family_park', 'park_park'})",True
+0.0012015777237938511,"frozenset({'park_leisure', 'TAG_KEY:leisure', 'family_park', 'park_park'})",True
+0.0011754564689287674,"frozenset({'workshop_car', 'TAG_KEY:shop'})",True
+0.0011754564689287674,frozenset({'workshop_car'}),True
+0.0011493352140636837,frozenset({'artwork_tourism'}),True
+0.0011493352140636837,frozenset({'fabrics_clothes'}),True
+0.0011493352140636837,"frozenset({'repair_shop', 'workshop_car'})",True
+0.0011493352140636837,"frozenset({'repair_shop', 'car_repair', 'workshop_car'})",True
+0.0011493352140636837,"frozenset({'repair_shop', 'workshop_car', 'TAG_KEY:shop'})",True
+0.0011493352140636837,"frozenset({'artwork_tourism', 'TAG_KEY:tourism'})",True
+0.0011493352140636837,frozenset({'dentist_healthcare'}),True
+0.0011493352140636837,"frozenset({'fabrics_clothes', 'TAG_KEY:shop'})",True
+0.0011493352140636837,"frozenset({'car_repair', 'workshop_car'})",True
+0.0011493352140636837,"frozenset({'workshop_car', 'car_repair', 'TAG_KEY:shop'})",True
+0.0011493352140636837,"frozenset({'dentist_healthcare', 'TAG_KEY:healthcare'})",True
+0.0011493352140636837,"frozenset({'repair_shop', 'workshop_car', 'car_repair', 'TAG_KEY:shop'})",True
+0.0011232139591986,"frozenset({'fabrics_clothes', 'clothes_shop'})",True
+0.0011232139591986,"frozenset({'fabrics_clothes', 'clothes_shop', 'TAG_KEY:shop'})",True
+0.0010970927043335162,"frozenset({'TAG_KEY:place', 'block_neighbourhood'})",True
+0.0010970927043335162,"frozenset({'neighbourhood_place', 'block_neighbourhood'})",True
+0.0010970927043335162,"frozenset({'TAG_KEY:amenity', 'courthouse_amenity'})",True
+0.0010970927043335162,frozenset({'cng_fuel'}),True
+0.0010970927043335162,"frozenset({'TAG_KEY:amenity', 'cng_fuel', 'fuel_amenity'})",True
+0.0010970927043335162,"frozenset({'TAG_KEY:amenity', 'cng_fuel'})",True
+0.0010970927043335162,frozenset({'courthouse_amenity'}),True
+0.0010970927043335162,"frozenset({'neighbourhood_place', 'town_neighbourhood'})",True
+0.0010970927043335162,"frozenset({'town_neighbourhood', 'TAG_KEY:place'})",True
+0.0010970927043335162,"frozenset({'neighbourhood_place', 'town_neighbourhood', 'TAG_KEY:place'})",True
+0.0010970927043335162,frozenset({'town_neighbourhood'}),True
+0.0010970927043335162,frozenset({'block_neighbourhood'}),True
+0.0010970927043335162,"frozenset({'cng_fuel', 'fuel_amenity'})",True
+0.0010970927043335162,"frozenset({'neighbourhood_place', 'TAG_KEY:place', 'block_neighbourhood'})",True
+0.0010448501946033488,frozenset({'grocery_store'}),True
+0.001018728939738265,frozenset({'store_clothes'}),True
+0.001018728939738265,"frozenset({'clothes_shop', 'store_clothes'})",True
+0.001018728939738265,"frozenset({'store_clothes', 'TAG_KEY:shop'})",True
+0.001018728939738265,"frozenset({'grocery_store', 'TAG_KEY:shop'})",True
+0.001018728939738265,"frozenset({'clothes_shop', 'store_clothes', 'TAG_KEY:shop'})",True

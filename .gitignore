@@ -251,3 +251,15 @@ config/secrets.yaml
 # Large/Binary Data Artifacts
 data/processed/*.pkl
 data/processed/*.npy
+
+# Data Reports and Artifacts
+# datareported/
+archive/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Local Configs
+.vscode/
+.idea/
