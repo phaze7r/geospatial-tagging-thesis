@@ -1,0 +1,36 @@
+core:
+  amenity:
+    - mosque
+    - marketplace
+    - bank
+    - atm
+    - police
+    - fire_station
+  leisure:
+    - park
+  tourism:
+    - museum
+  historic:
+    - fort
+services:
+  healthcare:
+    - hospital
+    - clinic
+    - pharmacy
+  education:
+    - school
+    - college
+    - university
+transport:
+  public_transport:
+    - bus_station
+    - bus_stop
+  railway:
+    - station
+places_natural:
+  place:
+    - neighbourhood
+  natural:
+    - water
+  landuse:
+    - cemetery

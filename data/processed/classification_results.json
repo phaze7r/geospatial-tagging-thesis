@@ -1,0 +1,129 @@
+{
+  "timestamp": "2025-12-07T22:30:17.434894Z",
+  "embedding_type": "SBERT",
+  "model": "LogisticRegression",
+  "accuracy": 0.9837505489679402,
+  "classification_report": {
+    "atm": {
+      "precision": 0.7633587786259542,
+      "recall": 1.0,
+      "f1-score": 0.8658008658008658,
+      "support": 100.0
+    },
+    "bank": {
+      "precision": 1.0,
+      "recall": 0.9472759226713533,
+      "f1-score": 0.9729241877256317,
+      "support": 569.0
+    },
+    "cemetery": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 90.0
+    },
+    "clinic": {
+      "precision": 0.9692307692307692,
+      "recall": 0.9692307692307692,
+      "f1-score": 0.9692307692307692,
+      "support": 65.0
+    },
+    "college": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 1.0
+    },
+    "fire_station": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 7.0
+    },
+    "fort": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1.0
+    },
+    "hospital": {
+      "precision": 0.9937888198757764,
+      "recall": 0.9937888198757764,
+      "f1-score": 0.9937888198757764,
+      "support": 161.0
+    },
+    "marketplace": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 110.0
+    },
+    "museum": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 9.0
+    },
+    "neighbourhood": {
+      "precision": 0.996551724137931,
+      "recall": 0.996551724137931,
+      "f1-score": 0.996551724137931,
+      "support": 290.0
+    },
+    "park": {
+      "precision": 0.9983416252072969,
+      "recall": 0.9983416252072969,
+      "f1-score": 0.9983416252072969,
+      "support": 603.0
+    },
+    "pharmacy": {
+      "precision": 1.0,
+      "recall": 0.9879518072289156,
+      "f1-score": 0.9939393939393939,
+      "support": 83.0
+    },
+    "police": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 56.0
+    },
+    "school": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "station": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 17.0
+    },
+    "university": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1-score": 0.6666666666666666,
+      "support": 1.0
+    },
+    "water": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 112.0
+    },
+    "accuracy": 0.9837505489679402,
+    "macro avg": {
+      "precision": 0.9011817620598737,
+      "recall": 0.9385078149084468,
+      "f1-score": 0.914291336254685,
+      "support": 2277.0
+    },
+    "weighted avg": {
+      "precision": 0.9867526912000857,
+      "recall": 0.9837505489679402,
+      "f1-score": 0.9843379823274515,
+      "support": 2277.0
+    }
+  }
+}
