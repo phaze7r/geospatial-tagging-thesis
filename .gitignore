@@ -240,3 +240,26 @@ results/*
 # Cache
 *.cache
 .cache/
+
+# User-requested Safety Rules
+secrets.yaml
+config/secrets.yaml
+*.key
+*.pem
+*.p12
+
+# Large/Binary Data Artifacts
+data/processed/*.pkl
+data/processed/*.npy
+
+# Data Reports and Artifacts
+# datareported/
+archive/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Local Configs
+.vscode/
+.idea/

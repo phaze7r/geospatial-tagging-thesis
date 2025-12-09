@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MS Thesis Progress Tracker - Geospatial Tagging </title>
 
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
     <link rel="stylesheet" href="mobile-style.css">
 
     <!-- External Libraries -->
@@ -39,24 +41,56 @@
 
     <style>
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
         @keyframes bounceGentle {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
         }
 
         @keyframes pulseOrange {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(242, 140, 56, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(242, 140, 56, 0); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(242, 140, 56, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(242, 140, 56, 0);
+            }
         }
 
         .glass-effect {
@@ -110,6 +144,7 @@
         }
     </style>
 </head>
+
 <body class="bg-white min-h-screen">
     <div id="root"></div>
 
@@ -119,8 +154,7 @@
         // Configuration - UPDATE THESE WITH YOUR ACTUAL ENDPOINTS
         const CONFIG = {
             GITHUB_REPO: 'phaze7r/geospatial-tagging-thesis',
-            //BACKEND_API: 'https://osm-dynamic-api-0506da85fcea.herokuapp.com/api',
-            MONGODB_URI: 'mongodb+srv://phaze7r:UBlzckErSAKPnwID@osm-cluster.scxgk9j.mongodb.net/?retryWrites=true&w=majority&appName=osm-cluster'// UPDATE THIS
+            BACKEND_API: 'https://osm-dynamic-api-0506da85fcea.herokuapp.com/api'
         };
 
         // Motivational quotes
@@ -145,75 +179,75 @@
 
         // API functions - REPLACE WITH ACTUAL API CALLS
         const api = {
-    // Authentication with caching and optimized error handling
-    login: async (username, password) => {
-        const cacheKey = `auth_${username}`;
+            // Authentication with caching and optimized error handling
+            login: async (username, password) => {
+                const cacheKey = `auth_${username}`;
 
-        // Check if we have a cached session
-        const cachedAuth = sessionStorage.getItem(cacheKey);
-        if (cachedAuth) {
-            try {
-                const parsed = JSON.parse(cachedAuth);
-                if (parsed.expiry > Date.now()) {
-                    return parsed.data;
+                // Check if we have a cached session
+                const cachedAuth = sessionStorage.getItem(cacheKey);
+                if (cachedAuth) {
+                    try {
+                        const parsed = JSON.parse(cachedAuth);
+                        if (parsed.expiry > Date.now()) {
+                            return parsed.data;
+                        }
+                        sessionStorage.removeItem(cacheKey); // Clear expired cache
+                    } catch (e) {
+                        sessionStorage.removeItem(cacheKey); // Clear invalid cache
+                    }
                 }
-                sessionStorage.removeItem(cacheKey); // Clear expired cache
-            } catch (e) {
-                sessionStorage.removeItem(cacheKey); // Clear invalid cache
-            }
-        }
 
-        try {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
+                try {
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
 
-            const response = await fetch(`${CONFIG.BACKEND_API}/auth/login`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Cache-Control': 'no-cache'
-                },
-                body: JSON.stringify({ username, password }),
-                signal: controller.signal
-            });
+                    const response = await fetch(`${CONFIG.BACKEND_API}/auth/login`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Cache-Control': 'no-cache'
+                        },
+                        body: JSON.stringify({ username, password }),
+                        signal: controller.signal
+                    });
 
-            clearTimeout(timeoutId);
+                    clearTimeout(timeoutId);
 
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
 
-            const data = await response.json();
+                    const data = await response.json();
 
-            // Cache successful login for 30 minutes
-            if (data.success) {
-                sessionStorage.setItem(cacheKey, JSON.stringify({
-                    data,
-                    expiry: Date.now() + (30 * 60 * 1000)
-                }));
-            }
+                    // Cache successful login for 30 minutes
+                    if (data.success) {
+                        sessionStorage.setItem(cacheKey, JSON.stringify({
+                            data,
+                            expiry: Date.now() + (30 * 60 * 1000)
+                        }));
+                    }
 
-            return data;
-        } catch (error) {
-            console.error('Login error:', error.message);
+                    return data;
+                } catch (error) {
+                    console.error('Login error:', error.message);
 
-            // Offline fallback for demo
-            if (!navigator.onLine) {
-                if (username === 'admin' && password === 'admin123') {
-                    return { success: true, user: { username, role: 'admin' } };
-                } else if (username === 'supervisor' && password === 'super123') {
-                    return { success: true, user: { username, role: 'editor' } };
+                    // Offline fallback for demo
+                    if (!navigator.onLine) {
+                        if (username === 'admin' && password === 'admin123') {
+                            return { success: true, user: { username, role: 'admin' } };
+                        } else if (username === 'supervisor' && password === 'super123') {
+                            return { success: true, user: { username, role: 'editor' } };
+                        }
+                    }
+
+                    return {
+                        success: false,
+                        message: error.name === 'AbortError'
+                            ? 'Login request timed out. Please try again.'
+                            : 'Login failed. Please check your connection and try again.'
+                    };
                 }
-            }
-
-            return {
-                success: false,
-                message: error.name === 'AbortError'
-                    ? 'Login request timed out. Please try again.'
-                    : 'Login failed. Please check your connection and try again.'
-            };
-        }
-    },
+            },
 
             // Progress
             getProgress: async () => {
@@ -561,7 +595,7 @@
                     </h3>
                     <div className="space-y-4 max-h-96 overflow-y-auto">
                         {commits.slice(0, 10).map((commit, index) => (
-                            <div key={commit.sha} className="border-l-4 border-sunset-orange pl-4 animate-slide-up" style={{animationDelay: `${index * 0.1}s`}}>
+                            <div key={commit.sha} className="border-l-4 border-sunset-orange pl-4 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                                 <div className="flex justify-between items-start">
                                     <div className="flex-1">
                                         <p className="font-medium text-gray-800">
@@ -627,27 +661,27 @@
                 };
                 const rootDataFiles = [];
 
-            items.forEach(item => {
-                const pathParts = item.path.split('/');
-                const topLevel = pathParts[0];
+                items.forEach(item => {
+                    const pathParts = item.path.split('/');
+                    const topLevel = pathParts[0];
 
-                if (topLevel === 'data') {
-                    if (pathParts.length === 2 && item.path.endsWith('.csv')) {
-                        // CSV files directly in data folder
-                        rootDataFiles.push(item);
-                    } else if (pathParts.length > 2) {
-                        // Files in data subfolders
-                        const subfolder = pathParts[1];
-                        if (dataFolders.hasOwnProperty(subfolder) && item.path.endsWith('.csv')) {
-                            dataFolders[subfolder].push(item);
+                    if (topLevel === 'data') {
+                        if (pathParts.length === 2 && item.path.endsWith('.csv')) {
+                            // CSV files directly in data folder
+                            rootDataFiles.push(item);
+                        } else if (pathParts.length > 2) {
+                            // Files in data subfolders
+                            const subfolder = pathParts[1];
+                            if (dataFolders.hasOwnProperty(subfolder) && item.path.endsWith('.csv')) {
+                                dataFolders[subfolder].push(item);
+                            }
                         }
+                    } else if (pathParts.length === 1 && item.type === 'tree') {
+                        mainFolders[topLevel] = item;
                     }
-                } else if (pathParts.length === 1 && item.type === 'tree') {
-                    mainFolders[topLevel] = item;
-        }
-    });
-            return { mainFolders, dataFolders, rootDataFiles };
-};
+                });
+                return { mainFolders, dataFolders, rootDataFiles };
+            };
 
             // const organizeTree = (items) => {
             //     const mainFolders = {};
@@ -702,7 +736,7 @@
                                         <div
                                             key={file.path}
                                             className="flex items-center py-2 px-3 hover:bg-white rounded cursor-pointer transition-colors animate-slide-up"
-                                            style={{animationDelay: `${index * 0.1}s`}}
+                                            style={{ animationDelay: `${index * 0.1}s` }}
                                             onClick={() => onFileClick(file.path)}
                                         >
                                             <span className="mr-3">📊</span>
@@ -713,40 +747,40 @@
                                         </div>
                                     ))}
 
-            {/* Data subfolders */}
-            {Object.entries(dataFolders).map(([folderName, files]) =>
-                files.length > 0 && (
-                    <div key={folderName} className="border-t border-gray-200 pt-2">
-                        <div className="flex items-center py-2 px-3 bg-gray-100 rounded-t mb-1">
-                            <span className="mr-3 text-lg">📂</span>
-                            <span className="text-gray-700 font-medium capitalize">{folderName}</span>
-                            <span className="ml-auto text-xs text-gray-500">
-                                {files.length} files
-                            </span>
-                        </div>
-                        <div className="space-y-1 pl-4">
-                            {files.map((file, index) => (
-                                <div
-                                    key={file.path}
-                                    className="flex items-center py-2 px-3 hover:bg-white rounded cursor-pointer transition-colors animate-slide-up"
-                                    style={{animationDelay: `${index * 0.1}s`}}
-                                    onClick={() => onFileClick(file.path)}
-                                >
-                                    <span className="mr-3">📊</span>
-                                    <span className="text-gray-700">{file.path.split('/').pop()}</span>
-                                    <span className="ml-auto text-xs bg-sunset-orange text-white px-2 py-1 rounded">
-                                        Preview
-                                    </span>
+                                    {/* Data subfolders */}
+                                    {Object.entries(dataFolders).map(([folderName, files]) =>
+                                        files.length > 0 && (
+                                            <div key={folderName} className="border-t border-gray-200 pt-2">
+                                                <div className="flex items-center py-2 px-3 bg-gray-100 rounded-t mb-1">
+                                                    <span className="mr-3 text-lg">📂</span>
+                                                    <span className="text-gray-700 font-medium capitalize">{folderName}</span>
+                                                    <span className="ml-auto text-xs text-gray-500">
+                                                        {files.length} files
+                                                    </span>
+                                                </div>
+                                                <div className="space-y-1 pl-4">
+                                                    {files.map((file, index) => (
+                                                        <div
+                                                            key={file.path}
+                                                            className="flex items-center py-2 px-3 hover:bg-white rounded cursor-pointer transition-colors animate-slide-up"
+                                                            style={{ animationDelay: `${index * 0.1}s` }}
+                                                            onClick={() => onFileClick(file.path)}
+                                                        >
+                                                            <span className="mr-3">📊</span>
+                                                            <span className="text-gray-700">{file.path.split('/').pop()}</span>
+                                                            <span className="ml-auto text-xs bg-sunset-orange text-white px-2 py-1 rounded">
+                                                                Preview
+                                                            </span>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )
+                                    )}
                                 </div>
-                            ))}
-                        </div>
-                    </div>
-                )
-            )}
-        </div>
-    </div>
-)}
-                        
+                            </div>
+                        )}
+
                         {/* Instructions */}
                         <div className="mt-4 p-3 bg-blue-50 rounded-lg">
                             <p className="text-sm text-blue-800">
@@ -878,7 +912,7 @@
 
                     <div className="space-y-4 max-h-64 overflow-y-auto">
                         {notes.slice(0, isPublic ? 5 : notes.length).map((note, index) => (
-                            <div key={note.id} className="border-l-4 border-sunset-orange pl-4 animate-slide-up" style={{animationDelay: `${index * 0.1}s`}}>
+                            <div key={note.id} className="border-l-4 border-sunset-orange pl-4 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                                 <p className="text-gray-800">{note.content}</p>
                                 <p className="text-sm text-gray-600 mt-1">
                                     {new Date(note.date).toLocaleDateString()} • by {note.author}
@@ -1191,4 +1225,5 @@
         ReactDOM.render(<App />, document.getElementById('root'));
     </script>
 </body>
+
 </html>

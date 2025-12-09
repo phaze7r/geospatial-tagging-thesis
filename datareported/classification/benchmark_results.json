@@ -1,0 +1,7 @@
+{
+  "timestamp": "2025-12-09T04:30:43.046554",
+  "baseline_word2vec_accuracy": 0.9752005162717802,
+  "hybrid_model_accuracy": 0.9985249377708122,
+  "improvement": 0.023324421499032022,
+  "classes": 97
+}
