@@ -1,36 +1,150 @@
+# Extended OpenStreetMap Tags for Pakistan Context
+
 core:
   amenity:
+    # Worship & Religious
     - mosque
-    - marketplace
+    - place_of_worship
+    # Finance
     - bank
     - atm
+    - bureau_de_change
+    - money_transfer
+    # Emergency & Public
     - police
     - fire_station
-  leisure:
-    - park
-  tourism:
-    - museum
-  historic:
-    - fort
+    - post_office
+    - townhall
+    - courthouse
+    - embassy
+  
+sustenance:
+  amenity:
+    - restaurant
+    - cafe
+    - fast_food
+    - food_court
+    - ice_cream
+    - juice_bar
+    - bakery  # Often tagged as shop=bakery but sometimes amenity
+
+shops:
+  shop:
+    - convenience
+    - supermarket
+    - department_store
+    - mall
+    - clothes
+    - fabric
+    - shoes
+    - electronics
+    - mobile_phone
+    - computer
+    - bakery
+    - butcher
+    - greengrocer
+    - chemist
+    - beauty
+    - hardware
+    - car_repair
+    - car_parts
+    - motorcycle
+    - furniture
+    - jewelry
+    - tailor
+    - copyshop
+    - stationery
+    - books
+    - gift
+
 services:
   healthcare:
     - hospital
     - clinic
+    - doctors
+    - dentist
     - pharmacy
+    - laboratory
   education:
     - school
     - college
     - university
+    - kindergarten
+    - library
+    - language_school
+    - tuition_centre
+
+leisure_tourism:
+  leisure:
+    - park
+    - garden
+    - playground
+    - sports_centre
+    - stadium
+    - pitch
+    - swimming_pool
+    - fitness_centre
+  tourism:
+    - museum
+    - artwork
+    - attraction
+    - view_point
+    - hotel
+    - guest_house
+    - hostel
+    - motel
+  historic:
+    - fort
+    - monument
+    - memorial
+    - ruins
+    - castle
+
 transport:
   public_transport:
     - bus_station
-    - bus_stop
+    - bus_stop (node)
+    - platform
   railway:
     - station
+    - halt
+  aeroway:
+    - aerodrome
+    - terminal
+  amenity:
+    - fuel
+    - parking
+    - taxi
+
+office:
+  office:
+    - government
+    - company
+    - lawyer
+    - ngo
+    - travel_agent
+    - estate_agent
+    - insurance
+
 places_natural:
   place:
+    - city
+    - suburb
+    - town
+    - village
     - neighbourhood
+    - yes
   natural:
     - water
+    - wood
+    - tree
+    - scrub
+    - wetland
   landuse:
     - cemetery
+    - residential
+    - commercial
+    - industrial
+    - retail
+    - construction
+    - religious

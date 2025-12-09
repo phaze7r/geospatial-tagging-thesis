@@ -8,3 +8,30 @@ cities:
   - name: Karachi
     bbox: [66.8, 24.7, 67.2, 25.0]
     province: Sindh
+  - name: Rawalpindi
+    bbox: [73.0, 33.5, 73.15, 33.7]
+    province: Punjab
+  - name: Kohat
+    bbox: [71.4, 33.5, 71.5, 33.65]
+    province: Khyber Pakhtunkhwa
+  - name: Peshawar
+    bbox: [71.45, 33.9, 71.7, 34.1]
+    province: Khyber Pakhtunkhwa
+  - name: Attock
+    bbox: [72.3, 33.7, 72.45, 33.85]
+    province: Punjab
+  - name: Chitral
+    bbox: [71.7, 35.8, 71.9, 36.0]
+    province: Khyber Pakhtunkhwa
+  - name: Skardu
+    bbox: [75.5, 35.2, 75.8, 35.4]
+    province: Gilgit-Baltistan
+  - name: Quetta
+    bbox: [66.9, 30.1, 67.1, 30.3]
+    province: Balochistan
+  - name: Sialkot
+    bbox: [74.45, 32.4, 74.65, 32.6]
+    province: Punjab
+  - name: Muzaffarabad
+    bbox: [73.4, 34.3, 73.55, 34.45]
+    province: Azad Kashmir
