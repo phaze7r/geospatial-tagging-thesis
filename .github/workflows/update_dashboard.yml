@@ -1,0 +1,39 @@
+name: Update Dashboard Data
+
+on:
+  push:
+    paths:
+      - 'docs/**'
+      - 'archive/reports/**.md'
+      - 'autoscripts/sync_dashboard.py'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout content
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Run Sync Script
+      run: |
+        python autoscripts/sync_dashboard.py
+
+    - name: Commit and Push changes
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        
+        # Check if data.js changed
+        if [[ -n $(git status --porcelain docs/data.js) ]]; then
+          git add docs/data.js
+          git commit -m "Auto-update dashboard data [skip ci]"
+          git push
+        else
+          echo "No changes to data.js"
+        fi
