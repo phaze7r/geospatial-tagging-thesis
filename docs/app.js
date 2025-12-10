@@ -34,7 +34,8 @@ const DataService = {
         try {
             // Fetch more commits to cover 6 months (approx)
             const resp = await fetch(`https://api.github.com/repos/${repo}/commits?per_page=100`);
-            return await resp.json();
+            const data = await resp.json();
+            return Array.isArray(data) ? data : [];
         } catch (e) {
             console.warn('GitHub API failed', e);
             return [];
