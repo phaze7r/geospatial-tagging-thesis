@@ -1,7 +1,8 @@
 name: Update Dashboard Data
+permissions:
+  contents: write
 
 on:
-  push:
     paths:
       - 'docs/**'
       - 'archive/reports/**.md'
