@@ -254,7 +254,7 @@ data/processed/*.npy
 
 # Data Reports and Artifacts
 # datareported/
-archive/
+
 
 # Python Cache
 __pycache__/

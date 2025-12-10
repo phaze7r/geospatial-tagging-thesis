@@ -32,7 +32,8 @@ const DataService = {
     // GitHub API Helper
     async fetchCommits(repo) {
         try {
-            const resp = await fetch(`https://api.github.com/repos/${repo}/commits?per_page=50`);
+            // Fetch more commits to cover 6 months (approx)
+            const resp = await fetch(`https://api.github.com/repos/${repo}/commits?per_page=100`);
             return await resp.json();
         } catch (e) {
             console.warn('GitHub API failed', e);
@@ -64,7 +65,7 @@ const DataService = {
 
 // --- Components ---
 
-const Sidebar = ({ activeTab, setActiveTab, user, onLogout }) => {
+const Sidebar = ({ activeTab, setActiveTab }) => {
     const menuItems = [
         { id: 'dashboard', icon: 'fa-chart-line', label: 'Dashboard' },
         { id: 'reports', icon: 'fa-file-alt', label: 'Reports' },
@@ -97,32 +98,9 @@ const Sidebar = ({ activeTab, setActiveTab, user, onLogout }) => {
             </nav>
 
             <div className="p-4 border-t border-gray-100">
-                {user ? (
-                    <div className="bg-gray-50 p-3 rounded-lg">
-                        <div className="flex items-center gap-2 mb-2">
-                            <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold">
-                                {user.username[0].toUpperCase()}
-                            </div>
-                            <div className="flex-1 min-w-0">
-                                <p className="text-sm font-medium text-gray-900 truncate">{user.username}</p>
-                                <p className="text-xs text-gray-500 capitalize">{user.role}</p>
-                            </div>
-                        </div>
-                        <button
-                            onClick={onLogout}
-                            className="w-full text-xs text-red-600 hover:text-red-700 font-medium py-1"
-                        >
-                            Sign Out
-                        </button>
-                    </div>
-                ) : (
-                    <button
-                        onClick={() => setActiveTab('login')}
-                        className="w-full bg-gray-900 text-white py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
-                    >
-                        Admin Login
-                    </button>
-                )}
+                <div className="text-xs text-gray-400 text-center">
+                    v1.2.0 • Read Only Mode
+                </div>
             </div>
         </aside>
     );
@@ -140,91 +118,100 @@ const MobileHeader = ({ onMenuClick }) => (
     </header>
 );
 
-const StatCard = ({ title, value, footer, icon, color = "orange" }) => (
-    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover-lift">
-        <div className="flex justify-between items-start mb-4">
-            <div>
-                <p className="text-sm font-medium text-gray-500 mb-1">{title}</p>
-                <h3 className="text-3xl font-bold text-gray-800">{value}</h3>
+const StatCard = ({ title, value, footer, icon, color = "orange" }) => {
+    // Dynamic color classes map
+    const colorClasses = {
+        orange: 'bg-orange-50 text-orange-500',
+        blue: 'bg-blue-50 text-blue-500',
+        green: 'bg-green-50 text-green-500',
+        purple: 'bg-purple-50 text-purple-500'
+    };
+
+    return (
+        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover-lift">
+            <div className="flex justify-between items-start mb-4">
+                <div>
+                    <p className="text-sm font-medium text-gray-500 mb-1">{title}</p>
+                    <h3 className="text-3xl font-bold text-gray-800">{value}</h3>
+                </div>
+                <div className={`p-3 rounded-lg ${colorClasses[color] || colorClasses.orange}`}>
+                    <i className={`fas ${icon} text-xl`}></i>
+                </div>
             </div>
-            <div className={`p-3 rounded-lg bg-${color}-50 text-${color}-500`}>
-                <i className={`fas ${icon} text-xl`}></i>
-            </div>
+            {footer && <div className="text-sm text-gray-600 border-t pt-3 mt-2">{footer}</div>}
         </div>
-        {footer && <div className="text-sm text-gray-600 border-t pt-3 mt-2">{footer}</div>}
-    </div>
-);
+    );
+};
 
 const ActivityChart = ({ commits }) => {
-    // Basic heatmap visualization
-    const days = useMemo(() => {
-        const d = [];
-        for (let i = 29; i >= 0; i--) {
-            const date = new Date();
-            date.setDate(date.getDate() - i);
-            d.push(date.toISOString().split('T')[0]);
+    // Generate last 6 months of dates
+    const weeks = useMemo(() => {
+        const today = new Date();
+        const sixMonthsAgo = new Date();
+        sixMonthsAgo.setMonth(today.getMonth() - 6);
+
+        // Align to previous Sunday
+        sixMonthsAgo.setDate(sixMonthsAgo.getDate() - sixMonthsAgo.getDay());
+
+        const dates = [];
+        let currentDate = new Date(sixMonthsAgo);
+
+        while (currentDate <= today) {
+            dates.push(new Date(currentDate));
+            currentDate.setDate(currentDate.getDate() + 1);
         }
-        return d;
+        return dates;
     }, []);
 
-    const activity = useMemo(() => {
-        const counts = {};
+    const activityMap = useMemo(() => {
+        const map = {};
         commits.forEach(c => {
-            const date = c.commit.author.date.split('T')[0];
-            counts[date] = (counts[date] || 0) + 1;
+            const dateStr = c.commit.author.date.split('T')[0];
+            map[dateStr] = (map[dateStr] || 0) + 1;
         });
-        return counts;
+        return map;
     }, [commits]);
 
-    const getColor = (count) => {
+    const getIntensity = (count) => {
         if (!count) return 'bg-gray-100';
-        if (count < 2) return 'bg-orange-200';
-        if (count < 4) return 'bg-orange-300';
+        if (count == 1) return 'bg-orange-200';
+        if (count <= 3) return 'bg-orange-300';
         return 'bg-orange-500';
     };
 
     return (
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-            <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <i className="fas fa-chart-bar text-orange-500"></i>
-                Contribution Activity (30 Days)
+        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+            <h3 className="font-bold text-gray-800 mb-6 flex items-center gap-2">
+                <i className="fab fa-github text-gray-700"></i>
+                Contribution Activity (6 Months)
             </h3>
-            <div className="flex gap-1 justify-between items-end h-24">
-                {days.map(day => {
-                    const count = activity[day] || 0;
-                    const height = Math.max(10, Math.min(100, count * 20)); // Scale height
+
+            <div className="flex flex-wrap gap-1 justify-start">
+                {weeks.map((date, i) => {
+                    const dateStr = date.toISOString().split('T')[0];
+                    const count = activityMap[dateStr] || 0;
                     return (
-                        <div key={day} className="flex-1 flex flex-col items-center gap-1 group relative">
-                            <div
-                                className={`w-full rounded-t-sm transition-all ${getColor(count)}`}
-                                style={{ height: `${height}%` }}
-                            ></div>
-                            <div className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-xs p-2 rounded whitespace-nowrap z-10">
-                                {count} commits on {day}
-                            </div>
-                        </div>
+                        <div
+                            key={dateStr}
+                            className={`w-3 h-3 rounded-sm ${getIntensity(count)} tooltip cursor-default`}
+                            data-tooltip={`${count} commits on ${dateStr}`}
+                        ></div>
                     );
                 })}
+            </div>
+            <div className="flex items-center gap-2 mt-4 text-xs text-gray-400">
+                <span>Less</span>
+                <div className="w-3 h-3 rounded-sm bg-gray-100"></div>
+                <div className="w-3 h-3 rounded-sm bg-orange-200"></div>
+                <div className="w-3 h-3 rounded-sm bg-orange-300"></div>
+                <div className="w-3 h-3 rounded-sm bg-orange-500"></div>
+                <span>More</span>
             </div>
         </div>
     );
 };
 
-const NotesFeed = ({ notes, user, onAddNote }) => {
-    const [isAdding, setIsAdding] = useState(false);
-    const [newNote, setNewNote] = useState("");
-
-    const handleSave = () => {
-        if (!newNote.trim()) return;
-        onAddNote({
-            content: newNote,
-            date: new Date().toISOString().split('T')[0],
-            author: user.username
-        });
-        setNewNote("");
-        setIsAdding(false);
-    };
-
+const NotesFeed = ({ notes }) => {
     return (
         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
             <div className="flex justify-between items-center mb-4">
@@ -232,30 +219,9 @@ const NotesFeed = ({ notes, user, onAddNote }) => {
                     <i className="fas fa-sticky-note text-orange-500 mr-2"></i>
                     Updates & Notes
                 </h3>
-                {user && (
-                    <button
-                        onClick={() => setIsAdding(!isAdding)}
-                        className="text-sm bg-orange-50 text-orange-600 px-3 py-1 rounded hover:bg-orange-100"
-                    >
-                        {isAdding ? 'Cancel' : '+ Add Note'}
-                    </button>
-                )}
             </div>
 
-            {isAdding && (
-                <div className="mb-4 animate-slide-up">
-                    <textarea
-                        className="w-full p-3 border rounded-lg text-sm focus:ring-2 focus:ring-orange-500 outline-none"
-                        rows="3"
-                        placeholder="What's new?"
-                        value={newNote}
-                        onChange={e => setNewNote(e.target.value)}
-                    ></textarea>
-                    <button onClick={handleSave} className="mt-2 bg-orange-500 text-white px-4 py-1.5 rounded-lg text-sm">Post Update</button>
-                </div>
-            )}
-
-            <div className="flex-1 overflow-y-auto space-y-4 pr-2 custom-scrollbar">
+            <div className="flex-1 overflow-y-auto space-y-4 pr-2 custom-scrollbar max-h-[400px]">
                 {notes.map((note, i) => (
                     <div key={i} className="flex gap-3 animate-slide-up" style={{ animationDelay: `${i * 0.05}s` }}>
                         <div className="w-10 h-10 rounded-full bg-gray-100 flex-shrink-0 flex items-center justify-center text-gray-500">
@@ -276,47 +242,12 @@ const NotesFeed = ({ notes, user, onAddNote }) => {
     );
 };
 
-const Dashboard = ({ config, setConfig, commits, user }) => {
-    // Handle updates to local state to "simulate" DB updates
-    const handleUpdateProgress = (val) => {
-        setConfig(prev => ({ ...prev, progress: parseInt(val) }));
-    };
-
-    const handleAddNote = (note) => {
-        const newNote = { ...note, id: Date.now() };
-        setConfig(prev => ({
-            ...prev,
-            notes: [newNote, ...(prev.notes || [])]
-        }));
-    };
-
+const Dashboard = ({ config, commits }) => {
     return (
         <div className="p-6 md:p-8 max-w-7xl mx-auto space-y-6">
-            <header className="flex justify-between items-end">
-                <div>
-                    <h2 className="text-2xl font-bold text-gray-800">Overview</h2>
-                    <p className="text-gray-500">Welcome to the project dashboard.</p>
-                </div>
-                {user && (
-                    <button
-                        onClick={() => {
-                            // Create a Blob and download
-                            const dataStr = JSON.stringify(config, null, 2);
-                            const blob = new Blob([dataStr], { type: "application/json" });
-                            const url = URL.createObjectURL(blob);
-                            const link = document.createElement("a");
-                            link.href = url;
-                            link.download = "data.json";
-                            document.body.appendChild(link);
-                            link.click();
-                            document.body.removeChild(link);
-                            alert("Downloaded data.json! Please commit this file to your repository to persist changes.");
-                        }}
-                        className="bg-gray-900 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-800"
-                    >
-                        <i className="fas fa-download"></i> Save Changes
-                    </button>
-                )}
+            <header>
+                <h2 className="text-2xl font-bold text-gray-800">Overview</h2>
+                <p className="text-gray-500">Project status and recent activity.</p>
             </header>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -325,18 +256,9 @@ const Dashboard = ({ config, setConfig, commits, user }) => {
                     value={`${config.progress || 0}%`}
                     icon="fa-tasks"
                     footer={
-                        user ? (
-                            <input
-                                type="range"
-                                className="w-full mt-2 accent-orange-500"
-                                value={config.progress || 0}
-                                onChange={(e) => handleUpdateProgress(e.target.value)}
-                            />
-                        ) : (
-                            <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
-                                <div className="bg-orange-500 h-2 rounded-full" style={{ width: `${config.progress}%` }}></div>
-                            </div>
-                        )
+                        <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div className="bg-orange-500 h-2 rounded-full" style={{ width: `${config.progress}%` }}></div>
+                        </div>
                     }
                 />
                 <StatCard
@@ -344,24 +266,24 @@ const Dashboard = ({ config, setConfig, commits, user }) => {
                     value={commits.length}
                     icon="fa-code-branch"
                     color="blue"
-                    footer="In the last 30 days"
+                    footer="In loaded history"
                 />
                 <StatCard
                     title="Total Reports"
-                    value="2"
+                    value={Object.keys(config.reports || {}).length}
                     icon="fa-file-alt"
                     color="green"
                     footer="Available in Docs"
                 />
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 min-h-[400px]">
-                <ActivityChart commits={commits} />
-                <NotesFeed
-                    notes={config.notes || []}
-                    user={user}
-                    onAddNote={handleAddNote}
-                />
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="lg:col-span-2">
+                    <ActivityChart commits={commits} />
+                </div>
+                <div>
+                    <NotesFeed notes={config.notes || []} />
+                </div>
             </div>
         </div>
     );
@@ -518,64 +440,12 @@ const DataExplorer = ({ config }) => {
     );
 };
 
-const LoginView = ({ onLogin }) => {
-    const [user, setUser] = useState('');
-    const [pass, setPass] = useState('');
-    const [err, setErr] = useState('');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Simple mock auth
-        if (user === 'admin' && pass === 'admin123') {
-            onLogin({ username: 'admin', role: 'admin' });
-        } else if (user === 'user' && pass === 'user') {
-            onLogin({ username: 'user', role: 'viewer' });
-        } else {
-            setErr('Invalid credentials (try admin/admin123)');
-        }
-    };
-
-    return (
-        <div className="flex items-center justify-center h-full min-h-[500px]">
-            <div className="bg-white p-8 rounded-xl shadow-lg max-w-sm w-full border border-gray-100">
-                <h2 className="text-2xl font-bold text-center mb-6">Access Dashboard</h2>
-                {err && <div className="bg-red-50 text-red-600 p-3 rounded mb-4 text-sm">{err}</div>}
-                <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Username</label>
-                        <input
-                            type="text"
-                            className="w-full p-2 border rounded focus:light-orange-500"
-                            value={user}
-                            onChange={e => setUser(e.target.value)}
-                        />
-                    </div>
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
-                        <input
-                            type="password"
-                            className="w-full p-2 border rounded"
-                            value={pass}
-                            onChange={e => setPass(e.target.value)}
-                        />
-                    </div>
-                    <button className="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600">Login</button>
-                    <div className="text-center text-xs text-gray-400 mt-4">
-                        Demo: admin / admin123
-                    </div>
-                </form>
-            </div>
-        </div>
-    );
-};
-
 // --- Main App ---
 
 const App = () => {
     const [config, setConfig] = useState(null);
     const [commits, setCommits] = useState([]);
     const [activeTab, setActiveTab] = useState('dashboard');
-    const [user, setUser] = useState(null);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     useEffect(() => {
@@ -595,10 +465,9 @@ const App = () => {
 
     const renderContent = () => {
         switch (activeTab) {
-            case 'dashboard': return <Dashboard config={config} setConfig={setConfig} commits={commits} user={user} />;
+            case 'dashboard': return <Dashboard config={config} commits={commits} />;
             case 'reports': return <ReportsViewer />;
             case 'data': return <DataExplorer config={config.config} />;
-            case 'login': return <LoginView onLogin={(u) => { setUser(u); setActiveTab('dashboard'); }} />;
             default: return <Dashboard config={config} />;
         }
     };
@@ -608,8 +477,6 @@ const App = () => {
             <Sidebar
                 activeTab={activeTab}
                 setActiveTab={(tab) => { setActiveTab(tab); setMobileMenuOpen(false); }}
-                user={user}
-                onLogout={() => { setUser(null); setActiveTab('dashboard'); }}
             />
 
             <div className="flex-1 flex flex-col min-w-0">
@@ -619,17 +486,11 @@ const App = () => {
                 {mobileMenuOpen && (
                     <div className="md:hidden fixed inset-0 z-40 bg-gray-800 bg-opacity-75" onClick={() => setMobileMenuOpen(false)}>
                         <div className="w-64 bg-white h-full shadow-xl" onClick={e => e.stopPropagation()}>
-                            {/* Reusing sidebar logic essentially, but simplified for brevity */}
                             <div className="p-4 font-bold border-b">Menu</div>
                             <nav className="p-4 space-y-2">
                                 <button onClick={() => { setActiveTab('dashboard'); setMobileMenuOpen(false) }} className="block w-full text-left p-2 hover:bg-gray-100 rounded">Dashboard</button>
                                 <button onClick={() => { setActiveTab('reports'); setMobileMenuOpen(false) }} className="block w-full text-left p-2 hover:bg-gray-100 rounded">Reports</button>
                                 <button onClick={() => { setActiveTab('data'); setMobileMenuOpen(false) }} className="block w-full text-left p-2 hover:bg-gray-100 rounded">Data</button>
-                                {!user ? (
-                                    <button onClick={() => { setActiveTab('login'); setMobileMenuOpen(false) }} className="block w-full text-left p-2 bg-gray-900 text-white rounded mt-4">Login</button>
-                                ) : (
-                                    <button onClick={() => { setUser(null); setMobileMenuOpen(false) }} className="block w-full text-left p-2 text-red-500 rounded mt-4">Logout</button>
-                                )}
                             </nav>
                         </div>
                     </div>
