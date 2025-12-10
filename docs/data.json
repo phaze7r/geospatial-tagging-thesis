@@ -1,0 +1,47 @@
+{
+  "progress": 43,
+  "config": {
+    "githubRepo": "phaze7r/geospatial-tagging-thesis",
+    "backendApi": "https://osm-dynamic-api-0506da85fcea.herokuapp.com/api"
+  },
+  "notes": [
+    {
+      "id": 4,
+      "date": "2025-06-28",
+      "content": "Starting data preprocessing Phase for training data",
+      "author": "phaze7r",
+      "createdAt": "2024-01-15T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "date": "2025-06-27",
+      "content": "Completed Data Collection Phase for top 5 pakistani cities",
+      "author": "phaze7r",
+      "createdAt": "2025-01-15T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "date": "2025-06-15",
+      "content": "Started data collection phase",
+      "author": "phaze7r",
+      "createdAt": "2025-01-15T10:00:00Z"
+    },
+    {
+      "id": 1,
+      "date": "2025-05-20",
+      "content": "Completed literature review",
+      "author": "phaze7r",
+      "createdAt": "2025-01-20T14:30:00Z"
+    }
+  ],
+  "quotes": [
+    "Keep exploring the geospatial frontier! 🌍",
+    "Every commit brings you closer to success! 🚀",
+    "Data is the new oil, and you're the refiner! ⛽",
+    "Mapping the world, one tag at a time! 🗺️",
+    "Your research will change how we see places! 👁️",
+    "Geospatial intelligence is the future! 🔮",
+    "Every dataset tells a story! 📊",
+    "Innovation happens at the intersection of data and geography! 🌐"
+  ]
+}
