@@ -181,24 +181,26 @@ const ActivityChart = ({ commits }) => {
     };
 
     return (
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-            <h3 className="font-bold text-gray-800 mb-6 flex items-center gap-2">
+        <div className="bg-white p-4 md:p-6 rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+            <h3 className="font-bold text-gray-800 mb-4 md:mb-6 flex items-center gap-2">
                 <i className="fab fa-github text-gray-700"></i>
                 Contribution Activity (6 Months)
             </h3>
 
-            <div className="flex flex-wrap gap-1 justify-start">
-                {weeks.map((date, i) => {
-                    const dateStr = date.toISOString().split('T')[0];
-                    const count = activityMap[dateStr] || 0;
-                    return (
-                        <div
-                            key={dateStr}
-                            className={`w-3 h-3 rounded-sm ${getIntensity(count)} tooltip cursor-default`}
-                            data-tooltip={`${count} commits on ${dateStr}`}
-                        ></div>
-                    );
-                })}
+            <div className="overflow-x-auto pb-2 scrollbar-hide">
+                <div className="flex gap-1 justify-start min-w-max">
+                    {weeks.map((date, i) => {
+                        const dateStr = date.toISOString().split('T')[0];
+                        const count = activityMap[dateStr] || 0;
+                        return (
+                            <div
+                                key={dateStr}
+                                className={`w-3 h-3 rounded-sm ${getIntensity(count)} tooltip cursor-default`}
+                                data-tooltip={`${count} commits on ${dateStr}`}
+                            ></div>
+                        );
+                    })}
+                </div>
             </div>
             <div className="flex items-center gap-2 mt-4 text-xs text-gray-400">
                 <span>Less</span>
@@ -214,7 +216,7 @@ const ActivityChart = ({ commits }) => {
 
 const NotesFeed = ({ notes }) => {
     return (
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+        <div className="bg-white p-4 md:p-6 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
             <div className="flex justify-between items-center mb-4">
                 <h3 className="font-bold text-gray-800">
                     <i className="fas fa-sticky-note text-orange-500 mr-2"></i>
@@ -245,13 +247,13 @@ const NotesFeed = ({ notes }) => {
 
 const Dashboard = ({ config, commits }) => {
     return (
-        <div className="p-6 md:p-8 max-w-7xl mx-auto space-y-6">
+        <div className="p-4 md:p-8 max-w-7xl mx-auto space-y-6">
             <header>
-                <h2 className="text-2xl font-bold text-gray-800">Overview</h2>
-                <p className="text-gray-500">Project status and recent activity.</p>
+                <h2 className="text-xl md:text-2xl font-bold text-gray-800">Overview</h2>
+                <p className="text-sm md:text-base text-gray-500">Project status and recent activity.</p>
             </header>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                 <StatCard
                     title="Thesis Progress"
                     value={`${config.progress || 0}%`}
@@ -294,10 +296,16 @@ const ReportsViewer = () => {
     const [selectedReport, setSelectedReport] = useState(null);
     const [content, setContent] = useState('');
 
-    // Hardcoded list for now, or we could fetch file list if we had an API
+    // Derived state for mobile view logic
+    const isMobileView = window.innerWidth < 768; // Simple check, or just use CSS classes
+
+    // Hardcoded list for now
     const reports = [
         { id: 'features', title: 'Feature Splits Analysis', date: '2025-08-15', path: 'reports/features_splits_20250815.md' },
-        { id: 'patterns', title: 'Pattern Mining Results', date: '2025-08-15', path: 'reports/patterns_mining_20250815.md' }
+        { id: 'patterns', title: 'Pattern Mining Results', date: '2025-08-15', path: 'reports/patterns_mining_20250815.md' },
+        { id: 'accuracy', title: 'Accuracy Analysis', date: '2025-12-10', path: 'reports/accuracy_analysis.md' },
+        { id: 'xai', title: 'XAI Summary', date: '2025-12-10', path: 'reports/xai_summary.md' },
+        { id: 'data', title: 'Extended Labels Data', date: '2025-12-10', path: 'reports/extended_labels_data.md' }
     ];
 
     useEffect(() => {
@@ -309,8 +317,9 @@ const ReportsViewer = () => {
     }, [selectedReport]);
 
     return (
-        <div className="p-6 md:p-8 max-w-7xl mx-auto h-[calc(100vh-2rem)] flex gap-6">
-            <div className="w-1/3 bg-white  rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col">
+        <div className="p-4 md:p-8 max-w-7xl mx-auto h-[calc(100vh-4rem)] md:h-[calc(100vh-2rem)] flex gap-6 relative">
+            {/* List Column - Hidden on mobile if report selected */}
+            <div className={`w-full md:w-1/3 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col absolute md:relative inset-0 z-10 md:z-auto ${selectedReport ? 'hidden md:flex' : 'flex'}`}>
                 <div className="p-4 border-b bg-gray-50">
                     <h3 className="font-bold text-gray-700">Available Reports</h3>
                 </div>
@@ -328,11 +337,21 @@ const ReportsViewer = () => {
                 </div>
             </div>
 
-            <div className="flex-1 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col">
+            {/* Content Column - Full screen on mobile when selected */}
+            <div className={`w-full md:flex-1 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col absolute md:relative inset-0 z-20 md:z-auto bg-white ${selectedReport ? 'flex' : 'hidden md:flex'}`}>
                 {selectedReport ? (
-                    <div className="flex-1 overflow-y-auto p-8 custom-scrollbar">
-                        <div className="markdown-body" dangerouslySetInnerHTML={{ __html: marked.parse(content) }}></div>
-                    </div>
+                    <>
+                        <div className="md:hidden p-3 border-b flex items-center gap-2 bg-gray-50">
+                            <button onClick={() => setSelectedReport(null)} className="text-gray-600 hover:text-orange-500 font-medium">
+                                <i className="fas fa-arrow-left mr-1"></i> Back
+                            </button>
+                            <span className="text-sm font-medium text-gray-400">|</span>
+                            <span className="text-sm font-semibold truncate text-gray-800">{selectedReport.title}</span>
+                        </div>
+                        <div className="flex-1 overflow-y-auto p-4 md:p-8 custom-scrollbar">
+                            <div className="markdown-body" dangerouslySetInnerHTML={{ __html: marked.parse(content) }}></div>
+                        </div>
+                    </>
                 ) : (
                     <div className="flex-1 flex items-center justify-center text-gray-400 flex-col">
                         <i className="fas fa-file-alt text-4xl mb-3 opacity-50"></i>
@@ -380,11 +399,12 @@ const DataExplorer = ({ config }) => {
     }, [fileContent]);
 
     return (
-        <div className="p-6 md:p-8 max-w-7xl mx-auto space-y-6">
+        <div className="p-4 md:p-8 max-w-7xl mx-auto space-y-6 h-[calc(100vh-4rem)] md:h-auto overflow-hidden md:overflow-visible">
             <h2 className="text-2xl font-bold text-gray-800">Data Explorer</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 h-[600px] overflow-y-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-full md:h-[600px]">
+                {/* File Tree - Hidden on mobile if file selected */}
+                <div className={`bg-white rounded-xl shadow-sm border border-gray-100 p-4 h-full md:h-full overflow-y-auto ${selectedFile ? 'hidden md:block' : 'block'}`}>
                     <h3 className="font-semibold text-gray-700 mb-4 px-2">Repository Files</h3>
                     {loading ? <div className="text-center p-4">Loading...</div> : (
                         <div className="space-y-1">
@@ -402,12 +422,18 @@ const DataExplorer = ({ config }) => {
                     )}
                 </div>
 
-                <div className="md:col-span-2 bg-white rounded-xl shadow-sm border border-gray-100 p-6 h-[600px] overflow-hidden flex flex-col">
+                {/* Content Preview - Full screen mobile if selected */}
+                <div className={`md:col-span-2 bg-white rounded-xl shadow-sm border border-gray-100 p-4 md:p-6 h-full md:h-full overflow-hidden flex flex-col ${selectedFile ? 'block' : 'hidden md:flex'}`}>
                     {selectedFile ? (
                         <>
                             <div className="flex justify-between items-center mb-4">
-                                <h3 className="font-semibold text-gray-800">{selectedFile.path}</h3>
-                                <span className="text-xs bg-gray-100 px-2 py-1 rounded">Preview (Top 20 rows)</span>
+                                <div className="flex items-center gap-2 overflow-hidden">
+                                    <button onClick={() => setSelectedFile(null)} className="md:hidden text-gray-600 mr-2">
+                                        <i className="fas fa-arrow-left"></i>
+                                    </button>
+                                    <h3 className="font-semibold text-gray-800 truncate">{selectedFile.path}</h3>
+                                </div>
+                                <span className="text-xs bg-gray-100 px-2 py-1 rounded whitespace-nowrap">Top 20</span>
                             </div>
                             <div className="flex-1 overflow-auto border rounded-lg">
                                 <table className="min-w-full text-sm text-left">
