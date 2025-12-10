@@ -24,7 +24,7 @@ jobs:
       run: |
         python autoscripts/sync_dashboard.py
 
-    - name: Commit and Push changes
+    - name: Commit and Push Data Bundle
       run: |
         git config --global user.name 'GitHub Action'
         git config --global user.email 'action@github.com'
@@ -37,3 +37,34 @@ jobs:
         else
           echo "No changes to data.js"
         fi
+
+    # Octopus Deploy Steps
+    - name: Zip Release Artifacts
+      run: |
+        # Create a clean package folder
+        mkdir -p package/content
+        # Copy everything from docs to the package
+        cp -r docs/* package/content/
+        
+        # Create Zip
+        cd package
+        zip -r ../dashboard-site.zip .
+    
+    - name: Push to Octopus Deploy
+      uses: OctopusDeploy/push-package-action@v3
+      with:
+        api_key: ${{ secrets.OCTOPUS_API_KEY }}
+        server: ${{ secrets.OCTOPUS_SERVER_URL }}
+        packages: dashboard-site.zip
+        space: 'Default'
+        overwrite_mode: 'OverwriteExisting'
+
+    - name: Create Release
+      uses: OctopusDeploy/create-release-action@v3
+      with:
+        api_key: ${{ secrets.OCTOPUS_API_KEY }}
+        server: ${{ secrets.OCTOPUS_SERVER_URL }}
+        space: 'Default'
+        project: 'Geospatial Dashboard'
+        package_version: 1.0.${{ github.run_number }}
+        deploy_to: 'Production'
