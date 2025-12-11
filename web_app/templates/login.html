@@ -8,8 +8,25 @@
 </head>
 
 <body class="bg-gray-100 h-screen flex items-center justify-center">
-    <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
-        <h1 class="text-2xl font-bold text-center mb-6">Admin Login</h1>
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+        <div class="text-center mb-8">
+            <h1 class="text-2xl font-bold text-gray-800">Admin Login</h1>
+            <p class="text-gray-500 text-sm">Geospatial Tagging Thesis</p>
+        </div>
+
+        <!-- GitHub Login -->
+        <div class="mb-6">
+            <a href="{{ url_for('github.login') }}"
+                class="w-full flex justify-center items-center gap-2 bg-gray-900 text-white p-3 rounded-lg hover:bg-gray-800 transition-colors">
+                <i class="fab fa-github text-xl"></i>
+                Login with GitHub
+            </a>
+            <div class="relative flex py-5 items-center">
+                <div class="flex-grow border-t border-gray-300"></div>
+                <span class="flex-shrink mx-4 text-gray-400 text-xs">OR USE PASSWORD</span>
+                <div class="flex-grow border-t border-gray-300"></div>
+            </div>
+        </div>
 
         {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
