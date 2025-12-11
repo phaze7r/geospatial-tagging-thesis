@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <nav class="bg-white shadow-sm p-4 mb-8">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold text-gray-800">🤖 Admin Dashboard</h1>
+            <a href="{{ url_for('logout') }}" class="text-red-500 hover:text-red-700">Logout</a>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto p-4 space-y-8">
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div
+            class="p-4 rounded-lg {{ 'bg-green-100 text-green-700' if category == 'success' else 'bg-red-100 text-red-700' }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <!-- Progress Section -->
+        <div class="bg-white p-6 rounded-xl shadow-sm">
+            <h2 class="text-lg font-bold mb-4">Project Progress</h2>
+            <form method="POST" class="flex gap-4 items-end">
+                <div class="flex-1">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Current Progress (%)</label>
+                    <input type="number" name="progress" value="{{ config.progress }}" min="0" max="100"
+                        class="w-full p-2 border rounded-lg">
+                </div>
+                <button type="submit" name="update_progress"
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Update</button>
+            </form>
+        </div>
+
+        <!-- Notes Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Notes Section -->
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h2 class="text-lg font-bold mb-4">Add Project Update</h2>
+                    <form method="POST" class="space-y-4">
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="col-span-1">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                                <input type="date" name="date" class="w-full p-2 border rounded-lg" required>
+                            </div>
+                            <div class="col-span-2">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Content</label>
+                                <textarea name="content" rows="1" class="w-full p-2 border rounded-lg"
+                                    placeholder="What's new?"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" name="add_note"
+                            class="w-full bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600">Post
+                            Update</button>
+                    </form>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold text-gray-700">Recent Updates</h3>
+                    {% for note in notes %}
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 relative group">
+                        <form action="{{ url_for('delete_note', id=note.id) }}" method="POST"
+                            class="absolute top-2 right-2">
+                            <button type="submit" class="text-gray-400 hover:text-red-600 transition-colors p-2"
+                                onclick="return confirm('Delete this note?')">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+                        <p class="text-gray-800">{{ note.content }}</p>
+                        <div class="text-xs text-gray-400 mt-2 flex justify-between">
+                            <span>{{ note.date_str }} • {{ note.author }}</span>
+                            <span class="font-mono text-gray-300">ID: {{ note.id }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Reports Section -->
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h2 class="text-lg font-bold mb-4">Add Report Artifact</h2>
+                    <form method="POST" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Title</label>
+                            <input type="text" name="title" class="w-full p-2 border rounded-lg"
+                                placeholder="e.g. Accuracy Analysis" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Path / URL</label>
+                            <input type="text" name="path" class="w-full p-2 border rounded-lg"
+                                placeholder="reports/foo.md or https://..." required>
+                        </div>
+                        <button type="submit" name="add_report"
+                            class="w-full bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700">Add
+                            Report</button>
+                    </form>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold text-gray-700">Active Reports</h3>
+                    {% for report in reports %}
+                    <div
+                        class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 relative group flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-gray-800">{{ report.title }}</h4>
+                            <p class="text-xs text-gray-500 font-mono">{{ report.path }}</p>
+                        </div>
+                        <form action="{{ url_for('delete_report', id=report.id) }}" method="POST">
+                            <button type="submit" class="text-red-400 hover:text-red-600 p-2"
+                                onclick="return confirm('Delete this report?')">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
