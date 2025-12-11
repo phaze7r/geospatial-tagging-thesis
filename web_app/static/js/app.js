@@ -371,7 +371,7 @@ const ActivityChart = ({ commits, repo }) => {
 // ... NotesFeed, ReportsViewer, DataExplorer ...
 const NotesFeed = ({ notes }) => {
     return (
-        <div className="glass p-6 rounded-xl h-full flex flex-col min-h-[400px]">
+        <div className="glass p-6 rounded-xl h-full flex flex-col min-h-[250px]">
             <h3 className="font-bold text-gray-800 mb-4 flex items-center">
                 <i className="fas fa-sticky-note text-amber-500 mr-2"></i>
                 Updates & Notes
@@ -405,7 +405,7 @@ const NotesFeed = ({ notes }) => {
 
 const Dashboard = ({ config, commits }) => {
     return (
-        <div className="p-4 md:p-8 max-w-7xl mx-auto space-y-8 animate-fade-in pb-20">
+        <div className="p-4 md:p-8 max-w-7xl mx-auto space-y-6 animate-fade-in pb-20">
             <header className="mb-10 text-center md:text-left border-b border-gray-200/50 pb-6">
                 <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4 leading-tight">
                     Geospatial Tagging of Volunteered Place Descriptions
@@ -462,7 +462,7 @@ const Dashboard = ({ config, commits }) => {
             </div>
 
             {/* Row 4: GitHub Activity (Full Width) */}
-            <div className="block -mt-6">
+            <div className="block -mt-4">
                 <ActivityChart commits={commits} repo={config.config?.githubRepo} />
             </div>
         </div>

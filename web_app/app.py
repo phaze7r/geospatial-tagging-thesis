@@ -22,7 +22,7 @@ app.config["GITHUB_OAUTH_CLIENT_SECRET"] = os.environ.get("GITHUB_OAUTH_CLIENT_S
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1' 
 
 github_bp = make_github_blueprint()
-app.register_blueprint(github_bp, url_prefix="/login")
+app.register_blueprint(github_bp, url_prefix="/auth")
 
 db.init_app(app)
 login_manager = LoginManager(app)
@@ -141,16 +141,12 @@ def delete_report(id):
     flash('Report deleted.', 'info')
     return redirect(url_for('admin'))
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if current_user.is_authenticated:
-        return redirect(url_for('admin'))
 
 # --- Security Config ---
 # Hardcoded credentials as requested ("forever in code")
-# Password: 'admin123' (You can generate a new hash using werkzeug.security.generate_password_hash)
 ADMIN_USERNAME = 'Faizan'
-ADMIN_PASSWORD_HASH = 'scrypt:32768:8:1$kX8j7...' # I will replace this with the actual hash from the previous step output
+ADMIN_PASSWORD_HASH = 'scrypt:32768:8:1$Ffw0B9dksM32pUmf$3b0e13785ced638758c7b47e1e70b140cbe8a59491bbf8b03ecfa1ab3e4a598002e81f7f5cdc524d070b133d8c479a9006a8577b3af9b1f4171fde7483615136'
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -197,9 +193,12 @@ def login():
         password = request.form.get('password')
         
         # Priority Check: Hardcoded Credentials
-        if username == ADMIN_USERNAME and check_password_hash(ADMIN_PASSWORD_HASH, password):
+        # Compare case-insensitively
+        print(f"Login Attempt: {username} (Expected: {ADMIN_USERNAME})")
+        if username and username.lower() == ADMIN_USERNAME.lower() and check_password_hash(ADMIN_PASSWORD_HASH, password):
+            print("Login Success: Hardcoded credentials match.")
             # Ensure user exists in DB for Flask-Login to load it
-            user = AdminUser.query.filter_by(username=ADMIN_USERNAME).first()
+            user = AdminUser.query.filter_by(username=ADMIN_USERNAME).first() # Use the canonical casing 'Faizan'
             if not user:
                 user = AdminUser(username=ADMIN_USERNAME, password_hash=ADMIN_PASSWORD_HASH)
                 db.session.add(user)
@@ -211,6 +210,8 @@ def login():
                 
             login_user(user)
             return redirect(url_for('admin'))
+        
+        print("Login Failed: Credentials did not match hardcoded values.")
             
         # Fallback: Check DB (optional, but code says "let me choose one time and stay forever", so maybe disable DB fallback? 
         # I'll leave DB check for legacy support but the Code Hash effectively overrides it if the username matches)
