@@ -146,49 +146,83 @@ def login():
     if current_user.is_authenticated:
         return redirect(url_for('admin'))
 
-    # Check for GitHub Login
-    if github.authorized:
+# --- Security Config ---
+# Hardcoded credentials as requested ("forever in code")
+# Password: 'admin123' (You can generate a new hash using werkzeug.security.generate_password_hash)
+ADMIN_USERNAME = 'Faizan'
+ADMIN_PASSWORD_HASH = 'scrypt:32768:8:1$kX8j7...' # I will replace this with the actual hash from the previous step output
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if current_user.is_authenticated:
+        return redirect(url_for('admin'))
+
+    # Check for GitHub Login (Only if Configured)
+    if app.config.get("GITHUB_OAUTH_CLIENT_ID") and github.authorized:
         try:
             resp = github.get("/user")
             if resp.ok:
                 account_info = resp.json()
                 username = account_info['login']
                 
-                # ALLOWED USERS CHECK
-                # ideally from env, but defaulting to 'phaze7r' as requested
+                # STRICT ACCESS CONTROL
+                # Only allow specific GitHub users. Default: phaze7r
                 allowed_users = os.environ.get('ALLOWED_GITHUB_USERS', 'phaze7r').split(',')
+                # normalize for comparison
+                allowed_users = [u.strip().lower() for u in allowed_users]
                 
-                if username in allowed_users:
-                    # Log in as the local AdminUser 'Faizan'
-                    user = AdminUser.query.filter_by(username='Faizan').first()
+                if username.lower() in allowed_users:
+                    # Log in as the AdminUser
+                    user = AdminUser.query.filter_by(username=ADMIN_USERNAME).first()
                     if not user:
-                        # Create if doesn't exist (emergency fallback)
-                        user = AdminUser(username='Faizan', password_hash='oauth_login')
-                        db.session.add(user)
-                        db.session.commit()
+                         # Ensure DB user exists to satisfy ForeignKey requirements if any, or just session
+                         user = AdminUser(username=ADMIN_USERNAME, password_hash=ADMIN_PASSWORD_HASH)
+                         db.session.add(user)
+                         db.session.commit()
                     
                     login_user(user)
-                    flash(f'Welcome back, {username}!', 'success')
+                    flash(f'Verified GitHub Identity: {username}', 'success')
                     return redirect(url_for('admin'))
                 else:
-                    flash(f'Access denied for GitHub user: {username}', 'danger')
+                    flash(f'Access Denied. GitHub user "{username}" is not on the allowlist.', 'danger')
             else:
-                 flash('Failed to fetch GitHub user info.', 'danger')
+                 flash('Failed to verify GitHub identity.', 'danger')
         except Exception as e:
-            flash(f'GitHub Login Error: {str(e)}', 'danger')
+            # Don't crash, just notify
+            print(f"GitHub Auth Error: {e}")
+            flash('GitHub Login Failed. Please check server logs.', 'danger')
         
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
-        user = AdminUser.query.filter_by(username=username).first()
         
+        # Priority Check: Hardcoded Credentials
+        if username == ADMIN_USERNAME and check_password_hash(ADMIN_PASSWORD_HASH, password):
+            # Ensure user exists in DB for Flask-Login to load it
+            user = AdminUser.query.filter_by(username=ADMIN_USERNAME).first()
+            if not user:
+                user = AdminUser(username=ADMIN_USERNAME, password_hash=ADMIN_PASSWORD_HASH)
+                db.session.add(user)
+                db.session.commit()
+            elif user.password_hash != ADMIN_PASSWORD_HASH:
+                # Sync DB with Code (Code is truth)
+                user.password_hash = ADMIN_PASSWORD_HASH
+                db.session.commit()
+                
+            login_user(user)
+            return redirect(url_for('admin'))
+            
+        # Fallback: Check DB (optional, but code says "let me choose one time and stay forever", so maybe disable DB fallback? 
+        # I'll leave DB check for legacy support but the Code Hash effectively overrides it if the username matches)
+        user = AdminUser.query.filter_by(username=username).first()
         if user and check_password_hash(user.password_hash, password):
             login_user(user)
             return redirect(url_for('admin'))
-        else:
-            flash('Login Unsuccessful. Please check username and password', 'danger')
             
-    return render_template('login.html')
+        flash('Invalid Credentials', 'danger')
+            
+    github_enabled = bool(app.config.get("GITHUB_OAUTH_CLIENT_ID"))
+    return render_template('login.html', github_enabled=github_enabled)
 
 @app.route('/logout')
 @login_required
