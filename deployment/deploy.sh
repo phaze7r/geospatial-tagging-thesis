@@ -39,6 +39,9 @@ User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/geospatial-tagging-thesis/web_app
 Environment="PATH=/home/ubuntu/geospatial-tagging-thesis/venv/bin"
+Environment="GITHUB_OAUTH_CLIENT_ID=Ov23lidaGYVpGxbY1dCv"
+Environment="GITHUB_OAUTH_CLIENT_SECRET=266c239f44ee09238f96bad8c15e3ea0e305fb51"
+Environment="ALLOWED_GITHUB_USERS=phaze7r"
 ExecStart=/home/ubuntu/geospatial-tagging-thesis/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:5000 app:app
 
 [Install]
