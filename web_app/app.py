@@ -3,16 +3,26 @@ import sys
 # Ensure web_app directory is in python path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from flask import Flask, render_template, jsonify, request, redirect, url_for, flash, send_from_directory
+from flask import Flask, render_template, jsonify, request, redirect, url_for, flash, send_from_directory, session
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 from models import db, AdminUser, ProjectConfig, Note, Report
 from datetime import datetime
+from flask_dance.contrib.github import make_github_blueprint, github
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-change-this')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# GitHub OAuth Config
+app.config["GITHUB_OAUTH_CLIENT_ID"] = os.environ.get("GITHUB_OAUTH_CLIENT_ID")
+app.config["GITHUB_OAUTH_CLIENT_SECRET"] = os.environ.get("GITHUB_OAUTH_CLIENT_SECRET")
+# Explicitly allow HTTP for OAuth in dev/local (Remove in Prod if HTTPS is set up, but Nginx handles SSL so internal is HTTP)
+os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1' 
+
+github_bp = make_github_blueprint()
+app.register_blueprint(github_bp, url_prefix="/login")
 
 db.init_app(app)
 login_manager = LoginManager(app)
@@ -135,6 +145,37 @@ def delete_report(id):
 def login():
     if current_user.is_authenticated:
         return redirect(url_for('admin'))
+
+    # Check for GitHub Login
+    if github.authorized:
+        try:
+            resp = github.get("/user")
+            if resp.ok:
+                account_info = resp.json()
+                username = account_info['login']
+                
+                # ALLOWED USERS CHECK
+                # ideally from env, but defaulting to 'phaze7r' as requested
+                allowed_users = os.environ.get('ALLOWED_GITHUB_USERS', 'phaze7r').split(',')
+                
+                if username in allowed_users:
+                    # Log in as the local AdminUser 'Faizan'
+                    user = AdminUser.query.filter_by(username='Faizan').first()
+                    if not user:
+                        # Create if doesn't exist (emergency fallback)
+                        user = AdminUser(username='Faizan', password_hash='oauth_login')
+                        db.session.add(user)
+                        db.session.commit()
+                    
+                    login_user(user)
+                    flash(f'Welcome back, {username}!', 'success')
+                    return redirect(url_for('admin'))
+                else:
+                    flash(f'Access denied for GitHub user: {username}', 'danger')
+            else:
+                 flash('Failed to fetch GitHub user info.', 'danger')
+        except Exception as e:
+            flash(f'GitHub Login Error: {str(e)}', 'danger')
         
     if request.method == 'POST':
         username = request.form.get('username')
