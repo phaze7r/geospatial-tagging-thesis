@@ -462,7 +462,7 @@ const Dashboard = ({ config, commits }) => {
             </div>
 
             {/* Row 4: GitHub Activity (Full Width) */}
-            <div className="block">
+            <div className="block -mt-6">
                 <ActivityChart commits={commits} repo={config.config?.githubRepo} />
             </div>
         </div>
