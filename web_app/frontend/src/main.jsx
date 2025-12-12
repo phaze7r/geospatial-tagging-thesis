@@ -14,7 +14,93 @@ const DataService = {
         }
     },
 
+    async loadLocalData() {
+        try {
+            const resp = await fetch('/api/datastore');
+            if (!resp.ok) throw new Error('Failed to load local data store');
+            return await resp.json();
+        } catch (e) {
+            console.error("Local Data Store fetch failed", e);
+            return [];
+        }
+    },
+
     async loadMarkdown(path) {
+        try {
+            const resp = await fetch(path);
+            if (!resp.ok) throw new Error('Failed to load markdown');
+            return await resp.text();
+        } catch (e) {
+            return '# Error loading report\n\nCould not load report file.';
+        }
+    },
+
+    async getAccuracyData() {
+        try {
+            const resp = await fetch('/api/reports/accuracy');
+            if (!resp.ok) throw new Error('Failed to load accuracy data');
+            return await resp.json();
+        } catch (e) {
+            console.error("Accuracy fetch failed", e);
+            return null;
+        }
+    },
+
+    async fetchCommits(repo) {
+        try {
+            const resp = await fetch(`https://api.github.com/repos/${repo}/commits?per_page=100`);
+            const data = await resp.json();
+            return Array.isArray(data) ? data : [];
+        } catch (e) {
+            console.warn('GitHub API failed', e);
+            return [];
+        }
+    },
+
+    async fetchRepoTree(repo) {
+        try {
+            const response = await fetch(`https://api.github.com/repos/${repo}/git/trees/main?recursive=1`);
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Error fetching repo tree:', error);
+            return { tree: [] };
+        }
+    },
+
+    async fetchFileContent(repo, path) {
+        // If path starts with /api/files, it is local
+        if (path.startsWith('/api/files')) {
+             try {
+                const resp = await fetch(path);
+                return await resp.text(); // Assume text/csv for preview
+             } catch(e) { return "" }
+        }
+
+        try {
+            const response = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`);
+            const data = await response.json();
+            return atob(data.content);
+        } catch (error) {
+            console.error('Error fetching file content:', error);
+            return '';
+        }
+    }
+};
+
+// ... (Sidebar, MobileHeader, Footer, FullWidthProgress, StatCard, AccuracyWidget, ActivityChart, NotesFeed components remain same) ...
+// (Since replace tool needs exact match, I will only replace the specific components I am changing: ReportsViewer and DataExplorer)
+
+// ERROR: I cannot use "..." in the new_string for existing code if I am replacing the whole file or large chunks.
+// Strategy: I will replace specifically `ReportsViewer` and `DataExplorer` definitions. 
+// Wait, the tool requires "old_string" to match exactly. I will use 2 separate replace calls for safety and precision.
+
+// Call 1: Update DataService (Adding loadLocalData)
+// Call 2: Update ReportsViewer
+// Call 3: Update DataExplorer
+
+// Let's do Call 1: DataService
+
         try {
             const resp = await fetch(path);
             if (!resp.ok) throw new Error('Failed to load markdown');
@@ -497,9 +583,16 @@ const ReportsViewer = () => {
                 </div>
                 <div className="overflow-y-auto flex-1 p-3 space-y-2">
                     {reports.map(r => (
-                        <div key={r.id} onClick={() => setSelectedReport(r)} className={`p-4 rounded-xl cursor-pointer transition-all ${selectedReport?.id === r.id ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg' : 'hover:bg-white/50'}`}>
-                            <h4 className="font-bold">{r.title}</h4>
-                            <p className={`text-xs mt-1 ${selectedReport?.id === r.id ? 'text-blue-100' : 'text-gray-400'}`}>{r.date}</p>
+                        <div key={r.id} onClick={() => setSelectedReport(r)} className={`group relative p-4 rounded-xl cursor-pointer transition-all overflow-hidden ${selectedReport?.id === r.id ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg' : 'hover:bg-white/50'}`}>
+                            {r.image && (
+                                <div className="absolute right-0 top-0 h-full w-1/3 opacity-20 mask-image-gradient">
+                                    <img src={r.image} alt="" className="h-full w-full object-cover" />
+                                </div>
+                            )}
+                            <div className="relative z-10">
+                                <h4 className="font-bold">{r.title}</h4>
+                                <p className={`text-xs mt-1 ${selectedReport?.id === r.id ? 'text-blue-100' : 'text-gray-400'}`}>{r.date}</p>
+                            </div>
                         </div>
                     ))}
 
@@ -515,7 +608,16 @@ const ReportsViewer = () => {
                 </div>
             </div>
             <div className="flex-1 glass rounded-2xl overflow-hidden flex flex-col">
-                {selectedReport ? <div className="flex-1 overflow-y-auto p-8 custom-scrollbar"><div className="markdown-body bg-transparent" dangerouslySetInnerHTML={{ __html: marked.parse(content) }}></div></div> : <div className="flex-1 flex items-center justify-center text-gray-400">Select a report</div>}
+                {selectedReport ? (
+                    <div className="flex-1 overflow-y-auto p-8 custom-scrollbar">
+                         {selectedReport.image && (
+                            <img src={selectedReport.image} alt={selectedReport.title} className="w-full h-64 object-cover rounded-xl mb-8 shadow-md" />
+                         )}
+                        <div className="markdown-body bg-transparent" dangerouslySetInnerHTML={{ __html: marked.parse(content) }}></div>
+                    </div>
+                ) : (
+                    <div className="flex-1 flex items-center justify-center text-gray-400">Select a report</div>
+                )}
             </div>
         </div>
     );
@@ -523,47 +625,129 @@ const ReportsViewer = () => {
 
 const DataExplorer = ({ config }) => {
     const [tree, setTree] = useState([]);
+    const [localFiles, setLocalFiles] = useState([]);
     const [loading, setLoading] = useState(false);
     const [selectedFile, setSelectedFile] = useState(null);
     const [fileContent, setFileContent] = useState('');
 
     useEffect(() => {
-        if (config?.githubRepo) {
-            setLoading(true);
-            DataService.fetchRepoTree(config.githubRepo).then(data => { setTree(data.tree || []); setLoading(false); });
-        }
+        setLoading(true);
+        const fetchData = async () => {
+             // 1. Fetch Local Data
+             const local = await DataService.loadLocalData();
+             setLocalFiles(local || []);
+
+             // 2. Fetch GitHub Data
+             if (config?.githubRepo) {
+                const ghData = await DataService.fetchRepoTree(config.githubRepo);
+                setTree(ghData.tree || []);
+             }
+             setLoading(false);
+        };
+        fetchData();
     }, [config]);
 
     const handleFileClick = async (file) => {
-        if (file.path.endsWith('.csv')) {
-            setSelectedFile(file);
-            setFileContent(await DataService.fetchFileContent(config.githubRepo, file.path));
+        if (file.isLocal) {
+             // Local File Handling
+             if (file.name.endsWith('.csv') || file.name.endsWith('.txt') || file.name.endsWith('.md') || file.name.endsWith('.json')) {
+                setSelectedFile(file);
+                // For local files, we use the serve_datareported route
+                // DataService.fetchFileContent handles logic if path starts with /api/files
+                // We construct the path manually here
+                const content = await DataService.fetchFileContent(null, `/api/files/${file.path}`);
+                setFileContent(content);
+             } else {
+                window.open(`/api/files/${file.path}`, '_blank');
+             }
         } else {
-            window.open(`https://github.com/${config.githubRepo}/blob/main/${file.path}`, '_blank');
+            // GitHub File Handling
+            if (file.path.endsWith('.csv')) {
+                setSelectedFile(file);
+                setFileContent(await DataService.fetchFileContent(config.githubRepo, file.path));
+            } else {
+                window.open(`https://github.com/${config.githubRepo}/blob/main/${file.path}`, '_blank');
+            }
         }
     }
 
     const csvData = useMemo(() => {
         if (!fileContent) return [];
+        // Simple CSV parser for preview
         const lines = fileContent.split('\n').filter(l => l.trim());
         if (!lines.length) return [];
         return { headers: lines[0].split(','), rows: lines.slice(1, 20).map(l => l.split(',')) };
     }, [fileContent]);
 
+    const getBadges = (file) => {
+        if (!file.mtime) return null;
+        const now = Date.now() / 1000; // seconds
+        const age = now - file.mtime;
+        
+        const badges = [];
+        if (age < 86400) { // 24 hours
+            badges.push(<span key="new" className="text-[10px] font-bold bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded ml-2">NEW</span>);
+        } else if (age < 259200) { // 3 days
+            badges.push(<span key="hot" className="text-[10px] font-bold bg-orange-100 text-orange-600 px-1.5 py-0.5 rounded ml-2">HOT</span>);
+        }
+        return badges;
+    };
+
     return (
         <div className="p-8 max-w-7xl mx-auto h-[90vh] flex gap-6 pb-20">
             <div className="w-1/3 glass rounded-2xl overflow-hidden flex flex-col">
-                <div className="p-4 border-b border-white/20"><h3 className="font-bold text-gray-800">Repository Files</h3></div>
-                <div className="flex-1 overflow-y-auto p-2">
-                    {loading ? <div className="p-4">Loading...</div> : tree.filter(i => i.path.startsWith('data/') || i.path.endsWith('.csv')).map(item => (
-                        <div key={item.path} onClick={() => handleFileClick(item)} className={`flex items-center gap-2 p-2 rounded-lg cursor-pointer text-sm ${selectedFile?.path === item.path ? 'bg-emerald-50 text-emerald-700' : 'hover:bg-white/50 text-gray-600'}`}>
-                            <i className={`fas ${item.path.endsWith('.csv') ? 'fa-table text-emerald-500' : 'fa-folder text-blue-300'}`}></i><span className="truncate">{item.path}</span>
+                <div className="p-4 border-b border-white/20"><h3 className="font-bold text-gray-800">Data Sources</h3></div>
+                <div className="flex-1 overflow-y-auto p-2 space-y-1">
+                    {loading && <div className="p-4">Loading...</div>}
+                    
+                    {/* Local Files Section */}
+                    {localFiles.length > 0 && (
+                        <div className="mb-4">
+                            <p className="px-2 py-1 text-xs font-bold text-gray-400 uppercase tracking-wider">Local Datastore</p>
+                            {localFiles.map(file => (
+                                <div key={file.path} onClick={() => handleFileClick({...file, isLocal: true})} className={`flex items-center gap-2 p-2 rounded-lg cursor-pointer text-sm group ${selectedFile?.path === file.path ? 'bg-emerald-50 text-emerald-700' : 'hover:bg-white/50 text-gray-600'}`}>
+                                    <i className={`fas ${file.name.endsWith('.csv') ? 'fa-table text-emerald-500' : 'fa-file-alt text-gray-400'} w-5 text-center`}></i>
+                                    <span className="truncate flex-1">{file.name}</span>
+                                    <div className="flex shrink-0">
+                                        {getBadges(file)}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    ))}
+                    )}
+
+                    {/* GitHub Files Section */}
+                    <div>
+                         <p className="px-2 py-1 text-xs font-bold text-gray-400 uppercase tracking-wider">GitHub Repository</p>
+                         {tree.filter(i => i.path.startsWith('data/') || i.path.endsWith('.csv')).map(item => (
+                            <div key={item.path} onClick={() => handleFileClick({...item, isLocal: false})} className={`flex items-center gap-2 p-2 rounded-lg cursor-pointer text-sm ${selectedFile?.path === item.path ? 'bg-emerald-50 text-emerald-700' : 'hover:bg-white/50 text-gray-600'}`}>
+                                <i className={`fas ${item.path.endsWith('.csv') ? 'fa-table text-emerald-500' : 'fa-folder text-blue-300'} w-5 text-center`}></i>
+                                <span className="truncate">{item.path}</span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
             <div className="flex-1 glass rounded-2xl overflow-hidden p-6 flex flex-col">
-                {selectedFile ? <div className="overflow-auto"><table className="min-w-full text-sm text-left"><thead className="bg-gray-50"><tr>{csvData.headers?.map((h, i) => <th key={i} className="px-4 py-2 border-b">{h}</th>)}</tr></thead><tbody>{csvData.rows?.map((r, i) => <tr key={i}>{r.map((c, j) => <td key={j} className="px-4 py-2 border-b">{c}</td>)}</tr>)}</tbody></table></div> : <div className="flex-1 flex items-center justify-center text-gray-400">Select CSV</div>}
+                {selectedFile ? (
+                    <div className="flex flex-col h-full">
+                         <div className="mb-4 flex justify-between items-center">
+                            <h3 className="font-bold text-gray-700">{selectedFile.name || selectedFile.path}</h3>
+                            {selectedFile.isLocal && <span className="text-xs text-gray-400">{(selectedFile.size / 1024).toFixed(1)} KB • {new Date(selectedFile.mtime * 1000).toLocaleDateString()}</span>}
+                         </div>
+                         <div className="overflow-auto flex-1 custom-scrollbar border border-gray-200 rounded-lg">
+                            <table className="min-w-full text-sm text-left bg-white">
+                                <thead className="bg-gray-50 sticky top-0"><tr>{csvData.headers?.map((h, i) => <th key={i} className="px-4 py-2 border-b font-semibold text-gray-600">{h}</th>)}</tr></thead>
+                                <tbody>{csvData.rows?.map((r, i) => <tr key={i} className="hover:bg-gray-50 transition-colors">{r.map((c, j) => <td key={j} className="px-4 py-2 border-b text-gray-600">{c}</td>)}</tr>)}</tbody>
+                            </table>
+                         </div>
+                    </div>
+                ) : (
+                    <div className="flex-1 flex flex-col items-center justify-center text-gray-400 gap-4">
+                        <i className="fas fa-database text-6xl opacity-20"></i>
+                        <p>Select a data source to preview</p>
+                    </div>
+                )}
             </div>
         </div>
     );

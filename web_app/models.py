@@ -35,6 +35,7 @@ class Report(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(120), nullable=False)
     path = db.Column(db.String(200), nullable=False) # e.g. "reports/foo.md" or "https://..."
+    image = db.Column(db.String(200), nullable=True) # URL or path to an image
     date_str = db.Column(db.String(20), nullable=False)
     
     def to_dict(self):
@@ -42,5 +43,6 @@ class Report(db.Model):
             "id": self.id,
             "title": self.title,
             "path": self.path,
+            "image": self.image,
             "date": self.date_str
         }

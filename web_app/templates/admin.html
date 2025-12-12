@@ -104,6 +104,11 @@
                             <input type="text" name="path" class="w-full p-2 border rounded-lg"
                                 placeholder="reports/foo.md or https://..." required>
                         </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Image URL / Path (Optional)</label>
+                            <input type="text" name="image" class="w-full p-2 border rounded-lg"
+                                placeholder="/api/files/img.jpg or https://...">
+                        </div>
                         <button type="submit" name="add_report"
                             class="w-full bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700">Add
                             Report</button>
@@ -118,6 +123,9 @@
                         <div>
                             <h4 class="font-bold text-gray-800">{{ report.title }}</h4>
                             <p class="text-xs text-gray-500 font-mono">{{ report.path }}</p>
+                            {% if report.image %}
+                            <p class="text-xs text-purple-500 font-mono"><i class="fas fa-image"></i> {{ report.image }}</p>
+                            {% endif %}
                         </div>
                         <form action="{{ url_for('delete_report', id=report.id) }}" method="POST">
                             <button type="submit" class="text-red-400 hover:text-red-600 p-2"

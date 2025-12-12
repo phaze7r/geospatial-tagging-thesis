@@ -9,6 +9,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from models import db, AdminUser, ProjectConfig, Note, Report
 from datetime import datetime
 from flask_dance.contrib.github import make_github_blueprint, github
+from sqlalchemy import text, inspect
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-change-this')
@@ -27,6 +28,18 @@ app.register_blueprint(github_bp, url_prefix="/auth")
 db.init_app(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
+
+def check_schema():
+    """Simple migration to add 'image' column to report table if missing."""
+    with app.app_context():
+        inspector = inspect(db.engine)
+        columns = [c['name'] for c in inspector.get_columns('report')]
+        if 'image' not in columns:
+            print("Migrating: Adding 'image' column to report table...")
+            with db.engine.connect() as conn:
+                conn.execute(text('ALTER TABLE report ADD COLUMN image VARCHAR(200)'))
+                conn.commit()
+            print("Migration complete.")
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -54,6 +67,37 @@ def get_data():
         "notes": [note.to_dict() for note in notes]
     }
     return jsonify(data)
+
+@app.route('/api/datastore')
+def get_datastore():
+    """List files in the local 'datareported' directory with metadata."""
+    try:
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        datareported_dir = os.path.join(base_dir, 'datareported')
+        
+        files_data = []
+        if os.path.exists(datareported_dir):
+            for root, dirs, files in os.walk(datareported_dir):
+                for name in files:
+                    if name.startswith('.'): continue # Skip hidden files
+                    
+                    filepath = os.path.join(root, name)
+                    rel_path = os.path.relpath(filepath, datareported_dir)
+                    stats = os.stat(filepath)
+                    
+                    files_data.append({
+                        "name": name,
+                        "path": rel_path,
+                        "size": stats.st_size,
+                        "mtime": stats.st_mtime,
+                        "mtime_iso": datetime.fromtimestamp(stats.st_mtime).isoformat()
+                    })
+        
+        # Sort by modification time (newest first)
+        files_data.sort(key=lambda x: x['mtime'], reverse=True)
+        return jsonify(files_data)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/api/reports/accuracy')
 def get_accuracy():
@@ -113,8 +157,9 @@ def admin():
         elif 'add_report' in request.form:
             title = request.form.get('title')
             path = request.form.get('path')
+            image = request.form.get('image') # New field
             date_str = datetime.now().strftime("%Y-%m-%d")
-            new_report = Report(title=title, path=path, date_str=date_str)
+            new_report = Report(title=title, path=path, image=image, date_str=date_str)
             db.session.add(new_report)
             db.session.commit()
             flash('Report added!', 'success')
@@ -246,6 +291,7 @@ def static_proxy(path):
 @app.cli.command("create-admin")
 def create_admin():
     db.create_all()
+    check_schema() # Run migration
     if not AdminUser.query.filter_by(username='Faizan').first():
         hashed_pw = generate_password_hash('admin') # Default checks for this
         user = AdminUser(username='Faizan', password_hash=hashed_pw)
@@ -263,4 +309,5 @@ def create_admin():
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
+        check_schema() # Run migration on startup for convenience
     app.run(debug=True, port=5000)
