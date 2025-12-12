@@ -10,11 +10,20 @@
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
 
     <!-- External Libraries -->
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- DEV ONLY: Vite Client & Entry Point -->
+    <script type="module">
+        import RefreshRuntime from "http://localhost:5173/@react-refresh"
+        RefreshRuntime.injectIntoGlobalHook(window)
+        window.$RefreshReg$ = () => {}
+        window.$RefreshSig$ = () => (type) => type
+        window.__vite_plugin_react_preamble_installed__ = true
+      </script>
+    <script type="module" src="http://localhost:5173/@vite/client"></script>
+    <script type="module" src="http://localhost:5173/src/main.jsx"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -33,8 +42,7 @@
             }
         }
     </script>
-
-    <!-- We can move styles to a static CSS file or keep them inline for simplicity in this artifact -->
+    
     <style>
         .hover-lift {
             transition: transform 0.2s, box-shadow 0.2s;
@@ -100,10 +108,6 @@
 
 <body class="text-gray-800 h-screen overflow-hidden">
     <div id="root"></div>
-
-    <!-- App Logic -->
-    <!-- Point to the static file served by Flask -->
-    <script type="text/babel" src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 
 </html>

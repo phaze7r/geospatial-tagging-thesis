@@ -263,3 +263,5 @@ __pycache__/
 # Local Configs
 .vscode/
 .idea/
+web_app/node_modules
+web_app/dist
