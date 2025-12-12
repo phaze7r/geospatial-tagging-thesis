@@ -88,72 +88,7 @@ const DataService = {
     }
 };
 
-// ... (Sidebar, MobileHeader, Footer, FullWidthProgress, StatCard, AccuracyWidget, ActivityChart, NotesFeed components remain same) ...
-// (Since replace tool needs exact match, I will only replace the specific components I am changing: ReportsViewer and DataExplorer)
 
-// ERROR: I cannot use "..." in the new_string for existing code if I am replacing the whole file or large chunks.
-// Strategy: I will replace specifically `ReportsViewer` and `DataExplorer` definitions. 
-// Wait, the tool requires "old_string" to match exactly. I will use 2 separate replace calls for safety and precision.
-
-// Call 1: Update DataService (Adding loadLocalData)
-// Call 2: Update ReportsViewer
-// Call 3: Update DataExplorer
-
-// Let's do Call 1: DataService
-
-        try {
-            const resp = await fetch(path);
-            if (!resp.ok) throw new Error('Failed to load markdown');
-            return await resp.text();
-        } catch (e) {
-            return '# Error loading report\n\nCould not load report file.';
-        }
-    },
-
-    async getAccuracyData() {
-        try {
-            const resp = await fetch('/api/reports/accuracy');
-            if (!resp.ok) throw new Error('Failed to load accuracy data');
-            return await resp.json();
-        } catch (e) {
-            console.error("Accuracy fetch failed", e);
-            return null;
-        }
-    },
-
-    async fetchCommits(repo) {
-        try {
-            const resp = await fetch(`https://api.github.com/repos/${repo}/commits?per_page=100`);
-            const data = await resp.json();
-            return Array.isArray(data) ? data : [];
-        } catch (e) {
-            console.warn('GitHub API failed', e);
-            return [];
-        }
-    },
-
-    async fetchRepoTree(repo) {
-        try {
-            const response = await fetch(`https://api.github.com/repos/${repo}/git/trees/main?recursive=1`);
-            const data = await response.json();
-            return data;
-        } catch (error) {
-            console.error('Error fetching repo tree:', error);
-            return { tree: [] };
-        }
-    },
-
-    async fetchFileContent(repo, path) {
-        try {
-            const response = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`);
-            const data = await response.json();
-            return atob(data.content);
-        } catch (error) {
-            console.error('Error fetching file content:', error);
-            return '';
-        }
-    }
-};
 
 // --- Components ---
 
