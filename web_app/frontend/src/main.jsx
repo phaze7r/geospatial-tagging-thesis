@@ -578,7 +578,7 @@ const App = () => {
 
     useEffect(() => {
         DataService.loadConfig().then(data => {
-            if (.env) {
+            if (data) {
                 setConfig(data);
                 if (data.config?.githubRepo) DataService.fetchCommits(data.config.githubRepo).then(setCommits);
             }
