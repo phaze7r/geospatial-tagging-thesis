@@ -70,7 +70,7 @@ const DataService = {
 
 // --- Components ---
 
-const Sidebar = ({ activeTab, setActiveTab, isCollapsed, toggleCollapse, mobileOpen }) => {
+const Sidebar = ({ activeTab, setActiveTab, isCollapsed, setCollapsed, mobileOpen, closeMobileMenu }) => {
     const menuItems = [
         { id: 'dashboard', icon: 'fa-chart-line', label: 'Dashboard' },
         { id: 'reports', icon: 'fa-file-alt', label: 'Reports' },
@@ -78,16 +78,25 @@ const Sidebar = ({ activeTab, setActiveTab, isCollapsed, toggleCollapse, mobileO
     ];
 
     return (
-        <aside className={`glass fixed md:sticky top-0 z-50 h-screen transition-all duration-300 
+        <aside 
+            className={`glass fixed md:sticky top-0 z-50 h-screen transition-all duration-300 
             ${mobileOpen ? 'translate-x-0 w-64' : '-translate-x-full md:translate-x-0'} 
             ${isCollapsed ? 'md:w-20' : 'md:w-64'}
             md:flex flex-col border-r border-white/20 bg-white/80 backdrop-blur-xl`}
+            onMouseEnter={() => window.innerWidth >= 768 && setCollapsed(false)}
+            onMouseLeave={() => window.innerWidth >= 768 && setCollapsed(true)}
         >
-            <div className="p-6 flex items-center gap-3 border-b border-white/20 h-20">
-                <div className="text-3xl animate-bounce-gentle shrink-0">🤖</div>
-                <div className={`overflow-hidden transition-all duration-300 ${isCollapsed ? 'w-0 opacity-0' : 'w-auto opacity-100'}`}>
-                    <h1 className="font-bold text-gray-800 text-lg leading-tight tracking-tight whitespace-nowrap">Geospatial<br />Thesis</h1>
+            <div className="p-6 flex items-center justify-between border-b border-white/20 h-20">
+                <div className="flex items-center gap-3">
+                    <div className="text-3xl animate-bounce-gentle shrink-0">🤖</div>
+                    <div className={`overflow-hidden transition-all duration-300 ${isCollapsed ? 'w-0 opacity-0' : 'w-auto opacity-100'}`}>
+                        <h1 className="font-bold text-gray-800 text-lg leading-tight tracking-tight whitespace-nowrap">Geospatial<br />Thesis</h1>
+                    </div>
                 </div>
+                {/* Mobile Close Button */}
+                <button onClick={closeMobileMenu} className="md:hidden text-gray-500 hover:text-red-500 p-2">
+                    <i className="fas fa-times text-xl"></i>
+                </button>
             </div>
 
             <nav className="flex-1 p-4 space-y-2">
@@ -113,24 +122,15 @@ const Sidebar = ({ activeTab, setActiveTab, isCollapsed, toggleCollapse, mobileO
                 ))}
             </nav>
 
-
-
             <div className={`p-4 border-t border-white/20 flex items-center gap-3 transition-all duration-300 ${isCollapsed ? 'justify-center mx-1' : ''}`}>
                 <div className="w-10 h-10 rounded-full bg-gray-200 overflow-hidden shrink-0 border-2 border-white shadow-sm">
                     <img src="/static/img/faizan.jpg" alt="Faizan" className="w-full h-full object-cover" onError={(e) => e.target.src = 'https://ui-avatars.com/api/?name=Faizan&background=random'} />
                 </div>
                 <div className={`overflow-hidden transition-all duration-300 ${isCollapsed ? 'w-0 opacity-0' : 'w-auto opacity-100'}`}>
                     <p className="text-sm font-bold text-gray-800">Faizan</p>
-                    <p className="text-xs text-gray-500">Administrator</p>
+                    <p className="text-xs text-gray-500">Reseracher</p>
                 </div>
             </div>
-
-            <button
-                onClick={toggleCollapse}
-                className="mx-4 mb-4 mt-2 p-2 bg-white/30 hover:bg-white/50 rounded-lg text-gray-600 transition-colors flex justify-center items-center"
-            >
-                <i className={`fas ${isCollapsed ? 'fa-angle-double-right' : 'fa-angle-double-left'}`}></i>
-            </button>
         </aside >
     );
 };
@@ -153,8 +153,7 @@ const Footer = () => (
     <footer className="mt-12 pt-8 border-t border-gray-200/50 pb-8 text-center text-sm text-gray-500">
         <div className="flex justify-center gap-6 mb-4">
             <a href="https://github.com/phaze7r" target="_blank" className="hover:text-blue-500 transition-colors"><i className="fab fa-github text-xl"></i></a>
-            <a href="#" target="_blank" className="hover:text-blue-500 transition-colors"><i className="fab fa-linkedin text-xl"></i></a>
-            <a href="#" target="_blank" className="hover:text-blue-500 transition-colors"><i className="fab fa-twitter text-xl"></i></a>
+            <a href="https://www.linkedin.com/in/faizan7r" target="_blank" className="hover:text-blue-500 transition-colors"><i className="fab fa-linkedin text-xl"></i></a>
         </div>
         <p className="mb-2">© 2025 Geospatial Tagging Thesis. All rights reserved.</p>
         <p className="text-xs text-gray-400">Released under MIT Open License.</p>
@@ -472,7 +471,9 @@ const Dashboard = ({ config, commits }) => {
 const ReportsViewer = () => {
     const [selectedReport, setSelectedReport] = useState(null);
     const [content, setContent] = useState('');
+    const [loading, setLoading] = useState(false);
     const [reports, setReports] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         DataService.loadConfig().then(data => {
@@ -484,37 +485,177 @@ const ReportsViewer = () => {
 
     useEffect(() => {
         if (selectedReport) {
-            DataService.loadMarkdown(selectedReport.path).then(setContent);
+            const ext = selectedReport.path.split('.').pop().toLowerCase();
+            if (['md', 'txt'].includes(ext)) {
+                setLoading(true);
+                DataService.loadMarkdown(selectedReport.path).then(text => {
+                    setContent(text);
+                    setLoading(false);
+                });
+            } else {
+                setContent('');
+            }
         }
     }, [selectedReport]);
 
-    return (
-        <div className="p-4 md:p-8 max-w-7xl mx-auto h-[calc(100vh-2rem)] flex gap-6 pb-20">
-            <div className="w-1/3 glass rounded-2xl overflow-hidden flex flex-col">
-                <div className="p-4 border-b border-white/20 bg-white/20 backdrop-blur-md">
-                    <h3 className="font-bold text-gray-800">Available Reports</h3>
+    const filteredReports = useMemo(() => {
+        return reports.filter(r => r.title.toLowerCase().includes(searchTerm.toLowerCase()));
+    }, [reports, searchTerm]);
+
+    const renderToolbar = () => (
+        <div className="h-16 border-b border-gray-200/50 bg-white/50 backdrop-blur flex justify-between items-center px-6 shrink-0">
+            <div className="min-w-0">
+                <h2 className="font-bold text-gray-800 truncate">{selectedReport.title}</h2>
+                <p className="text-xs text-gray-500 font-mono">{selectedReport.date} • {selectedReport.path.split('.').pop().toUpperCase()}</p>
+            </div>
+            <div className="flex gap-2">
+                <a 
+                    href={selectedReport.path} 
+                    download 
+                    className="p-2 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                    title="Download"
+                >
+                    <i className="fas fa-download"></i>
+                </a>
+                <a 
+                    href={selectedReport.path} 
+                    target="_blank" 
+                    className="p-2 text-gray-500 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+                    title="Open in New Tab"
+                >
+                    <i className="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    );
+
+    const renderContent = () => {
+        if (!selectedReport) return (
+            <div className="flex-1 flex flex-col items-center justify-center text-gray-400 bg-gray-50/30">
+                <div className="w-24 h-24 bg-white rounded-full shadow-sm flex items-center justify-center mb-6 animate-bounce-gentle">
+                    <i className="fas fa-layer-group text-4xl text-purple-200"></i>
                 </div>
-                <div className="overflow-y-auto flex-1 p-3 space-y-2">
-                    {reports.map(r => (
-                        <div key={r.id} onClick={() => setSelectedReport(r)} className={`p-4 rounded-xl cursor-pointer transition-all ${selectedReport?.id === r.id ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg' : 'hover:bg-white/50'}`}>
-                            <h4 className="font-bold">{r.title}</h4>
-                            <p className={`text-xs mt-1 ${selectedReport?.id === r.id ? 'text-blue-100' : 'text-gray-400'}`}>{r.date}</p>
-                        </div>
-                    ))}
+                <h3 className="text-lg font-bold text-gray-600">Select an Artifact</h3>
+                <p className="text-sm text-gray-400">View reports, images, and documents</p>
+            </div>
+        );
+        
+        const ext = selectedReport.path.split('.').pop().toLowerCase();
 
-                    {reports.length === 0 && (
-                        <div className="p-4 text-center text-gray-400 text-sm">
-                            No dynamic reports loaded. Check Admin.
-                        </div>
-                    )}
+        if (loading) return <div className="flex-1 flex items-center justify-center text-gray-400"><i className="fas fa-circle-notch fa-spin text-2xl text-purple-500"></i></div>;
 
-                    <div onClick={() => window.open('/api/files/xai/shap_summary_plot.png', '_blank')} className="p-4 rounded-xl cursor-pointer hover:bg-white/50 border border-dashed border-gray-300">
-                        <h4 className="font-bold text-gray-600"><i className="fas fa-image text-purple-500 mr-2"></i>SHAP Plot</h4>
+        if (['png', 'jpg', 'jpeg', 'gif', 'webp'].includes(ext)) {
+            return (
+                <div className="flex-1 flex flex-col h-full bg-gray-100 relative overflow-hidden group">
+                    {/* Checkerboard pattern for transparency */}
+                    <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+                    
+                    <div className="flex-1 flex items-center justify-center p-8 overflow-auto z-10">
+                         <img 
+                            src={selectedReport.path} 
+                            alt={selectedReport.title} 
+                            className="max-w-full max-h-full object-contain rounded-lg shadow-2xl transition-transform duration-300 group-hover:scale-[1.01]" 
+                        />
                     </div>
                 </div>
+            );
+        }
+
+        if (ext === 'pdf') {
+            return (
+                <div className="flex-1 w-full h-full bg-gray-50 p-4">
+                    <iframe src={selectedReport.path} className="w-full h-full rounded-xl border border-gray-200 shadow-sm" title={selectedReport.title}></iframe>
+                </div>
+            );
+        }
+
+        if (['md', 'txt'].includes(ext)) {
+             return (
+                 <div className="flex-1 overflow-y-auto p-8 md:p-12 custom-scrollbar bg-white">
+                     <div className="max-w-3xl mx-auto markdown-body bg-transparent" dangerouslySetInnerHTML={{ __html: marked.parse(content) }}></div>
+                 </div>
+             );
+        }
+
+        // Fallback
+        return (
+            <div className="flex-1 flex flex-col items-center justify-center text-gray-500">
+                <i className="fas fa-file-download text-5xl mb-4 text-gray-300"></i>
+                <p className="mb-4">Preview not available for this file type.</p>
+                <a href={selectedReport.path} target="_blank" className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                    Download File
+                </a>
             </div>
-            <div className="flex-1 glass rounded-2xl overflow-hidden flex flex-col">
-                {selectedReport ? <div className="flex-1 overflow-y-auto p-8 custom-scrollbar"><div className="markdown-body bg-transparent" dangerouslySetInnerHTML={{ __html: marked.parse(content) }}></div></div> : <div className="flex-1 flex items-center justify-center text-gray-400">Select a report</div>}
+        );
+    };
+
+    return (
+        <div className="p-4 md:p-6 max-w-[1600px] mx-auto h-auto md:h-[calc(100vh-2rem)] flex flex-col md:flex-row gap-6 pb-20">
+            {/* Sidebar List */}
+            <div className="w-full md:w-80 glass rounded-2xl overflow-hidden flex flex-col border border-white/40 shadow-xl shrink-0 h-64 md:h-auto">
+                <div className="p-5 border-b border-white/20 bg-white/20 backdrop-blur-md space-y-4">
+                    <h3 className="font-bold text-gray-800 flex items-center gap-2">
+                        <i className="fas fa-folder-open text-purple-500"></i>
+                        Artifacts
+                    </h3>
+                    {/* Search Bar */}
+                    <div className="relative">
+                        <i className="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+                        <input 
+                            type="text" 
+                            placeholder="Filter reports..." 
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            className="w-full pl-8 pr-3 py-2 bg-white/50 border border-white/30 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                        />
+                    </div>
+                </div>
+                
+                <div className="overflow-y-auto flex-1 p-3 space-y-2 custom-scrollbar">
+                    {filteredReports.map(r => {
+                         const ext = r.path.split('.').pop().toLowerCase();
+                         let icon = 'fa-file-alt text-gray-400';
+                         let colorClass = 'bg-gray-100';
+                         
+                         if (['png', 'jpg', 'jpeg'].includes(ext)) { icon = 'fa-image text-pink-500'; colorClass = 'bg-pink-50'; }
+                         if (ext === 'pdf') { icon = 'fa-file-pdf text-red-500'; colorClass = 'bg-red-50'; }
+                         if (['md', 'txt'].includes(ext)) { icon = 'fa-file-alt text-blue-500'; colorClass = 'bg-blue-50'; }
+                         
+                         return (
+                            <div key={r.id} onClick={() => setSelectedReport(r)} 
+                                className={`p-3 rounded-xl cursor-pointer transition-all duration-200 group flex items-center gap-3 border
+                                ${selectedReport?.id === r.id 
+                                    ? 'bg-white border-purple-200 shadow-md ring-1 ring-purple-100' 
+                                    : 'hover:bg-white/60 border-transparent hover:border-white/40 hover:shadow-sm'
+                                }`}>
+                                <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 transition-colors ${selectedReport?.id === r.id ? 'bg-purple-100' : colorClass}`}>
+                                    <i className={`fas ${icon} text-lg ${selectedReport?.id === r.id ? '!text-purple-600' : ''}`}></i>
+                                </div>
+                                <div className="min-w-0 flex-1">
+                                    <h4 className={`font-bold text-sm truncate ${selectedReport?.id === r.id ? 'text-purple-900' : 'text-gray-700'}`}>{r.title}</h4>
+                                    <p className="text-xs mt-0.5 text-gray-400 truncate flex justify-between">
+                                        <span>{r.date}</span>
+                                        <span className="uppercase text-[10px] font-bold opacity-70 border px-1 rounded">{ext}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        )
+                    })}
+
+                    {reports.length === 0 && (
+                        <div className="p-8 text-center text-gray-400 text-sm border-2 border-dashed border-gray-200/50 rounded-xl m-2">
+                            No artifacts found.
+                        </div>
+                    )}
+                </div>
+            </div>
+            
+            {/* Main Content Area */}
+            <div className="flex-1 glass rounded-2xl overflow-hidden flex flex-col border border-white/40 shadow-2xl relative bg-white/60 backdrop-blur-xl">
+                {selectedReport && renderToolbar()}
+                <div className="flex-1 overflow-hidden relative flex flex-col">
+                    {renderContent()}
+                </div>
             </div>
         </div>
     );
@@ -525,6 +666,7 @@ const DataExplorer = ({ config }) => {
     const [loading, setLoading] = useState(false);
     const [selectedFile, setSelectedFile] = useState(null);
     const [fileContent, setFileContent] = useState('');
+    const [fileType, setFileType] = useState(''); // 'csv' or 'json'
 
     useEffect(() => {
         if (config?.githubRepo) {
@@ -536,33 +678,162 @@ const DataExplorer = ({ config }) => {
     const handleFileClick = async (file) => {
         if (file.path.endsWith('.csv')) {
             setSelectedFile(file);
+            setFileType('csv');
+            setFileContent(await DataService.fetchFileContent(config.githubRepo, file.path));
+        } else if (file.path.endsWith('.json')) {
+            setSelectedFile(file);
+            setFileType('json');
             setFileContent(await DataService.fetchFileContent(config.githubRepo, file.path));
         } else {
             window.open(`https://github.com/${config.githubRepo}/blob/main/${file.path}`, '_blank');
         }
     }
 
-    const csvData = useMemo(() => {
-        if (!fileContent) return [];
-        const lines = fileContent.split('\n').filter(l => l.trim());
-        if (!lines.length) return [];
-        return { headers: lines[0].split(','), rows: lines.slice(1, 20).map(l => l.split(',')) };
-    }, [fileContent]);
+    const tableData = useMemo(() => {
+        if (!fileContent) return { headers: [], rows: [], totalRows: 0 };
+
+        let headers = [];
+        let rows = [];
+
+        if (fileType === 'csv') {
+            const lines = fileContent.split('\n').filter(l => l.trim());
+            if (lines.length) {
+                headers = lines[0].split(',');
+                rows = lines.slice(1).map(l => l.split(','));
+            }
+        } else if (fileType === 'json') {
+            try {
+                const json = JSON.parse(fileContent);
+                let dataArray = [];
+                if (Array.isArray(json)) dataArray = json;
+                else if (typeof json === 'object' && json !== null) {
+                    const possibleArray = Object.values(json).find(val => Array.isArray(val));
+                    dataArray = possibleArray || [json];
+                }
+                
+                if (dataArray.length) {
+                    headers = Array.from(new Set(dataArray.flatMap(Object.keys)));
+                    rows = dataArray.map(obj => headers.map(h => {
+                         const val = obj[h];
+                         return typeof val === 'object' ? JSON.stringify(val) : val;
+                    }));
+                } else {
+                    headers = ['Info'];
+                    rows = [['No tabular data found']];
+                }
+            } catch (e) {
+                headers = ['Error'];
+                rows = [['Invalid JSON content']];
+            }
+        }
+
+        return { headers, rows: rows.slice(0, 50), totalRows: rows.length };
+    }, [fileContent, fileType]);
+
+    const handleShowMore = () => {
+        const url = config.contactLink || `https://github.com/${config.githubRepo}`;
+        window.open(url, '_blank');
+    };
 
     return (
-        <div className="p-8 max-w-7xl mx-auto h-[90vh] flex gap-6 pb-20">
-            <div className="w-1/3 glass rounded-2xl overflow-hidden flex flex-col">
-                <div className="p-4 border-b border-white/20"><h3 className="font-bold text-gray-800">Repository Files</h3></div>
-                <div className="flex-1 overflow-y-auto p-2">
-                    {loading ? <div className="p-4">Loading...</div> : tree.filter(i => i.path.startsWith('data/') || i.path.endsWith('.csv')).map(item => (
-                        <div key={item.path} onClick={() => handleFileClick(item)} className={`flex items-center gap-2 p-2 rounded-lg cursor-pointer text-sm ${selectedFile?.path === item.path ? 'bg-emerald-50 text-emerald-700' : 'hover:bg-white/50 text-gray-600'}`}>
-                            <i className={`fas ${item.path.endsWith('.csv') ? 'fa-table text-emerald-500' : 'fa-folder text-blue-300'}`}></i><span className="truncate">{item.path}</span>
+        <div className="p-8 max-w-7xl mx-auto h-auto md:h-[90vh] flex flex-col md:flex-row gap-6 pb-20">
+            <div className="w-full md:w-1/3 glass rounded-2xl overflow-hidden flex flex-col border border-white/40 shadow-xl h-64 md:h-auto">
+                <div className="p-5 border-b border-white/20 bg-white/20 backdrop-blur-md">
+                    <h3 className="font-bold text-gray-800 flex items-center gap-2">
+                        <i className="fas fa-database text-blue-500"></i>
+                        Data Sources
+                    </h3>
+                </div>
+                <div className="flex-1 overflow-y-auto p-3 space-y-1 custom-scrollbar">
+                    {loading ? (
+                        <div className="p-8 text-center text-gray-500">
+                            <i className="fas fa-circle-notch fa-spin mb-2"></i><br/>Loading repository...
+                        </div>
+                    ) : tree.filter(i => i.path.startsWith('data/') || i.path.endsWith('.csv') || i.path.endsWith('.json')).map(item => (
+                        <div 
+                            key={item.path} 
+                            onClick={() => handleFileClick(item)} 
+                            className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer text-sm transition-all duration-200 group
+                                ${selectedFile?.path === item.path 
+                                    ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-md' 
+                                    : 'hover:bg-white/60 text-gray-600 hover:translate-x-1'
+                                }`}
+                        >
+                            <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 
+                                ${selectedFile?.path === item.path ? 'bg-white/20' : 'bg-white/50'}`}>
+                                <i className={`fas 
+                                    ${item.path.endsWith('.csv') ? 'fa-table text-emerald-500' : ''} 
+                                    ${item.path.endsWith('.json') ? 'fa-code text-amber-500' : ''}
+                                    ${!item.path.endsWith('.csv') && !item.path.endsWith('.json') ? 'fa-folder text-blue-300' : ''}
+                                    ${selectedFile?.path === item.path ? '!text-white' : ''}
+                                `}></i>
+                            </div>
+                            <span className="truncate font-medium">{item.path}</span>
                         </div>
                     ))}
                 </div>
             </div>
-            <div className="flex-1 glass rounded-2xl overflow-hidden p-6 flex flex-col">
-                {selectedFile ? <div className="overflow-auto"><table className="min-w-full text-sm text-left"><thead className="bg-gray-50"><tr>{csvData.headers?.map((h, i) => <th key={i} className="px-4 py-2 border-b">{h}</th>)}</tr></thead><tbody>{csvData.rows?.map((r, i) => <tr key={i}>{r.map((c, j) => <td key={j} className="px-4 py-2 border-b">{c}</td>)}</tr>)}</tbody></table></div> : <div className="flex-1 flex items-center justify-center text-gray-400">Select CSV</div>}
+            
+            <div className="flex-1 glass rounded-2xl overflow-hidden flex flex-col border border-white/40 shadow-xl relative bg-white/40">
+                {selectedFile ? (
+                    <>
+                        <div className="p-4 border-b border-white/20 bg-gray-50/50 flex justify-between items-center">
+                            <div className="flex items-center gap-2">
+                                <i className={`fas ${fileType === 'csv' ? 'fa-table text-emerald-500' : 'fa-code text-amber-500'}`}></i>
+                                <span className="font-bold text-gray-700">{selectedFile.path}</span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <span className="text-xs font-mono text-gray-500 bg-white px-2 py-1 rounded border">
+                                    Showing {tableData.rows.length} of {tableData.totalRows} rows
+                                </span>
+                            </div>
+                        </div>
+                        <div className="overflow-auto flex-1 custom-scrollbar relative">
+                            <table className="min-w-full text-sm text-left border-collapse">
+                                <thead className="bg-gray-50 sticky top-0 z-10 shadow-sm">
+                                    <tr>
+                                        {tableData.headers?.map((h, i) => (
+                                            <th key={i} className="px-6 py-3 font-semibold text-gray-600 uppercase tracking-wider text-xs border-b border-gray-200 bg-gray-50/95 backdrop-blur">
+                                                {h}
+                                            </th>
+                                        ))}
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-gray-100 bg-white/30">
+                                    {tableData.rows?.map((r, i) => (
+                                        <tr key={i} className="hover:bg-blue-50/50 transition-colors">
+                                            {r.map((c, j) => (
+                                                <td key={j} className="px-6 py-3 text-gray-600 border-b border-gray-100/50 max-w-xs truncate" title={c}>
+                                                    {c}
+                                                </td>
+                                            ))}
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                            
+                            {tableData.totalRows > 50 && (
+                                <div className="sticky bottom-0 left-0 w-full bg-gradient-to-t from-white via-white/90 to-transparent p-8 flex justify-center z-20">
+                                    <button 
+                                        onClick={handleShowMore}
+                                        className="bg-gray-900 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-gray-800 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+                                    >
+                                        <i className="fas fa-external-link-alt"></i>
+                                        Show More Data
+                                    </button>
+                                </div>
+                            )}
+                        </div>
+                    </>
+                ) : (
+                    <div className="flex-1 flex flex-col items-center justify-center text-gray-400">
+                        <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+                            <i className="fas fa-search text-4xl text-gray-300"></i>
+                        </div>
+                        <p className="font-medium">Select a file to preview</p>
+                        <p className="text-sm opacity-70">Supports CSV and JSON</p>
+                    </div>
+                )}
             </div>
         </div>
     );
@@ -573,7 +844,7 @@ const App = () => {
     const [commits, setCommits] = useState([]);
     const [activeTab, setActiveTab] = useState('dashboard');
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+    const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
 
     useEffect(() => {
         DataService.loadConfig().then(data => {
@@ -609,8 +880,9 @@ const App = () => {
                 activeTab={activeTab}
                 setActiveTab={(tab) => { setActiveTab(tab); setMobileMenuOpen(false); }}
                 isCollapsed={sidebarCollapsed}
-                toggleCollapse={() => setSidebarCollapsed(!sidebarCollapsed)}
+                setCollapsed={setSidebarCollapsed}
                 mobileOpen={mobileMenuOpen}
+                closeMobileMenu={() => setMobileMenuOpen(false)}
             />
 
             <div className="flex-1 flex flex-col min-w-0 h-screen overflow-hidden relative">
