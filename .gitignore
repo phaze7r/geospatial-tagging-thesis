@@ -263,3 +263,4 @@ __pycache__/
 # Local Configs
 .vscode/
 .idea/
+web_app/static/uploads/

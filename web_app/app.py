@@ -6,31 +6,65 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from flask import Flask, render_template, jsonify, request, redirect, url_for, flash, send_from_directory, session
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.utils import secure_filename
+from werkzeug.middleware.proxy_fix import ProxyFix
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 from models import db, AdminUser, ProjectConfig, Note, Report
 from datetime import datetime
 from flask_dance.contrib.github import make_github_blueprint, github
 
 app = Flask(__name__)
+# Fix for Nginx SSL termination
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
+
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-change-this')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['UPLOAD_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static', 'uploads')
+
+# Security Config
+app.config['SESSION_COOKIE_SECURE'] = True # Requires HTTPS
+app.config['SESSION_COOKIE_HTTPONLY'] = True
+app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
+
+# Setup Limiter
+limiter = Limiter(
+    get_remote_address,
+    app=app,
+    default_limits=["200 per day", "50 per hour"],
+    storage_uri="memory://"
+)
+
+# Ensure upload directory exists
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'md', 'json', 'csv'}
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 # GitHub OAuth Config
 app.config["GITHUB_OAUTH_CLIENT_ID"] = os.environ.get("GITHUB_OAUTH_CLIENT_ID")
 app.config["GITHUB_OAUTH_CLIENT_SECRET"] = os.environ.get("GITHUB_OAUTH_CLIENT_SECRET")
-# Explicitly allow HTTP for OAuth in dev/local (Remove in Prod if HTTPS is set up, but Nginx handles SSL so internal is HTTP)
-os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1' 
+# Removed OAUTHLIB_INSECURE_TRANSPORT as we are now behind Nginx ProxyFix with HTTPS
 
 github_bp = make_github_blueprint()
 app.register_blueprint(github_bp, url_prefix="/auth")
 
 db.init_app(app)
 login_manager = LoginManager(app)
-login_manager.login_view = 'login'
+# If a user hits a @login_required route, send them to admin (which will show login)
+login_manager.login_view = 'admin' 
 
 @login_manager.user_loader
 def load_user(user_id):
     return AdminUser.query.get(int(user_id))
+
+# --- Security Config ---
+# Hardcoded credentials as requested ("forever in code")
+ADMIN_USERNAME = 'Faizan'
+ADMIN_PASSWORD_HASH = 'scrypt:32768:8:1$Ffw0B9dksM32pUmf$3b0e13785ced638758c7b47e1e70b140cbe8a59491bbf8b03ecfa1ab3e4a598002e81f7f5cdc524d070b133d8c479a9006a8577b3af9b1f4171fde7483615136'
 
 # --- API Routes for Frontend ---
 
@@ -49,6 +83,7 @@ def get_data():
         "progress": config.progress,
         "config": {
             "githubRepo": config.github_repo,
+            "contactLink": config.contact_link,
             "reports": [r.to_dict() for r in reports]
         },
         "notes": [note.to_dict() for note in notes]
@@ -82,20 +117,88 @@ def serve_datareported(filename):
 # --- Admin Routes ---
 
 @app.route('/admin', methods=['GET', 'POST'])
-@login_required
+@limiter.limit("10 per minute") # Rate limit login attempts/admin access
 def admin():
+    # --- AUTHENTICATION LOGIC ---
+    if not current_user.is_authenticated:
+        # Check for GitHub Login (Only if Configured)
+        if app.config.get("GITHUB_OAUTH_CLIENT_ID") and github.authorized:
+            try:
+                resp = github.get("/user")
+                if resp.ok:
+                    account_info = resp.json()
+                    username = account_info['login']
+                    
+                    # STRICT ACCESS CONTROL
+                    allowed_users = os.environ.get('ALLOWED_GITHUB_USERS', 'phaze7r').split(',')
+                    allowed_users = [u.strip().lower() for u in allowed_users]
+                    
+                    if username.lower() in allowed_users:
+                        # Log in as the AdminUser
+                        user = AdminUser.query.filter_by(username=ADMIN_USERNAME).first()
+                        if not user:
+                             user = AdminUser(username=ADMIN_USERNAME, password_hash=ADMIN_PASSWORD_HASH)
+                             db.session.add(user)
+                             db.session.commit()
+                        
+                        login_user(user)
+                        flash(f'Verified GitHub Identity: {username}', 'success')
+                        return redirect(url_for('admin'))
+                    else:
+                        flash(f'Access Denied. GitHub user "{username}" is not on the allowlist.', 'danger')
+                else:
+                     flash('Failed to verify GitHub identity.', 'danger')
+            except Exception as e:
+                print(f"GitHub Auth Error: {e}")
+                flash('GitHub Login Failed. Please check server logs.', 'danger')
+
+        # Handle Standard Login POST
+        if request.method == 'POST':
+             username = request.form.get('username')
+             password = request.form.get('password')
+             
+             if username: # Ensure it is a login attempt
+                print(f"Login Attempt: {username} (Expected: {ADMIN_USERNAME})")
+                if username.lower() == ADMIN_USERNAME.lower() and check_password_hash(ADMIN_PASSWORD_HASH, password):
+                    print("Login Success: Hardcoded credentials match.")
+                    user = AdminUser.query.filter_by(username=ADMIN_USERNAME).first()
+                    if not user:
+                        user = AdminUser(username=ADMIN_USERNAME, password_hash=ADMIN_PASSWORD_HASH)
+                        db.session.add(user)
+                        db.session.commit()
+                    elif user.password_hash != ADMIN_PASSWORD_HASH:
+                        user.password_hash = ADMIN_PASSWORD_HASH
+                        db.session.commit()
+                        
+                    login_user(user)
+                    return redirect(url_for('admin'))
+                
+                # DB Fallback (Optional)
+                user = AdminUser.query.filter_by(username=username).first()
+                if user and check_password_hash(user.password_hash, password):
+                    login_user(user)
+                    return redirect(url_for('admin'))
+                    
+                flash('Invalid Credentials', 'danger')
+
+        # Render Login Template if not authenticated
+        github_enabled = bool(app.config.get("GITHUB_OAUTH_CLIENT_ID"))
+        return render_template('login.html', github_enabled=github_enabled)
+
+
+    # --- ADMIN DASHBOARD LOGIC (Authenticated) ---
     config = ProjectConfig.query.first()
     if not config:
-        # Initialize default config if missing
         config = ProjectConfig(progress=80)
         db.session.add(config)
         db.session.commit()
 
     if request.method == 'POST':
-        if 'update_progress' in request.form:
+        if 'update_config' in request.form:
             config.progress = int(request.form.get('progress'))
+            config.contact_link = request.form.get('contact_link')
             db.session.commit()
-            flash('Progress updated!', 'success')
+            flash('Configuration updated!', 'success')
         
         elif 'add_note' in request.form:
             content = request.form.get('content')
@@ -113,11 +216,24 @@ def admin():
         elif 'add_report' in request.form:
             title = request.form.get('title')
             path = request.form.get('path')
-            date_str = datetime.now().strftime("%Y-%m-%d")
-            new_report = Report(title=title, path=path, date_str=date_str)
-            db.session.add(new_report)
-            db.session.commit()
-            flash('Report added!', 'success')
+            
+            # Handle File Upload
+            file = request.files.get('file')
+            if file and file.filename != '' and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                # Save to web_app/static/uploads
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                # Set path to be accessible via static route
+                path = f'/static/uploads/{filename}'
+            
+            if not path:
+                flash('Please provide a file or a path URL.', 'danger')
+            else:
+                date_str = datetime.now().strftime("%Y-%m-%d")
+                new_report = Report(title=title, path=path, date_str=date_str)
+                db.session.add(new_report)
+                db.session.commit()
+                flash('Report added successfully!', 'success')
             
     notes = Note.query.order_by(Note.created_at.desc()).all()
     reports = Report.query.all()
@@ -141,89 +257,10 @@ def delete_report(id):
     flash('Report deleted.', 'info')
     return redirect(url_for('admin'))
 
-
-# --- Security Config ---
-# Hardcoded credentials as requested ("forever in code")
-ADMIN_USERNAME = 'Faizan'
-ADMIN_PASSWORD_HASH = 'scrypt:32768:8:1$Ffw0B9dksM32pUmf$3b0e13785ced638758c7b47e1e70b140cbe8a59491bbf8b03ecfa1ab3e4a598002e81f7f5cdc524d070b133d8c479a9006a8577b3af9b1f4171fde7483615136'
-
-
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if current_user.is_authenticated:
-        return redirect(url_for('admin'))
-
-    # Check for GitHub Login (Only if Configured)
-    if app.config.get("GITHUB_OAUTH_CLIENT_ID") and github.authorized:
-        try:
-            resp = github.get("/user")
-            if resp.ok:
-                account_info = resp.json()
-                username = account_info['login']
-                
-                # STRICT ACCESS CONTROL
-                # Only allow specific GitHub users. Default: phaze7r
-                allowed_users = os.environ.get('ALLOWED_GITHUB_USERS', 'phaze7r').split(',')
-                # normalize for comparison
-                allowed_users = [u.strip().lower() for u in allowed_users]
-                
-                if username.lower() in allowed_users:
-                    # Log in as the AdminUser
-                    user = AdminUser.query.filter_by(username=ADMIN_USERNAME).first()
-                    if not user:
-                         # Ensure DB user exists to satisfy ForeignKey requirements if any, or just session
-                         user = AdminUser(username=ADMIN_USERNAME, password_hash=ADMIN_PASSWORD_HASH)
-                         db.session.add(user)
-                         db.session.commit()
-                    
-                    login_user(user)
-                    flash(f'Verified GitHub Identity: {username}', 'success')
-                    return redirect(url_for('admin'))
-                else:
-                    flash(f'Access Denied. GitHub user "{username}" is not on the allowlist.', 'danger')
-            else:
-                 flash('Failed to verify GitHub identity.', 'danger')
-        except Exception as e:
-            # Don't crash, just notify
-            print(f"GitHub Auth Error: {e}")
-            flash('GitHub Login Failed. Please check server logs.', 'danger')
-        
-    if request.method == 'POST':
-        username = request.form.get('username')
-        password = request.form.get('password')
-        
-        # Priority Check: Hardcoded Credentials
-        # Compare case-insensitively
-        print(f"Login Attempt: {username} (Expected: {ADMIN_USERNAME})")
-        if username and username.lower() == ADMIN_USERNAME.lower() and check_password_hash(ADMIN_PASSWORD_HASH, password):
-            print("Login Success: Hardcoded credentials match.")
-            # Ensure user exists in DB for Flask-Login to load it
-            user = AdminUser.query.filter_by(username=ADMIN_USERNAME).first() # Use the canonical casing 'Faizan'
-            if not user:
-                user = AdminUser(username=ADMIN_USERNAME, password_hash=ADMIN_PASSWORD_HASH)
-                db.session.add(user)
-                db.session.commit()
-            elif user.password_hash != ADMIN_PASSWORD_HASH:
-                # Sync DB with Code (Code is truth)
-                user.password_hash = ADMIN_PASSWORD_HASH
-                db.session.commit()
-                
-            login_user(user)
-            return redirect(url_for('admin'))
-        
-        print("Login Failed: Credentials did not match hardcoded values.")
-            
-        # Fallback: Check DB (optional, but code says "let me choose one time and stay forever", so maybe disable DB fallback? 
-        # I'll leave DB check for legacy support but the Code Hash effectively overrides it if the username matches)
-        user = AdminUser.query.filter_by(username=username).first()
-        if user and check_password_hash(user.password_hash, password):
-            login_user(user)
-            return redirect(url_for('admin'))
-            
-        flash('Invalid Credentials', 'danger')
-            
-    github_enabled = bool(app.config.get("GITHUB_OAUTH_CLIENT_ID"))
-    return render_template('login.html', github_enabled=github_enabled)
+# Redirect /login to /admin to consolidate
+@app.route('/login')
+def login_redirect():
+    return redirect(url_for('admin'))
 
 @app.route('/logout')
 @login_required
