@@ -14,6 +14,7 @@ class ProjectConfig(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     progress = db.Column(db.Integer, default=0)
     github_repo = db.Column(db.String(120), default="phaze7r/geospatial-tagging-thesis")
+    contact_link = db.Column(db.String(200), default="")
 
 class Note(db.Model):
     id = db.Column(db.Integer, primary_key=True)
