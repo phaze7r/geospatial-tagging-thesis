@@ -110,7 +110,7 @@ const Sidebar = ({ activeTab, setActiveTab, isCollapsed, setCollapsed, mobileOpe
                             }`}
                     >
                         <i className={`fas ${item.icon} w-5 text-center shrink-0`}></i>
-                        <span className={`font-medium transition-all duration-300 ${isCollapsed ? 'hidden' : 'block'}`}>{item.label}</span>
+                        <span className={`font-medium transition-all duration-300 ${mobileOpen || !isCollapsed ? 'block' : 'hidden'}`}>{item.label}</span>
 
                         {/* Tooltip for collapsed state */}
                         {isCollapsed && (
@@ -503,10 +503,19 @@ const ReportsViewer = () => {
     }, [reports, searchTerm]);
 
     const renderToolbar = () => (
-        <div className="h-16 border-b border-gray-200/50 bg-white/50 backdrop-blur flex justify-between items-center px-6 shrink-0">
-            <div className="min-w-0">
-                <h2 className="font-bold text-gray-800 truncate">{selectedReport.title}</h2>
-                <p className="text-xs text-gray-500 font-mono">{selectedReport.date} • {selectedReport.path.split('.').pop().toUpperCase()}</p>
+        <div className="h-16 border-b border-gray-200/50 bg-white/50 backdrop-blur flex justify-between items-center px-4 md:px-6 shrink-0">
+            <div className="flex items-center gap-3 min-w-0">
+                {/* Mobile Back Button */}
+                <button 
+                    onClick={() => setSelectedReport(null)}
+                    className="md:hidden p-2 -ml-2 text-gray-500 hover:text-gray-700"
+                >
+                    <i className="fas fa-arrow-left"></i>
+                </button>
+                <div className="min-w-0">
+                    <h2 className="font-bold text-gray-800 truncate text-sm md:text-base">{selectedReport.title}</h2>
+                    <p className="text-xs text-gray-500 font-mono hidden md:block">{selectedReport.date} • {selectedReport.path.split('.').pop().toUpperCase()}</p>
+                </div>
             </div>
             <div className="flex gap-2">
                 <a 
@@ -571,7 +580,7 @@ const ReportsViewer = () => {
 
         if (['md', 'txt'].includes(ext)) {
              return (
-                 <div className="flex-1 overflow-y-auto p-8 md:p-12 custom-scrollbar bg-white">
+                 <div className="flex-1 overflow-y-auto p-4 md:p-12 custom-scrollbar bg-white">
                      <div className="max-w-3xl mx-auto markdown-body bg-transparent" dangerouslySetInnerHTML={{ __html: marked.parse(content) }}></div>
                  </div>
              );
@@ -590,9 +599,9 @@ const ReportsViewer = () => {
     };
 
     return (
-        <div className="p-4 md:p-6 max-w-[1600px] mx-auto h-auto md:h-[calc(100vh-2rem)] flex flex-col md:flex-row gap-6 pb-20">
+        <div className="p-4 md:p-6 max-w-[1600px] mx-auto h-[calc(100vh-5rem)] md:h-[calc(100vh-2rem)] flex flex-col md:flex-row gap-6 pb-4 md:pb-20">
             {/* Sidebar List */}
-            <div className="w-full md:w-80 glass rounded-2xl overflow-hidden flex flex-col border border-white/40 shadow-xl shrink-0 h-64 md:h-auto">
+            <div className={`${selectedReport ? 'hidden md:flex' : 'flex'} w-full md:w-80 glass rounded-2xl overflow-hidden flex-col border border-white/40 shadow-xl shrink-0 h-full md:h-auto`}>
                 <div className="p-5 border-b border-white/20 bg-white/20 backdrop-blur-md space-y-4">
                     <h3 className="font-bold text-gray-800 flex items-center gap-2">
                         <i className="fas fa-folder-open text-purple-500"></i>
@@ -651,7 +660,7 @@ const ReportsViewer = () => {
             </div>
             
             {/* Main Content Area */}
-            <div className="flex-1 glass rounded-2xl overflow-hidden flex flex-col border border-white/40 shadow-2xl relative bg-white/60 backdrop-blur-xl">
+            <div className={`${!selectedReport ? 'hidden md:flex' : 'flex'} flex-1 glass rounded-2xl overflow-hidden flex-col border border-white/40 shadow-2xl relative bg-white/60 backdrop-blur-xl`}>
                 {selectedReport && renderToolbar()}
                 <div className="flex-1 overflow-hidden relative flex flex-col">
                     {renderContent()}
@@ -736,8 +745,8 @@ const DataExplorer = ({ config }) => {
     };
 
     return (
-        <div className="p-8 max-w-7xl mx-auto h-auto md:h-[90vh] flex flex-col md:flex-row gap-6 pb-20">
-            <div className="w-full md:w-1/3 glass rounded-2xl overflow-hidden flex flex-col border border-white/40 shadow-xl h-64 md:h-auto">
+        <div className="p-4 md:p-8 max-w-7xl mx-auto h-[calc(100vh-5rem)] md:h-[90vh] flex flex-col md:flex-row gap-6 pb-4 md:pb-20">
+            <div className={`${selectedFile ? 'hidden md:flex' : 'flex'} w-full md:w-1/3 glass rounded-2xl overflow-hidden flex-col border border-white/40 shadow-xl h-full md:h-auto`}>
                 <div className="p-5 border-b border-white/20 bg-white/20 backdrop-blur-md">
                     <h3 className="font-bold text-gray-800 flex items-center gap-2">
                         <i className="fas fa-database text-blue-500"></i>
@@ -774,16 +783,23 @@ const DataExplorer = ({ config }) => {
                 </div>
             </div>
             
-            <div className="flex-1 glass rounded-2xl overflow-hidden flex flex-col border border-white/40 shadow-xl relative bg-white/40">
+            <div className={`${!selectedFile ? 'hidden md:flex' : 'flex'} flex-1 glass rounded-2xl overflow-hidden flex-col border border-white/40 shadow-xl relative bg-white/40`}>
                 {selectedFile ? (
                     <>
                         <div className="p-4 border-b border-white/20 bg-gray-50/50 flex justify-between items-center">
-                            <div className="flex items-center gap-2">
-                                <i className={`fas ${fileType === 'csv' ? 'fa-table text-emerald-500' : 'fa-code text-amber-500'}`}></i>
-                                <span className="font-bold text-gray-700">{selectedFile.path}</span>
+                            <div className="flex items-center gap-2 min-w-0">
+                                {/* Back Button */}
+                                <button 
+                                    onClick={() => setSelectedFile(null)}
+                                    className="md:hidden text-gray-500 hover:text-gray-700 p-1 mr-1"
+                                >
+                                    <i className="fas fa-arrow-left"></i>
+                                </button>
+                                <i className={`fas ${fileType === 'csv' ? 'fa-table text-emerald-500' : 'fa-code text-amber-500'} shrink-0`}></i>
+                                <span className="font-bold text-gray-700 truncate text-sm md:text-base">{selectedFile.path}</span>
                             </div>
-                            <div className="flex items-center gap-3">
-                                <span className="text-xs font-mono text-gray-500 bg-white px-2 py-1 rounded border">
+                            <div className="flex items-center gap-3 shrink-0">
+                                <span className="text-xs font-mono text-gray-500 bg-white px-2 py-1 rounded border hidden sm:inline">
                                     Showing {tableData.rows.length} of {tableData.totalRows} rows
                                 </span>
                             </div>
