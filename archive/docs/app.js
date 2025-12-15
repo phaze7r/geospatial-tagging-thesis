@@ -246,37 +246,44 @@ const NotesFeed = ({ notes }) => {
 };
 
 const Dashboard = ({ config, commits }) => {
+    // Use metrics if available, otherwise fallback to basic config or defaults
+    const metrics = config.metrics || {};
+    
     return (
         <div className="p-4 md:p-8 max-w-7xl mx-auto space-y-6">
             <header>
                 <h2 className="text-xl md:text-2xl font-bold text-gray-800">Overview</h2>
-                <p className="text-sm md:text-base text-gray-500">Project status and recent activity.</p>
+                <p className="text-sm md:text-base text-gray-500">
+                    {metrics.last_updated 
+                        ? `Last updated: ${metrics.last_updated}` 
+                        : "Project status and recent activity."}
+                </p>
             </header>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                 <StatCard
-                    title="Thesis Progress"
-                    value={`${config.progress || 0}%`}
-                    icon="fa-tasks"
+                    title="Model Accuracy"
+                    value={metrics.accuracy || `${config.progress || 0}%`}
+                    icon="fa-bullseye"
                     footer={
-                        <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
-                            <div className="bg-orange-500 h-2 rounded-full" style={{ width: `${config.progress}%` }}></div>
-                        </div>
+                        metrics.improvement 
+                        ? <span className="text-green-600 text-sm font-medium"><i className="fas fa-arrow-up"></i> {metrics.improvement} vs baseline</span>
+                        : <div className="w-full bg-gray-200 rounded-full h-2 mt-2"><div className="bg-orange-500 h-2 rounded-full" style={{ width: `${config.progress}%` }}></div></div>
                     }
                 />
                 <StatCard
-                    title="Recent Commits"
-                    value={commits.length}
-                    icon="fa-code-branch"
+                    title="Patterns Mined"
+                    value={metrics.patterns_count || commits.length}
+                    icon="fa-project-diagram"
                     color="blue"
-                    footer="In loaded history"
+                    footer={metrics.patterns_count ? "From Guided FP-Growth" : "In loaded history"}
                 />
                 <StatCard
-                    title="Total Reports"
-                    value={Object.keys(config.reports || {}).length}
-                    icon="fa-file-alt"
+                    title="Selected Features"
+                    value={metrics.features_count || Object.keys(config.reports || {}).length}
+                    icon="fa-filter"
                     color="green"
-                    footer="Available in Docs"
+                    footer={metrics.features_count ? "Via Bayesian Elastic Net" : "Available Reports"}
                 />
             </div>
 
@@ -292,21 +299,12 @@ const Dashboard = ({ config, commits }) => {
     );
 };
 
-const ReportsViewer = () => {
+const ReportsViewer = ({ reports = [] }) => {
     const [selectedReport, setSelectedReport] = useState(null);
     const [content, setContent] = useState('');
 
     // Derived state for mobile view logic
     const isMobileView = window.innerWidth < 768; // Simple check, or just use CSS classes
-
-    // Hardcoded list for now
-    const reports = [
-        { id: 'features', title: 'Feature Splits Analysis', date: '2025-08-15', path: 'reports/features_splits_20250815.md' },
-        { id: 'patterns', title: 'Pattern Mining Results', date: '2025-08-15', path: 'reports/patterns_mining_20250815.md' },
-        { id: 'accuracy', title: 'Accuracy Analysis', date: '2025-12-10', path: 'reports/accuracy_analysis.md' },
-        { id: 'xai', title: 'XAI Summary', date: '2025-12-10', path: 'reports/xai_summary.md' },
-        { id: 'data', title: 'Extended Labels Data', date: '2025-12-10', path: 'reports/extended_labels_data.md' }
-    ];
 
     useEffect(() => {
         if (selectedReport) {
@@ -324,7 +322,7 @@ const ReportsViewer = () => {
                     <h3 className="font-bold text-gray-700">Available Reports</h3>
                 </div>
                 <div className="overflow-y-auto flex-1 p-2 space-y-2">
-                    {reports.map(r => (
+                    {reports.length > 0 ? reports.map(r => (
                         <div
                             key={r.id}
                             onClick={() => setSelectedReport(r)}
@@ -333,7 +331,9 @@ const ReportsViewer = () => {
                             <h4 className="font-medium text-gray-800">{r.title}</h4>
                             <p className="text-xs text-gray-500">{r.date}</p>
                         </div>
-                    ))}
+                    )) : (
+                        <div className="p-4 text-center text-gray-400">No reports found</div>
+                    )}
                 </div>
             </div>
 
@@ -493,7 +493,7 @@ const App = () => {
     const renderContent = () => {
         switch (activeTab) {
             case 'dashboard': return <Dashboard config={config} commits={commits} />;
-            case 'reports': return <ReportsViewer />;
+            case 'reports': return <ReportsViewer reports={config.reports_list || []} />;
             case 'data': return <DataExplorer config={config.config} />;
             default: return <Dashboard config={config} />;
         }

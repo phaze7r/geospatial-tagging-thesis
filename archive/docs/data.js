@@ -50,11 +50,57 @@ window.LOCAL_DATA = {
     "Every dataset tells a story! \ud83d\udcca",
     "Innovation happens at the intersection of data and geography! \ud83c\udf10"
   ],
+  "metrics": {
+    "accuracy": "99.85%",
+    "improvement": "2.33%",
+    "patterns_count": 517,
+    "features_count": 252,
+    "last_updated": "2025-12-15 00:16:02"
+  },
   "reports": {
-    "reports/xai_summary.md": "# \ud83e\udde0 Explainable AI (XAI) Summary\n\n## SHAP Value Analysis\nThis section analyzes feature importance using SHAP values.\n\n### Top Features\n1. **Building Density**: High positive impact on \"Urban\" classification.\n2. **Road Proximity**: Moderate impact across all classes.\n3. **Vegetation Index**: Strong negative correlation with \"Industrial\" zones.\n\n### Local Interpretability\n*(Insert specific case studies here where the model's decision is explained)*\n\n## Conclusion\nThe model relies heavily on structural features, aligning with urban planning theories.\n",
-    "reports/accuracy_analysis.md": "# \ud83d\udcca Accuracy Analysis Report\n\n## Overview\nThis report details the accuracy metrics of the geospatial tagging models.\n\n### Model Performance\n- **Baseline Model**: [Insert Baseline Accuracy]%\n- **Deep Learning Model**: [Insert DL Accuracy]%\n- **Ensemble Approach**: [Insert Ensemble Accuracy]%\n\n### Confusion Matrix\n*(Insert Confusion Matrix Image or Table Here)*\n\n### Key Findings\n- The model performed best on residential areas.\n- Urban density significantly impacts classification confidence.\n",
+    "reports/extended_labels_data.md": "# \ud83c\udfd9\ufe0f Extended Labels Data Collection\n\n## Dataset Overview\nSummary of data collected for extended city labels.\n\n### Cities Covered\n- **Islamabad**: [Insert Row Count] records\n- **Rawalpindi**: [Insert Row Count] records\n- **Lahore**: [Insert Row Count] records\n- **Karachi**: [Insert Row Count] records\n- **Peshawar**: [Insert Row Count] records\n\n### Label Distribution\n| Label | Count | Percentage |\n|-------|-------|------------|\n| Residential | 0 | 0% |\n| Commercial | 0 | 0% |\n| Industrial | 0 | 0% |\n| Recreational | 0 | 0% |\n\n### Data Quality Notes\n- **Missing Values**: < 1%\n- **Spatial Resolution**: High\n",
     "reports/patterns_mining_20250815.md": "### Notebook 2 \u2014 Pattern Extraction & Guided Frequent Itemsets\n\n- Timestamp: 2025-08-15 02:34:29 UTC\n- Transactions: 3 (after pruning: 3)\n- MIN_SUP: 0.05, MIN_CONF: 0.5, MAX_ITEMSET_LEN: 3\n- Vocab kept: 3\n- Frequent itemsets: 7; Rules: 8\n- Guidance: Included domain synonyms (e.g., masjid->amenity=mosque) as osm_hint:* items to bias useful patterns.\n- Top rules (by lift/conf): [{\"antecedent\": [\"osm_hint:amenity=park\"], \"consequent\": \"amenity=park\", \"support\": 0.3333, \"confidence\": 1.0, \"lift\": 3.0, \"antecedent_len\": 1}, {\"antecedent\": [\"osm_hint:amenity=park\", \"osm_hint:shop=mall\"], \"consequent\": \"amenity=park\", \"support\": 0.3333, \"confidence\": 1.0, \"lift\": 3.0, \"antecedent_len\": 2}, {\"antecedent\": [\"city:islamabad\", \"osm_hint:amenity=park\"], \"consequent\": \"amenity=park\", \"support\": 0.3333, \"confidence\": 1.0, \"lift\": 3.0, \"antecedent_len\": 2}, {\"antecedent\": [\"city:islamabad\", \"osm_hint:amenity=park\", \"osm_hint:shop=mall\"], \"consequent\": \"amenity=park\", \"support\": 0.3333, \"confidence\": 1.0, \"lift\": 3.0, \"antecedent_len\": 3}, {\"antecedent\": [\"osm_hint:shop=mall\"], \"consequent\": \"amenity=park\", \"support\": 0.3333, \"confidence\": 0.5, \"lift\": 1.5, \"antecedent_len\": 1}]\n",
     "reports/features_splits_20250815.md": "### Notebook 3 \u2014 Embeddings, Pattern Features, and Splits\n\n- Timestamp: 2025-08-15 04:07:26 UTC\n- Rows (valid labels): 3\n- Classes: 3\n- Pattern vocab size: 3\n- Embedding model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2\n- Embedding dim: 384\n- Split sizes: train=1, val=1, test=1\n",
-    "reports/extended_labels_data.md": "# \ud83c\udfd9\ufe0f Extended Labels Data Collection\n\n## Dataset Overview\nSummary of data collected for extended city labels.\n\n### Cities Covered\n- **Islamabad**: [Insert Row Count] records\n- **Rawalpindi**: [Insert Row Count] records\n- **Lahore**: [Insert Row Count] records\n- **Karachi**: [Insert Row Count] records\n- **Peshawar**: [Insert Row Count] records\n\n### Label Distribution\n| Label | Count | Percentage |\n|-------|-------|------------|\n| Residential | 0 | 0% |\n| Commercial | 0 | 0% |\n| Industrial | 0 | 0% |\n| Recreational | 0 | 0% |\n\n### Data Quality Notes\n- **Missing Values**: < 1%\n- **Spatial Resolution**: High\n"
-  }
+    "reports/latest_pipeline_results.md": "# Latest Pipeline Results\n*Generated on 2025-12-15 00:16:02*\n\n## Model Performance\n- **Hybrid Model Accuracy:** 99.85%\n- **Improvement over Baseline:** 2.33%\n\n## Methodology Statistics\n- **Mined Patterns:** 517\n- **Selected Features (BEN):** 252\n\n## Explainability\nSee the SHAP summary plot for detailed feature importance.\n",
+    "reports/accuracy_analysis.md": "# \ud83d\udcca Accuracy Analysis Report\n\n## Overview\nThis report details the accuracy metrics of the geospatial tagging models.\n\n### Model Performance\n- **Baseline Model**: [Insert Baseline Accuracy]%\n- **Deep Learning Model**: [Insert DL Accuracy]%\n- **Ensemble Approach**: [Insert Ensemble Accuracy]%\n\n### Confusion Matrix\n*(Insert Confusion Matrix Image or Table Here)*\n\n### Key Findings\n- The model performed best on residential areas.\n- Urban density significantly impacts classification confidence.\n",
+    "reports/xai_summary.md": "# \ud83e\udde0 Explainable AI (XAI) Summary\n\n## SHAP Value Analysis\nThis section analyzes feature importance using SHAP values.\n\n### Top Features\n1. **Building Density**: High positive impact on \"Urban\" classification.\n2. **Road Proximity**: Moderate impact across all classes.\n3. **Vegetation Index**: Strong negative correlation with \"Industrial\" zones.\n\n### Local Interpretability\n*(Insert specific case studies here where the model's decision is explained)*\n\n## Conclusion\nThe model relies heavily on structural features, aligning with urban planning theories.\n"
+  },
+  "reports_list": [
+    {
+      "id": "extended_labels_data.md",
+      "title": "Extended Labels Data",
+      "date": "2025-12-11",
+      "path": "reports/extended_labels_data.md"
+    },
+    {
+      "id": "patterns_mining_20250815.md",
+      "title": "Patterns Mining 20250815",
+      "date": "2025-12-11",
+      "path": "reports/patterns_mining_20250815.md"
+    },
+    {
+      "id": "features_splits_20250815.md",
+      "title": "Features Splits 20250815",
+      "date": "2025-12-11",
+      "path": "reports/features_splits_20250815.md"
+    },
+    {
+      "id": "latest_pipeline_results.md",
+      "title": "Latest Pipeline Results",
+      "date": "2025-12-15",
+      "path": "reports/latest_pipeline_results.md"
+    },
+    {
+      "id": "accuracy_analysis.md",
+      "title": "Accuracy Analysis",
+      "date": "2025-12-11",
+      "path": "reports/accuracy_analysis.md"
+    },
+    {
+      "id": "xai_summary.md",
+      "title": "Xai Summary",
+      "date": "2025-12-11",
+      "path": "reports/xai_summary.md"
+    }
+  ]
 };

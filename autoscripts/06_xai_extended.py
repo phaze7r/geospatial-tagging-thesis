@@ -9,6 +9,11 @@ import pickle
 import json
 from datetime import datetime
 
+import sys
+# Add current directory to path to allow importing sync_dashboard
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+from sync_dashboard import sync_dashboard
+
 # --- Configuration ---
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATAREPORTED_DIR = os.path.join(BASE_DIR, "datareported")
@@ -108,6 +113,13 @@ def main():
     logging.info(f"Saved SHAP summary plot to {plot_path}")
     
     logging.info("XAI Complete.")
+
+    # Trigger Dashboard Sync
+    logging.info("Syncing Dashboard...")
+    try:
+        sync_dashboard()
+    except Exception as e:
+        logging.error(f"Failed to sync dashboard: {e}")
 
 if __name__ == "__main__":
     main()
