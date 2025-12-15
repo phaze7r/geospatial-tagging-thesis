@@ -1,50 +1,137 @@
-import json
+import sys
 import os
-import glob
+import shutil
+import json
+import logging
+import pandas as pd
+from datetime import datetime
+
+# --- Configuration ---
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+WEB_APP_DIR = os.path.join(BASE_DIR, "web_app")
+DATAREPORTED_DIR = os.path.join(BASE_DIR, "datareported")
+STATIC_UPLOADS_DIR = os.path.join(WEB_APP_DIR, "static", "uploads")
+STATIC_DIR = os.path.join(WEB_APP_DIR, "static")
+
+# Logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
+
+# Ensure web_app is importable
+sys.path.append(WEB_APP_DIR)
+
+try:
+    from app import app, db
+    from models import ProjectConfig, Report, Note
+except ImportError as e:
+    logging.error(f"Failed to import Flask app/models: {e}")
+    sys.exit(1)
 
 def sync_dashboard():
-    # Paths
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    docs_dir = os.path.join(base_dir, 'docs')
-    reports_dir = os.path.join(base_dir, 'archive', 'reports')
-    data_json_path = os.path.join(docs_dir, 'data.json')
-    data_js_path = os.path.join(docs_dir, 'data.js')
+    logging.info("Starting Dashboard Sync (Target: web_app)...")
     
-    # 1. Read data.json
-    print(f"Reading {data_json_path}...")
-    try:
-        with open(data_json_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-    except Exception as e:
-        print(f"Error reading data.json: {e}")
-        data = {"config": {}, "progress": 0, "notes": []}
+    # 1. Update Accuracy Metrics (JSON)
+    results_path = os.path.join(DATAREPORTED_DIR, "classification", "benchmark_results.json")
+    metrics_path = os.path.join(STATIC_DIR, "dashboard_metrics.json")
+    
+    if os.path.exists(results_path):
+        try:
+            shutil.copy(results_path, metrics_path)
+            logging.info(f"Updated dashboard_metrics.json from {results_path}")
+        except Exception as e:
+            logging.error(f"Failed to copy metrics: {e}")
+    else:
+        logging.warning("benchmark_results.json not found.")
 
-    # 2. Read all markdown reports
-    print(f"Scanning reports in {reports_dir}...")
-    reports = {}
-    if os.path.exists(reports_dir):
-        for report_path in glob.glob(os.path.join(reports_dir, '*.md')):
-            filename = os.path.basename(report_path)
-            # Web path should be relative to index.html, e.g., 'reports/filename.md'
-            web_key = f"reports/{filename}"
-            try:
-                with open(report_path, 'r', encoding='utf-8') as f:
-                    reports[web_key] = f.read()
-                print(f"  Loaded {filename}")
-            except Exception as e:
-                print(f"  Error loading {filename}: {e}")
+    # 2. Copy SHAP Plot
+    shap_src = os.path.join(DATAREPORTED_DIR, "xai", "shap_summary_plot.png")
+    shap_dst = os.path.join(STATIC_UPLOADS_DIR, "shap_summary_plot.png")
     
-    # 3. Combine into final object
-    data['reports'] = reports
+    if os.path.exists(shap_src):
+        try:
+            shutil.copy(shap_src, shap_dst)
+            logging.info("Updated shap_summary_plot.png")
+        except Exception as e:
+            logging.error(f"Failed to copy SHAP plot: {e}")
+
+    # 3. Generate Markdown Summary
+    summary_md_path = os.path.join(STATIC_UPLOADS_DIR, "latest_run_summary.md")
     
-    # 4. Write data.js
-    print(f"Writing to {data_js_path}...")
-    js_content = f"window.LOCAL_DATA = {json.dumps(data, indent=2)};"
-    
-    with open(data_js_path, 'w', encoding='utf-8') as f:
-        f.write(js_content)
-    
-    print("Different 'data.js' generated successfully.")
+    # Gather stats
+    patterns_count = 0
+    patterns_path = os.path.join(DATAREPORTED_DIR, "fp_growth", "guided_patterns.csv")
+    if os.path.exists(patterns_path):
+        patterns_count = len(pd.read_csv(patterns_path))
+        
+    features_count = 0
+    ben_path = os.path.join(DATAREPORTED_DIR, "ben_features", "ben_selected_features.json")
+    if os.path.exists(ben_path):
+        with open(ben_path) as f:
+            features_count = len(json.load(f).get("features", []))
+
+    # Read metrics again for markdown
+    metrics = {}
+    if os.path.exists(results_path):
+        with open(results_path) as f:
+            metrics = json.load(f)
+
+    md_content = f"""# Pipeline Execution Summary
+*Generated on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*
+
+## 1. Performance Metrics
+- **Hybrid Model Accuracy**: {metrics.get('hybrid_model_accuracy', 0):.4f}
+- **Baseline Accuracy**: {metrics.get('baseline_word2vec_accuracy', 0):.4f}
+- **Net Improvement**: {metrics.get('improvement', 0):.4f}
+
+## 2. Methodology Stats
+- **Mined Patterns (Guided FP-Growth)**: {patterns_count}
+- **Selected Features (Bayesian Elastic Net)**: {features_count}
+
+## 3. Artifacts
+- [SHAP Analysis Plot](/static/uploads/shap_summary_plot.png)
+- [Benchmark Results (JSON)](/api/reports/accuracy)
+
+---
+*This report was automatically generated by the Geospatial Tagging Pipeline.*
+"""
+    with open(summary_md_path, "w") as f:
+        f.write(md_content)
+    logging.info("Generated latest_run_summary.md")
+
+    # 4. Update Database (Reports & Notes)
+    with app.app_context():
+        # Update Config Progress
+        config = ProjectConfig.query.first()
+        if not config:
+            config = ProjectConfig()
+            db.session.add(config)
+        config.progress = 100 # Pipeline done
+        
+        # Add/Update Report: SHAP
+        shap_rep = Report.query.filter_by(title="SHAP Analysis Plot").first()
+        if not shap_rep:
+            shap_rep = Report(title="SHAP Analysis Plot", path="/static/uploads/shap_summary_plot.png", date_str=datetime.now().strftime("%Y-%m-%d"))
+            db.session.add(shap_rep)
+        else:
+            shap_rep.date_str = datetime.now().strftime("%Y-%m-%d") # Touch date
+            
+        # Add/Update Report: Summary
+        sum_rep = Report.query.filter_by(title="Latest Pipeline Results").first()
+        if not sum_rep:
+            sum_rep = Report(title="Latest Pipeline Results", path="/static/uploads/latest_run_summary.md", date_str=datetime.now().strftime("%Y-%m-%d"))
+            db.session.add(sum_rep)
+        else:
+            sum_rep.date_str = datetime.now().strftime("%Y-%m-%d")
+
+        # Add Note
+        new_note = Note(
+            content=f"Pipeline executed successfully. Accuracy: {metrics.get('hybrid_model_accuracy', 0):.2%}. New reports available.",
+            date_str=datetime.now().strftime("%Y-%m-%d"),
+            author="System"
+        )
+        db.session.add(new_note)
+        
+        db.session.commit()
+        logging.info("Database updated with new Reports and Note.")
 
 if __name__ == "__main__":
     sync_dashboard()
