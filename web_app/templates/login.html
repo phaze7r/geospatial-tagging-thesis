@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+        <div class="text-center mb-8">
+            <h1 class="text-2xl font-bold text-gray-800">Admin Login</h1>
+            <p class="text-gray-500 text-sm">Geospatial Tagging Thesis</p>
+        </div>
+
+        {% if github_enabled %}
+        <!-- GitHub Login -->
+        <div class="mb-6">
+            <a href="{{ url_for('github.login') }}"
+                class="w-full flex justify-center items-center gap-2 bg-gray-900 text-white p-3 rounded-lg hover:bg-gray-800 transition-colors">
+                <i class="fab fa-github text-xl"></i>
+                Login with GitHub
+            </a>
+            <div class="relative flex py-5 items-center">
+                <div class="flex-grow border-t border-gray-300"></div>
+                <span class="flex-shrink mx-4 text-gray-400 text-xs">OR USE PASSWORD</span>
+                <div class="flex-grow border-t border-gray-300"></div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="mb-4 p-3 rounded {{ 'bg-red-100 text-red-700' if category == 'danger' else 'bg-blue-100' }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <form method="POST" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Username</label>
+                <input type="text" name="username" class="w-full mt-1 p-2 border rounded-lg" required>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" name="password" class="w-full mt-1 p-2 border rounded-lg" required>
+            </div>
+            <button type="submit" class="w-full bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-800 transition">Log
+                In</button>
+        </form>
+    </div>
+</body>
+
+</html>
