@@ -6,8 +6,6 @@
 
 
 
-##### Note: The site loads on desktop perfectly and we are trying our best to opitmize it for mobile view stay tunde. :D 
-
 ## Technical Overview
 
 ### 1. Data Collection (Extended Pipeline)
