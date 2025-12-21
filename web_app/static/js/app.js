@@ -80,7 +80,7 @@ const DataService = {
 
 // --- Components ---
 
-const Sidebar = ({ activeTab, setActiveTab, isCollapsed, setCollapsed, mobileOpen, closeMobileMenu, title, profile, team, onOpenProfile, onOpenMember }) => {
+const Sidebar = ({ activeTab, setActiveTab, isCollapsed, setCollapsed, mobileOpen, closeMobileMenu, title, profile, team, onOpenProfile, onOpenMember, robotIcon }) => {
     const menuItems = [
         { id: 'dashboard', icon: 'fa-chart-line', label: 'Dashboard' },
         { id: 'osm_page', icon: 'fa-globe-americas', label: 'OSM Tools' }, // New item
@@ -89,6 +89,9 @@ const Sidebar = ({ activeTab, setActiveTab, isCollapsed, setCollapsed, mobileOpe
     ];
 
     const userProfile = profile || { name: 'Faizan', title: 'Researcher', image: '/static/img/faizan.jpg' };
+    const iconContent = (robotIcon && robotIcon.startsWith('/')) 
+        ? <img src={robotIcon} alt="Icon" className="w-10 h-10 object-contain animate-bounce-gentle shrink-0" />
+        : <div className="text-3xl animate-bounce-gentle shrink-0">{robotIcon || '🤖'}</div>;
 
     return (
         <aside 
@@ -101,7 +104,7 @@ const Sidebar = ({ activeTab, setActiveTab, isCollapsed, setCollapsed, mobileOpe
         >
             <div className="p-6 flex items-center justify-between border-b border-white/20 h-20">
                 <div className="flex items-center gap-3">
-                    <div className="text-3xl animate-bounce-gentle shrink-0">🤖</div>
+                    {iconContent}
                     <div className={`overflow-hidden transition-all duration-300 ${(isCollapsed && !mobileOpen) ? 'w-0 opacity-0' : 'w-auto opacity-100'}`}>
                         <h1 className="font-bold text-gray-800 text-base break-words">{title}</h1>
                     </div>
@@ -173,16 +176,19 @@ const Sidebar = ({ activeTab, setActiveTab, isCollapsed, setCollapsed, mobileOpe
     );
 };
 
-const MobileHeader = ({ onMenuClick, title }) => (
-    <header className="md:hidden glass border-b border-white/20 p-4 flex justify-between items-center sticky top-0 z-20">
+const MobileHeader = ({ onMenuClick, title, robotIcon }) => (
+    <header className="md:hidden glass border-b border-white/20 p-4 flex justify-between items-center fixed top-0 w-full z-50">
         <div className="flex items-center gap-2">
-            <span className="text-2xl">🤖</span>
+            {(robotIcon && robotIcon.startsWith('/')) 
+                ? <img src={robotIcon} alt="Icon" className="w-8 h-8 object-contain" />
+                : <span className="text-2xl">{robotIcon || '🤖'}</span>
+            }
             <div>
                 <span className="font-bold text-gray-800 block text-base">{title}</span>
             </div>
         </div>
-        <button onClick={onMenuClick} className="text-gray-600 p-2">
-            <i className="fas fa-bars text-xl"></i>
+        <button onClick={onMenuClick} class="text-blue-600 p-2 rounded-lg hover:bg-white/50 transition-colors">
+            <i class="fas fa-bars text-xl"></i>
         </button>
     </header>
 );
@@ -1059,7 +1065,7 @@ const App = () => {
     };
 
     return (
-        <div className="flex min-h-screen">
+        <div className="flex min-h-screen flex-col"> {/* Outer container for fixed header and scrollable content */}
             {isProfileOpen && <ProfileModal profile={config.profile} onClose={() => setProfileOpen(false)} />}
             {selectedMember && <ProfileModal profile={selectedMember} onClose={() => setSelectedMember(null)} />}
             
@@ -1071,34 +1077,43 @@ const App = () => {
                 ></div>
             )}
 
-            <Sidebar
-                activeTab={activeTab}
-                setActiveTab={(tab) => { setActiveTab(tab); setMobileMenuOpen(false); }}
-                isCollapsed={sidebarCollapsed}
-                setCollapsed={setSidebarCollapsed}
-                mobileOpen={mobileMenuOpen}
-                closeMobileMenu={() => setMobileMenuOpen(false)}
-                title={config.config?.sidebarTitle || "Geospatial Thesis"}
-                profile={config.profile}
-                team={config.team}
-                onOpenProfile={() => setProfileOpen(true)}
-                onOpenMember={setSelectedMember}
+            {/* Fixed Mobile Header */}
+            <MobileHeader 
+                onMenuClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
+                title={config.config?.sidebarTitle || "Geospatial Thesis"} 
+                robotIcon={config.config?.robotIcon}
             />
 
-            <div className="flex-1 flex flex-col min-w-0 h-screen overflow-hidden relative">
-                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none -z-10">
-                    <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-                    <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-                </div>
+            {/* Main content area, pushed down by fixed header on mobile */}
+            <div className="flex flex-1 pt-[73px] md:pt-0">
+                <Sidebar
+                    activeTab={activeTab}
+                    setActiveTab={(tab) => { setActiveTab(tab); setMobileMenuOpen(false); }}
+                    isCollapsed={sidebarCollapsed}
+                    setCollapsed={setSidebarCollapsed}
+                    mobileOpen={mobileMenuOpen}
+                    closeMobileMenu={() => setMobileMenuOpen(false)}
+                    title={config.config?.sidebarTitle || "Geospatial Thesis"}
+                    robotIcon={config.config?.robotIcon}
+                    profile={config.profile}
+                    team={config.team}
+                    onOpenProfile={() => setProfileOpen(true)}
+                    onOpenMember={setSelectedMember}
+                />
 
-                <MobileHeader onMenuClick={() => setMobileMenuOpen(!mobileMenuOpen)} title={config.config?.sidebarTitle || "Geospatial Thesis"} />
-
-                <main className="flex-1 overflow-y-auto custom-scrollbar p-0 relative z-10 flex flex-col">
-                    <div className="flex-1">
-                        {renderContent()}
+                <div className="flex-1 flex flex-col min-w-0 h-screen overflow-hidden relative">
+                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none -z-10">
+                        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+                        <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
                     </div>
-                    <Footer />
-                </main>
+
+                    <main className="flex-1 overflow-y-auto custom-scrollbar p-0 relative z-10 flex flex-col">
+                        <div className="flex-1">
+                            {renderContent()}
+                        </div>
+                        <Footer />
+                    </main>
+                </div>
             </div>
         </div>
     );
