@@ -17,6 +17,8 @@ class ProjectConfig(db.Model):
     contact_link = db.Column(db.String(200), default="")
     dashboard_title = db.Column(db.String(120), default="Geospatial Tagging Thesis")
     sidebar_title = db.Column(db.String(50), default="Geospatial Thesis")
+    robot_icon = db.Column(db.String(200), default="🤖")
+    favicon = db.Column(db.String(200), default="")
 
 class ResearcherProfile(db.Model):
     id = db.Column(db.Integer, primary_key=True)
