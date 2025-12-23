@@ -1,0 +1,1297 @@
+sentence,extracted_noun,extracted_adj,language,city,osm_key,osm_value,target_label
+defence main jo general store hai wo bohat lajawab hai.,general store,lajawab,ur,Karachi,shop,convenience,shop__convenience
+hum ne blue area main aik bada bagh dekha.,bagh,bada,ur,Islamabad,leisure,park,leisure__park
+we visited the most crowded stitching center in karachi yesterday.,stitching center,crowded,en,Karachi,shop,tailor,shop__tailor
+we visited the most oldest police station in karachi yesterday.,police station,oldest,en,Karachi,amenity,police,amenity__police
+liberty market wala boutique kaafi saaf suthra hai.,boutique,saaf suthra,ur,Lahore,shop,clothes,shop__clothes
+there is a famous playground in university road which is very oldest.,playground,oldest,en,Peshawar,leisure,park,leisure__park
+hum ne karkhano main aik bada chai wala dekha.,chai wala,bada,ur,Peshawar,amenity,cafe,amenity__cafe
+suna hai ke rawalpindi main sab se mashoor quetta tea hotel wahan hai.,quetta tea hotel,mashoor,ur,Rawalpindi,amenity,cafe,amenity__cafe
+can you recommend a famous precinct around university road?,precinct,famous,en,Peshawar,amenity,police,amenity__police
+suna hai ke islamabad main sab se purana restaurant wahan hai.,restaurant,purana,ur,Islamabad,amenity,restaurant,amenity__restaurant
+mujhay gulshan ke qareeb koi mehnga ground chahiye.,ground,mehnga,ur,Karachi,leisure,park,leisure__park
+"avoid the eatery in saddar, it is not popular.",eatery,popular,en,Peshawar,amenity,restaurant,amenity__restaurant
+f-7 main jo tailor shop hai wo bohat sasta hai.,tailor shop,sasta,ur,Islamabad,shop,tailor,shop__tailor
+hum ne commercial market main aik pur-sukoon guest house dekha.,guest house,pur-sukoon,ur,Rawalpindi,tourism,hotel,tourism__hotel
+we visited the most cheap restaurant in rawalpindi yesterday.,restaurant,cheap,en,Rawalpindi,amenity,restaurant,amenity__restaurant
+is there any cheap stitching center open in karachi right now?,stitching center,cheap,en,Karachi,shop,tailor,shop__tailor
+saddar main jo thana hai wo bohat sasta hai.,thana,sasta,ur,Peshawar,amenity,police,amenity__police
+is there any affordable tailor shop open in karachi right now?,tailor shop,affordable,en,Karachi,shop,tailor,shop__tailor
+rawalpindi ke commercial market main aik bohat khubsurat cloth market hai.,cloth market,khubsurat,ur,Rawalpindi,shop,clothes,shop__clothes
+hum ne commercial market main aik lajawab silai markaz dekha.,silai markaz,lajawab,ur,Rawalpindi,shop,tailor,shop__tailor
+dha main jo sauda salf ki dukaan hai wo bohat bada hai.,sauda salf ki dukaan,bada,ur,Lahore,shop,convenience,shop__convenience
+i am looking for a biggest police station near karkhano.,police station,biggest,en,Peshawar,amenity,police,amenity__police
+i am looking for a affordable guest house near hayatabad.,guest house,affordable,en,Peshawar,tourism,hotel,tourism__hotel
+karachi ke saddar main aik bohat mashoor dukaan hai.,dukaan,mashoor,ur,Karachi,shop,convenience,shop__convenience
+can you recommend a biggest precinct around raja bazaar?,precinct,biggest,en,Rawalpindi,amenity,police,amenity__police
+islamabad ke f-7 main aik bohat rush wala boutique hai.,boutique,rush wala,ur,Islamabad,shop,clothes,shop__clothes
+the hayatabad in peshawar has an nearby stitching center.,stitching center,nearby,en,Peshawar,shop,tailor,shop__tailor
+can you recommend a popular precinct around gulberg?,precinct,popular,en,Lahore,amenity,police,amenity__police
+we visited the most historic police station in rawalpindi yesterday.,police station,historic,en,Rawalpindi,amenity,police,amenity__police
+agar qareebi sair gah dhoond rahay ho to centaurus jao.,sair gah,qareebi,ur,Islamabad,leisure,park,leisure__park
+can you recommend a luxury restaurant around saddar?,restaurant,luxury,en,Rawalpindi,amenity,restaurant,amenity__restaurant
+kya peshawar main koi bada tailor shop khula hai?,tailor shop,bada,ur,Peshawar,shop,tailor,shop__tailor
+the karkhano in peshawar has an oldest precinct.,precinct,oldest,en,Peshawar,amenity,police,amenity__police
+there is a famous guest house in bahria town which is very historic.,guest house,historic,en,Rawalpindi,tourism,hotel,tourism__hotel
+is there any crowded stitching center open in islamabad right now?,stitching center,crowded,en,Islamabad,shop,tailor,shop__tailor
+agar behtareen cafe dhoond rahay ho to hayatabad jao.,cafe,behtareen,ur,Peshawar,amenity,cafe,amenity__cafe
+is there any affordable tailor shop open in peshawar right now?,tailor shop,affordable,en,Peshawar,shop,tailor,shop__tailor
+does islamabad have any historic restaurant for tourists?,restaurant,historic,en,Islamabad,amenity,restaurant,amenity__restaurant
+agar mehnga boutique dhoond rahay ho to hayatabad jao.,boutique,mehnga,ur,Peshawar,shop,clothes,shop__clothes
+hum ne blue area main aik purana tailor shop dekha.,tailor shop,purana,ur,Islamabad,shop,tailor,shop__tailor
+mujhay clifton ke qareeb koi behtareen kiryana store chahiye.,kiryana store,behtareen,ur,Karachi,shop,convenience,shop__convenience
+the gulberg in lahore has an best fashion outlet.,fashion outlet,best,en,Lahore,shop,clothes,shop__clothes
+can you recommend a popular fashion outlet around university road?,fashion outlet,popular,en,Peshawar,shop,clothes,shop__clothes
+islamabad ke f-11 markaz main aik bohat lajawab cafe hai.,cafe,lajawab,ur,Islamabad,amenity,cafe,amenity__cafe
+hum ne commercial market main aik sasta kiryana store dekha.,kiryana store,sasta,ur,Rawalpindi,shop,convenience,shop__convenience
+the commercial market in rawalpindi has an cheap garden.,garden,cheap,en,Rawalpindi,leisure,park,leisure__park
+islamabad ke blue area main aik bohat mehnga bagh hai.,bagh,mehnga,ur,Islamabad,leisure,park,leisure__park
+hum ne saddar main aik sasta hotel dekha.,hotel,sasta,ur,Rawalpindi,tourism,hotel,tourism__hotel
+anarkali wala khanay ka center kaafi pur-sukoon hai.,khanay ka center,pur-sukoon,ur,Lahore,amenity,restaurant,amenity__restaurant
+commercial market main jo chowki hai wo bohat pur-sukoon hai.,chowki,pur-sukoon,ur,Rawalpindi,amenity,police,amenity__police
+agar saaf suthra guest house dhoond rahay ho to blue area jao.,guest house,saaf suthra,ur,Islamabad,tourism,hotel,tourism__hotel
+can you recommend a best coffee shop around centaurus?,coffee shop,best,en,Islamabad,amenity,cafe,amenity__cafe
+agar bada silai markaz dhoond rahay ho to saddar jao.,silai markaz,bada,ur,Peshawar,shop,tailor,shop__tailor
+"avoid the clothing store in f-7, it is not oldest.",clothing store,oldest,en,Islamabad,shop,clothes,shop__clothes
+i am looking for a luxury resort near saddar.,resort,luxury,en,Peshawar,tourism,hotel,tourism__hotel
+mall road main jo police station hai wo bohat qareebi hai.,police station,qareebi,ur,Lahore,amenity,police,amenity__police
+there is a famous guest house in liberty market which is very popular.,guest house,popular,en,Lahore,tourism,hotel,tourism__hotel
+hum ne dha main aik purana resort dekha.,resort,purana,ur,Lahore,tourism,hotel,tourism__hotel
+"avoid the cafe in dha, it is not luxury.",cafe,luxury,en,Lahore,amenity,cafe,amenity__cafe
+is there any famous police station open in lahore right now?,police station,famous,en,Lahore,amenity,police,amenity__police
+hum ne hayatabad main aik behtareen police station dekha.,police station,behtareen,ur,Peshawar,amenity,police,amenity__police
+hum ne gulberg main aik bada park dekha.,park,bada,ur,Lahore,leisure,park,leisure__park
+does islamabad have any biggest resort for tourists?,resort,biggest,en,Islamabad,tourism,hotel,tourism__hotel
+karkhano main jo dhaba hai wo bohat khubsurat hai.,dhaba,khubsurat,ur,Peshawar,amenity,restaurant,amenity__restaurant
+agar bada silai markaz dhoond rahay ho to gulberg jao.,silai markaz,bada,ur,Lahore,shop,tailor,shop__tailor
+suna hai ke islamabad main sab se qareebi boutique wahan hai.,boutique,qareebi,ur,Islamabad,shop,clothes,shop__clothes
+we visited the most affordable bistro in rawalpindi yesterday.,bistro,affordable,en,Rawalpindi,amenity,restaurant,amenity__restaurant
+i am looking for a best jogging track near commercial market.,jogging track,best,en,Rawalpindi,leisure,park,leisure__park
+kya islamabad main koi bada general store khula hai?,general store,bada,ur,Islamabad,shop,convenience,shop__convenience
+"avoid the dining place in dha, it is not affordable.",dining place,affordable,en,Lahore,amenity,restaurant,amenity__restaurant
+suna hai ke islamabad main sab se khubsurat sauda salf ki dukaan wahan hai.,sauda salf ki dukaan,khubsurat,ur,Islamabad,shop,convenience,shop__convenience
+we visited the most biggest jogging track in islamabad yesterday.,jogging track,biggest,en,Islamabad,leisure,park,leisure__park
+kya islamabad main koi qareebi tikka shop khula hai?,tikka shop,qareebi,ur,Islamabad,amenity,restaurant,amenity__restaurant
+mujhay saddar ke qareeb koi mashoor chai wala chahiye.,chai wala,mashoor,ur,Peshawar,amenity,cafe,amenity__cafe
+university road wala hotel kaafi sasta hai.,hotel,sasta,ur,Peshawar,amenity,restaurant,amenity__restaurant
+is there any best coffee shop open in karachi right now?,coffee shop,best,en,Karachi,amenity,cafe,amenity__cafe
+university road wala ground kaafi mashoor hai.,ground,mashoor,ur,Peshawar,leisure,park,leisure__park
+the university road in peshawar has an best police station.,police station,best,en,Peshawar,amenity,police,amenity__police
+the saddar in rawalpindi has an crowded bistro.,bistro,crowded,en,Rawalpindi,amenity,restaurant,amenity__restaurant
+is there any cheap precinct open in islamabad right now?,precinct,cheap,en,Islamabad,amenity,police,amenity__police
+we visited the most luxury lodge in rawalpindi yesterday.,lodge,luxury,en,Rawalpindi,tourism,hotel,tourism__hotel
+saddar main jo thana hai wo bohat behtareen hai.,thana,behtareen,ur,Peshawar,amenity,police,amenity__police
+suna hai ke rawalpindi main sab se khubsurat park wahan hai.,park,khubsurat,ur,Rawalpindi,leisure,park,leisure__park
+does rawalpindi have any clean coffee shop for tourists?,coffee shop,clean,en,Rawalpindi,amenity,cafe,amenity__cafe
+there is a famous eatery in defence which is very luxury.,eatery,luxury,en,Karachi,amenity,restaurant,amenity__restaurant
+does islamabad have any clean resort for tourists?,resort,clean,en,Islamabad,tourism,hotel,tourism__hotel
+there is a famous park in tariq road which is very popular.,park,popular,en,Karachi,leisure,park,leisure__park
+is there any oldest cafe open in lahore right now?,cafe,oldest,en,Lahore,amenity,cafe,amenity__cafe
+i am looking for a crowded police station near saddar.,police station,crowded,en,Karachi,amenity,police,amenity__police
+kya peshawar main koi behtareen darzi khula hai?,darzi,behtareen,ur,Peshawar,shop,tailor,shop__tailor
+hum ne university road main aik khubsurat bagh dekha.,bagh,khubsurat,ur,Peshawar,leisure,park,leisure__park
+i am looking for a oldest convenience store near university road.,convenience store,oldest,en,Peshawar,shop,convenience,shop__convenience
+can you recommend a luxury cafe around gulberg?,cafe,luxury,en,Lahore,amenity,cafe,amenity__cafe
+does peshawar have any affordable garden for tourists?,garden,affordable,en,Peshawar,leisure,park,leisure__park
+the saddar in karachi has an famous coffee shop.,coffee shop,famous,en,Karachi,amenity,cafe,amenity__cafe
+i am looking for a affordable garment shop near gulberg.,garment shop,affordable,en,Lahore,shop,clothes,shop__clothes
+hum ne hayatabad main aik lajawab general store dekha.,general store,lajawab,ur,Peshawar,shop,convenience,shop__convenience
+saddar main jo kapron ki dukaan hai wo bohat rush wala hai.,kapron ki dukaan,rush wala,ur,Rawalpindi,shop,clothes,shop__clothes
+agar purana darzi dhoond rahay ho to gulshan jao.,darzi,purana,ur,Karachi,shop,tailor,shop__tailor
+i am looking for a nearby playground near clifton.,playground,nearby,en,Karachi,leisure,park,leisure__park
+"avoid the resort in bahria town, it is not historic.",resort,historic,en,Rawalpindi,tourism,hotel,tourism__hotel
+hum ne defence main aik saaf suthra sair gah dekha.,sair gah,saaf suthra,ur,Karachi,leisure,park,leisure__park
+agar mashoor ground dhoond rahay ho to clifton jao.,ground,mashoor,ur,Karachi,leisure,park,leisure__park
+we visited the most best tailor shop in islamabad yesterday.,tailor shop,best,en,Islamabad,shop,tailor,shop__tailor
+the mall road in lahore has an cheap garden.,garden,cheap,en,Lahore,leisure,park,leisure__park
+"avoid the park in hayatabad, it is not historic.",park,historic,en,Peshawar,leisure,park,leisure__park
+hum ne liberty market main aik rush wala chai wala dekha.,chai wala,rush wala,ur,Lahore,amenity,cafe,amenity__cafe
+i am looking for a oldest police station near saddar.,police station,oldest,en,Karachi,amenity,police,amenity__police
+mujhay university road ke qareeb koi mehnga tailor shop chahiye.,tailor shop,mehnga,ur,Peshawar,shop,tailor,shop__tailor
+the centaurus in islamabad has an crowded coffee shop.,coffee shop,crowded,en,Islamabad,amenity,cafe,amenity__cafe
+hum ne f-7 main aik rush wala thana dekha.,thana,rush wala,ur,Islamabad,amenity,police,amenity__police
+blue area main jo kapron ki dukaan hai wo bohat rush wala hai.,kapron ki dukaan,rush wala,ur,Islamabad,shop,clothes,shop__clothes
+clifton wala silai markaz kaafi khubsurat hai.,silai markaz,khubsurat,ur,Karachi,shop,tailor,shop__tailor
+"avoid the lodge in commercial market, it is not affordable.",lodge,affordable,en,Rawalpindi,tourism,hotel,tourism__hotel
+islamabad ke g-9 main aik bohat mehnga musafir khana hai.,musafir khana,mehnga,ur,Islamabad,tourism,hotel,tourism__hotel
+"avoid the jogging track in gulberg, it is not best.",jogging track,best,en,Lahore,leisure,park,leisure__park
+i am looking for a oldest cafe near gulshan.,cafe,oldest,en,Karachi,amenity,cafe,amenity__cafe
+suna hai ke peshawar main sab se mashoor chai wala wahan hai.,chai wala,mashoor,ur,Peshawar,amenity,cafe,amenity__cafe
+karachi ke defence main aik bohat bada kapron ki dukaan hai.,kapron ki dukaan,bada,ur,Karachi,shop,clothes,shop__clothes
+the g-9 in islamabad has an clean precinct.,precinct,clean,en,Islamabad,amenity,police,amenity__police
+kya islamabad main koi purana fashion center khula hai?,fashion center,purana,ur,Islamabad,shop,clothes,shop__clothes
+liberty market main jo kiryana store hai wo bohat rush wala hai.,kiryana store,rush wala,ur,Lahore,shop,convenience,shop__convenience
+kya karachi main koi khubsurat thana khula hai?,thana,khubsurat,ur,Karachi,amenity,police,amenity__police
+hum ne anarkali main aik qareebi silai markaz dekha.,silai markaz,qareebi,ur,Lahore,shop,tailor,shop__tailor
+can you recommend a biggest convenience store around g-9?,convenience store,biggest,en,Islamabad,shop,convenience,shop__convenience
+is there any cheap restaurant open in islamabad right now?,restaurant,cheap,en,Islamabad,amenity,restaurant,amenity__restaurant
+hum ne commercial market main aik saaf suthra hotel dekha.,hotel,saaf suthra,ur,Rawalpindi,tourism,hotel,tourism__hotel
+agar rush wala sair gah dhoond rahay ho to dha jao.,sair gah,rush wala,ur,Lahore,leisure,park,leisure__park
+agar behtareen tailor shop dhoond rahay ho to defence jao.,tailor shop,behtareen,ur,Karachi,shop,tailor,shop__tailor
+there is a famous guest house in saddar which is very oldest.,guest house,oldest,en,Peshawar,tourism,hotel,tourism__hotel
+dha main jo dhaba hai wo bohat rush wala hai.,dhaba,rush wala,ur,Lahore,amenity,restaurant,amenity__restaurant
+lahore ke mall road main aik bohat khubsurat park hai.,park,khubsurat,ur,Lahore,leisure,park,leisure__park
+does lahore have any cheap clothing store for tourists?,clothing store,cheap,en,Lahore,shop,clothes,shop__clothes
+g-9 main jo sair gah hai wo bohat bada hai.,sair gah,bada,ur,Islamabad,leisure,park,leisure__park
+does rawalpindi have any affordable park for tourists?,park,affordable,en,Rawalpindi,leisure,park,leisure__park
+mujhay gulberg ke qareeb koi qareebi quetta tea hotel chahiye.,quetta tea hotel,qareebi,ur,Lahore,amenity,cafe,amenity__cafe
+suna hai ke islamabad main sab se rush wala chowki wahan hai.,chowki,rush wala,ur,Islamabad,amenity,police,amenity__police
+the dha in lahore has an cheap fashion outlet.,fashion outlet,cheap,en,Lahore,shop,clothes,shop__clothes
+can you recommend a best playground around raja bazaar?,playground,best,en,Rawalpindi,leisure,park,leisure__park
+is there any historic tea house open in lahore right now?,tea house,historic,en,Lahore,amenity,cafe,amenity__cafe
+agar mehnga musafir khana dhoond rahay ho to gulshan jao.,musafir khana,mehnga,ur,Karachi,tourism,hotel,tourism__hotel
+i am looking for a affordable grocery store near saddar.,grocery store,affordable,en,Karachi,shop,convenience,shop__convenience
+university road wala cafe kaafi qareebi hai.,cafe,qareebi,ur,Peshawar,amenity,cafe,amenity__cafe
+the g-9 in islamabad has an oldest fashion outlet.,fashion outlet,oldest,en,Islamabad,shop,clothes,shop__clothes
+mujhay university road ke qareeb koi bada hotel chahiye.,hotel,bada,ur,Peshawar,amenity,restaurant,amenity__restaurant
+can you recommend a nearby guest house around g-9?,guest house,nearby,en,Islamabad,tourism,hotel,tourism__hotel
+we visited the most clean convenience store in karachi yesterday.,convenience store,clean,en,Karachi,shop,convenience,shop__convenience
+agar pur-sukoon guest house dhoond rahay ho to bahria town jao.,guest house,pur-sukoon,ur,Rawalpindi,tourism,hotel,tourism__hotel
+we visited the most popular coffee shop in karachi yesterday.,coffee shop,popular,en,Karachi,amenity,cafe,amenity__cafe
+"avoid the park in saddar, it is not famous.",park,famous,en,Rawalpindi,leisure,park,leisure__park
+the defence in karachi has an cheap restaurant.,restaurant,cheap,en,Karachi,amenity,restaurant,amenity__restaurant
+bahria town wala sair gah kaafi pur-sukoon hai.,sair gah,pur-sukoon,ur,Rawalpindi,leisure,park,leisure__park
+"avoid the tea house in mall road, it is not affordable.",tea house,affordable,en,Lahore,amenity,cafe,amenity__cafe
+kya peshawar main koi lajawab thana khula hai?,thana,lajawab,ur,Peshawar,amenity,police,amenity__police
+there is a famous police station in bahria town which is very nearby.,police station,nearby,en,Rawalpindi,amenity,police,amenity__police
+agar sasta cloth market dhoond rahay ho to saddar jao.,cloth market,sasta,ur,Karachi,shop,clothes,shop__clothes
+we visited the most clean convenience store in lahore yesterday.,convenience store,clean,en,Lahore,shop,convenience,shop__convenience
+can you recommend a crowded precinct around bahria town?,precinct,crowded,en,Rawalpindi,amenity,police,amenity__police
+hum ne f-11 markaz main aik purana cafe dekha.,cafe,purana,ur,Islamabad,amenity,cafe,amenity__cafe
+there is a famous stitching center in anarkali which is very historic.,stitching center,historic,en,Lahore,shop,tailor,shop__tailor
+can you recommend a biggest garment shop around centaurus?,garment shop,biggest,en,Islamabad,shop,clothes,shop__clothes
+mujhay bahria town ke qareeb koi purana sauda salf ki dukaan chahiye.,sauda salf ki dukaan,purana,ur,Rawalpindi,shop,convenience,shop__convenience
+we visited the most affordable tailor shop in rawalpindi yesterday.,tailor shop,affordable,en,Rawalpindi,shop,tailor,shop__tailor
+suna hai ke islamabad main sab se mehnga darzi wahan hai.,darzi,mehnga,ur,Islamabad,shop,tailor,shop__tailor
+hum ne bahria town main aik rush wala hotel dekha.,hotel,rush wala,ur,Rawalpindi,tourism,hotel,tourism__hotel
+does islamabad have any cheap restaurant for tourists?,restaurant,cheap,en,Islamabad,amenity,restaurant,amenity__restaurant
+is there any cheap stitching center open in lahore right now?,stitching center,cheap,en,Lahore,shop,tailor,shop__tailor
+rawalpindi ke commercial market main aik bohat pur-sukoon chai wala hai.,chai wala,pur-sukoon,ur,Rawalpindi,amenity,cafe,amenity__cafe
+i am looking for a clean tuck shop near anarkali.,tuck shop,clean,en,Lahore,shop,convenience,shop__convenience
+kya lahore main koi purana sair gah khula hai?,sair gah,purana,ur,Lahore,leisure,park,leisure__park
+mujhay hayatabad ke qareeb koi sasta park chahiye.,park,sasta,ur,Peshawar,leisure,park,leisure__park
+commercial market wala sair gah kaafi pur-sukoon hai.,sair gah,pur-sukoon,ur,Rawalpindi,leisure,park,leisure__park
+hum ne gulshan main aik pur-sukoon thana dekha.,thana,pur-sukoon,ur,Karachi,amenity,police,amenity__police
+is there any biggest garment shop open in rawalpindi right now?,garment shop,biggest,en,Rawalpindi,shop,clothes,shop__clothes
+the defence in karachi has an historic lodge.,lodge,historic,en,Karachi,tourism,hotel,tourism__hotel
+gulberg main jo chowki hai wo bohat mehnga hai.,chowki,mehnga,ur,Lahore,amenity,police,amenity__police
+the saddar in karachi has an historic coffee shop.,coffee shop,historic,en,Karachi,amenity,cafe,amenity__cafe
+can you recommend a famous hotel around karkhano?,hotel,famous,en,Peshawar,tourism,hotel,tourism__hotel
+agar sasta tailor shop dhoond rahay ho to tariq road jao.,tailor shop,sasta,ur,Karachi,shop,tailor,shop__tailor
+we visited the most popular fashion outlet in rawalpindi yesterday.,fashion outlet,popular,en,Rawalpindi,shop,clothes,shop__clothes
+mall road main jo silai markaz hai wo bohat saaf suthra hai.,silai markaz,saaf suthra,ur,Lahore,shop,tailor,shop__tailor
+hum ne saddar main aik behtareen kapron ki dukaan dekha.,kapron ki dukaan,behtareen,ur,Karachi,shop,clothes,shop__clothes
+anarkali wala police station kaafi behtareen hai.,police station,behtareen,ur,Lahore,amenity,police,amenity__police
+lahore ke gulberg main aik bohat purana fashion center hai.,fashion center,purana,ur,Lahore,shop,clothes,shop__clothes
+saddar wala police station kaafi saaf suthra hai.,police station,saaf suthra,ur,Peshawar,amenity,police,amenity__police
+does islamabad have any cheap hotel for tourists?,hotel,cheap,en,Islamabad,tourism,hotel,tourism__hotel
+rawalpindi ke raja bazaar main aik bohat sasta police station hai.,police station,sasta,ur,Rawalpindi,amenity,police,amenity__police
+can you recommend a cheap mini mart around blue area?,mini mart,cheap,en,Islamabad,shop,convenience,shop__convenience
+agar lajawab dukaan dhoond rahay ho to f-11 markaz jao.,dukaan,lajawab,ur,Islamabad,shop,convenience,shop__convenience
+i am looking for a oldest restaurant near commercial market.,restaurant,oldest,en,Rawalpindi,amenity,restaurant,amenity__restaurant
+"avoid the playground in karkhano, it is not oldest.",playground,oldest,en,Peshawar,leisure,park,leisure__park
+there is a famous resort in bahria town which is very clean.,resort,clean,en,Rawalpindi,tourism,hotel,tourism__hotel
+saddar main jo general store hai wo bohat khubsurat hai.,general store,khubsurat,ur,Rawalpindi,shop,convenience,shop__convenience
+karachi ke defence main aik bohat sasta bagh hai.,bagh,sasta,ur,Karachi,leisure,park,leisure__park
+i am looking for a famous clothing store near saddar.,clothing store,famous,en,Peshawar,shop,clothes,shop__clothes
+lahore ke mall road main aik bohat purana chowki hai.,chowki,purana,ur,Lahore,amenity,police,amenity__police
+agar mashoor guest house dhoond rahay ho to anarkali jao.,guest house,mashoor,ur,Lahore,tourism,hotel,tourism__hotel
+there is a famous guest house in saddar which is very nearby.,guest house,nearby,en,Peshawar,tourism,hotel,tourism__hotel
+does karachi have any luxury garment shop for tourists?,garment shop,luxury,en,Karachi,shop,clothes,shop__clothes
+rawalpindi ke commercial market main aik bohat mehnga chaye khana hai.,chaye khana,mehnga,ur,Rawalpindi,amenity,cafe,amenity__cafe
+i am looking for a historic resort near gulshan.,resort,historic,en,Karachi,tourism,hotel,tourism__hotel
+we visited the most nearby garment shop in rawalpindi yesterday.,garment shop,nearby,en,Rawalpindi,shop,clothes,shop__clothes
+"avoid the eatery in defence, it is not affordable.",eatery,affordable,en,Karachi,amenity,restaurant,amenity__restaurant
+kya rawalpindi main koi rush wala fashion center khula hai?,fashion center,rush wala,ur,Rawalpindi,shop,clothes,shop__clothes
+hum ne gulshan main aik khubsurat tikka shop dekha.,tikka shop,khubsurat,ur,Karachi,amenity,restaurant,amenity__restaurant
+rawalpindi ke commercial market main aik bohat sasta police station hai.,police station,sasta,ur,Rawalpindi,amenity,police,amenity__police
+kya karachi main koi pur-sukoon cafe khula hai?,cafe,pur-sukoon,ur,Karachi,amenity,cafe,amenity__cafe
+can you recommend a affordable fashion outlet around tariq road?,fashion outlet,affordable,en,Karachi,shop,clothes,shop__clothes
+lahore ke gulberg main aik bohat bada guest house hai.,guest house,bada,ur,Lahore,tourism,hotel,tourism__hotel
+there is a famous hotel in liberty market which is very biggest.,hotel,biggest,en,Lahore,tourism,hotel,tourism__hotel
+does karachi have any clean garment shop for tourists?,garment shop,clean,en,Karachi,shop,clothes,shop__clothes
+"avoid the eatery in anarkali, it is not clean.",eatery,clean,en,Lahore,amenity,restaurant,amenity__restaurant
+defence main jo chaye khana hai wo bohat khubsurat hai.,chaye khana,khubsurat,ur,Karachi,amenity,cafe,amenity__cafe
+suna hai ke karachi main sab se mashoor boutique wahan hai.,boutique,mashoor,ur,Karachi,shop,clothes,shop__clothes
+hum ne hayatabad main aik sasta khanay ka center dekha.,khanay ka center,sasta,ur,Peshawar,amenity,restaurant,amenity__restaurant
+tariq road main jo silai markaz hai wo bohat mashoor hai.,silai markaz,mashoor,ur,Karachi,shop,tailor,shop__tailor
+agar rush wala silai markaz dhoond rahay ho to saddar jao.,silai markaz,rush wala,ur,Peshawar,shop,tailor,shop__tailor
+hum ne centaurus main aik saaf suthra thana dekha.,thana,saaf suthra,ur,Islamabad,amenity,police,amenity__police
+hum ne blue area main aik lajawab silai markaz dekha.,silai markaz,lajawab,ur,Islamabad,shop,tailor,shop__tailor
+hum ne defence main aik khubsurat cafe dekha.,cafe,khubsurat,ur,Karachi,amenity,cafe,amenity__cafe
+the liberty market in lahore has an famous clothing store.,clothing store,famous,en,Lahore,shop,clothes,shop__clothes
+the saddar in rawalpindi has an historic tea house.,tea house,historic,en,Rawalpindi,amenity,cafe,amenity__cafe
+kya peshawar main koi mashoor sauda salf ki dukaan khula hai?,sauda salf ki dukaan,mashoor,ur,Peshawar,shop,convenience,shop__convenience
+the f-7 in islamabad has an cheap boutique.,boutique,cheap,en,Islamabad,shop,clothes,shop__clothes
+does peshawar have any popular police station for tourists?,police station,popular,en,Peshawar,amenity,police,amenity__police
+agar behtareen darzi dhoond rahay ho to centaurus jao.,darzi,behtareen,ur,Islamabad,shop,tailor,shop__tailor
+is there any luxury tea house open in karachi right now?,tea house,luxury,en,Karachi,amenity,cafe,amenity__cafe
+we visited the most oldest stitching center in peshawar yesterday.,stitching center,oldest,en,Peshawar,shop,tailor,shop__tailor
+peshawar ke saddar main aik bohat saaf suthra dhaba hai.,dhaba,saaf suthra,ur,Peshawar,amenity,restaurant,amenity__restaurant
+"avoid the stitching center in university road, it is not best.",stitching center,best,en,Peshawar,shop,tailor,shop__tailor
+mujhay gulberg ke qareeb koi rush wala chaye khana chahiye.,chaye khana,rush wala,ur,Lahore,amenity,cafe,amenity__cafe
+agar mashoor tailor shop dhoond rahay ho to saddar jao.,tailor shop,mashoor,ur,Rawalpindi,shop,tailor,shop__tailor
+gulberg main jo cafe hai wo bohat mehnga hai.,cafe,mehnga,ur,Lahore,amenity,cafe,amenity__cafe
+there is a famous tailor shop in commercial market which is very affordable.,tailor shop,affordable,en,Rawalpindi,shop,tailor,shop__tailor
+anarkali main jo restaurant hai wo bohat rush wala hai.,restaurant,rush wala,ur,Lahore,amenity,restaurant,amenity__restaurant
+there is a famous restaurant in centaurus which is very luxury.,restaurant,luxury,en,Islamabad,amenity,restaurant,amenity__restaurant
+does peshawar have any historic coffee shop for tourists?,coffee shop,historic,en,Peshawar,amenity,cafe,amenity__cafe
+hum ne saddar main aik lajawab dukaan dekha.,dukaan,lajawab,ur,Rawalpindi,shop,convenience,shop__convenience
+is there any popular stitching center open in lahore right now?,stitching center,popular,en,Lahore,shop,tailor,shop__tailor
+kya rawalpindi main koi behtareen guest house khula hai?,guest house,behtareen,ur,Rawalpindi,tourism,hotel,tourism__hotel
+the bahria town in rawalpindi has an luxury coffee shop.,coffee shop,luxury,en,Rawalpindi,amenity,cafe,amenity__cafe
+kya karachi main koi sasta silai markaz khula hai?,silai markaz,sasta,ur,Karachi,shop,tailor,shop__tailor
+"avoid the cafe in saddar, it is not popular.",cafe,popular,en,Rawalpindi,amenity,cafe,amenity__cafe
+"avoid the precinct in gulberg, it is not clean.",precinct,clean,en,Lahore,amenity,police,amenity__police
+does lahore have any crowded convenience store for tourists?,convenience store,crowded,en,Lahore,shop,convenience,shop__convenience
+islamabad ke centaurus main aik bohat khubsurat khanay ka center hai.,khanay ka center,khubsurat,ur,Islamabad,amenity,restaurant,amenity__restaurant
+can you recommend a historic restaurant around blue area?,restaurant,historic,en,Islamabad,amenity,restaurant,amenity__restaurant
+"avoid the cafe in hayatabad, it is not oldest.",cafe,oldest,en,Peshawar,amenity,cafe,amenity__cafe
+we visited the most luxury boutique in islamabad yesterday.,boutique,luxury,en,Islamabad,shop,clothes,shop__clothes
+does islamabad have any biggest police station for tourists?,police station,biggest,en,Islamabad,amenity,police,amenity__police
+is there any best resort open in rawalpindi right now?,resort,best,en,Rawalpindi,tourism,hotel,tourism__hotel
+can you recommend a luxury eatery around anarkali?,eatery,luxury,en,Lahore,amenity,restaurant,amenity__restaurant
+we visited the most crowded park in lahore yesterday.,park,crowded,en,Lahore,leisure,park,leisure__park
+kya islamabad main koi mehnga chaye khana khula hai?,chaye khana,mehnga,ur,Islamabad,amenity,cafe,amenity__cafe
+i am looking for a historic tea house near saddar.,tea house,historic,en,Karachi,amenity,cafe,amenity__cafe
+is there any luxury tuck shop open in rawalpindi right now?,tuck shop,luxury,en,Rawalpindi,shop,convenience,shop__convenience
+we visited the most best eatery in rawalpindi yesterday.,eatery,best,en,Rawalpindi,amenity,restaurant,amenity__restaurant
+hum ne f-11 markaz main aik purana boutique dekha.,boutique,purana,ur,Islamabad,shop,clothes,shop__clothes
+the gulberg in lahore has an oldest dining place.,dining place,oldest,en,Lahore,amenity,restaurant,amenity__restaurant
+the karkhano in peshawar has an oldest police station.,police station,oldest,en,Peshawar,amenity,police,amenity__police
+is there any biggest cafe open in islamabad right now?,cafe,biggest,en,Islamabad,amenity,cafe,amenity__cafe
+karachi ke tariq road main aik bohat sasta police station hai.,police station,sasta,ur,Karachi,amenity,police,amenity__police
+kya karachi main koi sasta ground khula hai?,ground,sasta,ur,Karachi,leisure,park,leisure__park
+suna hai ke peshawar main sab se mehnga sair gah wahan hai.,sair gah,mehnga,ur,Peshawar,leisure,park,leisure__park
+hayatabad main jo silai markaz hai wo bohat bada hai.,silai markaz,bada,ur,Peshawar,shop,tailor,shop__tailor
+we visited the most affordable garment shop in rawalpindi yesterday.,garment shop,affordable,en,Rawalpindi,shop,clothes,shop__clothes
+"avoid the tailor shop in saddar, it is not nearby.",tailor shop,nearby,en,Karachi,shop,tailor,shop__tailor
+there is a famous fashion outlet in blue area which is very crowded.,fashion outlet,crowded,en,Islamabad,shop,clothes,shop__clothes
+i am looking for a affordable lodge near liberty market.,lodge,affordable,en,Lahore,tourism,hotel,tourism__hotel
+the bahria town in rawalpindi has an popular guest house.,guest house,popular,en,Rawalpindi,tourism,hotel,tourism__hotel
+the raja bazaar in rawalpindi has an oldest resort.,resort,oldest,en,Rawalpindi,tourism,hotel,tourism__hotel
+we visited the most crowded clothing store in peshawar yesterday.,clothing store,crowded,en,Peshawar,shop,clothes,shop__clothes
+i am looking for a nearby police station near f-7.,police station,nearby,en,Islamabad,amenity,police,amenity__police
+does karachi have any cheap dining place for tourists?,dining place,cheap,en,Karachi,amenity,restaurant,amenity__restaurant
+"avoid the playground in university road, it is not biggest.",playground,biggest,en,Peshawar,leisure,park,leisure__park
+"avoid the garden in saddar, it is not crowded.",garden,crowded,en,Rawalpindi,leisure,park,leisure__park
+karkhano main jo park hai wo bohat behtareen hai.,park,behtareen,ur,Peshawar,leisure,park,leisure__park
+"avoid the clothing store in tariq road, it is not oldest.",clothing store,oldest,en,Karachi,shop,clothes,shop__clothes
+the liberty market in lahore has an biggest stitching center.,stitching center,biggest,en,Lahore,shop,tailor,shop__tailor
+there is a famous jogging track in raja bazaar which is very biggest.,jogging track,biggest,en,Rawalpindi,leisure,park,leisure__park
+agar saaf suthra boutique dhoond rahay ho to blue area jao.,boutique,saaf suthra,ur,Islamabad,shop,clothes,shop__clothes
+does islamabad have any affordable grocery store for tourists?,grocery store,affordable,en,Islamabad,shop,convenience,shop__convenience
+can you recommend a nearby stitching center around tariq road?,stitching center,nearby,en,Karachi,shop,tailor,shop__tailor
+saddar main jo cloth market hai wo bohat pur-sukoon hai.,cloth market,pur-sukoon,ur,Peshawar,shop,clothes,shop__clothes
+g-9 main jo thana hai wo bohat qareebi hai.,thana,qareebi,ur,Islamabad,amenity,police,amenity__police
+"avoid the playground in f-7, it is not biggest.",playground,biggest,en,Islamabad,leisure,park,leisure__park
+mujhay liberty market ke qareeb koi purana darzi chahiye.,darzi,purana,ur,Lahore,shop,tailor,shop__tailor
+hum ne bahria town main aik saaf suthra darzi dekha.,darzi,saaf suthra,ur,Rawalpindi,shop,tailor,shop__tailor
+suna hai ke karachi main sab se rush wala chai wala wahan hai.,chai wala,rush wala,ur,Karachi,amenity,cafe,amenity__cafe
+there is a famous grocery store in saddar which is very popular.,grocery store,popular,en,Karachi,shop,convenience,shop__convenience
+hum ne f-7 main aik khubsurat cafe dekha.,cafe,khubsurat,ur,Islamabad,amenity,cafe,amenity__cafe
+suna hai ke islamabad main sab se behtareen fashion center wahan hai.,fashion center,behtareen,ur,Islamabad,shop,clothes,shop__clothes
+f-11 markaz wala musafir khana kaafi purana hai.,musafir khana,purana,ur,Islamabad,tourism,hotel,tourism__hotel
+can you recommend a biggest clothing store around hayatabad?,clothing store,biggest,en,Peshawar,shop,clothes,shop__clothes
+is there any biggest fashion outlet open in rawalpindi right now?,fashion outlet,biggest,en,Rawalpindi,shop,clothes,shop__clothes
+we visited the most biggest eatery in islamabad yesterday.,eatery,biggest,en,Islamabad,amenity,restaurant,amenity__restaurant
+we visited the most clean garden in karachi yesterday.,garden,clean,en,Karachi,leisure,park,leisure__park
+"avoid the guest house in gulshan, it is not biggest.",guest house,biggest,en,Karachi,tourism,hotel,tourism__hotel
+we visited the most oldest convenience store in karachi yesterday.,convenience store,oldest,en,Karachi,shop,convenience,shop__convenience
+the gulshan in karachi has an biggest playground.,playground,biggest,en,Karachi,leisure,park,leisure__park
+hum ne g-9 main aik mashoor cafe dekha.,cafe,mashoor,ur,Islamabad,amenity,cafe,amenity__cafe
+hum ne commercial market main aik purana chai wala dekha.,chai wala,purana,ur,Rawalpindi,amenity,cafe,amenity__cafe
+does islamabad have any oldest garment shop for tourists?,garment shop,oldest,en,Islamabad,shop,clothes,shop__clothes
+hum ne hayatabad main aik mehnga guest house dekha.,guest house,mehnga,ur,Peshawar,tourism,hotel,tourism__hotel
+does islamabad have any nearby resort for tourists?,resort,nearby,en,Islamabad,tourism,hotel,tourism__hotel
+agar purana quetta tea hotel dhoond rahay ho to liberty market jao.,quetta tea hotel,purana,ur,Lahore,amenity,cafe,amenity__cafe
+kya lahore main koi bada thana khula hai?,thana,bada,ur,Lahore,amenity,police,amenity__police
+hum ne g-9 main aik saaf suthra sair gah dekha.,sair gah,saaf suthra,ur,Islamabad,leisure,park,leisure__park
+suna hai ke rawalpindi main sab se lajawab tikka shop wahan hai.,tikka shop,lajawab,ur,Rawalpindi,amenity,restaurant,amenity__restaurant
+the blue area in islamabad has an crowded tailor shop.,tailor shop,crowded,en,Islamabad,shop,tailor,shop__tailor
+is there any nearby precinct open in rawalpindi right now?,precinct,nearby,en,Rawalpindi,amenity,police,amenity__police
+i am looking for a historic garment shop near clifton.,garment shop,historic,en,Karachi,shop,clothes,shop__clothes
+clifton main jo darzi hai wo bohat mashoor hai.,darzi,mashoor,ur,Karachi,shop,tailor,shop__tailor
+i am looking for a affordable boutique near g-9.,boutique,affordable,en,Islamabad,shop,clothes,shop__clothes
+gulshan wala silai markaz kaafi khubsurat hai.,silai markaz,khubsurat,ur,Karachi,shop,tailor,shop__tailor
+saddar wala darzi kaafi mehnga hai.,darzi,mehnga,ur,Karachi,shop,tailor,shop__tailor
+kya peshawar main koi saaf suthra bagh khula hai?,bagh,saaf suthra,ur,Peshawar,leisure,park,leisure__park
+suna hai ke rawalpindi main sab se mashoor khanay ka center wahan hai.,khanay ka center,mashoor,ur,Rawalpindi,amenity,restaurant,amenity__restaurant
+we visited the most popular restaurant in karachi yesterday.,restaurant,popular,en,Karachi,amenity,restaurant,amenity__restaurant
+there is a famous coffee shop in blue area which is very best.,coffee shop,best,en,Islamabad,amenity,cafe,amenity__cafe
+can you recommend a affordable boutique around dha?,boutique,affordable,en,Lahore,shop,clothes,shop__clothes
+"avoid the garden in saddar, it is not oldest.",garden,oldest,en,Rawalpindi,leisure,park,leisure__park
+karachi ke gulshan main aik bohat saaf suthra hotel hai.,hotel,saaf suthra,ur,Karachi,amenity,restaurant,amenity__restaurant
+there is a famous stitching center in karkhano which is very biggest.,stitching center,biggest,en,Peshawar,shop,tailor,shop__tailor
+is there any oldest guest house open in lahore right now?,guest house,oldest,en,Lahore,tourism,hotel,tourism__hotel
+the g-9 in islamabad has an popular convenience store.,convenience store,popular,en,Islamabad,shop,convenience,shop__convenience
+suna hai ke karachi main sab se rush wala chowki wahan hai.,chowki,rush wala,ur,Karachi,amenity,police,amenity__police
+peshawar ke university road main aik bohat mashoor cafe hai.,cafe,mashoor,ur,Peshawar,amenity,cafe,amenity__cafe
+agar lajawab quetta tea hotel dhoond rahay ho to commercial market jao.,quetta tea hotel,lajawab,ur,Rawalpindi,amenity,cafe,amenity__cafe
+can you recommend a luxury coffee shop around centaurus?,coffee shop,luxury,en,Islamabad,amenity,cafe,amenity__cafe
+suna hai ke islamabad main sab se sasta silai markaz wahan hai.,silai markaz,sasta,ur,Islamabad,shop,tailor,shop__tailor
+tariq road wala kapron ki dukaan kaafi mehnga hai.,kapron ki dukaan,mehnga,ur,Karachi,shop,clothes,shop__clothes
+there is a famous tuck shop in university road which is very nearby.,tuck shop,nearby,en,Peshawar,shop,convenience,shop__convenience
+we visited the most famous coffee shop in rawalpindi yesterday.,coffee shop,famous,en,Rawalpindi,amenity,cafe,amenity__cafe
+raja bazaar main jo ground hai wo bohat behtareen hai.,ground,behtareen,ur,Rawalpindi,leisure,park,leisure__park
+we visited the most popular hotel in rawalpindi yesterday.,hotel,popular,en,Rawalpindi,tourism,hotel,tourism__hotel
+peshawar ke university road main aik bohat sasta chowki hai.,chowki,sasta,ur,Peshawar,amenity,police,amenity__police
+"avoid the bistro in karkhano, it is not cheap.",bistro,cheap,en,Peshawar,amenity,restaurant,amenity__restaurant
+gulberg wala ground kaafi qareebi hai.,ground,qareebi,ur,Lahore,leisure,park,leisure__park
+"avoid the tea house in saddar, it is not luxury.",tea house,luxury,en,Rawalpindi,amenity,cafe,amenity__cafe
+"avoid the stitching center in gulshan, it is not crowded.",stitching center,crowded,en,Karachi,shop,tailor,shop__tailor
+hum ne saddar main aik rush wala police station dekha.,police station,rush wala,ur,Rawalpindi,amenity,police,amenity__police
+suna hai ke lahore main sab se qareebi ground wahan hai.,ground,qareebi,ur,Lahore,leisure,park,leisure__park
+mujhay blue area ke qareeb koi sasta musafir khana chahiye.,musafir khana,sasta,ur,Islamabad,tourism,hotel,tourism__hotel
+we visited the most nearby resort in lahore yesterday.,resort,nearby,en,Lahore,tourism,hotel,tourism__hotel
+lahore ke liberty market main aik bohat mehnga cloth market hai.,cloth market,mehnga,ur,Lahore,shop,clothes,shop__clothes
+karkhano main jo khanay ka center hai wo bohat sasta hai.,khanay ka center,sasta,ur,Peshawar,amenity,restaurant,amenity__restaurant
+the g-9 in islamabad has an cheap fashion outlet.,fashion outlet,cheap,en,Islamabad,shop,clothes,shop__clothes
+mujhay gulshan ke qareeb koi behtareen khanay ka center chahiye.,khanay ka center,behtareen,ur,Karachi,amenity,restaurant,amenity__restaurant
+there is a famous clothing store in g-9 which is very popular.,clothing store,popular,en,Islamabad,shop,clothes,shop__clothes
+is there any clean lodge open in peshawar right now?,lodge,clean,en,Peshawar,tourism,hotel,tourism__hotel
+agar sasta guest house dhoond rahay ho to defence jao.,guest house,sasta,ur,Karachi,tourism,hotel,tourism__hotel
+can you recommend a cheap mini mart around hayatabad?,mini mart,cheap,en,Peshawar,shop,convenience,shop__convenience
+the blue area in islamabad has an nearby guest house.,guest house,nearby,en,Islamabad,tourism,hotel,tourism__hotel
+i am looking for a best dining place near g-9.,dining place,best,en,Islamabad,amenity,restaurant,amenity__restaurant
+is there any popular guest house open in lahore right now?,guest house,popular,en,Lahore,tourism,hotel,tourism__hotel
+the hayatabad in peshawar has an clean police station.,police station,clean,en,Peshawar,amenity,police,amenity__police
+i am looking for a cheap jogging track near defence.,jogging track,cheap,en,Karachi,leisure,park,leisure__park
+agar pur-sukoon thana dhoond rahay ho to g-9 jao.,thana,pur-sukoon,ur,Islamabad,amenity,police,amenity__police
+mujhay centaurus ke qareeb koi purana boutique chahiye.,boutique,purana,ur,Islamabad,shop,clothes,shop__clothes
+kya rawalpindi main koi sasta silai markaz khula hai?,silai markaz,sasta,ur,Rawalpindi,shop,tailor,shop__tailor
+hum ne liberty market main aik khubsurat cafe dekha.,cafe,khubsurat,ur,Lahore,amenity,cafe,amenity__cafe
+there is a famous cafe in mall road which is very clean.,cafe,clean,en,Lahore,amenity,cafe,amenity__cafe
+there is a famous hotel in gulshan which is very historic.,hotel,historic,en,Karachi,tourism,hotel,tourism__hotel
+suna hai ke rawalpindi main sab se lajawab kapron ki dukaan wahan hai.,kapron ki dukaan,lajawab,ur,Rawalpindi,shop,clothes,shop__clothes
+anarkali main jo chowki hai wo bohat saaf suthra hai.,chowki,saaf suthra,ur,Lahore,amenity,police,amenity__police
+we visited the most affordable stitching center in karachi yesterday.,stitching center,affordable,en,Karachi,shop,tailor,shop__tailor
+university road wala chowki kaafi pur-sukoon hai.,chowki,pur-sukoon,ur,Peshawar,amenity,police,amenity__police
+is there any famous stitching center open in peshawar right now?,stitching center,famous,en,Peshawar,shop,tailor,shop__tailor
+the tariq road in karachi has an clean police station.,police station,clean,en,Karachi,amenity,police,amenity__police
+does peshawar have any historic cafe for tourists?,cafe,historic,en,Peshawar,amenity,cafe,amenity__cafe
+peshawar ke saddar main aik bohat mehnga cloth market hai.,cloth market,mehnga,ur,Peshawar,shop,clothes,shop__clothes
+does rawalpindi have any oldest tea house for tourists?,tea house,oldest,en,Rawalpindi,amenity,cafe,amenity__cafe
+peshawar ke saddar main aik bohat qareebi cafe hai.,cafe,qareebi,ur,Peshawar,amenity,cafe,amenity__cafe
+suna hai ke islamabad main sab se saaf suthra ground wahan hai.,ground,saaf suthra,ur,Islamabad,leisure,park,leisure__park
+agar saaf suthra fashion center dhoond rahay ho to tariq road jao.,fashion center,saaf suthra,ur,Karachi,shop,clothes,shop__clothes
+hum ne saddar main aik bada police station dekha.,police station,bada,ur,Rawalpindi,amenity,police,amenity__police
+is there any popular convenience store open in rawalpindi right now?,convenience store,popular,en,Rawalpindi,shop,convenience,shop__convenience
+does peshawar have any luxury jogging track for tourists?,jogging track,luxury,en,Peshawar,leisure,park,leisure__park
+kya rawalpindi main koi sasta guest house khula hai?,guest house,sasta,ur,Rawalpindi,tourism,hotel,tourism__hotel
+f-11 markaz wala hotel kaafi bada hai.,hotel,bada,ur,Islamabad,amenity,restaurant,amenity__restaurant
+the hayatabad in peshawar has an biggest hotel.,hotel,biggest,en,Peshawar,tourism,hotel,tourism__hotel
+there is a famous stitching center in f-7 which is very affordable.,stitching center,affordable,en,Islamabad,shop,tailor,shop__tailor
+can you recommend a biggest resort around saddar?,resort,biggest,en,Karachi,tourism,hotel,tourism__hotel
+is there any oldest playground open in rawalpindi right now?,playground,oldest,en,Rawalpindi,leisure,park,leisure__park
+suna hai ke lahore main sab se khubsurat police station wahan hai.,police station,khubsurat,ur,Lahore,amenity,police,amenity__police
+kya lahore main koi mehnga cafe khula hai?,cafe,mehnga,ur,Lahore,amenity,cafe,amenity__cafe
+suna hai ke peshawar main sab se mehnga silai markaz wahan hai.,silai markaz,mehnga,ur,Peshawar,shop,tailor,shop__tailor
+suna hai ke peshawar main sab se mehnga khanay ka center wahan hai.,khanay ka center,mehnga,ur,Peshawar,amenity,restaurant,amenity__restaurant
+karachi ke clifton main aik bohat khubsurat police station hai.,police station,khubsurat,ur,Karachi,amenity,police,amenity__police
+i am looking for a famous police station near clifton.,police station,famous,en,Karachi,amenity,police,amenity__police
+the anarkali in lahore has an cheap precinct.,precinct,cheap,en,Lahore,amenity,police,amenity__police
+does lahore have any oldest stitching center for tourists?,stitching center,oldest,en,Lahore,shop,tailor,shop__tailor
+the gulberg in lahore has an cheap coffee shop.,coffee shop,cheap,en,Lahore,amenity,cafe,amenity__cafe
+there is a famous tailor shop in saddar which is very popular.,tailor shop,popular,en,Peshawar,shop,tailor,shop__tailor
+"avoid the stitching center in centaurus, it is not oldest.",stitching center,oldest,en,Islamabad,shop,tailor,shop__tailor
+i am looking for a luxury guest house near liberty market.,guest house,luxury,en,Lahore,tourism,hotel,tourism__hotel
+mujhay saddar ke qareeb koi sasta sair gah chahiye.,sair gah,sasta,ur,Rawalpindi,leisure,park,leisure__park
+agar qareebi silai markaz dhoond rahay ho to saddar jao.,silai markaz,qareebi,ur,Peshawar,shop,tailor,shop__tailor
+can you recommend a famous eatery around blue area?,eatery,famous,en,Islamabad,amenity,restaurant,amenity__restaurant
+"avoid the garden in karkhano, it is not popular.",garden,popular,en,Peshawar,leisure,park,leisure__park
+does rawalpindi have any best convenience store for tourists?,convenience store,best,en,Rawalpindi,shop,convenience,shop__convenience
+does karachi have any crowded coffee shop for tourists?,coffee shop,crowded,en,Karachi,amenity,cafe,amenity__cafe
+kya islamabad main koi rush wala thana khula hai?,thana,rush wala,ur,Islamabad,amenity,police,amenity__police
+"avoid the police station in raja bazaar, it is not luxury.",police station,luxury,en,Rawalpindi,amenity,police,amenity__police
+"avoid the convenience store in blue area, it is not crowded.",convenience store,crowded,en,Islamabad,shop,convenience,shop__convenience
+does islamabad have any clean restaurant for tourists?,restaurant,clean,en,Islamabad,amenity,restaurant,amenity__restaurant
+"avoid the police station in raja bazaar, it is not cheap.",police station,cheap,en,Rawalpindi,amenity,police,amenity__police
+mujhay saddar ke qareeb koi sasta cafe chahiye.,cafe,sasta,ur,Karachi,amenity,cafe,amenity__cafe
+agar mashoor darzi dhoond rahay ho to centaurus jao.,darzi,mashoor,ur,Islamabad,shop,tailor,shop__tailor
+anarkali wala ground kaafi lajawab hai.,ground,lajawab,ur,Lahore,leisure,park,leisure__park
+can you recommend a cheap boutique around f-7?,boutique,cheap,en,Islamabad,shop,clothes,shop__clothes
+agar mashoor quetta tea hotel dhoond rahay ho to centaurus jao.,quetta tea hotel,mashoor,ur,Islamabad,amenity,cafe,amenity__cafe
+hum ne f-11 markaz main aik qareebi chaye khana dekha.,chaye khana,qareebi,ur,Islamabad,amenity,cafe,amenity__cafe
+can you recommend a nearby tuck shop around saddar?,tuck shop,nearby,en,Karachi,shop,convenience,shop__convenience
+kya karachi main koi behtareen hotel khula hai?,hotel,behtareen,ur,Karachi,tourism,hotel,tourism__hotel
+karkhano main jo guest house hai wo bohat lajawab hai.,guest house,lajawab,ur,Peshawar,tourism,hotel,tourism__hotel
+lahore ke mall road main aik bohat lajawab darzi hai.,darzi,lajawab,ur,Lahore,shop,tailor,shop__tailor
+agar bada police station dhoond rahay ho to dha jao.,police station,bada,ur,Lahore,amenity,police,amenity__police
+islamabad ke f-7 main aik bohat mashoor darzi hai.,darzi,mashoor,ur,Islamabad,shop,tailor,shop__tailor
+kya lahore main koi lajawab sair gah khula hai?,sair gah,lajawab,ur,Lahore,leisure,park,leisure__park
+suna hai ke rawalpindi main sab se behtareen general store wahan hai.,general store,behtareen,ur,Rawalpindi,shop,convenience,shop__convenience
+we visited the most crowded precinct in lahore yesterday.,precinct,crowded,en,Lahore,amenity,police,amenity__police
+can you recommend a affordable coffee shop around centaurus?,coffee shop,affordable,en,Islamabad,amenity,cafe,amenity__cafe
+raja bazaar wala ground kaafi saaf suthra hai.,ground,saaf suthra,ur,Rawalpindi,leisure,park,leisure__park
+mujhay anarkali ke qareeb koi pur-sukoon tikka shop chahiye.,tikka shop,pur-sukoon,ur,Lahore,amenity,restaurant,amenity__restaurant
+does islamabad have any historic dining place for tourists?,dining place,historic,en,Islamabad,amenity,restaurant,amenity__restaurant
+i am looking for a famous precinct near karkhano.,precinct,famous,en,Peshawar,amenity,police,amenity__police
+the bahria town in rawalpindi has an famous precinct.,precinct,famous,en,Rawalpindi,amenity,police,amenity__police
+the dha in lahore has an cheap grocery store.,grocery store,cheap,en,Lahore,shop,convenience,shop__convenience
+suna hai ke peshawar main sab se mashoor musafir khana wahan hai.,musafir khana,mashoor,ur,Peshawar,tourism,hotel,tourism__hotel
+the university road in peshawar has an famous resort.,resort,famous,en,Peshawar,tourism,hotel,tourism__hotel
+does peshawar have any famous park for tourists?,park,famous,en,Peshawar,leisure,park,leisure__park
+i am looking for a best garden near saddar.,garden,best,en,Karachi,leisure,park,leisure__park
+mujhay commercial market ke qareeb koi lajawab dukaan chahiye.,dukaan,lajawab,ur,Rawalpindi,shop,convenience,shop__convenience
+hum ne hayatabad main aik bada ground dekha.,ground,bada,ur,Peshawar,leisure,park,leisure__park
+"avoid the stitching center in saddar, it is not affordable.",stitching center,affordable,en,Peshawar,shop,tailor,shop__tailor
+suna hai ke karachi main sab se purana musafir khana wahan hai.,musafir khana,purana,ur,Karachi,tourism,hotel,tourism__hotel
+hum ne university road main aik sasta thana dekha.,thana,sasta,ur,Peshawar,amenity,police,amenity__police
+agar purana chowki dhoond rahay ho to blue area jao.,chowki,purana,ur,Islamabad,amenity,police,amenity__police
+there is a famous fashion outlet in raja bazaar which is very cheap.,fashion outlet,cheap,en,Rawalpindi,shop,clothes,shop__clothes
+mujhay blue area ke qareeb koi behtareen police station chahiye.,police station,behtareen,ur,Islamabad,amenity,police,amenity__police
+there is a famous bistro in gulshan which is very historic.,bistro,historic,en,Karachi,amenity,restaurant,amenity__restaurant
+lahore ke dha main aik bohat purana cafe hai.,cafe,purana,ur,Lahore,amenity,cafe,amenity__cafe
+peshawar ke hayatabad main aik bohat purana bagh hai.,bagh,purana,ur,Peshawar,leisure,park,leisure__park
+we visited the most best grocery store in rawalpindi yesterday.,grocery store,best,en,Rawalpindi,shop,convenience,shop__convenience
+blue area wala dukaan kaafi purana hai.,dukaan,purana,ur,Islamabad,shop,convenience,shop__convenience
+agar mashoor restaurant dhoond rahay ho to saddar jao.,restaurant,mashoor,ur,Peshawar,amenity,restaurant,amenity__restaurant
+university road main jo thana hai wo bohat qareebi hai.,thana,qareebi,ur,Peshawar,amenity,police,amenity__police
+"avoid the mini mart in liberty market, it is not luxury.",mini mart,luxury,en,Lahore,shop,convenience,shop__convenience
+does karachi have any best stitching center for tourists?,stitching center,best,en,Karachi,shop,tailor,shop__tailor
+agar pur-sukoon sauda salf ki dukaan dhoond rahay ho to commercial market jao.,sauda salf ki dukaan,pur-sukoon,ur,Rawalpindi,shop,convenience,shop__convenience
+can you recommend a luxury stitching center around saddar?,stitching center,luxury,en,Peshawar,shop,tailor,shop__tailor
+i am looking for a popular tea house near bahria town.,tea house,popular,en,Rawalpindi,amenity,cafe,amenity__cafe
+the karkhano in peshawar has an best jogging track.,jogging track,best,en,Peshawar,leisure,park,leisure__park
+lahore ke liberty market main aik bohat pur-sukoon quetta tea hotel hai.,quetta tea hotel,pur-sukoon,ur,Lahore,amenity,cafe,amenity__cafe
+clifton wala tailor shop kaafi khubsurat hai.,tailor shop,khubsurat,ur,Karachi,shop,tailor,shop__tailor
+"avoid the park in liberty market, it is not clean.",park,clean,en,Lahore,leisure,park,leisure__park
+karachi ke tariq road main aik bohat qareebi chowki hai.,chowki,qareebi,ur,Karachi,amenity,police,amenity__police
+gulshan main jo cloth market hai wo bohat qareebi hai.,cloth market,qareebi,ur,Karachi,shop,clothes,shop__clothes
+hum ne saddar main aik rush wala hotel dekha.,hotel,rush wala,ur,Peshawar,amenity,restaurant,amenity__restaurant
+there is a famous restaurant in gulshan which is very best.,restaurant,best,en,Karachi,amenity,restaurant,amenity__restaurant
+we visited the most nearby grocery store in rawalpindi yesterday.,grocery store,nearby,en,Rawalpindi,shop,convenience,shop__convenience
+suna hai ke peshawar main sab se lajawab general store wahan hai.,general store,lajawab,ur,Peshawar,shop,convenience,shop__convenience
+lahore ke anarkali main aik bohat mashoor kiryana store hai.,kiryana store,mashoor,ur,Lahore,shop,convenience,shop__convenience
+raja bazaar wala tikka shop kaafi mashoor hai.,tikka shop,mashoor,ur,Rawalpindi,amenity,restaurant,amenity__restaurant
+does peshawar have any affordable restaurant for tourists?,restaurant,affordable,en,Peshawar,amenity,restaurant,amenity__restaurant
+the commercial market in rawalpindi has an clean precinct.,precinct,clean,en,Rawalpindi,amenity,police,amenity__police
+hum ne saddar main aik khubsurat chai wala dekha.,chai wala,khubsurat,ur,Karachi,amenity,cafe,amenity__cafe
+"avoid the resort in karkhano, it is not cheap.",resort,cheap,en,Peshawar,tourism,hotel,tourism__hotel
+mujhay raja bazaar ke qareeb koi saaf suthra thana chahiye.,thana,saaf suthra,ur,Rawalpindi,amenity,police,amenity__police
+islamabad ke f-11 markaz main aik bohat saaf suthra fashion center hai.,fashion center,saaf suthra,ur,Islamabad,shop,clothes,shop__clothes
+suna hai ke islamabad main sab se purana tikka shop wahan hai.,tikka shop,purana,ur,Islamabad,amenity,restaurant,amenity__restaurant
+"avoid the guest house in raja bazaar, it is not famous.",guest house,famous,en,Rawalpindi,tourism,hotel,tourism__hotel
+g-9 wala cafe kaafi purana hai.,cafe,purana,ur,Islamabad,amenity,cafe,amenity__cafe
+mujhay defence ke qareeb koi saaf suthra quetta tea hotel chahiye.,quetta tea hotel,saaf suthra,ur,Karachi,amenity,cafe,amenity__cafe
+the saddar in karachi has an affordable fashion outlet.,fashion outlet,affordable,en,Karachi,shop,clothes,shop__clothes
+is there any popular tailor shop open in rawalpindi right now?,tailor shop,popular,en,Rawalpindi,shop,tailor,shop__tailor
+hum ne anarkali main aik rush wala musafir khana dekha.,musafir khana,rush wala,ur,Lahore,tourism,hotel,tourism__hotel
+the defence in karachi has an nearby convenience store.,convenience store,nearby,en,Karachi,shop,convenience,shop__convenience
+we visited the most biggest garden in islamabad yesterday.,garden,biggest,en,Islamabad,leisure,park,leisure__park
+kya peshawar main koi behtareen resort khula hai?,resort,behtareen,ur,Peshawar,tourism,hotel,tourism__hotel
+"avoid the fashion outlet in saddar, it is not cheap.",fashion outlet,cheap,en,Peshawar,shop,clothes,shop__clothes
+lahore ke anarkali main aik bohat behtareen dukaan hai.,dukaan,behtareen,ur,Lahore,shop,convenience,shop__convenience
+raja bazaar main jo darzi hai wo bohat pur-sukoon hai.,darzi,pur-sukoon,ur,Rawalpindi,shop,tailor,shop__tailor
+does karachi have any popular bistro for tourists?,bistro,popular,en,Karachi,amenity,restaurant,amenity__restaurant
+kya islamabad main koi bada police station khula hai?,police station,bada,ur,Islamabad,amenity,police,amenity__police
+the centaurus in islamabad has an biggest park.,park,biggest,en,Islamabad,leisure,park,leisure__park
+we visited the most best fashion outlet in peshawar yesterday.,fashion outlet,best,en,Peshawar,shop,clothes,shop__clothes
+hum ne bahria town main aik pur-sukoon cafe dekha.,cafe,pur-sukoon,ur,Rawalpindi,amenity,cafe,amenity__cafe
+can you recommend a best precinct around commercial market?,precinct,best,en,Rawalpindi,amenity,police,amenity__police
+dha main jo khanay ka center hai wo bohat behtareen hai.,khanay ka center,behtareen,ur,Lahore,amenity,restaurant,amenity__restaurant
+can you recommend a nearby eatery around anarkali?,eatery,nearby,en,Lahore,amenity,restaurant,amenity__restaurant
+can you recommend a crowded police station around blue area?,police station,crowded,en,Islamabad,amenity,police,amenity__police
+i am looking for a nearby garment shop near gulshan.,garment shop,nearby,en,Karachi,shop,clothes,shop__clothes
+is there any historic boutique open in karachi right now?,boutique,historic,en,Karachi,shop,clothes,shop__clothes
+anarkali main jo chaye khana hai wo bohat khubsurat hai.,chaye khana,khubsurat,ur,Lahore,amenity,cafe,amenity__cafe
+the bahria town in rawalpindi has an crowded lodge.,lodge,crowded,en,Rawalpindi,tourism,hotel,tourism__hotel
+agar mehnga cloth market dhoond rahay ho to centaurus jao.,cloth market,mehnga,ur,Islamabad,shop,clothes,shop__clothes
+hum ne liberty market main aik purana musafir khana dekha.,musafir khana,purana,ur,Lahore,tourism,hotel,tourism__hotel
+agar khubsurat park dhoond rahay ho to university road jao.,park,khubsurat,ur,Peshawar,leisure,park,leisure__park
+the saddar in peshawar has an oldest bistro.,bistro,oldest,en,Peshawar,amenity,restaurant,amenity__restaurant
+karkhano wala hotel kaafi saaf suthra hai.,hotel,saaf suthra,ur,Peshawar,amenity,restaurant,amenity__restaurant
+can you recommend a cheap cafe around mall road?,cafe,cheap,en,Lahore,amenity,cafe,amenity__cafe
+"avoid the garment shop in saddar, it is not oldest.",garment shop,oldest,en,Peshawar,shop,clothes,shop__clothes
+we visited the most biggest stitching center in islamabad yesterday.,stitching center,biggest,en,Islamabad,shop,tailor,shop__tailor
+suna hai ke peshawar main sab se mehnga guest house wahan hai.,guest house,mehnga,ur,Peshawar,tourism,hotel,tourism__hotel
+mujhay gulshan ke qareeb koi qareebi park chahiye.,park,qareebi,ur,Karachi,leisure,park,leisure__park
+hum ne anarkali main aik pur-sukoon ground dekha.,ground,pur-sukoon,ur,Lahore,leisure,park,leisure__park
+hum ne karkhano main aik behtareen chowki dekha.,chowki,behtareen,ur,Peshawar,amenity,police,amenity__police
+there is a famous tailor shop in clifton which is very famous.,tailor shop,famous,en,Karachi,shop,tailor,shop__tailor
+the g-9 in islamabad has an famous stitching center.,stitching center,famous,en,Islamabad,shop,tailor,shop__tailor
+suna hai ke karachi main sab se saaf suthra musafir khana wahan hai.,musafir khana,saaf suthra,ur,Karachi,tourism,hotel,tourism__hotel
+kya lahore main koi rush wala kiryana store khula hai?,kiryana store,rush wala,ur,Lahore,shop,convenience,shop__convenience
+bahria town wala khanay ka center kaafi saaf suthra hai.,khanay ka center,saaf suthra,ur,Rawalpindi,amenity,restaurant,amenity__restaurant
+"avoid the playground in blue area, it is not luxury.",playground,luxury,en,Islamabad,leisure,park,leisure__park
+centaurus wala ground kaafi khubsurat hai.,ground,khubsurat,ur,Islamabad,leisure,park,leisure__park
+does lahore have any affordable park for tourists?,park,affordable,en,Lahore,leisure,park,leisure__park
+does islamabad have any famous police station for tourists?,police station,famous,en,Islamabad,amenity,police,amenity__police
+the f-7 in islamabad has an popular precinct.,precinct,popular,en,Islamabad,amenity,police,amenity__police
+g-9 wala police station kaafi sasta hai.,police station,sasta,ur,Islamabad,amenity,police,amenity__police
+i am looking for a historic clothing store near mall road.,clothing store,historic,en,Lahore,shop,clothes,shop__clothes
+i am looking for a oldest tuck shop near f-11 markaz.,tuck shop,oldest,en,Islamabad,shop,convenience,shop__convenience
+agar khubsurat quetta tea hotel dhoond rahay ho to commercial market jao.,quetta tea hotel,khubsurat,ur,Rawalpindi,amenity,cafe,amenity__cafe
+we visited the most biggest resort in peshawar yesterday.,resort,biggest,en,Peshawar,tourism,hotel,tourism__hotel
+kya rawalpindi main koi lajawab park khula hai?,park,lajawab,ur,Rawalpindi,leisure,park,leisure__park
+saddar wala tailor shop kaafi mehnga hai.,tailor shop,mehnga,ur,Rawalpindi,shop,tailor,shop__tailor
+"avoid the clothing store in f-11 markaz, it is not nearby.",clothing store,nearby,en,Islamabad,shop,clothes,shop__clothes
+does rawalpindi have any cheap eatery for tourists?,eatery,cheap,en,Rawalpindi,amenity,restaurant,amenity__restaurant
+i am looking for a luxury coffee shop near university road.,coffee shop,luxury,en,Peshawar,amenity,cafe,amenity__cafe
+saddar wala quetta tea hotel kaafi rush wala hai.,quetta tea hotel,rush wala,ur,Karachi,amenity,cafe,amenity__cafe
+hum ne blue area main aik khubsurat chowki dekha.,chowki,khubsurat,ur,Islamabad,amenity,police,amenity__police
+mujhay gulshan ke qareeb koi behtareen quetta tea hotel chahiye.,quetta tea hotel,behtareen,ur,Karachi,amenity,cafe,amenity__cafe
+kya karachi main koi behtareen kiryana store khula hai?,kiryana store,behtareen,ur,Karachi,shop,convenience,shop__convenience
+blue area main jo tailor shop hai wo bohat khubsurat hai.,tailor shop,khubsurat,ur,Islamabad,shop,tailor,shop__tailor
+we visited the most oldest lodge in lahore yesterday.,lodge,oldest,en,Lahore,tourism,hotel,tourism__hotel
+the saddar in peshawar has an best stitching center.,stitching center,best,en,Peshawar,shop,tailor,shop__tailor
+the tariq road in karachi has an nearby police station.,police station,nearby,en,Karachi,amenity,police,amenity__police
+university road wala bagh kaafi pur-sukoon hai.,bagh,pur-sukoon,ur,Peshawar,leisure,park,leisure__park
+kya karachi main koi bada fashion center khula hai?,fashion center,bada,ur,Karachi,shop,clothes,shop__clothes
+kya rawalpindi main koi khubsurat silai markaz khula hai?,silai markaz,khubsurat,ur,Rawalpindi,shop,tailor,shop__tailor
+can you recommend a historic hotel around g-9?,hotel,historic,en,Islamabad,tourism,hotel,tourism__hotel
+i am looking for a biggest tailor shop near university road.,tailor shop,biggest,en,Peshawar,shop,tailor,shop__tailor
+can you recommend a best restaurant around anarkali?,restaurant,best,en,Lahore,amenity,restaurant,amenity__restaurant
+can you recommend a famous jogging track around bahria town?,jogging track,famous,en,Rawalpindi,leisure,park,leisure__park
+hum ne f-7 main aik bada bagh dekha.,bagh,bada,ur,Islamabad,leisure,park,leisure__park
+does peshawar have any famous hotel for tourists?,hotel,famous,en,Peshawar,tourism,hotel,tourism__hotel
+we visited the most clean playground in karachi yesterday.,playground,clean,en,Karachi,leisure,park,leisure__park
+mujhay commercial market ke qareeb koi khubsurat ground chahiye.,ground,khubsurat,ur,Rawalpindi,leisure,park,leisure__park
+mujhay f-7 ke qareeb koi mashoor general store chahiye.,general store,mashoor,ur,Islamabad,shop,convenience,shop__convenience
+blue area main jo chowki hai wo bohat behtareen hai.,chowki,behtareen,ur,Islamabad,amenity,police,amenity__police
+we visited the most oldest coffee shop in karachi yesterday.,coffee shop,oldest,en,Karachi,amenity,cafe,amenity__cafe
+mujhay bahria town ke qareeb koi bada dukaan chahiye.,dukaan,bada,ur,Rawalpindi,shop,convenience,shop__convenience
+the karkhano in peshawar has an oldest bistro.,bistro,oldest,en,Peshawar,amenity,restaurant,amenity__restaurant
+the g-9 in islamabad has an oldest boutique.,boutique,oldest,en,Islamabad,shop,clothes,shop__clothes
+there is a famous police station in university road which is very nearby.,police station,nearby,en,Peshawar,amenity,police,amenity__police
+is there any clean resort open in islamabad right now?,resort,clean,en,Islamabad,tourism,hotel,tourism__hotel
+we visited the most clean resort in lahore yesterday.,resort,clean,en,Lahore,tourism,hotel,tourism__hotel
+saddar wala thana kaafi pur-sukoon hai.,thana,pur-sukoon,ur,Karachi,amenity,police,amenity__police
+is there any best jogging track open in peshawar right now?,jogging track,best,en,Peshawar,leisure,park,leisure__park
+hum ne raja bazaar main aik saaf suthra hotel dekha.,hotel,saaf suthra,ur,Rawalpindi,tourism,hotel,tourism__hotel
+"avoid the tailor shop in g-9, it is not best.",tailor shop,best,en,Islamabad,shop,tailor,shop__tailor
+"avoid the resort in defence, it is not clean.",resort,clean,en,Karachi,tourism,hotel,tourism__hotel
+we visited the most clean cafe in rawalpindi yesterday.,cafe,clean,en,Rawalpindi,amenity,cafe,amenity__cafe
+is there any clean garden open in rawalpindi right now?,garden,clean,en,Rawalpindi,leisure,park,leisure__park
+i am looking for a biggest lodge near mall road.,lodge,biggest,en,Lahore,tourism,hotel,tourism__hotel
+suna hai ke karachi main sab se lajawab silai markaz wahan hai.,silai markaz,lajawab,ur,Karachi,shop,tailor,shop__tailor
+agar rush wala chaye khana dhoond rahay ho to mall road jao.,chaye khana,rush wala,ur,Lahore,amenity,cafe,amenity__cafe
+we visited the most best tailor shop in lahore yesterday.,tailor shop,best,en,Lahore,shop,tailor,shop__tailor
+lahore ke gulberg main aik bohat qareebi tikka shop hai.,tikka shop,qareebi,ur,Lahore,amenity,restaurant,amenity__restaurant
+agar sasta general store dhoond rahay ho to hayatabad jao.,general store,sasta,ur,Peshawar,shop,convenience,shop__convenience
+"avoid the convenience store in dha, it is not famous.",convenience store,famous,en,Lahore,shop,convenience,shop__convenience
+mujhay saddar ke qareeb koi sasta tailor shop chahiye.,tailor shop,sasta,ur,Karachi,shop,tailor,shop__tailor
+can you recommend a biggest eatery around defence?,eatery,biggest,en,Karachi,amenity,restaurant,amenity__restaurant
+there is a famous eatery in tariq road which is very luxury.,eatery,luxury,en,Karachi,amenity,restaurant,amenity__restaurant
+mujhay mall road ke qareeb koi sasta kapron ki dukaan chahiye.,kapron ki dukaan,sasta,ur,Lahore,shop,clothes,shop__clothes
+agar sasta bagh dhoond rahay ho to f-11 markaz jao.,bagh,sasta,ur,Islamabad,leisure,park,leisure__park
+kya rawalpindi main koi lajawab thana khula hai?,thana,lajawab,ur,Rawalpindi,amenity,police,amenity__police
+bahria town wala cloth market kaafi mashoor hai.,cloth market,mashoor,ur,Rawalpindi,shop,clothes,shop__clothes
+"avoid the tea house in gulshan, it is not oldest.",tea house,oldest,en,Karachi,amenity,cafe,amenity__cafe
+saddar wala boutique kaafi mehnga hai.,boutique,mehnga,ur,Rawalpindi,shop,clothes,shop__clothes
+the hayatabad in peshawar has an affordable tuck shop.,tuck shop,affordable,en,Peshawar,shop,convenience,shop__convenience
+we visited the most biggest precinct in karachi yesterday.,precinct,biggest,en,Karachi,amenity,police,amenity__police
+i am looking for a affordable grocery store near gulberg.,grocery store,affordable,en,Lahore,shop,convenience,shop__convenience
+i am looking for a clean precinct near university road.,precinct,clean,en,Peshawar,amenity,police,amenity__police
+agar mehnga dukaan dhoond rahay ho to raja bazaar jao.,dukaan,mehnga,ur,Rawalpindi,shop,convenience,shop__convenience
+agar qareebi quetta tea hotel dhoond rahay ho to saddar jao.,quetta tea hotel,qareebi,ur,Karachi,amenity,cafe,amenity__cafe
+does rawalpindi have any best tea house for tourists?,tea house,best,en,Rawalpindi,amenity,cafe,amenity__cafe
+we visited the most historic dining place in karachi yesterday.,dining place,historic,en,Karachi,amenity,restaurant,amenity__restaurant
+there is a famous eatery in dha which is very best.,eatery,best,en,Lahore,amenity,restaurant,amenity__restaurant
+commercial market main jo chai wala hai wo bohat behtareen hai.,chai wala,behtareen,ur,Rawalpindi,amenity,cafe,amenity__cafe
+kya rawalpindi main koi qareebi park khula hai?,park,qareebi,ur,Rawalpindi,leisure,park,leisure__park
+i am looking for a oldest eatery near saddar.,eatery,oldest,en,Peshawar,amenity,restaurant,amenity__restaurant
+mujhay saddar ke qareeb koi purana general store chahiye.,general store,purana,ur,Rawalpindi,shop,convenience,shop__convenience
+we visited the most biggest playground in islamabad yesterday.,playground,biggest,en,Islamabad,leisure,park,leisure__park
+agar sasta fashion center dhoond rahay ho to g-9 jao.,fashion center,sasta,ur,Islamabad,shop,clothes,shop__clothes
+mujhay gulberg ke qareeb koi khubsurat kapron ki dukaan chahiye.,kapron ki dukaan,khubsurat,ur,Lahore,shop,clothes,shop__clothes
+the dha in lahore has an nearby eatery.,eatery,nearby,en,Lahore,amenity,restaurant,amenity__restaurant
+kya lahore main koi saaf suthra boutique khula hai?,boutique,saaf suthra,ur,Lahore,shop,clothes,shop__clothes
+mujhay f-11 markaz ke qareeb koi qareebi fashion center chahiye.,fashion center,qareebi,ur,Islamabad,shop,clothes,shop__clothes
+kya rawalpindi main koi pur-sukoon boutique khula hai?,boutique,pur-sukoon,ur,Rawalpindi,shop,clothes,shop__clothes
+agar sasta general store dhoond rahay ho to dha jao.,general store,sasta,ur,Lahore,shop,convenience,shop__convenience
+can you recommend a oldest restaurant around hayatabad?,restaurant,oldest,en,Peshawar,amenity,restaurant,amenity__restaurant
+agar saaf suthra hotel dhoond rahay ho to karkhano jao.,hotel,saaf suthra,ur,Peshawar,amenity,restaurant,amenity__restaurant
+we visited the most cheap tailor shop in lahore yesterday.,tailor shop,cheap,en,Lahore,shop,tailor,shop__tailor
+there is a famous park in raja bazaar which is very cheap.,park,cheap,en,Rawalpindi,leisure,park,leisure__park
+mujhay clifton ke qareeb koi pur-sukoon guest house chahiye.,guest house,pur-sukoon,ur,Karachi,tourism,hotel,tourism__hotel
+suna hai ke islamabad main sab se pur-sukoon tailor shop wahan hai.,tailor shop,pur-sukoon,ur,Islamabad,shop,tailor,shop__tailor
+hum ne anarkali main aik purana cafe dekha.,cafe,purana,ur,Lahore,amenity,cafe,amenity__cafe
+agar mashoor silai markaz dhoond rahay ho to dha jao.,silai markaz,mashoor,ur,Lahore,shop,tailor,shop__tailor
+hum ne saddar main aik bada cafe dekha.,cafe,bada,ur,Rawalpindi,amenity,cafe,amenity__cafe
+suna hai ke peshawar main sab se khubsurat darzi wahan hai.,darzi,khubsurat,ur,Peshawar,shop,tailor,shop__tailor
+is there any nearby hotel open in karachi right now?,hotel,nearby,en,Karachi,tourism,hotel,tourism__hotel
+suna hai ke islamabad main sab se lajawab kiryana store wahan hai.,kiryana store,lajawab,ur,Islamabad,shop,convenience,shop__convenience
+peshawar ke hayatabad main aik bohat qareebi tikka shop hai.,tikka shop,qareebi,ur,Peshawar,amenity,restaurant,amenity__restaurant
+the commercial market in rawalpindi has an popular grocery store.,grocery store,popular,en,Rawalpindi,shop,convenience,shop__convenience
+there is a famous stitching center in saddar which is very crowded.,stitching center,crowded,en,Peshawar,shop,tailor,shop__tailor
+lahore ke gulberg main aik bohat bada chai wala hai.,chai wala,bada,ur,Lahore,amenity,cafe,amenity__cafe
+is there any affordable grocery store open in rawalpindi right now?,grocery store,affordable,en,Rawalpindi,shop,convenience,shop__convenience
+mujhay hayatabad ke qareeb koi mashoor tikka shop chahiye.,tikka shop,mashoor,ur,Peshawar,amenity,restaurant,amenity__restaurant
+"avoid the fashion outlet in karkhano, it is not crowded.",fashion outlet,crowded,en,Peshawar,shop,clothes,shop__clothes
+does karachi have any oldest police station for tourists?,police station,oldest,en,Karachi,amenity,police,amenity__police
+i am looking for a nearby mini mart near hayatabad.,mini mart,nearby,en,Peshawar,shop,convenience,shop__convenience
+"avoid the cafe in blue area, it is not luxury.",cafe,luxury,en,Islamabad,amenity,cafe,amenity__cafe
+g-9 main jo chaye khana hai wo bohat bada hai.,chaye khana,bada,ur,Islamabad,amenity,cafe,amenity__cafe
+can you recommend a cheap tea house around mall road?,tea house,cheap,en,Lahore,amenity,cafe,amenity__cafe
+kya rawalpindi main koi mehnga thana khula hai?,thana,mehnga,ur,Rawalpindi,amenity,police,amenity__police
+can you recommend a affordable police station around saddar?,police station,affordable,en,Rawalpindi,amenity,police,amenity__police
+the clifton in karachi has an luxury park.,park,luxury,en,Karachi,leisure,park,leisure__park
+can you recommend a best police station around saddar?,police station,best,en,Rawalpindi,amenity,police,amenity__police
+commercial market wala musafir khana kaafi behtareen hai.,musafir khana,behtareen,ur,Rawalpindi,tourism,hotel,tourism__hotel
+"avoid the clothing store in karkhano, it is not nearby.",clothing store,nearby,en,Peshawar,shop,clothes,shop__clothes
+there is a famous boutique in saddar which is very biggest.,boutique,biggest,en,Peshawar,shop,clothes,shop__clothes
+there is a famous boutique in anarkali which is very luxury.,boutique,luxury,en,Lahore,shop,clothes,shop__clothes
+we visited the most crowded eatery in peshawar yesterday.,eatery,crowded,en,Peshawar,amenity,restaurant,amenity__restaurant
+agar lajawab musafir khana dhoond rahay ho to saddar jao.,musafir khana,lajawab,ur,Peshawar,tourism,hotel,tourism__hotel
+agar sasta boutique dhoond rahay ho to liberty market jao.,boutique,sasta,ur,Lahore,shop,clothes,shop__clothes
+lahore ke liberty market main aik bohat rush wala resort hai.,resort,rush wala,ur,Lahore,tourism,hotel,tourism__hotel
+can you recommend a nearby lodge around centaurus?,lodge,nearby,en,Islamabad,tourism,hotel,tourism__hotel
+there is a famous clothing store in saddar which is very clean.,clothing store,clean,en,Peshawar,shop,clothes,shop__clothes
+dha main jo quetta tea hotel hai wo bohat sasta hai.,quetta tea hotel,sasta,ur,Lahore,amenity,cafe,amenity__cafe
+there is a famous eatery in f-7 which is very popular.,eatery,popular,en,Islamabad,amenity,restaurant,amenity__restaurant
+agar purana police station dhoond rahay ho to liberty market jao.,police station,purana,ur,Lahore,amenity,police,amenity__police
+does lahore have any crowded tea house for tourists?,tea house,crowded,en,Lahore,amenity,cafe,amenity__cafe
+we visited the most clean restaurant in karachi yesterday.,restaurant,clean,en,Karachi,amenity,restaurant,amenity__restaurant
+hum ne dha main aik saaf suthra kiryana store dekha.,kiryana store,saaf suthra,ur,Lahore,shop,convenience,shop__convenience
+kya islamabad main koi pur-sukoon cafe khula hai?,cafe,pur-sukoon,ur,Islamabad,amenity,cafe,amenity__cafe
+commercial market wala boutique kaafi mehnga hai.,boutique,mehnga,ur,Rawalpindi,shop,clothes,shop__clothes
+agar qareebi thana dhoond rahay ho to saddar jao.,thana,qareebi,ur,Rawalpindi,amenity,police,amenity__police
+gulshan wala cloth market kaafi pur-sukoon hai.,cloth market,pur-sukoon,ur,Karachi,shop,clothes,shop__clothes
+hum ne saddar main aik purana silai markaz dekha.,silai markaz,purana,ur,Peshawar,shop,tailor,shop__tailor
+agar qareebi police station dhoond rahay ho to f-7 jao.,police station,qareebi,ur,Islamabad,amenity,police,amenity__police
+hayatabad wala quetta tea hotel kaafi mashoor hai.,quetta tea hotel,mashoor,ur,Peshawar,amenity,cafe,amenity__cafe
+clifton wala chowki kaafi rush wala hai.,chowki,rush wala,ur,Karachi,amenity,police,amenity__police
+i am looking for a crowded fashion outlet near saddar.,fashion outlet,crowded,en,Karachi,shop,clothes,shop__clothes
+we visited the most historic mini mart in karachi yesterday.,mini mart,historic,en,Karachi,shop,convenience,shop__convenience
+mujhay saddar ke qareeb koi behtareen boutique chahiye.,boutique,behtareen,ur,Peshawar,shop,clothes,shop__clothes
+bahria town wala kapron ki dukaan kaafi sasta hai.,kapron ki dukaan,sasta,ur,Rawalpindi,shop,clothes,shop__clothes
+tariq road main jo chowki hai wo bohat mashoor hai.,chowki,mashoor,ur,Karachi,amenity,police,amenity__police
+commercial market main jo cloth market hai wo bohat bada hai.,cloth market,bada,ur,Rawalpindi,shop,clothes,shop__clothes
+is there any best bistro open in peshawar right now?,bistro,best,en,Peshawar,amenity,restaurant,amenity__restaurant
+agar saaf suthra thana dhoond rahay ho to gulshan jao.,thana,saaf suthra,ur,Karachi,amenity,police,amenity__police
+mujhay saddar ke qareeb koi mashoor sauda salf ki dukaan chahiye.,sauda salf ki dukaan,mashoor,ur,Karachi,shop,convenience,shop__convenience
+agar rush wala chowki dhoond rahay ho to f-11 markaz jao.,chowki,rush wala,ur,Islamabad,amenity,police,amenity__police
+mujhay saddar ke qareeb koi khubsurat dhaba chahiye.,dhaba,khubsurat,ur,Rawalpindi,amenity,restaurant,amenity__restaurant
+tariq road wala tailor shop kaafi mehnga hai.,tailor shop,mehnga,ur,Karachi,shop,tailor,shop__tailor
+suna hai ke lahore main sab se behtareen tailor shop wahan hai.,tailor shop,behtareen,ur,Lahore,shop,tailor,shop__tailor
+there is a famous tailor shop in f-7 which is very famous.,tailor shop,famous,en,Islamabad,shop,tailor,shop__tailor
+mujhay karkhano ke qareeb koi bada darzi chahiye.,darzi,bada,ur,Peshawar,shop,tailor,shop__tailor
+can you recommend a best garment shop around bahria town?,garment shop,best,en,Rawalpindi,shop,clothes,shop__clothes
+there is a famous bistro in centaurus which is very oldest.,bistro,oldest,en,Islamabad,amenity,restaurant,amenity__restaurant
+hum ne saddar main aik mehnga darzi dekha.,darzi,mehnga,ur,Karachi,shop,tailor,shop__tailor
+dha main jo fashion center hai wo bohat mashoor hai.,fashion center,mashoor,ur,Lahore,shop,clothes,shop__clothes
+suna hai ke peshawar main sab se behtareen park wahan hai.,park,behtareen,ur,Peshawar,leisure,park,leisure__park
+i am looking for a clean playground near gulshan.,playground,clean,en,Karachi,leisure,park,leisure__park
+agar mehnga darzi dhoond rahay ho to f-7 jao.,darzi,mehnga,ur,Islamabad,shop,tailor,shop__tailor
+hum ne bahria town main aik pur-sukoon silai markaz dekha.,silai markaz,pur-sukoon,ur,Rawalpindi,shop,tailor,shop__tailor
+"avoid the bistro in bahria town, it is not cheap.",bistro,cheap,en,Rawalpindi,amenity,restaurant,amenity__restaurant
+agar qareebi tikka shop dhoond rahay ho to dha jao.,tikka shop,qareebi,ur,Lahore,amenity,restaurant,amenity__restaurant
+the bahria town in rawalpindi has an biggest grocery store.,grocery store,biggest,en,Rawalpindi,shop,convenience,shop__convenience
+the karkhano in peshawar has an cheap fashion outlet.,fashion outlet,cheap,en,Peshawar,shop,clothes,shop__clothes
+peshawar ke university road main aik bohat behtareen thana hai.,thana,behtareen,ur,Peshawar,amenity,police,amenity__police
+islamabad ke f-7 main aik bohat mashoor cloth market hai.,cloth market,mashoor,ur,Islamabad,shop,clothes,shop__clothes
+mujhay saddar ke qareeb koi bada police station chahiye.,police station,bada,ur,Karachi,amenity,police,amenity__police
+islamabad ke f-7 main aik bohat qareebi general store hai.,general store,qareebi,ur,Islamabad,shop,convenience,shop__convenience
+is there any cheap precinct open in peshawar right now?,precinct,cheap,en,Peshawar,amenity,police,amenity__police
+is there any crowded fashion outlet open in lahore right now?,fashion outlet,crowded,en,Lahore,shop,clothes,shop__clothes
+hum ne centaurus main aik rush wala silai markaz dekha.,silai markaz,rush wala,ur,Islamabad,shop,tailor,shop__tailor
+mujhay raja bazaar ke qareeb koi behtareen quetta tea hotel chahiye.,quetta tea hotel,behtareen,ur,Rawalpindi,amenity,cafe,amenity__cafe
+kya islamabad main koi rush wala park khula hai?,park,rush wala,ur,Islamabad,leisure,park,leisure__park
+is there any luxury restaurant open in karachi right now?,restaurant,luxury,en,Karachi,amenity,restaurant,amenity__restaurant
+mall road wala general store kaafi sasta hai.,general store,sasta,ur,Lahore,shop,convenience,shop__convenience
+suna hai ke rawalpindi main sab se purana thana wahan hai.,thana,purana,ur,Rawalpindi,amenity,police,amenity__police
+is there any historic jogging track open in rawalpindi right now?,jogging track,historic,en,Rawalpindi,leisure,park,leisure__park
+is there any best fashion outlet open in rawalpindi right now?,fashion outlet,best,en,Rawalpindi,shop,clothes,shop__clothes
+islamabad ke f-11 markaz main aik bohat lajawab musafir khana hai.,musafir khana,lajawab,ur,Islamabad,tourism,hotel,tourism__hotel
+agar qareebi fashion center dhoond rahay ho to saddar jao.,fashion center,qareebi,ur,Peshawar,shop,clothes,shop__clothes
+we visited the most biggest restaurant in rawalpindi yesterday.,restaurant,biggest,en,Rawalpindi,amenity,restaurant,amenity__restaurant
+mall road wala boutique kaafi khubsurat hai.,boutique,khubsurat,ur,Lahore,shop,clothes,shop__clothes
+i am looking for a affordable lodge near saddar.,lodge,affordable,en,Peshawar,tourism,hotel,tourism__hotel
+kya karachi main koi mehnga quetta tea hotel khula hai?,quetta tea hotel,mehnga,ur,Karachi,amenity,cafe,amenity__cafe
+kya karachi main koi behtareen tailor shop khula hai?,tailor shop,behtareen,ur,Karachi,shop,tailor,shop__tailor
+i am looking for a clean convenience store near mall road.,convenience store,clean,en,Lahore,shop,convenience,shop__convenience
+agar mehnga khanay ka center dhoond rahay ho to bahria town jao.,khanay ka center,mehnga,ur,Rawalpindi,amenity,restaurant,amenity__restaurant
+does lahore have any best jogging track for tourists?,jogging track,best,en,Lahore,leisure,park,leisure__park
+islamabad ke f-11 markaz main aik bohat qareebi hotel hai.,hotel,qareebi,ur,Islamabad,tourism,hotel,tourism__hotel
+mujhay karkhano ke qareeb koi purana silai markaz chahiye.,silai markaz,purana,ur,Peshawar,shop,tailor,shop__tailor
+does islamabad have any crowded stitching center for tourists?,stitching center,crowded,en,Islamabad,shop,tailor,shop__tailor
+saddar main jo silai markaz hai wo bohat mashoor hai.,silai markaz,mashoor,ur,Peshawar,shop,tailor,shop__tailor
+lahore ke mall road main aik bohat mashoor dhaba hai.,dhaba,mashoor,ur,Lahore,amenity,restaurant,amenity__restaurant
+the hayatabad in peshawar has an luxury bistro.,bistro,luxury,en,Peshawar,amenity,restaurant,amenity__restaurant
+peshawar ke karkhano main aik bohat khubsurat bagh hai.,bagh,khubsurat,ur,Peshawar,leisure,park,leisure__park
+kya karachi main koi saaf suthra restaurant khula hai?,restaurant,saaf suthra,ur,Karachi,amenity,restaurant,amenity__restaurant
+hum ne g-9 main aik sasta hotel dekha.,hotel,sasta,ur,Islamabad,tourism,hotel,tourism__hotel
+i am looking for a clean precinct near gulberg.,precinct,clean,en,Lahore,amenity,police,amenity__police
+f-7 wala hotel kaafi lajawab hai.,hotel,lajawab,ur,Islamabad,tourism,hotel,tourism__hotel
+can you recommend a cheap dining place around liberty market?,dining place,cheap,en,Lahore,amenity,restaurant,amenity__restaurant
+we visited the most popular dining place in karachi yesterday.,dining place,popular,en,Karachi,amenity,restaurant,amenity__restaurant
+suna hai ke peshawar main sab se rush wala chowki wahan hai.,chowki,rush wala,ur,Peshawar,amenity,police,amenity__police
+hum ne defence main aik mashoor musafir khana dekha.,musafir khana,mashoor,ur,Karachi,tourism,hotel,tourism__hotel
+"avoid the mini mart in tariq road, it is not cheap.",mini mart,cheap,en,Karachi,shop,convenience,shop__convenience
+kya lahore main koi purana silai markaz khula hai?,silai markaz,purana,ur,Lahore,shop,tailor,shop__tailor
+kya peshawar main koi pur-sukoon chowki khula hai?,chowki,pur-sukoon,ur,Peshawar,amenity,police,amenity__police
+rawalpindi ke raja bazaar main aik bohat mashoor chowki hai.,chowki,mashoor,ur,Rawalpindi,amenity,police,amenity__police
+the f-11 markaz in islamabad has an luxury coffee shop.,coffee shop,luxury,en,Islamabad,amenity,cafe,amenity__cafe
+suna hai ke lahore main sab se rush wala general store wahan hai.,general store,rush wala,ur,Lahore,shop,convenience,shop__convenience
+agar rush wala cafe dhoond rahay ho to tariq road jao.,cafe,rush wala,ur,Karachi,amenity,cafe,amenity__cafe
+can you recommend a popular jogging track around centaurus?,jogging track,popular,en,Islamabad,leisure,park,leisure__park
+i am looking for a luxury fashion outlet near karkhano.,fashion outlet,luxury,en,Peshawar,shop,clothes,shop__clothes
+university road main jo thana hai wo bohat mehnga hai.,thana,mehnga,ur,Peshawar,amenity,police,amenity__police
+rawalpindi ke saddar main aik bohat saaf suthra cafe hai.,cafe,saaf suthra,ur,Rawalpindi,amenity,cafe,amenity__cafe
+clifton wala kapron ki dukaan kaafi mashoor hai.,kapron ki dukaan,mashoor,ur,Karachi,shop,clothes,shop__clothes
+suna hai ke peshawar main sab se lajawab sauda salf ki dukaan wahan hai.,sauda salf ki dukaan,lajawab,ur,Peshawar,shop,convenience,shop__convenience
+i am looking for a crowded resort near f-11 markaz.,resort,crowded,en,Islamabad,tourism,hotel,tourism__hotel
+dha main jo darzi hai wo bohat saaf suthra hai.,darzi,saaf suthra,ur,Lahore,shop,tailor,shop__tailor
+mujhay saddar ke qareeb koi khubsurat ground chahiye.,ground,khubsurat,ur,Peshawar,leisure,park,leisure__park
+can you recommend a luxury clothing store around hayatabad?,clothing store,luxury,en,Peshawar,shop,clothes,shop__clothes
+saddar wala cloth market kaafi pur-sukoon hai.,cloth market,pur-sukoon,ur,Karachi,shop,clothes,shop__clothes
+can you recommend a cheap dining place around blue area?,dining place,cheap,en,Islamabad,amenity,restaurant,amenity__restaurant
+i am looking for a popular tea house near saddar.,tea house,popular,en,Karachi,amenity,cafe,amenity__cafe
+there is a famous clothing store in mall road which is very nearby.,clothing store,nearby,en,Lahore,shop,clothes,shop__clothes
+agar purana kiryana store dhoond rahay ho to gulberg jao.,kiryana store,purana,ur,Lahore,shop,convenience,shop__convenience
+i am looking for a luxury cafe near gulberg.,cafe,luxury,en,Lahore,amenity,cafe,amenity__cafe
+agar behtareen cloth market dhoond rahay ho to g-9 jao.,cloth market,behtareen,ur,Islamabad,shop,clothes,shop__clothes
+suna hai ke karachi main sab se bada darzi wahan hai.,darzi,bada,ur,Karachi,shop,tailor,shop__tailor
+the commercial market in rawalpindi has an luxury clothing store.,clothing store,luxury,en,Rawalpindi,shop,clothes,shop__clothes
+saddar main jo resort hai wo bohat sasta hai.,resort,sasta,ur,Peshawar,tourism,hotel,tourism__hotel
+there is a famous grocery store in defence which is very luxury.,grocery store,luxury,en,Karachi,shop,convenience,shop__convenience
+i am looking for a luxury jogging track near defence.,jogging track,luxury,en,Karachi,leisure,park,leisure__park
+i am looking for a crowded garment shop near gulberg.,garment shop,crowded,en,Lahore,shop,clothes,shop__clothes
+is there any biggest tailor shop open in rawalpindi right now?,tailor shop,biggest,en,Rawalpindi,shop,tailor,shop__tailor
+lahore ke liberty market main aik bohat purana kapron ki dukaan hai.,kapron ki dukaan,purana,ur,Lahore,shop,clothes,shop__clothes
+suna hai ke karachi main sab se lajawab general store wahan hai.,general store,lajawab,ur,Karachi,shop,convenience,shop__convenience
+mujhay centaurus ke qareeb koi lajawab tailor shop chahiye.,tailor shop,lajawab,ur,Islamabad,shop,tailor,shop__tailor
+mujhay dha ke qareeb koi mashoor sauda salf ki dukaan chahiye.,sauda salf ki dukaan,mashoor,ur,Lahore,shop,convenience,shop__convenience
+i am looking for a affordable stitching center near blue area.,stitching center,affordable,en,Islamabad,shop,tailor,shop__tailor
+hayatabad wala chowki kaafi mashoor hai.,chowki,mashoor,ur,Peshawar,amenity,police,amenity__police
+"avoid the fashion outlet in defence, it is not oldest.",fashion outlet,oldest,en,Karachi,shop,clothes,shop__clothes
+hum ne anarkali main aik khubsurat police station dekha.,police station,khubsurat,ur,Lahore,amenity,police,amenity__police
+mujhay centaurus ke qareeb koi behtareen kiryana store chahiye.,kiryana store,behtareen,ur,Islamabad,shop,convenience,shop__convenience
+saddar main jo fashion center hai wo bohat saaf suthra hai.,fashion center,saaf suthra,ur,Rawalpindi,shop,clothes,shop__clothes
+"avoid the clothing store in saddar, it is not biggest.",clothing store,biggest,en,Karachi,shop,clothes,shop__clothes
+we visited the most biggest clothing store in peshawar yesterday.,clothing store,biggest,en,Peshawar,shop,clothes,shop__clothes
+i am looking for a popular dining place near saddar.,dining place,popular,en,Peshawar,amenity,restaurant,amenity__restaurant
+is there any cheap jogging track open in islamabad right now?,jogging track,cheap,en,Islamabad,leisure,park,leisure__park
+dha wala sauda salf ki dukaan kaafi behtareen hai.,sauda salf ki dukaan,behtareen,ur,Lahore,shop,convenience,shop__convenience
+can you recommend a clean park around university road?,park,clean,en,Peshawar,leisure,park,leisure__park
+i am looking for a famous grocery store near hayatabad.,grocery store,famous,en,Peshawar,shop,convenience,shop__convenience
+agar rush wala thana dhoond rahay ho to defence jao.,thana,rush wala,ur,Karachi,amenity,police,amenity__police
+defence wala boutique kaafi purana hai.,boutique,purana,ur,Karachi,shop,clothes,shop__clothes
+can you recommend a clean police station around bahria town?,police station,clean,en,Rawalpindi,amenity,police,amenity__police
+hum ne hayatabad main aik behtareen hotel dekha.,hotel,behtareen,ur,Peshawar,amenity,restaurant,amenity__restaurant
+agar sasta bagh dhoond rahay ho to saddar jao.,bagh,sasta,ur,Karachi,leisure,park,leisure__park
+blue area main jo cafe hai wo bohat qareebi hai.,cafe,qareebi,ur,Islamabad,amenity,cafe,amenity__cafe
+i am looking for a nearby jogging track near commercial market.,jogging track,nearby,en,Rawalpindi,leisure,park,leisure__park
+saddar main jo park hai wo bohat qareebi hai.,park,qareebi,ur,Peshawar,leisure,park,leisure__park
+agar mehnga sair gah dhoond rahay ho to centaurus jao.,sair gah,mehnga,ur,Islamabad,leisure,park,leisure__park
+hum ne karkhano main aik rush wala chai wala dekha.,chai wala,rush wala,ur,Peshawar,amenity,cafe,amenity__cafe
+hum ne blue area main aik qareebi sauda salf ki dukaan dekha.,sauda salf ki dukaan,qareebi,ur,Islamabad,shop,convenience,shop__convenience
+gulshan main jo hotel hai wo bohat pur-sukoon hai.,hotel,pur-sukoon,ur,Karachi,amenity,restaurant,amenity__restaurant
+is there any affordable stitching center open in rawalpindi right now?,stitching center,affordable,en,Rawalpindi,shop,tailor,shop__tailor
+can you recommend a oldest bistro around f-7?,bistro,oldest,en,Islamabad,amenity,restaurant,amenity__restaurant
+suna hai ke lahore main sab se pur-sukoon tailor shop wahan hai.,tailor shop,pur-sukoon,ur,Lahore,shop,tailor,shop__tailor
+we visited the most cheap boutique in rawalpindi yesterday.,boutique,cheap,en,Rawalpindi,shop,clothes,shop__clothes
+suna hai ke rawalpindi main sab se bada bagh wahan hai.,bagh,bada,ur,Rawalpindi,leisure,park,leisure__park
+islamabad ke f-11 markaz main aik bohat rush wala guest house hai.,guest house,rush wala,ur,Islamabad,tourism,hotel,tourism__hotel
+"avoid the precinct in clifton, it is not nearby.",precinct,nearby,en,Karachi,amenity,police,amenity__police
+we visited the most biggest tuck shop in karachi yesterday.,tuck shop,biggest,en,Karachi,shop,convenience,shop__convenience
+hum ne saddar main aik qareebi hotel dekha.,hotel,qareebi,ur,Peshawar,amenity,restaurant,amenity__restaurant
+the commercial market in rawalpindi has an oldest garden.,garden,oldest,en,Rawalpindi,leisure,park,leisure__park
+is there any clean stitching center open in islamabad right now?,stitching center,clean,en,Islamabad,shop,tailor,shop__tailor
+mujhay karkhano ke qareeb koi mehnga park chahiye.,park,mehnga,ur,Peshawar,leisure,park,leisure__park
+does peshawar have any luxury guest house for tourists?,guest house,luxury,en,Peshawar,tourism,hotel,tourism__hotel
+we visited the most cheap restaurant in peshawar yesterday.,restaurant,cheap,en,Peshawar,amenity,restaurant,amenity__restaurant
+i am looking for a oldest garment shop near f-7.,garment shop,oldest,en,Islamabad,shop,clothes,shop__clothes
+is there any nearby tea house open in karachi right now?,tea house,nearby,en,Karachi,amenity,cafe,amenity__cafe
+i am looking for a clean precinct near saddar.,precinct,clean,en,Peshawar,amenity,police,amenity__police
+agar mehnga chaye khana dhoond rahay ho to f-11 markaz jao.,chaye khana,mehnga,ur,Islamabad,amenity,cafe,amenity__cafe
+is there any clean coffee shop open in islamabad right now?,coffee shop,clean,en,Islamabad,amenity,cafe,amenity__cafe
+f-11 markaz wala sair gah kaafi pur-sukoon hai.,sair gah,pur-sukoon,ur,Islamabad,leisure,park,leisure__park
+saddar main jo bagh hai wo bohat mehnga hai.,bagh,mehnga,ur,Peshawar,leisure,park,leisure__park
+can you recommend a crowded fashion outlet around anarkali?,fashion outlet,crowded,en,Lahore,shop,clothes,shop__clothes
+agar pur-sukoon quetta tea hotel dhoond rahay ho to bahria town jao.,quetta tea hotel,pur-sukoon,ur,Rawalpindi,amenity,cafe,amenity__cafe
+is there any popular playground open in islamabad right now?,playground,popular,en,Islamabad,leisure,park,leisure__park
+"avoid the grocery store in f-7, it is not luxury.",grocery store,luxury,en,Islamabad,shop,convenience,shop__convenience
+kya karachi main koi mehnga sauda salf ki dukaan khula hai?,sauda salf ki dukaan,mehnga,ur,Karachi,shop,convenience,shop__convenience
+hum ne clifton main aik behtareen quetta tea hotel dekha.,quetta tea hotel,behtareen,ur,Karachi,amenity,cafe,amenity__cafe
+islamabad ke centaurus main aik bohat khubsurat fashion center hai.,fashion center,khubsurat,ur,Islamabad,shop,clothes,shop__clothes
+islamabad ke g-9 main aik bohat saaf suthra silai markaz hai.,silai markaz,saaf suthra,ur,Islamabad,shop,tailor,shop__tailor
+i am looking for a famous guest house near university road.,guest house,famous,en,Peshawar,tourism,hotel,tourism__hotel
+i am looking for a famous fashion outlet near commercial market.,fashion outlet,famous,en,Rawalpindi,shop,clothes,shop__clothes
+the mall road in lahore has an affordable stitching center.,stitching center,affordable,en,Lahore,shop,tailor,shop__tailor
+mujhay saddar ke qareeb koi rush wala ground chahiye.,ground,rush wala,ur,Peshawar,leisure,park,leisure__park
+we visited the most nearby hotel in rawalpindi yesterday.,hotel,nearby,en,Rawalpindi,tourism,hotel,tourism__hotel
+the clifton in karachi has an cheap cafe.,cafe,cheap,en,Karachi,amenity,cafe,amenity__cafe
+agar khubsurat musafir khana dhoond rahay ho to tariq road jao.,musafir khana,khubsurat,ur,Karachi,tourism,hotel,tourism__hotel
+the bahria town in rawalpindi has an crowded guest house.,guest house,crowded,en,Rawalpindi,tourism,hotel,tourism__hotel
+kya karachi main koi bada chai wala khula hai?,chai wala,bada,ur,Karachi,amenity,cafe,amenity__cafe
+university road wala tailor shop kaafi purana hai.,tailor shop,purana,ur,Peshawar,shop,tailor,shop__tailor
+we visited the most biggest hotel in lahore yesterday.,hotel,biggest,en,Lahore,tourism,hotel,tourism__hotel
+clifton main jo thana hai wo bohat pur-sukoon hai.,thana,pur-sukoon,ur,Karachi,amenity,police,amenity__police
+there is a famous tea house in clifton which is very biggest.,tea house,biggest,en,Karachi,amenity,cafe,amenity__cafe
+the liberty market in lahore has an clean lodge.,lodge,clean,en,Lahore,tourism,hotel,tourism__hotel
+the g-9 in islamabad has an popular jogging track.,jogging track,popular,en,Islamabad,leisure,park,leisure__park
+can you recommend a affordable eatery around f-7?,eatery,affordable,en,Islamabad,amenity,restaurant,amenity__restaurant
+"avoid the tailor shop in f-7, it is not affordable.",tailor shop,affordable,en,Islamabad,shop,tailor,shop__tailor
+can you recommend a crowded dining place around blue area?,dining place,crowded,en,Islamabad,amenity,restaurant,amenity__restaurant
+peshawar ke saddar main aik bohat pur-sukoon chaye khana hai.,chaye khana,pur-sukoon,ur,Peshawar,amenity,cafe,amenity__cafe
+does karachi have any popular eatery for tourists?,eatery,popular,en,Karachi,amenity,restaurant,amenity__restaurant
+g-9 main jo hotel hai wo bohat lajawab hai.,hotel,lajawab,ur,Islamabad,tourism,hotel,tourism__hotel
+kya islamabad main koi bada cloth market khula hai?,cloth market,bada,ur,Islamabad,shop,clothes,shop__clothes
+does islamabad have any luxury eatery for tourists?,eatery,luxury,en,Islamabad,amenity,restaurant,amenity__restaurant
+f-11 markaz wala guest house kaafi qareebi hai.,guest house,qareebi,ur,Islamabad,tourism,hotel,tourism__hotel
+clifton main jo quetta tea hotel hai wo bohat qareebi hai.,quetta tea hotel,qareebi,ur,Karachi,amenity,cafe,amenity__cafe
+does lahore have any famous precinct for tourists?,precinct,famous,en,Lahore,amenity,police,amenity__police
+suna hai ke islamabad main sab se mehnga musafir khana wahan hai.,musafir khana,mehnga,ur,Islamabad,tourism,hotel,tourism__hotel
+does karachi have any cheap precinct for tourists?,precinct,cheap,en,Karachi,amenity,police,amenity__police
+mujhay f-7 ke qareeb koi sasta silai markaz chahiye.,silai markaz,sasta,ur,Islamabad,shop,tailor,shop__tailor
+mujhay blue area ke qareeb koi rush wala bagh chahiye.,bagh,rush wala,ur,Islamabad,leisure,park,leisure__park
+there is a famous hotel in tariq road which is very best.,hotel,best,en,Karachi,tourism,hotel,tourism__hotel
+i am looking for a famous resort near commercial market.,resort,famous,en,Rawalpindi,tourism,hotel,tourism__hotel
+islamabad ke blue area main aik bohat sasta ground hai.,ground,sasta,ur,Islamabad,leisure,park,leisure__park
+saddar wala chai wala kaafi pur-sukoon hai.,chai wala,pur-sukoon,ur,Peshawar,amenity,cafe,amenity__cafe
+i am looking for a biggest bistro near hayatabad.,bistro,biggest,en,Peshawar,amenity,restaurant,amenity__restaurant
+is there any popular police station open in islamabad right now?,police station,popular,en,Islamabad,amenity,police,amenity__police
+islamabad ke g-9 main aik bohat mashoor hotel hai.,hotel,mashoor,ur,Islamabad,tourism,hotel,tourism__hotel
+"avoid the dining place in g-9, it is not famous.",dining place,famous,en,Islamabad,amenity,restaurant,amenity__restaurant
+there is a famous resort in raja bazaar which is very historic.,resort,historic,en,Rawalpindi,tourism,hotel,tourism__hotel
+we visited the most best lodge in rawalpindi yesterday.,lodge,best,en,Rawalpindi,tourism,hotel,tourism__hotel
+does lahore have any nearby tuck shop for tourists?,tuck shop,nearby,en,Lahore,shop,convenience,shop__convenience
+blue area wala silai markaz kaafi pur-sukoon hai.,silai markaz,pur-sukoon,ur,Islamabad,shop,tailor,shop__tailor
+mujhay saddar ke qareeb koi sasta darzi chahiye.,darzi,sasta,ur,Karachi,shop,tailor,shop__tailor
+i am looking for a biggest garment shop near hayatabad.,garment shop,biggest,en,Peshawar,shop,clothes,shop__clothes
+i am looking for a best boutique near saddar.,boutique,best,en,Peshawar,shop,clothes,shop__clothes
+mujhay f-11 markaz ke qareeb koi qareebi tailor shop chahiye.,tailor shop,qareebi,ur,Islamabad,shop,tailor,shop__tailor
+does lahore have any cheap lodge for tourists?,lodge,cheap,en,Lahore,tourism,hotel,tourism__hotel
+there is a famous cafe in g-9 which is very luxury.,cafe,luxury,en,Islamabad,amenity,cafe,amenity__cafe
+is there any nearby tailor shop open in karachi right now?,tailor shop,nearby,en,Karachi,shop,tailor,shop__tailor
+"avoid the guest house in bahria town, it is not crowded.",guest house,crowded,en,Rawalpindi,tourism,hotel,tourism__hotel
+"avoid the stitching center in saddar, it is not historic.",stitching center,historic,en,Rawalpindi,shop,tailor,shop__tailor
+kya karachi main koi sasta cloth market khula hai?,cloth market,sasta,ur,Karachi,shop,clothes,shop__clothes
+can you recommend a popular resort around f-11 markaz?,resort,popular,en,Islamabad,tourism,hotel,tourism__hotel
+"avoid the playground in saddar, it is not luxury.",playground,luxury,en,Karachi,leisure,park,leisure__park
+does lahore have any famous grocery store for tourists?,grocery store,famous,en,Lahore,shop,convenience,shop__convenience
+tariq road wala sair gah kaafi purana hai.,sair gah,purana,ur,Karachi,leisure,park,leisure__park
+agar qareebi tikka shop dhoond rahay ho to centaurus jao.,tikka shop,qareebi,ur,Islamabad,amenity,restaurant,amenity__restaurant
+hum ne university road main aik mashoor darzi dekha.,darzi,mashoor,ur,Peshawar,shop,tailor,shop__tailor
+i am looking for a famous tailor shop near f-7.,tailor shop,famous,en,Islamabad,shop,tailor,shop__tailor
+the f-11 markaz in islamabad has an biggest clothing store.,clothing store,biggest,en,Islamabad,shop,clothes,shop__clothes
+agar bada restaurant dhoond rahay ho to university road jao.,restaurant,bada,ur,Peshawar,amenity,restaurant,amenity__restaurant
+hum ne commercial market main aik mashoor quetta tea hotel dekha.,quetta tea hotel,mashoor,ur,Rawalpindi,amenity,cafe,amenity__cafe
+mujhay dha ke qareeb koi behtareen boutique chahiye.,boutique,behtareen,ur,Lahore,shop,clothes,shop__clothes
+we visited the most oldest tuck shop in lahore yesterday.,tuck shop,oldest,en,Lahore,shop,convenience,shop__convenience
+lahore ke mall road main aik bohat behtareen kiryana store hai.,kiryana store,behtareen,ur,Lahore,shop,convenience,shop__convenience
+is there any crowded coffee shop open in karachi right now?,coffee shop,crowded,en,Karachi,amenity,cafe,amenity__cafe
+agar saaf suthra cloth market dhoond rahay ho to hayatabad jao.,cloth market,saaf suthra,ur,Peshawar,shop,clothes,shop__clothes
+suna hai ke peshawar main sab se pur-sukoon boutique wahan hai.,boutique,pur-sukoon,ur,Peshawar,shop,clothes,shop__clothes
+hum ne liberty market main aik lajawab musafir khana dekha.,musafir khana,lajawab,ur,Lahore,tourism,hotel,tourism__hotel
+we visited the most cheap eatery in islamabad yesterday.,eatery,cheap,en,Islamabad,amenity,restaurant,amenity__restaurant
+is there any cheap coffee shop open in islamabad right now?,coffee shop,cheap,en,Islamabad,amenity,cafe,amenity__cafe
+is there any biggest lodge open in karachi right now?,lodge,biggest,en,Karachi,tourism,hotel,tourism__hotel
+we visited the most affordable garment shop in islamabad yesterday.,garment shop,affordable,en,Islamabad,shop,clothes,shop__clothes
+agar khubsurat tailor shop dhoond rahay ho to centaurus jao.,tailor shop,khubsurat,ur,Islamabad,shop,tailor,shop__tailor
+the gulshan in karachi has an biggest park.,park,biggest,en,Karachi,leisure,park,leisure__park
+suna hai ke lahore main sab se lajawab restaurant wahan hai.,restaurant,lajawab,ur,Lahore,amenity,restaurant,amenity__restaurant
+can you recommend a oldest tailor shop around defence?,tailor shop,oldest,en,Karachi,shop,tailor,shop__tailor
+suna hai ke karachi main sab se behtareen tailor shop wahan hai.,tailor shop,behtareen,ur,Karachi,shop,tailor,shop__tailor
+agar rush wala restaurant dhoond rahay ho to clifton jao.,restaurant,rush wala,ur,Karachi,amenity,restaurant,amenity__restaurant
+kya lahore main koi sasta sair gah khula hai?,sair gah,sasta,ur,Lahore,leisure,park,leisure__park
+suna hai ke lahore main sab se purana tailor shop wahan hai.,tailor shop,purana,ur,Lahore,shop,tailor,shop__tailor
+suna hai ke rawalpindi main sab se mehnga chowki wahan hai.,chowki,mehnga,ur,Rawalpindi,amenity,police,amenity__police
+hum ne university road main aik lajawab chowki dekha.,chowki,lajawab,ur,Peshawar,amenity,police,amenity__police
+there is a famous tea house in anarkali which is very affordable.,tea house,affordable,en,Lahore,amenity,cafe,amenity__cafe
+we visited the most famous clothing store in peshawar yesterday.,clothing store,famous,en,Peshawar,shop,clothes,shop__clothes
+the hayatabad in peshawar has an popular clothing store.,clothing store,popular,en,Peshawar,shop,clothes,shop__clothes
+saddar wala police station kaafi mashoor hai.,police station,mashoor,ur,Karachi,amenity,police,amenity__police
+there is a famous resort in bahria town which is very crowded.,resort,crowded,en,Rawalpindi,tourism,hotel,tourism__hotel
+mujhay defence ke qareeb koi behtareen darzi chahiye.,darzi,behtareen,ur,Karachi,shop,tailor,shop__tailor
+lahore ke anarkali main aik bohat qareebi darzi hai.,darzi,qareebi,ur,Lahore,shop,tailor,shop__tailor
+i am looking for a famous tea house near centaurus.,tea house,famous,en,Islamabad,amenity,cafe,amenity__cafe
+suna hai ke karachi main sab se sasta fashion center wahan hai.,fashion center,sasta,ur,Karachi,shop,clothes,shop__clothes
+"avoid the coffee shop in hayatabad, it is not best.",coffee shop,best,en,Peshawar,amenity,cafe,amenity__cafe
+peshawar ke university road main aik bohat mehnga thana hai.,thana,mehnga,ur,Peshawar,amenity,police,amenity__police
+the university road in peshawar has an biggest playground.,playground,biggest,en,Peshawar,leisure,park,leisure__park
+agar purana darzi dhoond rahay ho to saddar jao.,darzi,purana,ur,Peshawar,shop,tailor,shop__tailor
+kya rawalpindi main koi lajawab dhaba khula hai?,dhaba,lajawab,ur,Rawalpindi,amenity,restaurant,amenity__restaurant
+suna hai ke lahore main sab se pur-sukoon fashion center wahan hai.,fashion center,pur-sukoon,ur,Lahore,shop,clothes,shop__clothes
+we visited the most popular police station in peshawar yesterday.,police station,popular,en,Peshawar,amenity,police,amenity__police
+blue area main jo tailor shop hai wo bohat mashoor hai.,tailor shop,mashoor,ur,Islamabad,shop,tailor,shop__tailor
+hum ne gulshan main aik qareebi chai wala dekha.,chai wala,qareebi,ur,Karachi,amenity,cafe,amenity__cafe
+agar khubsurat quetta tea hotel dhoond rahay ho to f-7 jao.,quetta tea hotel,khubsurat,ur,Islamabad,amenity,cafe,amenity__cafe
+"avoid the clothing store in karkhano, it is not popular.",clothing store,popular,en,Peshawar,shop,clothes,shop__clothes
+peshawar ke saddar main aik bohat qareebi dukaan hai.,dukaan,qareebi,ur,Peshawar,shop,convenience,shop__convenience
+anarkali main jo ground hai wo bohat purana hai.,ground,purana,ur,Lahore,leisure,park,leisure__park
+is there any luxury tailor shop open in peshawar right now?,tailor shop,luxury,en,Peshawar,shop,tailor,shop__tailor
+does rawalpindi have any clean police station for tourists?,police station,clean,en,Rawalpindi,amenity,police,amenity__police
+the raja bazaar in rawalpindi has an luxury tuck shop.,tuck shop,luxury,en,Rawalpindi,shop,convenience,shop__convenience
+saddar wala police station kaafi khubsurat hai.,police station,khubsurat,ur,Rawalpindi,amenity,police,amenity__police
+hum ne university road main aik pur-sukoon park dekha.,park,pur-sukoon,ur,Peshawar,leisure,park,leisure__park
+"avoid the fashion outlet in raja bazaar, it is not biggest.",fashion outlet,biggest,en,Rawalpindi,shop,clothes,shop__clothes
+mujhay blue area ke qareeb koi bada guest house chahiye.,guest house,bada,ur,Islamabad,tourism,hotel,tourism__hotel
+we visited the most nearby restaurant in karachi yesterday.,restaurant,nearby,en,Karachi,amenity,restaurant,amenity__restaurant
+agar purana restaurant dhoond rahay ho to dha jao.,restaurant,purana,ur,Lahore,amenity,restaurant,amenity__restaurant
+we visited the most biggest park in islamabad yesterday.,park,biggest,en,Islamabad,leisure,park,leisure__park
+there is a famous boutique in mall road which is very popular.,boutique,popular,en,Lahore,shop,clothes,shop__clothes
+centaurus wala dukaan kaafi bada hai.,dukaan,bada,ur,Islamabad,shop,convenience,shop__convenience
+mujhay g-9 ke qareeb koi qareebi dukaan chahiye.,dukaan,qareebi,ur,Islamabad,shop,convenience,shop__convenience
+commercial market wala guest house kaafi rush wala hai.,guest house,rush wala,ur,Rawalpindi,tourism,hotel,tourism__hotel
+kya lahore main koi sasta cloth market khula hai?,cloth market,sasta,ur,Lahore,shop,clothes,shop__clothes
+"avoid the cafe in raja bazaar, it is not famous.",cafe,famous,en,Rawalpindi,amenity,cafe,amenity__cafe
+liberty market wala chai wala kaafi mehnga hai.,chai wala,mehnga,ur,Lahore,amenity,cafe,amenity__cafe
+the anarkali in lahore has an cheap fashion outlet.,fashion outlet,cheap,en,Lahore,shop,clothes,shop__clothes
+we visited the most historic garment shop in karachi yesterday.,garment shop,historic,en,Karachi,shop,clothes,shop__clothes
+does islamabad have any nearby playground for tourists?,playground,nearby,en,Islamabad,leisure,park,leisure__park
+kya karachi main koi mashoor guest house khula hai?,guest house,mashoor,ur,Karachi,tourism,hotel,tourism__hotel
+is there any clean boutique open in islamabad right now?,boutique,clean,en,Islamabad,shop,clothes,shop__clothes
+kya karachi main koi pur-sukoon police station khula hai?,police station,pur-sukoon,ur,Karachi,amenity,police,amenity__police
+is there any cheap park open in lahore right now?,park,cheap,en,Lahore,leisure,park,leisure__park
+the raja bazaar in rawalpindi has an cheap precinct.,precinct,cheap,en,Rawalpindi,amenity,police,amenity__police
+defence wala hotel kaafi sasta hai.,hotel,sasta,ur,Karachi,amenity,restaurant,amenity__restaurant
+"avoid the convenience store in gulberg, it is not popular.",convenience store,popular,en,Lahore,shop,convenience,shop__convenience
+kya peshawar main koi lajawab police station khula hai?,police station,lajawab,ur,Peshawar,amenity,police,amenity__police
+suna hai ke rawalpindi main sab se lajawab resort wahan hai.,resort,lajawab,ur,Rawalpindi,tourism,hotel,tourism__hotel
+does lahore have any popular park for tourists?,park,popular,en,Lahore,leisure,park,leisure__park
+we visited the most clean eatery in lahore yesterday.,eatery,clean,en,Lahore,amenity,restaurant,amenity__restaurant
+"avoid the dining place in defence, it is not famous.",dining place,famous,en,Karachi,amenity,restaurant,amenity__restaurant
+agar sasta chaye khana dhoond rahay ho to saddar jao.,chaye khana,sasta,ur,Peshawar,amenity,cafe,amenity__cafe
+mujhay saddar ke qareeb koi behtareen ground chahiye.,ground,behtareen,ur,Rawalpindi,leisure,park,leisure__park
+suna hai ke islamabad main sab se pur-sukoon bagh wahan hai.,bagh,pur-sukoon,ur,Islamabad,leisure,park,leisure__park
+agar mehnga ground dhoond rahay ho to dha jao.,ground,mehnga,ur,Lahore,leisure,park,leisure__park
+karachi ke tariq road main aik bohat behtareen resort hai.,resort,behtareen,ur,Karachi,tourism,hotel,tourism__hotel
+kya peshawar main koi rush wala silai markaz khula hai?,silai markaz,rush wala,ur,Peshawar,shop,tailor,shop__tailor
+i am looking for a famous playground near saddar.,playground,famous,en,Peshawar,leisure,park,leisure__park
+suna hai ke lahore main sab se saaf suthra police station wahan hai.,police station,saaf suthra,ur,Lahore,amenity,police,amenity__police
+mall road wala hotel kaafi sasta hai.,hotel,sasta,ur,Lahore,amenity,restaurant,amenity__restaurant
+hum ne centaurus main aik khubsurat silai markaz dekha.,silai markaz,khubsurat,ur,Islamabad,shop,tailor,shop__tailor
+mujhay dha ke qareeb koi bada guest house chahiye.,guest house,bada,ur,Lahore,tourism,hotel,tourism__hotel
+peshawar ke university road main aik bohat mashoor kapron ki dukaan hai.,kapron ki dukaan,mashoor,ur,Peshawar,shop,clothes,shop__clothes
+hum ne raja bazaar main aik mehnga general store dekha.,general store,mehnga,ur,Rawalpindi,shop,convenience,shop__convenience
+can you recommend a clean garment shop around centaurus?,garment shop,clean,en,Islamabad,shop,clothes,shop__clothes
+is there any biggest fashion outlet open in karachi right now?,fashion outlet,biggest,en,Karachi,shop,clothes,shop__clothes
+mujhay saddar ke qareeb koi bada quetta tea hotel chahiye.,quetta tea hotel,bada,ur,Karachi,amenity,cafe,amenity__cafe
+is there any crowded clothing store open in karachi right now?,clothing store,crowded,en,Karachi,shop,clothes,shop__clothes
+agar purana quetta tea hotel dhoond rahay ho to tariq road jao.,quetta tea hotel,purana,ur,Karachi,amenity,cafe,amenity__cafe
+the defence in karachi has an clean jogging track.,jogging track,clean,en,Karachi,leisure,park,leisure__park
+can you recommend a popular jogging track around karkhano?,jogging track,popular,en,Peshawar,leisure,park,leisure__park
+hum ne anarkali main aik sasta kiryana store dekha.,kiryana store,sasta,ur,Lahore,shop,convenience,shop__convenience
+is there any luxury lodge open in karachi right now?,lodge,luxury,en,Karachi,tourism,hotel,tourism__hotel
+does islamabad have any best convenience store for tourists?,convenience store,best,en,Islamabad,shop,convenience,shop__convenience
+is there any crowded precinct open in karachi right now?,precinct,crowded,en,Karachi,amenity,police,amenity__police
+the saddar in rawalpindi has an best grocery store.,grocery store,best,en,Rawalpindi,shop,convenience,shop__convenience
+centaurus wala ground kaafi sasta hai.,ground,sasta,ur,Islamabad,leisure,park,leisure__park
+suna hai ke karachi main sab se pur-sukoon khanay ka center wahan hai.,khanay ka center,pur-sukoon,ur,Karachi,amenity,restaurant,amenity__restaurant
+can you recommend a clean cafe around saddar?,cafe,clean,en,Karachi,amenity,cafe,amenity__cafe
+"avoid the precinct in university road, it is not cheap.",precinct,cheap,en,Peshawar,amenity,police,amenity__police
+raja bazaar main jo quetta tea hotel hai wo bohat behtareen hai.,quetta tea hotel,behtareen,ur,Rawalpindi,amenity,cafe,amenity__cafe
+hum ne dha main aik lajawab kapron ki dukaan dekha.,kapron ki dukaan,lajawab,ur,Lahore,shop,clothes,shop__clothes
+mujhay gulberg ke qareeb koi sasta silai markaz chahiye.,silai markaz,sasta,ur,Lahore,shop,tailor,shop__tailor
+we visited the most biggest stitching center in peshawar yesterday.,stitching center,biggest,en,Peshawar,shop,tailor,shop__tailor
+does karachi have any crowded tea house for tourists?,tea house,crowded,en,Karachi,amenity,cafe,amenity__cafe
+suna hai ke rawalpindi main sab se bada chaye khana wahan hai.,chaye khana,bada,ur,Rawalpindi,amenity,cafe,amenity__cafe
+does rawalpindi have any best hotel for tourists?,hotel,best,en,Rawalpindi,tourism,hotel,tourism__hotel
+suna hai ke rawalpindi main sab se sasta kiryana store wahan hai.,kiryana store,sasta,ur,Rawalpindi,shop,convenience,shop__convenience
+can you recommend a popular garment shop around karkhano?,garment shop,popular,en,Peshawar,shop,clothes,shop__clothes
+kya lahore main koi behtareen chowki khula hai?,chowki,behtareen,ur,Lahore,amenity,police,amenity__police
+i am looking for a best grocery store near clifton.,grocery store,best,en,Karachi,shop,convenience,shop__convenience
+suna hai ke peshawar main sab se pur-sukoon hotel wahan hai.,hotel,pur-sukoon,ur,Peshawar,tourism,hotel,tourism__hotel
+can you recommend a clean tuck shop around raja bazaar?,tuck shop,clean,en,Rawalpindi,shop,convenience,shop__convenience
+saddar wala kapron ki dukaan kaafi mashoor hai.,kapron ki dukaan,mashoor,ur,Rawalpindi,shop,clothes,shop__clothes
+centaurus wala musafir khana kaafi pur-sukoon hai.,musafir khana,pur-sukoon,ur,Islamabad,tourism,hotel,tourism__hotel
+agar purana ground dhoond rahay ho to dha jao.,ground,purana,ur,Lahore,leisure,park,leisure__park
+can you recommend a best park around g-9?,park,best,en,Islamabad,leisure,park,leisure__park
+there is a famous cafe in f-11 markaz which is very clean.,cafe,clean,en,Islamabad,amenity,cafe,amenity__cafe
+there is a famous hotel in raja bazaar which is very cheap.,hotel,cheap,en,Rawalpindi,tourism,hotel,tourism__hotel
+we visited the most famous cafe in rawalpindi yesterday.,cafe,famous,en,Rawalpindi,amenity,cafe,amenity__cafe
+mujhay dha ke qareeb koi saaf suthra khanay ka center chahiye.,khanay ka center,saaf suthra,ur,Lahore,amenity,restaurant,amenity__restaurant
+mall road wala dukaan kaafi pur-sukoon hai.,dukaan,pur-sukoon,ur,Lahore,shop,convenience,shop__convenience
+suna hai ke peshawar main sab se mashoor darzi wahan hai.,darzi,mashoor,ur,Peshawar,shop,tailor,shop__tailor
+the mall road in lahore has an popular precinct.,precinct,popular,en,Lahore,amenity,police,amenity__police
+suna hai ke islamabad main sab se rush wala darzi wahan hai.,darzi,rush wala,ur,Islamabad,shop,tailor,shop__tailor
+f-11 markaz main jo police station hai wo bohat purana hai.,police station,purana,ur,Islamabad,amenity,police,amenity__police
+the karkhano in peshawar has an nearby precinct.,precinct,nearby,en,Peshawar,amenity,police,amenity__police
+lahore ke dha main aik bohat purana boutique hai.,boutique,purana,ur,Lahore,shop,clothes,shop__clothes
+does islamabad have any oldest precinct for tourists?,precinct,oldest,en,Islamabad,amenity,police,amenity__police
+lahore ke gulberg main aik bohat saaf suthra cafe hai.,cafe,saaf suthra,ur,Lahore,amenity,cafe,amenity__cafe
+hum ne saddar main aik khubsurat darzi dekha.,darzi,khubsurat,ur,Peshawar,shop,tailor,shop__tailor
+f-7 main jo park hai wo bohat khubsurat hai.,park,khubsurat,ur,Islamabad,leisure,park,leisure__park
+hum ne gulberg main aik khubsurat hotel dekha.,hotel,khubsurat,ur,Lahore,amenity,restaurant,amenity__restaurant
+rawalpindi ke raja bazaar main aik bohat khubsurat tikka shop hai.,tikka shop,khubsurat,ur,Rawalpindi,amenity,restaurant,amenity__restaurant
+is there any famous garment shop open in peshawar right now?,garment shop,famous,en,Peshawar,shop,clothes,shop__clothes
+kya rawalpindi main koi qareebi kapron ki dukaan khula hai?,kapron ki dukaan,qareebi,ur,Rawalpindi,shop,clothes,shop__clothes
+tariq road main jo chai wala hai wo bohat bada hai.,chai wala,bada,ur,Karachi,amenity,cafe,amenity__cafe
+does peshawar have any popular precinct for tourists?,precinct,popular,en,Peshawar,amenity,police,amenity__police
+karachi ke saddar main aik bohat mashoor silai markaz hai.,silai markaz,mashoor,ur,Karachi,shop,tailor,shop__tailor
+is there any cheap cafe open in karachi right now?,cafe,cheap,en,Karachi,amenity,cafe,amenity__cafe
+i am looking for a clean tailor shop near bahria town.,tailor shop,clean,en,Rawalpindi,shop,tailor,shop__tailor
+hum ne anarkali main aik bada dukaan dekha.,dukaan,bada,ur,Lahore,shop,convenience,shop__convenience
+is there any affordable boutique open in peshawar right now?,boutique,affordable,en,Peshawar,shop,clothes,shop__clothes
+suna hai ke islamabad main sab se pur-sukoon sauda salf ki dukaan wahan hai.,sauda salf ki dukaan,pur-sukoon,ur,Islamabad,shop,convenience,shop__convenience
+we visited the most cheap precinct in karachi yesterday.,precinct,cheap,en,Karachi,amenity,police,amenity__police
+mujhay karkhano ke qareeb koi rush wala chowki chahiye.,chowki,rush wala,ur,Peshawar,amenity,police,amenity__police
+there is a famous boutique in bahria town which is very best.,boutique,best,en,Rawalpindi,shop,clothes,shop__clothes
+clifton main jo ground hai wo bohat qareebi hai.,ground,qareebi,ur,Karachi,leisure,park,leisure__park
+is there any popular bistro open in karachi right now?,bistro,popular,en,Karachi,amenity,restaurant,amenity__restaurant
+we visited the most affordable tea house in islamabad yesterday.,tea house,affordable,en,Islamabad,amenity,cafe,amenity__cafe
+is there any crowded tailor shop open in islamabad right now?,tailor shop,crowded,en,Islamabad,shop,tailor,shop__tailor
+we visited the most popular eatery in peshawar yesterday.,eatery,popular,en,Peshawar,amenity,restaurant,amenity__restaurant
+hum ne raja bazaar main aik qareebi sair gah dekha.,sair gah,qareebi,ur,Rawalpindi,leisure,park,leisure__park
+does rawalpindi have any popular police station for tourists?,police station,popular,en,Rawalpindi,amenity,police,amenity__police
+we visited the most luxury cafe in karachi yesterday.,cafe,luxury,en,Karachi,amenity,cafe,amenity__cafe
+agar mehnga guest house dhoond rahay ho to commercial market jao.,guest house,mehnga,ur,Rawalpindi,tourism,hotel,tourism__hotel
+we visited the most affordable hotel in islamabad yesterday.,hotel,affordable,en,Islamabad,tourism,hotel,tourism__hotel
+kya rawalpindi main koi mehnga chowki khula hai?,chowki,mehnga,ur,Rawalpindi,amenity,police,amenity__police
+agar saaf suthra ground dhoond rahay ho to saddar jao.,ground,saaf suthra,ur,Karachi,leisure,park,leisure__park
+is there any best boutique open in islamabad right now?,boutique,best,en,Islamabad,shop,clothes,shop__clothes
+gulshan wala guest house kaafi pur-sukoon hai.,guest house,pur-sukoon,ur,Karachi,tourism,hotel,tourism__hotel
+"avoid the lodge in gulshan, it is not oldest.",lodge,oldest,en,Karachi,tourism,hotel,tourism__hotel
+raja bazaar wala khanay ka center kaafi behtareen hai.,khanay ka center,behtareen,ur,Rawalpindi,amenity,restaurant,amenity__restaurant
+can you recommend a clean police station around saddar?,police station,clean,en,Karachi,amenity,police,amenity__police
+suna hai ke lahore main sab se lajawab quetta tea hotel wahan hai.,quetta tea hotel,lajawab,ur,Lahore,amenity,cafe,amenity__cafe
+there is a famous tailor shop in saddar which is very cheap.,tailor shop,cheap,en,Karachi,shop,tailor,shop__tailor
+hum ne bahria town main aik mashoor guest house dekha.,guest house,mashoor,ur,Rawalpindi,tourism,hotel,tourism__hotel
+the commercial market in rawalpindi has an biggest precinct.,precinct,biggest,en,Rawalpindi,amenity,police,amenity__police
+islamabad ke blue area main aik bohat khubsurat darzi hai.,darzi,khubsurat,ur,Islamabad,shop,tailor,shop__tailor
+kya rawalpindi main koi mehnga sair gah khula hai?,sair gah,mehnga,ur,Rawalpindi,leisure,park,leisure__park
+kya peshawar main koi behtareen kiryana store khula hai?,kiryana store,behtareen,ur,Peshawar,shop,convenience,shop__convenience
+agar sasta darzi dhoond rahay ho to defence jao.,darzi,sasta,ur,Karachi,shop,tailor,shop__tailor
+mujhay defence ke qareeb koi mashoor darzi chahiye.,darzi,mashoor,ur,Karachi,shop,tailor,shop__tailor
+does lahore have any luxury park for tourists?,park,luxury,en,Lahore,leisure,park,leisure__park
+we visited the most affordable cafe in karachi yesterday.,cafe,affordable,en,Karachi,amenity,cafe,amenity__cafe
+suna hai ke islamabad main sab se khubsurat police station wahan hai.,police station,khubsurat,ur,Islamabad,amenity,police,amenity__police
+there is a famous coffee shop in saddar which is very affordable.,coffee shop,affordable,en,Karachi,amenity,cafe,amenity__cafe
+can you recommend a cheap hotel around f-11 markaz?,hotel,cheap,en,Islamabad,tourism,hotel,tourism__hotel
+"avoid the guest house in liberty market, it is not historic.",guest house,historic,en,Lahore,tourism,hotel,tourism__hotel
+hum ne mall road main aik pur-sukoon sair gah dekha.,sair gah,pur-sukoon,ur,Lahore,leisure,park,leisure__park
+does rawalpindi have any biggest precinct for tourists?,precinct,biggest,en,Rawalpindi,amenity,police,amenity__police
+the mall road in lahore has an famous jogging track.,jogging track,famous,en,Lahore,leisure,park,leisure__park
+mujhay blue area ke qareeb koi purana general store chahiye.,general store,purana,ur,Islamabad,shop,convenience,shop__convenience
+kya islamabad main koi mashoor quetta tea hotel khula hai?,quetta tea hotel,mashoor,ur,Islamabad,amenity,cafe,amenity__cafe
+f-7 wala tailor shop kaafi pur-sukoon hai.,tailor shop,pur-sukoon,ur,Islamabad,shop,tailor,shop__tailor
+i am looking for a famous mini mart near raja bazaar.,mini mart,famous,en,Rawalpindi,shop,convenience,shop__convenience
+f-7 wala musafir khana kaafi khubsurat hai.,musafir khana,khubsurat,ur,Islamabad,tourism,hotel,tourism__hotel
+gulshan wala thana kaafi rush wala hai.,thana,rush wala,ur,Karachi,amenity,police,amenity__police
+mujhay gulshan ke qareeb koi khubsurat ground chahiye.,ground,khubsurat,ur,Karachi,leisure,park,leisure__park
+i am looking for a biggest tailor shop near saddar.,tailor shop,biggest,en,Karachi,shop,tailor,shop__tailor
+hum ne commercial market main aik saaf suthra chowki dekha.,chowki,saaf suthra,ur,Rawalpindi,amenity,police,amenity__police
+we visited the most luxury convenience store in peshawar yesterday.,convenience store,luxury,en,Peshawar,shop,convenience,shop__convenience
+we visited the most oldest police station in peshawar yesterday.,police station,oldest,en,Peshawar,amenity,police,amenity__police
+i am looking for a best lodge near tariq road.,lodge,best,en,Karachi,tourism,hotel,tourism__hotel
+the mall road in lahore has an cheap precinct.,precinct,cheap,en,Lahore,amenity,police,amenity__police
+mujhay f-11 markaz ke qareeb koi khubsurat quetta tea hotel chahiye.,quetta tea hotel,khubsurat,ur,Islamabad,amenity,cafe,amenity__cafe
+suna hai ke rawalpindi main sab se bada chai wala wahan hai.,chai wala,bada,ur,Rawalpindi,amenity,cafe,amenity__cafe
+mujhay clifton ke qareeb koi sasta kiryana store chahiye.,kiryana store,sasta,ur,Karachi,shop,convenience,shop__convenience
+i am looking for a nearby tuck shop near bahria town.,tuck shop,nearby,en,Rawalpindi,shop,convenience,shop__convenience
+"avoid the cafe in g-9, it is not historic.",cafe,historic,en,Islamabad,amenity,cafe,amenity__cafe
+mujhay saddar ke qareeb koi lajawab chowki chahiye.,chowki,lajawab,ur,Rawalpindi,amenity,police,amenity__police
+kya rawalpindi main koi bada ground khula hai?,ground,bada,ur,Rawalpindi,leisure,park,leisure__park
+does islamabad have any luxury resort for tourists?,resort,luxury,en,Islamabad,tourism,hotel,tourism__hotel
+we visited the most biggest resort in karachi yesterday.,resort,biggest,en,Karachi,tourism,hotel,tourism__hotel
+kya karachi main koi khubsurat chowki khula hai?,chowki,khubsurat,ur,Karachi,amenity,police,amenity__police
+kya rawalpindi main koi rush wala hotel khula hai?,hotel,rush wala,ur,Rawalpindi,tourism,hotel,tourism__hotel
+there is a famous tailor shop in university road which is very famous.,tailor shop,famous,en,Peshawar,shop,tailor,shop__tailor
+the karkhano in peshawar has an affordable tuck shop.,tuck shop,affordable,en,Peshawar,shop,convenience,shop__convenience
+kya peshawar main koi mashoor police station khula hai?,police station,mashoor,ur,Peshawar,amenity,police,amenity__police
+i am looking for a crowded eatery near raja bazaar.,eatery,crowded,en,Rawalpindi,amenity,restaurant,amenity__restaurant
+i am looking for a biggest lodge near dha.,lodge,biggest,en,Lahore,tourism,hotel,tourism__hotel
+there is a famous precinct in saddar which is very historic.,precinct,historic,en,Peshawar,amenity,police,amenity__police
+i am looking for a biggest playground near hayatabad.,playground,biggest,en,Peshawar,leisure,park,leisure__park
+suna hai ke rawalpindi main sab se lajawab sauda salf ki dukaan wahan hai.,sauda salf ki dukaan,lajawab,ur,Rawalpindi,shop,convenience,shop__convenience
+liberty market main jo restaurant hai wo bohat saaf suthra hai.,restaurant,saaf suthra,ur,Lahore,amenity,restaurant,amenity__restaurant
+suna hai ke rawalpindi main sab se khubsurat boutique wahan hai.,boutique,khubsurat,ur,Rawalpindi,shop,clothes,shop__clothes
+i am looking for a affordable tea house near university road.,tea house,affordable,en,Peshawar,amenity,cafe,amenity__cafe
+hayatabad wala cloth market kaafi mehnga hai.,cloth market,mehnga,ur,Peshawar,shop,clothes,shop__clothes
+kya islamabad main koi behtareen kiryana store khula hai?,kiryana store,behtareen,ur,Islamabad,shop,convenience,shop__convenience
+is there any cheap tuck shop open in peshawar right now?,tuck shop,cheap,en,Peshawar,shop,convenience,shop__convenience
+is there any crowded guest house open in peshawar right now?,guest house,crowded,en,Peshawar,tourism,hotel,tourism__hotel
+hum ne gulshan main aik khubsurat bagh dekha.,bagh,khubsurat,ur,Karachi,leisure,park,leisure__park
+peshawar ke saddar main aik bohat purana park hai.,park,purana,ur,Peshawar,leisure,park,leisure__park
+clifton main jo thana hai wo bohat bada hai.,thana,bada,ur,Karachi,amenity,police,amenity__police
+saddar main jo silai markaz hai wo bohat rush wala hai.,silai markaz,rush wala,ur,Karachi,shop,tailor,shop__tailor
+mujhay defence ke qareeb koi mehnga thana chahiye.,thana,mehnga,ur,Karachi,amenity,police,amenity__police
+islamabad ke centaurus main aik bohat khubsurat sauda salf ki dukaan hai.,sauda salf ki dukaan,khubsurat,ur,Islamabad,shop,convenience,shop__convenience
+the tariq road in karachi has an clean precinct.,precinct,clean,en,Karachi,amenity,police,amenity__police
+peshawar ke university road main aik bohat pur-sukoon bagh hai.,bagh,pur-sukoon,ur,Peshawar,leisure,park,leisure__park
+is there any historic mini mart open in islamabad right now?,mini mart,historic,en,Islamabad,shop,convenience,shop__convenience
+does peshawar have any nearby bistro for tourists?,bistro,nearby,en,Peshawar,amenity,restaurant,amenity__restaurant
+peshawar ke university road main aik bohat qareebi bagh hai.,bagh,qareebi,ur,Peshawar,leisure,park,leisure__park
+is there any cheap guest house open in rawalpindi right now?,guest house,cheap,en,Rawalpindi,tourism,hotel,tourism__hotel
+karachi ke clifton main aik bohat bada chai wala hai.,chai wala,bada,ur,Karachi,amenity,cafe,amenity__cafe
+is there any historic guest house open in lahore right now?,guest house,historic,en,Lahore,tourism,hotel,tourism__hotel
+is there any clean jogging track open in rawalpindi right now?,jogging track,clean,en,Rawalpindi,leisure,park,leisure__park
+islamabad ke blue area main aik bohat qareebi fashion center hai.,fashion center,qareebi,ur,Islamabad,shop,clothes,shop__clothes
+karachi ke saddar main aik bohat rush wala musafir khana hai.,musafir khana,rush wala,ur,Karachi,tourism,hotel,tourism__hotel
+blue area wala cloth market kaafi saaf suthra hai.,cloth market,saaf suthra,ur,Islamabad,shop,clothes,shop__clothes
+mall road main jo tikka shop hai wo bohat rush wala hai.,tikka shop,rush wala,ur,Lahore,amenity,restaurant,amenity__restaurant
+we visited the most affordable tea house in karachi yesterday.,tea house,affordable,en,Karachi,amenity,cafe,amenity__cafe
+can you recommend a affordable grocery store around centaurus?,grocery store,affordable,en,Islamabad,shop,convenience,shop__convenience
+suna hai ke karachi main sab se pur-sukoon chai wala wahan hai.,chai wala,pur-sukoon,ur,Karachi,amenity,cafe,amenity__cafe
+"avoid the mini mart in f-7, it is not crowded.",mini mart,crowded,en,Islamabad,shop,convenience,shop__convenience
+does rawalpindi have any oldest tuck shop for tourists?,tuck shop,oldest,en,Rawalpindi,shop,convenience,shop__convenience
+islamabad ke f-11 markaz main aik bohat purana restaurant hai.,restaurant,purana,ur,Islamabad,amenity,restaurant,amenity__restaurant
+is there any clean tea house open in karachi right now?,tea house,clean,en,Karachi,amenity,cafe,amenity__cafe
+we visited the most nearby dining place in peshawar yesterday.,dining place,nearby,en,Peshawar,amenity,restaurant,amenity__restaurant
+i am looking for a crowded cafe near tariq road.,cafe,crowded,en,Karachi,amenity,cafe,amenity__cafe
+we visited the most best clothing store in peshawar yesterday.,clothing store,best,en,Peshawar,shop,clothes,shop__clothes
+kya karachi main koi qareebi dukaan khula hai?,dukaan,qareebi,ur,Karachi,shop,convenience,shop__convenience
+suna hai ke rawalpindi main sab se lajawab silai markaz wahan hai.,silai markaz,lajawab,ur,Rawalpindi,shop,tailor,shop__tailor
+defence main jo dukaan hai wo bohat bada hai.,dukaan,bada,ur,Karachi,shop,convenience,shop__convenience
+there is a famous police station in bahria town which is very best.,police station,best,en,Rawalpindi,amenity,police,amenity__police
+the raja bazaar in rawalpindi has an affordable jogging track.,jogging track,affordable,en,Rawalpindi,leisure,park,leisure__park
+does lahore have any historic clothing store for tourists?,clothing store,historic,en,Lahore,shop,clothes,shop__clothes
+suna hai ke peshawar main sab se pur-sukoon sauda salf ki dukaan wahan hai.,sauda salf ki dukaan,pur-sukoon,ur,Peshawar,shop,convenience,shop__convenience
+i am looking for a affordable precinct near karkhano.,precinct,affordable,en,Peshawar,amenity,police,amenity__police
+mall road main jo police station hai wo bohat khubsurat hai.,police station,khubsurat,ur,Lahore,amenity,police,amenity__police
+i am looking for a oldest clothing store near commercial market.,clothing store,oldest,en,Rawalpindi,shop,clothes,shop__clothes
+agar pur-sukoon thana dhoond rahay ho to hayatabad jao.,thana,pur-sukoon,ur,Peshawar,amenity,police,amenity__police
+hayatabad wala fashion center kaafi bada hai.,fashion center,bada,ur,Peshawar,shop,clothes,shop__clothes
+is there any crowded fashion outlet open in rawalpindi right now?,fashion outlet,crowded,en,Rawalpindi,shop,clothes,shop__clothes
+mall road wala hotel kaafi khubsurat hai.,hotel,khubsurat,ur,Lahore,tourism,hotel,tourism__hotel
+kya peshawar main koi qareebi kiryana store khula hai?,kiryana store,qareebi,ur,Peshawar,shop,convenience,shop__convenience
+suna hai ke lahore main sab se qareebi chai wala wahan hai.,chai wala,qareebi,ur,Lahore,amenity,cafe,amenity__cafe
+i am looking for a oldest tailor shop near defence.,tailor shop,oldest,en,Karachi,shop,tailor,shop__tailor
+karkhano main jo resort hai wo bohat khubsurat hai.,resort,khubsurat,ur,Peshawar,tourism,hotel,tourism__hotel
+saddar wala tailor shop kaafi bada hai.,tailor shop,bada,ur,Rawalpindi,shop,tailor,shop__tailor
+agar pur-sukoon dukaan dhoond rahay ho to raja bazaar jao.,dukaan,pur-sukoon,ur,Rawalpindi,shop,convenience,shop__convenience
+"avoid the coffee shop in karkhano, it is not oldest.",coffee shop,oldest,en,Peshawar,amenity,cafe,amenity__cafe
+the bahria town in rawalpindi has an nearby mini mart.,mini mart,nearby,en,Rawalpindi,shop,convenience,shop__convenience
+is there any clean garment shop open in rawalpindi right now?,garment shop,clean,en,Rawalpindi,shop,clothes,shop__clothes
+agar khubsurat park dhoond rahay ho to anarkali jao.,park,khubsurat,ur,Lahore,leisure,park,leisure__park
+there is a famous grocery store in clifton which is very historic.,grocery store,historic,en,Karachi,shop,convenience,shop__convenience
+is there any historic bistro open in peshawar right now?,bistro,historic,en,Peshawar,amenity,restaurant,amenity__restaurant
+we visited the most famous guest house in karachi yesterday.,guest house,famous,en,Karachi,tourism,hotel,tourism__hotel
+the clifton in karachi has an luxury mini mart.,mini mart,luxury,en,Karachi,shop,convenience,shop__convenience
+is there any luxury resort open in peshawar right now?,resort,luxury,en,Peshawar,tourism,hotel,tourism__hotel
+can you recommend a luxury hotel around university road?,hotel,luxury,en,Peshawar,tourism,hotel,tourism__hotel
+i am looking for a affordable guest house near gulshan.,guest house,affordable,en,Karachi,tourism,hotel,tourism__hotel
+kya lahore main koi rush wala chaye khana khula hai?,chaye khana,rush wala,ur,Lahore,amenity,cafe,amenity__cafe
+is there any famous bistro open in karachi right now?,bistro,famous,en,Karachi,amenity,restaurant,amenity__restaurant
+does lahore have any oldest precinct for tourists?,precinct,oldest,en,Lahore,amenity,police,amenity__police
+suna hai ke lahore main sab se behtareen quetta tea hotel wahan hai.,quetta tea hotel,behtareen,ur,Lahore,amenity,cafe,amenity__cafe
+raja bazaar main jo resort hai wo bohat qareebi hai.,resort,qareebi,ur,Rawalpindi,tourism,hotel,tourism__hotel
+"avoid the hotel in commercial market, it is not best.",hotel,best,en,Rawalpindi,tourism,hotel,tourism__hotel
+is there any crowded park open in peshawar right now?,park,crowded,en,Peshawar,leisure,park,leisure__park
+karachi ke defence main aik bohat sasta thana hai.,thana,sasta,ur,Karachi,amenity,police,amenity__police
+does karachi have any crowded tailor shop for tourists?,tailor shop,crowded,en,Karachi,shop,tailor,shop__tailor
+can you recommend a oldest clothing store around saddar?,clothing store,oldest,en,Rawalpindi,shop,clothes,shop__clothes
+can you recommend a historic cafe around saddar?,cafe,historic,en,Karachi,amenity,cafe,amenity__cafe
+there is a famous jogging track in tariq road which is very oldest.,jogging track,oldest,en,Karachi,leisure,park,leisure__park
+can you recommend a famous police station around gulshan?,police station,famous,en,Karachi,amenity,police,amenity__police
+commercial market wala dhaba kaafi pur-sukoon hai.,dhaba,pur-sukoon,ur,Rawalpindi,amenity,restaurant,amenity__restaurant
+kya peshawar main koi bada guest house khula hai?,guest house,bada,ur,Peshawar,tourism,hotel,tourism__hotel
+is there any oldest tea house open in rawalpindi right now?,tea house,oldest,en,Rawalpindi,amenity,cafe,amenity__cafe
+liberty market main jo tailor shop hai wo bohat mehnga hai.,tailor shop,mehnga,ur,Lahore,shop,tailor,shop__tailor
+gulberg main jo quetta tea hotel hai wo bohat qareebi hai.,quetta tea hotel,qareebi,ur,Lahore,amenity,cafe,amenity__cafe
+we visited the most biggest coffee shop in peshawar yesterday.,coffee shop,biggest,en,Peshawar,amenity,cafe,amenity__cafe
+i am looking for a famous tea house near clifton.,tea house,famous,en,Karachi,amenity,cafe,amenity__cafe
+does karachi have any oldest mini mart for tourists?,mini mart,oldest,en,Karachi,shop,convenience,shop__convenience
+gulberg main jo police station hai wo bohat bada hai.,police station,bada,ur,Lahore,amenity,police,amenity__police
+suna hai ke karachi main sab se khubsurat darzi wahan hai.,darzi,khubsurat,ur,Karachi,shop,tailor,shop__tailor
+can you recommend a best resort around gulberg?,resort,best,en,Lahore,tourism,hotel,tourism__hotel
+there is a famous cafe in defence which is very affordable.,cafe,affordable,en,Karachi,amenity,cafe,amenity__cafe
+hayatabad wala bagh kaafi khubsurat hai.,bagh,khubsurat,ur,Peshawar,leisure,park,leisure__park
+can you recommend a popular resort around defence?,resort,popular,en,Karachi,tourism,hotel,tourism__hotel
+is there any oldest precinct open in peshawar right now?,precinct,oldest,en,Peshawar,amenity,police,amenity__police
+"avoid the coffee shop in bahria town, it is not historic.",coffee shop,historic,en,Rawalpindi,amenity,cafe,amenity__cafe
+karachi ke clifton main aik bohat qareebi thana hai.,thana,qareebi,ur,Karachi,amenity,police,amenity__police
+we visited the most crowded tuck shop in lahore yesterday.,tuck shop,crowded,en,Lahore,shop,convenience,shop__convenience
+the tariq road in karachi has an nearby fashion outlet.,fashion outlet,nearby,en,Karachi,shop,clothes,shop__clothes
+hum ne anarkali main aik mashoor kapron ki dukaan dekha.,kapron ki dukaan,mashoor,ur,Lahore,shop,clothes,shop__clothes
+"avoid the tea house in defence, it is not nearby.",tea house,nearby,en,Karachi,amenity,cafe,amenity__cafe
+"avoid the stitching center in clifton, it is not best.",stitching center,best,en,Karachi,shop,tailor,shop__tailor
+mall road main jo bagh hai wo bohat sasta hai.,bagh,sasta,ur,Lahore,leisure,park,leisure__park
+hum ne gulshan main aik purana silai markaz dekha.,silai markaz,purana,ur,Karachi,shop,tailor,shop__tailor
+"avoid the tuck shop in bahria town, it is not luxury.",tuck shop,luxury,en,Rawalpindi,shop,convenience,shop__convenience
+i am looking for a biggest garden near saddar.,garden,biggest,en,Karachi,leisure,park,leisure__park
+agar saaf suthra resort dhoond rahay ho to g-9 jao.,resort,saaf suthra,ur,Islamabad,tourism,hotel,tourism__hotel
+f-11 markaz wala tailor shop kaafi lajawab hai.,tailor shop,lajawab,ur,Islamabad,shop,tailor,shop__tailor
+dha wala police station kaafi rush wala hai.,police station,rush wala,ur,Lahore,amenity,police,amenity__police
+can you recommend a clean garment shop around hayatabad?,garment shop,clean,en,Peshawar,shop,clothes,shop__clothes
+gulberg main jo chai wala hai wo bohat khubsurat hai.,chai wala,khubsurat,ur,Lahore,amenity,cafe,amenity__cafe
+is there any historic clothing store open in karachi right now?,clothing store,historic,en,Karachi,shop,clothes,shop__clothes
+karachi ke defence main aik bohat pur-sukoon kapron ki dukaan hai.,kapron ki dukaan,pur-sukoon,ur,Karachi,shop,clothes,shop__clothes
+g-9 wala quetta tea hotel kaafi mashoor hai.,quetta tea hotel,mashoor,ur,Islamabad,amenity,cafe,amenity__cafe
+islamabad ke centaurus main aik bohat purana chai wala hai.,chai wala,purana,ur,Islamabad,amenity,cafe,amenity__cafe
+does lahore have any historic garden for tourists?,garden,historic,en,Lahore,leisure,park,leisure__park
+the saddar in peshawar has an best precinct.,precinct,best,en,Peshawar,amenity,police,amenity__police
+we visited the most affordable precinct in karachi yesterday.,precinct,affordable,en,Karachi,amenity,police,amenity__police
+we visited the most oldest coffee shop in islamabad yesterday.,coffee shop,oldest,en,Islamabad,amenity,cafe,amenity__cafe
+i am looking for a clean clothing store near defence.,clothing store,clean,en,Karachi,shop,clothes,shop__clothes
+there is a famous stitching center in university road which is very cheap.,stitching center,cheap,en,Peshawar,shop,tailor,shop__tailor
+university road main jo khanay ka center hai wo bohat saaf suthra hai.,khanay ka center,saaf suthra,ur,Peshawar,amenity,restaurant,amenity__restaurant
+university road wala park kaafi behtareen hai.,park,behtareen,ur,Peshawar,leisure,park,leisure__park
+kya lahore main koi rush wala restaurant khula hai?,restaurant,rush wala,ur,Lahore,amenity,restaurant,amenity__restaurant
+mujhay defence ke qareeb koi khubsurat cafe chahiye.,cafe,khubsurat,ur,Karachi,amenity,cafe,amenity__cafe
+hum ne university road main aik mashoor ground dekha.,ground,mashoor,ur,Peshawar,leisure,park,leisure__park
+suna hai ke rawalpindi main sab se bada darzi wahan hai.,darzi,bada,ur,Rawalpindi,shop,tailor,shop__tailor
+karkhano main jo boutique hai wo bohat khubsurat hai.,boutique,khubsurat,ur,Peshawar,shop,clothes,shop__clothes
+f-7 wala kiryana store kaafi mashoor hai.,kiryana store,mashoor,ur,Islamabad,shop,convenience,shop__convenience
+f-11 markaz main jo tailor shop hai wo bohat mehnga hai.,tailor shop,mehnga,ur,Islamabad,shop,tailor,shop__tailor
+does karachi have any clean jogging track for tourists?,jogging track,clean,en,Karachi,leisure,park,leisure__park
+hum ne gulshan main aik behtareen khanay ka center dekha.,khanay ka center,behtareen,ur,Karachi,amenity,restaurant,amenity__restaurant
+mall road main jo police station hai wo bohat mashoor hai.,police station,mashoor,ur,Lahore,amenity,police,amenity__police
+is there any nearby clothing store open in islamabad right now?,clothing store,nearby,en,Islamabad,shop,clothes,shop__clothes
+agar pur-sukoon hotel dhoond rahay ho to gulberg jao.,hotel,pur-sukoon,ur,Lahore,tourism,hotel,tourism__hotel
+the centaurus in islamabad has an historic park.,park,historic,en,Islamabad,leisure,park,leisure__park
+does lahore have any oldest grocery store for tourists?,grocery store,oldest,en,Lahore,shop,convenience,shop__convenience
+islamabad ke f-7 main aik bohat pur-sukoon kiryana store hai.,kiryana store,pur-sukoon,ur,Islamabad,shop,convenience,shop__convenience
+there is a famous dining place in commercial market which is very luxury.,dining place,luxury,en,Rawalpindi,amenity,restaurant,amenity__restaurant
+agar behtareen fashion center dhoond rahay ho to anarkali jao.,fashion center,behtareen,ur,Lahore,shop,clothes,shop__clothes
+does lahore have any oldest tuck shop for tourists?,tuck shop,oldest,en,Lahore,shop,convenience,shop__convenience
+kya islamabad main koi mashoor hotel khula hai?,hotel,mashoor,ur,Islamabad,amenity,restaurant,amenity__restaurant
+kya peshawar main koi behtareen hotel khula hai?,hotel,behtareen,ur,Peshawar,amenity,restaurant,amenity__restaurant
+the gulberg in lahore has an best police station.,police station,best,en,Lahore,amenity,police,amenity__police
+there is a famous tailor shop in dha which is very best.,tailor shop,best,en,Lahore,shop,tailor,shop__tailor
+islamabad ke f-7 main aik bohat saaf suthra ground hai.,ground,saaf suthra,ur,Islamabad,leisure,park,leisure__park
+there is a famous garden in tariq road which is very crowded.,garden,crowded,en,Karachi,leisure,park,leisure__park
+lahore ke mall road main aik bohat saaf suthra silai markaz hai.,silai markaz,saaf suthra,ur,Lahore,shop,tailor,shop__tailor
+blue area wala restaurant kaafi sasta hai.,restaurant,sasta,ur,Islamabad,amenity,restaurant,amenity__restaurant
+can you recommend a biggest tailor shop around saddar?,tailor shop,biggest,en,Peshawar,shop,tailor,shop__tailor
+g-9 main jo police station hai wo bohat sasta hai.,police station,sasta,ur,Islamabad,amenity,police,amenity__police
+suna hai ke peshawar main sab se rush wala bagh wahan hai.,bagh,rush wala,ur,Peshawar,leisure,park,leisure__park
+agar khubsurat fashion center dhoond rahay ho to saddar jao.,fashion center,khubsurat,ur,Rawalpindi,shop,clothes,shop__clothes
+does islamabad have any biggest fashion outlet for tourists?,fashion outlet,biggest,en,Islamabad,shop,clothes,shop__clothes
+suna hai ke islamabad main sab se qareebi darzi wahan hai.,darzi,qareebi,ur,Islamabad,shop,tailor,shop__tailor
+i am looking for a luxury hotel near f-11 markaz.,hotel,luxury,en,Islamabad,tourism,hotel,tourism__hotel
+hum ne tariq road main aik mehnga musafir khana dekha.,musafir khana,mehnga,ur,Karachi,tourism,hotel,tourism__hotel
+mujhay bahria town ke qareeb koi mashoor sauda salf ki dukaan chahiye.,sauda salf ki dukaan,mashoor,ur,Rawalpindi,shop,convenience,shop__convenience
+i am looking for a affordable lodge near f-7.,lodge,affordable,en,Islamabad,tourism,hotel,tourism__hotel
+we visited the most crowded cafe in peshawar yesterday.,cafe,crowded,en,Peshawar,amenity,cafe,amenity__cafe
+suna hai ke islamabad main sab se khubsurat kiryana store wahan hai.,kiryana store,khubsurat,ur,Islamabad,shop,convenience,shop__convenience
+rawalpindi ke raja bazaar main aik bohat khubsurat police station hai.,police station,khubsurat,ur,Rawalpindi,amenity,police,amenity__police
+commercial market main jo quetta tea hotel hai wo bohat mehnga hai.,quetta tea hotel,mehnga,ur,Rawalpindi,amenity,cafe,amenity__cafe
+i am looking for a crowded stitching center near university road.,stitching center,crowded,en,Peshawar,shop,tailor,shop__tailor
+rawalpindi ke bahria town main aik bohat behtareen boutique hai.,boutique,behtareen,ur,Rawalpindi,shop,clothes,shop__clothes
+rawalpindi ke saddar main aik bohat sasta dukaan hai.,dukaan,sasta,ur,Rawalpindi,shop,convenience,shop__convenience
+suna hai ke lahore main sab se rush wala darzi wahan hai.,darzi,rush wala,ur,Lahore,shop,tailor,shop__tailor
+suna hai ke karachi main sab se behtareen darzi wahan hai.,darzi,behtareen,ur,Karachi,shop,tailor,shop__tailor
+does islamabad have any clean tailor shop for tourists?,tailor shop,clean,en,Islamabad,shop,tailor,shop__tailor
+islamabad ke g-9 main aik bohat bada resort hai.,resort,bada,ur,Islamabad,tourism,hotel,tourism__hotel
+is there any affordable grocery store open in islamabad right now?,grocery store,affordable,en,Islamabad,shop,convenience,shop__convenience
+can you recommend a oldest stitching center around g-9?,stitching center,oldest,en,Islamabad,shop,tailor,shop__tailor
+suna hai ke lahore main sab se pur-sukoon quetta tea hotel wahan hai.,quetta tea hotel,pur-sukoon,ur,Lahore,amenity,cafe,amenity__cafe
+hum ne saddar main aik sasta kapron ki dukaan dekha.,kapron ki dukaan,sasta,ur,Karachi,shop,clothes,shop__clothes
+hum ne hayatabad main aik mashoor dukaan dekha.,dukaan,mashoor,ur,Peshawar,shop,convenience,shop__convenience
+lahore ke liberty market main aik bohat sasta chai wala hai.,chai wala,sasta,ur,Lahore,amenity,cafe,amenity__cafe
+hum ne centaurus main aik rush wala khanay ka center dekha.,khanay ka center,rush wala,ur,Islamabad,amenity,restaurant,amenity__restaurant
+does peshawar have any crowded stitching center for tourists?,stitching center,crowded,en,Peshawar,shop,tailor,shop__tailor
+"avoid the playground in saddar, it is not best.",playground,best,en,Rawalpindi,leisure,park,leisure__park
+agar mehnga cloth market dhoond rahay ho to blue area jao.,cloth market,mehnga,ur,Islamabad,shop,clothes,shop__clothes
+there is a famous park in clifton which is very nearby.,park,nearby,en,Karachi,leisure,park,leisure__park
+rawalpindi ke raja bazaar main aik bohat khubsurat restaurant hai.,restaurant,khubsurat,ur,Rawalpindi,amenity,restaurant,amenity__restaurant
+mujhay tariq road ke qareeb koi bada sauda salf ki dukaan chahiye.,sauda salf ki dukaan,bada,ur,Karachi,shop,convenience,shop__convenience
+kya lahore main koi rush wala quetta tea hotel khula hai?,quetta tea hotel,rush wala,ur,Lahore,amenity,cafe,amenity__cafe
+there is a famous mini mart in commercial market which is very oldest.,mini mart,oldest,en,Rawalpindi,shop,convenience,shop__convenience
+kya peshawar main koi lajawab darzi khula hai?,darzi,lajawab,ur,Peshawar,shop,tailor,shop__tailor
+hum ne blue area main aik sasta kiryana store dekha.,kiryana store,sasta,ur,Islamabad,shop,convenience,shop__convenience
+mujhay saddar ke qareeb koi saaf suthra quetta tea hotel chahiye.,quetta tea hotel,saaf suthra,ur,Rawalpindi,amenity,cafe,amenity__cafe
+the saddar in rawalpindi has an cheap stitching center.,stitching center,cheap,en,Rawalpindi,shop,tailor,shop__tailor
+agar pur-sukoon tikka shop dhoond rahay ho to saddar jao.,tikka shop,pur-sukoon,ur,Karachi,amenity,restaurant,amenity__restaurant
+the hayatabad in peshawar has an cheap bistro.,bistro,cheap,en,Peshawar,amenity,restaurant,amenity__restaurant
+i am looking for a oldest tuck shop near liberty market.,tuck shop,oldest,en,Lahore,shop,convenience,shop__convenience
+"avoid the resort in mall road, it is not crowded.",resort,crowded,en,Lahore,tourism,hotel,tourism__hotel
+there is a famous clothing store in raja bazaar which is very luxury.,clothing store,luxury,en,Rawalpindi,shop,clothes,shop__clothes
+is there any famous fashion outlet open in karachi right now?,fashion outlet,famous,en,Karachi,shop,clothes,shop__clothes
+we visited the most cheap precinct in islamabad yesterday.,precinct,cheap,en,Islamabad,amenity,police,amenity__police
+suna hai ke islamabad main sab se sasta boutique wahan hai.,boutique,sasta,ur,Islamabad,shop,clothes,shop__clothes
+suna hai ke lahore main sab se lajawab fashion center wahan hai.,fashion center,lajawab,ur,Lahore,shop,clothes,shop__clothes
+"avoid the police station in clifton, it is not luxury.",police station,luxury,en,Karachi,amenity,police,amenity__police
+the g-9 in islamabad has an best precinct.,precinct,best,en,Islamabad,amenity,police,amenity__police
+is there any luxury hotel open in lahore right now?,hotel,luxury,en,Lahore,tourism,hotel,tourism__hotel
+does islamabad have any oldest bistro for tourists?,bistro,oldest,en,Islamabad,amenity,restaurant,amenity__restaurant
+clifton wala cafe kaafi lajawab hai.,cafe,lajawab,ur,Karachi,amenity,cafe,amenity__cafe
+f-7 wala kapron ki dukaan kaafi mehnga hai.,kapron ki dukaan,mehnga,ur,Islamabad,shop,clothes,shop__clothes
+we visited the most cheap mini mart in rawalpindi yesterday.,mini mart,cheap,en,Rawalpindi,shop,convenience,shop__convenience
+the saddar in peshawar has an best eatery.,eatery,best,en,Peshawar,amenity,restaurant,amenity__restaurant
+there is a famous grocery store in blue area which is very biggest.,grocery store,biggest,en,Islamabad,shop,convenience,shop__convenience

@@ -263,5 +263,7 @@ __pycache__/
 # Local Configs
 .vscode/
 .idea/
+.npm
+npm
 #web_app/static/uploads/
 #web_app/

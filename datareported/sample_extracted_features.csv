@@ -1,0 +1,11 @@
+sentence,transaction,target_label
+defence main jo general store hai wo bohat lajawab hai.,"['shop__convenience', 'general', 'defence', 'main']",shop__convenience
+hum ne blue area main aik bada bagh dekha.,"['bagh', 'leisure__park', 'aik', 'main']",leisure__park
+we visited the most crowded stitching center in karachi yesterday.,"['center', 'stitching', 'shop__tailor', 'crowded', 'yesterday']",shop__tailor
+we visited the most oldest police station in karachi yesterday.,"['station', 'amenity__police', 'police', 'old', 'yesterday']",amenity__police
+liberty market wala boutique kaafi saaf suthra hai.,"['liberty', 'shop__clothes', 'market']",shop__clothes
+there is a famous playground in university road which is very oldest.,"['playground', 'road', 'university', 'leisure__park', 'famous', 'old']",leisure__park
+hum ne karkhano main aik bada chai wala dekha.,"['amenity__cafe', 'aik', 'main']",amenity__cafe
+suna hai ke rawalpindi main sab se mashoor quetta tea hotel wahan hai.,"['sab', 'amenity__cafe', 'tea', 'mashoor', 'hotel', 'main', 'quetta']",amenity__cafe
+can you recommend a famous precinct around university road?,"['road', 'university', 'amenity__police', 'precinct', 'famous']",amenity__police
+suna hai ke islamabad main sab se purana restaurant wahan hai.,"['amenity__restaurant', 'main']",amenity__restaurant
