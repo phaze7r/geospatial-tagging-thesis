@@ -94,6 +94,8 @@ def get_data():
             "contactLink": config.contact_link,
             "dashboardTitle": config.dashboard_title,
             "sidebarTitle": config.sidebar_title,
+            "robotIcon": config.robot_icon,
+            "favicon": config.favicon,
             "reports": [r.to_dict() for r in reports]
         },
         "profile": profile.to_dict(),
@@ -201,6 +203,21 @@ def admin():
             config.contact_link = request.form.get('contact_link')
             config.dashboard_title = request.form.get('dashboard_title')
             config.sidebar_title = request.form.get('sidebar_title')
+            
+            # Universal Icon Update (Logo + Favicon)
+            icon_file = request.files.get('project_icon_file')
+            icon_text = request.form.get('robot_icon_text')
+            
+            if icon_file and icon_file.filename != '' and allowed_file(icon_file.filename):
+                filename = secure_filename(icon_file.filename)
+                icon_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                path = f'/static/uploads/{filename}'
+                config.robot_icon = path
+                config.favicon = path # Sync both
+            elif icon_text:
+                config.robot_icon = icon_text
+                # Note: Text cannot be a favicon, so we leave favicon as is or empty
+                
             db.session.commit()
             flash('Configuration updated!', 'success')
         
@@ -337,7 +354,8 @@ def admin():
                          profile=profile, 
                          team_members=team_members,
                          notes=notes, 
-                         reports=reports)
+                         reports=reports,
+                         version=datetime.now().timestamp())
 
 @app.route('/admin/delete_note/<int:id>', methods=['POST'])
 @login_required
@@ -374,7 +392,8 @@ def logout():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    config = ProjectConfig.query.first()
+    return render_template('index.html', config=config, version=datetime.now().timestamp())
 
 @app.route('/<path:path>')
 def static_proxy(path):
