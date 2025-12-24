@@ -1,4 +1,0 @@
-id,osm_id,osm_geom_type,osm_tag_key,osm_tag_value,name,name_ur,alt_name,description_raw,description_final,description_source,wikipedia_title,wikipedia_url,lat,lon,city,province,country,language,dedup_group_id
-toy-1,n1,node,amenity,park,Kids Park F-7,بچوں کا پارک ایف-7,,"A quiet park near the F-7 markaz, perfect for kids.","A quiet park near the F-7 markaz, perfect for kids.",toy,,,33.723,73.055,Islamabad,ICT,Pakistan,Roman Urdu,0dc2b872-da697349
-toy-2,w2,way,amenity,place_of_worship,Masjid-e-Quba,مسجد قبا,Quba Mosque,پرانے بازار کے قریب ایک خوبصورت مسجد۔,پرانے بازار کے قریب ایک خوبصورت مسجد۔,toy,,,33.706,73.039,Islamabad,ICT,Pakistan,Urdu,05f94746-e0e4091e
-toy-3,n3,node,shop,mall,Centaurus,سینٹورس,The Centaurus Mall,Famous mall with food court and cinema.,Famous mall with food court and cinema.,toy,The Centaurus,,33.71,73.058,Islamabad,ICT,Pakistan,English,b6ece0a2-82d7bdcf
