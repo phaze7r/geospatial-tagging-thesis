@@ -1,0 +1,420 @@
+{
+ "sets": {
+  "osm_test": 7017,
+  "osm_test_pakistan": 26,
+  "eval_106": 106,
+  "pk_n3": 157
+ },
+ "results": {
+  "osm_test": {
+   "final: numberbatch + OSM conf": {
+    "Hits@1": 0.211913923329058,
+    "Hits@3": 0.3802194670086932,
+    "nDCG@20": 0.408359831710022
+   },
+   "numberbatch + OSM freq EN": {
+    "Hits@1": 0.205358415277184,
+    "Hits@3": 0.3619780532991307,
+    "nDCG@20": 0.3888534905524482
+   },
+   "numberbatch + OSM Bayesian EN": {
+    "Hits@1": 0.1963802194670087,
+    "Hits@3": 0.34131395183126695,
+    "nDCG@20": 0.37372119766365614
+   },
+   "numberbatch + Wikivoyage adj EN": {
+    "Hits@1": 0.1115861479264643,
+    "Hits@3": 0.2387059997149779,
+    "nDCG@20": 0.28876474949253716
+   },
+   "w2v + OSM conf": {
+    "Hits@1": 0.1876870457460453,
+    "Hits@3": 0.3437366395895682,
+    "nDCG@20": 0.37217162187386776
+   },
+   "base paper (w2v, Algorithm 2)": {
+    "Hits@1": 0.08009120706854782,
+    "Hits@3": 0.18882713410289298,
+    "nDCG@20": 0.237092310724222
+   }
+  },
+  "osm_test_pakistan": {
+   "final: numberbatch + OSM conf": {
+    "Hits@1": 0.0,
+    "Hits@3": 0.11538461538461539,
+    "nDCG@20": 0.17623253015854762
+   },
+   "numberbatch + OSM freq EN": {
+    "Hits@1": 0.038461538461538464,
+    "Hits@3": 0.11538461538461539,
+    "nDCG@20": 0.15666619443935273
+   },
+   "numberbatch + OSM Bayesian EN": {
+    "Hits@1": 0.0,
+    "Hits@3": 0.11538461538461539,
+    "nDCG@20": 0.14379201517590665
+   },
+   "numberbatch + Wikivoyage adj EN": {
+    "Hits@1": 0.0,
+    "Hits@3": 0.07692307692307693,
+    "nDCG@20": 0.1307990249693894
+   },
+   "w2v + OSM conf": {
+    "Hits@1": 0.0,
+    "Hits@3": 0.07692307692307693,
+    "nDCG@20": 0.12502013380486576
+   },
+   "base paper (w2v, Algorithm 2)": {
+    "Hits@1": 0.0,
+    "Hits@3": 0.07692307692307693,
+    "nDCG@20": 0.09518467381641037
+   }
+  },
+  "eval_106": {
+   "final: numberbatch + OSM conf": {
+    "Hits@1": 0.2641509433962264,
+    "Hits@3": 0.5471698113207547,
+    "nDCG@20": 0.539352487556016
+   },
+   "numberbatch + OSM freq EN": {
+    "Hits@1": 0.3018867924528302,
+    "Hits@3": 0.5849056603773585,
+    "nDCG@20": 0.5468469296227252
+   },
+   "numberbatch + OSM Bayesian EN": {
+    "Hits@1": 0.25471698113207547,
+    "Hits@3": 0.49056603773584906,
+    "nDCG@20": 0.5036040342637156
+   },
+   "numberbatch + Wikivoyage adj EN": {
+    "Hits@1": 0.2641509433962264,
+    "Hits@3": 0.5566037735849056,
+    "nDCG@20": 0.5348699449108887
+   },
+   "w2v + OSM conf": {
+    "Hits@1": 0.2358490566037736,
+    "Hits@3": 0.4811320754716981,
+    "nDCG@20": 0.4975884357194569
+   },
+   "base paper (w2v, Algorithm 2)": {
+    "Hits@1": 0.22641509433962265,
+    "Hits@3": 0.4339622641509434,
+    "nDCG@20": 0.4615398170505286
+   }
+  },
+  "pk_n3": {
+   "final: numberbatch + OSM conf": {
+    "Hits@1": 0.28662420382165604,
+    "Hits@3": 0.6178343949044586,
+    "nDCG@20": 0.5674353346090145
+   },
+   "numberbatch + OSM freq EN": {
+    "Hits@1": 0.3885350318471338,
+    "Hits@3": 0.6560509554140127,
+    "nDCG@20": 0.6188276779626166
+   },
+   "numberbatch + OSM Bayesian EN": {
+    "Hits@1": 0.34394904458598724,
+    "Hits@3": 0.5859872611464968,
+    "nDCG@20": 0.5906161801184533
+   },
+   "numberbatch + Wikivoyage adj EN": {
+    "Hits@1": 0.3885350318471338,
+    "Hits@3": 0.6114649681528662,
+    "nDCG@20": 0.6273967378400174
+   },
+   "w2v + OSM conf": {
+    "Hits@1": 0.2229299363057325,
+    "Hits@3": 0.535031847133758,
+    "nDCG@20": 0.5010103818599956
+   },
+   "base paper (w2v, Algorithm 2)": {
+    "Hits@1": 0.21019108280254778,
+    "Hits@3": 0.5095541401273885,
+    "nDCG@20": 0.4871198602138882
+   }
+  }
+ },
+ "comparisons": [
+  {
+   "set": "osm_test",
+   "a": "numberbatch + OSM freq EN",
+   "b": "final: numberbatch + OSM conf",
+   "delta_hits3": -0.018241413709562504,
+   "ci95": [
+    -0.02550947698446626,
+    -0.011258372523870575
+   ],
+   "a_only": 272,
+   "b_only": 400,
+   "p": 8.956105428825832e-07,
+   "p_holm": 1.4329768686121331e-05
+  },
+  {
+   "set": "osm_test",
+   "a": "numberbatch + OSM Bayesian EN",
+   "b": "final: numberbatch + OSM conf",
+   "delta_hits3": -0.03890551517742624,
+   "ci95": [
+    -0.04645860054154194,
+    -0.03149494085791649
+   ],
+   "a_only": 209,
+   "b_only": 482,
+   "p": 9.834471788558907e-26,
+   "p_holm": 1.7702049219406034e-24
+  },
+  {
+   "set": "osm_test",
+   "a": "final: numberbatch + OSM conf",
+   "b": "numberbatch + Wikivoyage adj EN",
+   "delta_hits3": 0.14151346729371528,
+   "ci95": [
+    0.1313951831266923,
+    0.1516317514607382
+   ],
+   "a_only": 1220,
+   "b_only": 227,
+   "p": 1.9086515345159524e-164,
+   "p_holm": 3.626437915580309e-163
+  },
+  {
+   "set": "osm_test",
+   "a": "final: numberbatch + OSM conf",
+   "b": "w2v + OSM conf",
+   "delta_hits3": 0.03648282741912501,
+   "ci95": [
+    0.029072253099615253,
+    0.044035912783240705
+   ],
+   "a_only": 500,
+   "b_only": 244,
+   "p": 3.612362107169258e-21,
+   "p_holm": 6.141015582187738e-20
+  },
+  {
+   "set": "osm_test",
+   "a": "final: numberbatch + OSM conf",
+   "b": "base paper (w2v, Algorithm 2)",
+   "delta_hits3": 0.1913923329058002,
+   "ci95": [
+    0.1798489382927177,
+    0.20279321647427678
+   ],
+   "a_only": 1643,
+   "b_only": 300,
+   "p": 9.11102806462957e-224,
+   "p_holm": 1.822205612925914e-222
+  },
+  {
+   "set": "osm_test_pakistan",
+   "a": "numberbatch + OSM freq EN",
+   "b": "final: numberbatch + OSM conf",
+   "delta_hits3": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "a_only": 0,
+   "b_only": 0,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "set": "osm_test_pakistan",
+   "a": "numberbatch + OSM Bayesian EN",
+   "b": "final: numberbatch + OSM conf",
+   "delta_hits3": 0.0,
+   "ci95": [
+    -0.11538461538461539,
+    0.11538461538461539
+   ],
+   "a_only": 1,
+   "b_only": 1,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "set": "osm_test_pakistan",
+   "a": "final: numberbatch + OSM conf",
+   "b": "numberbatch + Wikivoyage adj EN",
+   "delta_hits3": 0.038461538461538464,
+   "ci95": [
+    -0.07692307692307693,
+    0.15384615384615385
+   ],
+   "a_only": 2,
+   "b_only": 1,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "set": "osm_test_pakistan",
+   "a": "final: numberbatch + OSM conf",
+   "b": "w2v + OSM conf",
+   "delta_hits3": 0.038461538461538464,
+   "ci95": [
+    0.0,
+    0.11538461538461539
+   ],
+   "a_only": 1,
+   "b_only": 0,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "set": "osm_test_pakistan",
+   "a": "final: numberbatch + OSM conf",
+   "b": "base paper (w2v, Algorithm 2)",
+   "delta_hits3": 0.038461538461538464,
+   "ci95": [
+    0.0,
+    0.11538461538461539
+   ],
+   "a_only": 1,
+   "b_only": 0,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "set": "eval_106",
+   "a": "numberbatch + OSM freq EN",
+   "b": "final: numberbatch + OSM conf",
+   "delta_hits3": 0.037735849056603765,
+   "ci95": [
+    -0.028301886792452824,
+    0.10377358490566035
+   ],
+   "a_only": 9,
+   "b_only": 5,
+   "p": 0.4239501953125,
+   "p_holm": 1.0
+  },
+  {
+   "set": "eval_106",
+   "a": "numberbatch + OSM Bayesian EN",
+   "b": "final: numberbatch + OSM conf",
+   "delta_hits3": -0.05660377358490565,
+   "ci95": [
+    -0.13207547169811318,
+    0.009433962264150941
+   ],
+   "a_only": 5,
+   "b_only": 11,
+   "p": 0.210113525390625,
+   "p_holm": 1.0
+  },
+  {
+   "set": "eval_106",
+   "a": "final: numberbatch + OSM conf",
+   "b": "numberbatch + Wikivoyage adj EN",
+   "delta_hits3": -0.009433962264150941,
+   "ci95": [
+    -0.10377358490566035,
+    0.08490566037735847
+   ],
+   "a_only": 12,
+   "b_only": 13,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "set": "eval_106",
+   "a": "final: numberbatch + OSM conf",
+   "b": "w2v + OSM conf",
+   "delta_hits3": 0.06603773584905659,
+   "ci95": [
+    -0.009433962264150941,
+    0.14150943396226412
+   ],
+   "a_only": 13,
+   "b_only": 6,
+   "p": 0.1670684814453125,
+   "p_holm": 1.0
+  },
+  {
+   "set": "eval_106",
+   "a": "final: numberbatch + OSM conf",
+   "b": "base paper (w2v, Algorithm 2)",
+   "delta_hits3": 0.1132075471698113,
+   "ci95": [
+    0.0,
+    0.2169811320754717
+   ],
+   "a_only": 24,
+   "b_only": 12,
+   "p": 0.06524533522315325,
+   "p_holm": 0.8481893579009923
+  },
+  {
+   "set": "pk_n3",
+   "a": "numberbatch + OSM freq EN",
+   "b": "final: numberbatch + OSM conf",
+   "delta_hits3": 0.03821656050955413,
+   "ci95": [
+    -0.019108280254777066,
+    0.09554140127388533
+   ],
+   "a_only": 14,
+   "b_only": 8,
+   "p": 0.28627872467041016,
+   "p_holm": 1.0
+  },
+  {
+   "set": "pk_n3",
+   "a": "numberbatch + OSM Bayesian EN",
+   "b": "final: numberbatch + OSM conf",
+   "delta_hits3": -0.031847133757961776,
+   "ci95": [
+    -0.10191082802547768,
+    0.03821656050955413
+   ],
+   "a_only": 12,
+   "b_only": 17,
+   "p": 0.45825831964612007,
+   "p_holm": 1.0
+  },
+  {
+   "set": "pk_n3",
+   "a": "final: numberbatch + OSM conf",
+   "b": "numberbatch + Wikivoyage adj EN",
+   "delta_hits3": 0.006369426751592355,
+   "ci95": [
+    -0.07006369426751591,
+    0.08280254777070062
+   ],
+   "a_only": 20,
+   "b_only": 19,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "set": "pk_n3",
+   "a": "final: numberbatch + OSM conf",
+   "b": "w2v + OSM conf",
+   "delta_hits3": 0.08280254777070062,
+   "ci95": [
+    0.02547770700636942,
+    0.14012738853503182
+   ],
+   "a_only": 17,
+   "b_only": 4,
+   "p": 0.007197380065917969,
+   "p_holm": 0.10796070098876953
+  },
+  {
+   "set": "pk_n3",
+   "a": "final: numberbatch + OSM conf",
+   "b": "base paper (w2v, Algorithm 2)",
+   "delta_hits3": 0.10828025477707004,
+   "ci95": [
+    0.02547770700636942,
+    0.19108280254777066
+   ],
+   "a_only": 31,
+   "b_only": 14,
+   "p": 0.016094360031274842,
+   "p_holm": 0.22532104043784779
+  }
+ ]
+}

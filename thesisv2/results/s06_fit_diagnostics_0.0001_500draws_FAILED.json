@@ -1,0 +1,37 @@
+{
+ "min_support": 0.0001,
+ "patterns": 2916,
+ "adjectives": 1393,
+ "pairs": 1523,
+ "classes": 384,
+ "train_rows": 71784,
+ "dev_rows": 9042,
+ "rows_with_pattern": {
+  "train": 0.6469826145101972,
+  "dev": 0.6491926564919266
+ },
+ "fen": {
+  "0.5": {
+   "iters": 38,
+   "nonzero": 0.016913687414266118,
+   "seconds": 280.9621820449829
+  }
+ },
+ "ben": {
+  "rows": 46443,
+  "seconds": 9360.216482877731,
+  "divergences": 0,
+  "mean_leapfrog": 1023.0,
+  "b_mean": 0.07128004729747772,
+  "rhat_top200_median": 1.0005311965942383,
+  "rhat_top200_max": 1.0793440341949463,
+  "ess_top200_median": 309.595339785037,
+  "credible_share": 0.00040723593964334706,
+  "patterns_with_credible_tag": 300,
+  "median_interval_width": 1.1792291402816772,
+  "pass_p17b": false,
+  "chains": 2,
+  "warmup": 500,
+  "samples": 500
+ }
+}

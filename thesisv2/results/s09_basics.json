@@ -1,0 +1,840 @@
+{
+ "summary": {
+  "M1": {
+   "1": 0.20833333333333334,
+   "3": 0.5625,
+   "5": 0.6041666666666666,
+   "n_scored": 48
+  },
+  "M2": {
+   "1": 0.10416666666666667,
+   "3": 0.4166666666666667,
+   "5": 0.5416666666666666,
+   "n_scored": 48
+  },
+  "M3": {
+   "1": 0.2916666666666667,
+   "3": 0.5625,
+   "5": 0.75,
+   "n_scored": 48
+  }
+ },
+ "detail": [
+  {
+   "id": "B01",
+   "group": "everyday",
+   "sentence": "cheapest children clothing with best quality",
+   "gold": "clothes",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "restaurant",
+    "convenience",
+    "clothes",
+    "medical-supply",
+    "fabric"
+   ],
+   "rank_M3": 3,
+   "rank_M1": 1,
+   "rank_M2": 5
+  },
+  {
+   "id": "B02",
+   "group": "everyday",
+   "sentence": "racks of stitched shalwar kameez and bridal wear, they will alter the fit while you wait",
+   "gold": "tailor",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "clothes",
+    "fabric",
+    "shoes",
+    "tailor",
+    "jewelry"
+   ],
+   "rank_M3": 4,
+   "rank_M1": 5,
+   "rank_M2": 4
+  },
+  {
+   "id": "B03",
+   "group": "everyday",
+   "sentence": "you can get a haircut and a beard trim here for very little and the wait is short",
+   "gold": "hairdresser",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "path",
+    "hairdresser",
+    "foot-way",
+    "scrub",
+    "camp-site"
+   ],
+   "rank_M3": 2,
+   "rank_M1": 1,
+   "rank_M2": 2
+  },
+  {
+   "id": "B04",
+   "group": "everyday",
+   "sentence": "sells soap, biscuits, cold drinks and phone credit and stays open late at night",
+   "gold": "convenience",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "cafe",
+    "beverages",
+    "shower",
+    "icecream",
+    "coffee"
+   ],
+   "rank_M3": 10,
+   "rank_M1": 328,
+   "rank_M2": 313
+  },
+  {
+   "id": "B05",
+   "group": "everyday",
+   "sentence": "they fix flat tyres and change the oil, and the mechanics are honest about the price",
+   "gold": "car-repair",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "fuel",
+    "camp-site",
+    "roofer",
+    "plumber",
+    "tyres"
+   ],
+   "rank_M3": 16,
+   "rank_M1": 2,
+   "rank_M2": 2
+  },
+  {
+   "id": "B06",
+   "group": "everyday",
+   "sentence": "the shelves are full of screws, paint and pipes and the owner knows where everything is",
+   "gold": "hardware",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "restaurant",
+    "dentist",
+    "plumber",
+    "hotel",
+    "chimney"
+   ],
+   "rank_M3": 13,
+   "rank_M1": 3,
+   "rank_M2": 4
+  },
+  {
+   "id": "B07",
+   "group": "everyday",
+   "sentence": "fresh mutton and beef cut to order, open early in the morning before the heat",
+   "gold": "butcher",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "restaurant",
+    "seafood",
+    "fast-food",
+    "cheese",
+    "butcher"
+   ],
+   "rank_M3": 5,
+   "rank_M1": 3,
+   "rank_M2": 19
+  },
+  {
+   "id": "B08",
+   "group": "everyday",
+   "sentence": "cracked screens repaired in an hour and second hand handsets sold at fair prices",
+   "gold": "mobile-phone",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "estate-agent",
+    "charging-station",
+    "internet-cafe",
+    "film-location",
+    "mobile-phone"
+   ],
+   "rank_M3": 5,
+   "rank_M1": 91,
+   "rank_M2": 181
+  },
+  {
+   "id": "B09",
+   "group": "everyday",
+   "sentence": "sofas, beds and wardrobes made from sheesham wood, delivery included",
+   "gold": "furniture",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "furniture",
+    "bed",
+    "flooring",
+    "kitchen",
+    "carpet"
+   ],
+   "rank_M3": 1,
+   "rank_M1": 2,
+   "rank_M2": 2
+  },
+  {
+   "id": "B10",
+   "group": "everyday",
+   "sentence": "gold bangles and diamond rings, with a certificate for every piece",
+   "gold": "jewelry",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "jewelry",
+    "gift",
+    "disc-golf-course",
+    "handicraft",
+    "ticket"
+   ],
+   "rank_M3": 1,
+   "rank_M1": 1,
+   "rank_M2": 1
+  },
+  {
+   "id": "B11",
+   "group": "everyday",
+   "sentence": "leather sandals and sports sneakers in all sizes, sale prices at the end of the month",
+   "gold": "shoes",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "shoes",
+    "retail",
+    "quarter",
+    "wholesale",
+    "spring"
+   ],
+   "rank_M3": 1,
+   "rank_M1": 1,
+   "rank_M2": 1
+  },
+  {
+   "id": "B12",
+   "group": "everyday",
+   "sentence": "bunches of roses and marigolds, they also arrange wedding stage decorations",
+   "gold": "florist",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "garden-centre",
+    "garden",
+    "florist",
+    "tree",
+    "candles"
+   ],
+   "rank_M3": 3,
+   "rank_M1": 8,
+   "rank_M2": 8
+  },
+  {
+   "id": "B13",
+   "group": "everyday",
+   "sentence": "wash and fold service by the kilo, ready the next day, shirts pressed on request",
+   "gold": "laundry",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "charging-station",
+    "information",
+    "house",
+    "hotel",
+    "rental"
+   ],
+   "rank_M3": 36,
+   "rank_M1": 115,
+   "rank_M2": 133
+  },
+  {
+   "id": "B14",
+   "group": "everyday",
+   "sentence": "handmade souvenirs, truck art and carved wooden boxes for visitors to take home",
+   "gold": "gift",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "artwork",
+    "gift",
+    "social-facility",
+    "museum",
+    "temple"
+   ],
+   "rank_M3": 2,
+   "rank_M1": 4,
+   "rank_M2": 5
+  },
+  {
+   "id": "B15",
+   "group": "everyday",
+   "sentence": "they stock almost every medicine and a pharmacist is always on hand to help",
+   "gold": "pharmacy",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "pharmacy",
+    "doctors",
+    "medical-supply",
+    "chemist",
+    "veterinary"
+   ],
+   "rank_M3": 1,
+   "rank_M1": 2,
+   "rank_M2": 2
+  },
+  {
+   "id": "B16",
+   "group": "everyday",
+   "sentence": "diesel and petrol pumps, a tyre air station and a small shop open all night",
+   "gold": "fuel",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "cafe",
+    "bicycle-repair-station",
+    "camp-site",
+    "park",
+    "fuel"
+   ],
+   "rank_M3": 5,
+   "rank_M1": 2,
+   "rank_M2": 2
+  },
+  {
+   "id": "B17",
+   "group": "everyday",
+   "sentence": "a clean clinic where the doctor listens and the fees are fair",
+   "gold": "doctors",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "hotel",
+    "clinic",
+    "estate-agent",
+    "doctors",
+    "lawyer"
+   ],
+   "rank_M3": 4,
+   "rank_M1": 3,
+   "rank_M2": 3
+  },
+  {
+   "id": "B18",
+   "group": "everyday",
+   "sentence": "fresh bread, cakes and cookies baked every morning, the smell reaches the street",
+   "gold": "bakery",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "bakery",
+    "restaurant",
+    "cafe",
+    "pastry",
+    "deli"
+   ],
+   "rank_M3": 1,
+   "rank_M1": 6,
+   "rank_M2": 5
+  },
+  {
+   "id": "B19",
+   "group": "everyday",
+   "sentence": "huge aisles with groceries, frozen food and household goods and a big car park",
+   "gold": "supermarket",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "supermarket",
+    "convenience",
+    "restaurant",
+    "grocery",
+    "park"
+   ],
+   "rank_M3": 1,
+   "rank_M1": 2,
+   "rank_M2": 2
+  },
+  {
+   "id": "B20",
+   "group": "everyday",
+   "sentence": "used and new novels, textbooks and magazines stacked to the ceiling",
+   "gold": "bookshop",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "bookshop",
+    "car",
+    "library",
+    "public-bookcase",
+    "path"
+   ],
+   "rank_M3": 1,
+   "rank_M1": 1,
+   "rank_M2": 7
+  },
+  {
+   "id": "B21",
+   "group": "everyday",
+   "sentence": "spicy karahi and fresh naan cooked in a clay oven, always crowded on weekends",
+   "gold": "restaurant",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "restaurant",
+    "kitchen",
+    "fast-food",
+    "pastry",
+    "water"
+   ],
+   "rank_M3": 1,
+   "rank_M1": 6,
+   "rank_M2": 8
+  },
+  {
+   "id": "B22",
+   "group": "everyday",
+   "sentence": "excellent chai and sandwiches in a calm corner with fast internet",
+   "gold": "cafe",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "restaurant",
+    "cafe",
+    "internet-cafe",
+    "coffee",
+    "deli"
+   ],
+   "rank_M3": 2,
+   "rank_M1": 2,
+   "rank_M2": 2
+  },
+  {
+   "id": "B23",
+   "group": "tourism",
+   "sentence": "simple clean rooms with a hot shower and a rooftop breakfast, popular with backpackers",
+   "gold": "guest-house",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "hotel",
+    "camp-site",
+    "guest-house",
+    "hostel",
+    "motel"
+   ],
+   "rank_M3": 3,
+   "rank_M1": 13,
+   "rank_M2": 32
+  },
+  {
+   "id": "B24",
+   "group": "tourism",
+   "sentence": "cheap dorm beds, a shared kitchen and a common room where travellers swap stories",
+   "gold": "hostel",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "guest-house",
+    "hostel",
+    "hotel",
+    "bed",
+    "dormitory"
+   ],
+   "rank_M3": 2,
+   "rank_M1": 9,
+   "rank_M2": 18
+  },
+  {
+   "id": "B25",
+   "group": "tourism",
+   "sentence": "a short climb ends at a ledge with a sweeping view of the snow capped peaks at sunset",
+   "gold": "viewpoint",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "camp-site",
+    "foot-way",
+    "peak",
+    "viewpoint",
+    "path"
+   ],
+   "rank_M3": 4,
+   "rank_M1": 33,
+   "rank_M2": 55
+  },
+  {
+   "id": "B26",
+   "group": "tourism",
+   "sentence": "a small kiosk with maps and brochures where staff suggest treks and give directions",
+   "gold": "information",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "park",
+    "camp-site",
+    "guide",
+    "path",
+    "caravan-site"
+   ],
+   "rank_M3": 20,
+   "rank_M1": 17,
+   "rank_M2": 42
+  },
+  {
+   "id": "B27",
+   "group": "tourism",
+   "sentence": "pitch a tent on the grass beside the river, fire pits, toilets and stunning stars at night",
+   "gold": "camp-site",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "camp-site",
+    "restaurant",
+    "chalet",
+    "guest-house",
+    "hotel"
+   ],
+   "rank_M3": 1,
+   "rank_M1": 1,
+   "rank_M2": 2
+  },
+  {
+   "id": "B28",
+   "group": "tourism",
+   "sentence": "massive brick walls, bastions and a vast courtyard built by the Mughals",
+   "gold": "fort",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "temple",
+    "fort",
+    "castle",
+    "building",
+    "tower"
+   ],
+   "rank_M3": 2,
+   "rank_M1": 1,
+   "rank_M2": 2
+  },
+  {
+   "id": "B29",
+   "group": "tourism",
+   "sentence": "ancient stupas and monasteries from the Gandhara era with carved stone remains",
+   "gold": "archaeological-site",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "archaeological-site",
+    "memorial",
+    "ruins",
+    "temple",
+    "monument"
+   ],
+   "rank_M3": 1,
+   "rank_M1": 83,
+   "rank_M2": 23
+  },
+  {
+   "id": "B30",
+   "group": "tourism",
+   "sentence": "galleries with Gandhara sculptures, old coins and manuscripts explained in English and Urdu",
+   "gold": "museum",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "artwork",
+    "path",
+    "museum",
+    "art",
+    "antiques"
+   ],
+   "rank_M3": 3,
+   "rank_M1": 3,
+   "rank_M2": 2
+  },
+  {
+   "id": "B31",
+   "group": "tourism",
+   "sentence": "white marble domes, four tall minarets and a vast courtyard that holds thousands for prayer",
+   "gold": "mosque",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "memorial",
+    "mosque",
+    "artwork",
+    "cathedral",
+    "shrine"
+   ],
+   "rank_M3": 2,
+   "rank_M1": 2,
+   "rank_M2": 8
+  },
+  {
+   "id": "B32",
+   "group": "tourism",
+   "sentence": "a tiled blue dome where pilgrims leave rose petals and the qawwali starts after sunset",
+   "gold": "shrine",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "artwork",
+    "wayside-shrine",
+    "chapel",
+    "shrine",
+    "information"
+   ],
+   "rank_M3": 4,
+   "rank_M1": 3,
+   "rank_M2": 10
+  },
+  {
+   "id": "B33",
+   "group": "tourism",
+   "sentence": "an ornate burial chamber with fine tilework from the Mughal era in a quiet garden",
+   "gold": "tomb",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "hotel",
+    "restaurant",
+    "guest-house",
+    "apartment",
+    "house"
+   ],
+   "rank_M3": 18,
+   "rank_M1": 3,
+   "rank_M2": 5
+  },
+  {
+   "id": "B34",
+   "group": "tourism",
+   "sentence": "the water thunders down a rocky cliff into a cold green pool and the spray cools the trail",
+   "gold": "waterfall",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "park",
+    "path",
+    "camp-site",
+    "water",
+    "waterfall"
+   ],
+   "rank_M3": 5,
+   "rank_M1": 2,
+   "rank_M2": 2
+  },
+  {
+   "id": "B35",
+   "group": "tourism",
+   "sentence": "calm turquoise water ringed by mountains, you can hire a small boat and watch eagles",
+   "gold": "lake",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "camp-site",
+    "boat-storage",
+    "hotel",
+    "water",
+    "park"
+   ],
+   "rank_M3": 8,
+   "rank_M1": 1,
+   "rank_M2": 1
+  },
+  {
+   "id": "B36",
+   "group": "tourism",
+   "sentence": "a huge river of ice that you reach after a long trek, with crevasses and blue ice walls",
+   "gold": "glacier",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "path",
+    "cave-entrance",
+    "artwork",
+    "canal",
+    "attraction"
+   ],
+   "rank_M3": 10,
+   "rank_M1": 1,
+   "rank_M2": 1
+  },
+  {
+   "id": "B37",
+   "group": "tourism",
+   "sentence": "steaming water bubbles out of the rock into stone pools, people soak here after the hike",
+   "gold": "hot-spring",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "memorial",
+    "waterfall",
+    "water",
+    "park",
+    "rock"
+   ],
+   "rank_M3": 17,
+   "rank_M1": 12,
+   "rank_M2": 7
+  },
+  {
+   "id": "B38",
+   "group": "tourism",
+   "sentence": "soft sand, gentle waves and camels for hire, crowded at sunset",
+   "gold": "beach",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "dentist",
+    "beach",
+    "sand",
+    "path",
+    "beach-resort"
+   ],
+   "rank_M3": 2,
+   "rank_M1": 2,
+   "rank_M2": 2
+  },
+  {
+   "id": "B39",
+   "group": "tourism",
+   "sentence": "luxury cottages with a pool, a spa and views of the valley, price includes all meals",
+   "gold": "resort",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "chalet",
+    "bungalow",
+    "resort",
+    "beach-resort",
+    "swimming-pool"
+   ],
+   "rank_M3": 3,
+   "rank_M1": 15,
+   "rank_M2": 15
+  },
+  {
+   "id": "B40",
+   "group": "tourism",
+   "sentence": "a protected forest with pine trees, wild goats and rangers who guide walks",
+   "gold": "nature-reserve",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "camp-site",
+    "nature-reserve",
+    "woods",
+    "forest",
+    "park"
+   ],
+   "rank_M3": 2,
+   "rank_M1": 22,
+   "rank_M2": 10
+  },
+  {
+   "id": "B41",
+   "group": "tourism",
+   "sentence": "narrow lanes with spice sellers, carpet shops and street food, loud and colourful until late",
+   "gold": "marketplace",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "artwork",
+    "country-store",
+    "variety-store",
+    "grocery",
+    "supermarket"
+   ],
+   "rank_M3": 12,
+   "rank_M1": 51,
+   "rank_M2": 106
+  },
+  {
+   "id": "B42",
+   "group": "tourism",
+   "sentence": "an old walled city with a famous gate, mosques and bazaars",
+   "gold": "city-gate",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "city-gate",
+    "restaurant",
+    "archaeological-site",
+    "attraction",
+    "hotel"
+   ],
+   "rank_M3": 1,
+   "rank_M1": 271,
+   "rank_M2": 300
+  },
+  {
+   "id": "B43",
+   "group": "tourism",
+   "sentence": "a stay near the Karakoram highway with comfortable rooms, a restaurant and mountain views",
+   "gold": "hotel",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "hotel",
+    "motel",
+    "guest-house",
+    "hostel",
+    "resort"
+   ],
+   "rank_M3": 1,
+   "rank_M1": 1,
+   "rank_M2": 1
+  },
+  {
+   "id": "B44",
+   "group": "tourism",
+   "sentence": "shady lawns, a small lake with boats, jogging tracks and picnics for families",
+   "gold": "park",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "camp-site",
+    "water",
+    "picnic-site",
+    "park",
+    "lake"
+   ],
+   "rank_M3": 4,
+   "rank_M1": 7,
+   "rank_M2": 8
+  },
+  {
+   "id": "B45",
+   "group": "tourism",
+   "sentence": "neat flower beds and fountains with marble walkways, a calm place to stroll in the evening",
+   "gold": "garden",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "memorial",
+    "hotel",
+    "fountain",
+    "bed",
+    "park"
+   ],
+   "rank_M3": 27,
+   "rank_M1": 8,
+   "rank_M2": 13
+  },
+  {
+   "id": "B46",
+   "group": "tourism",
+   "sentence": "giraffes, lions and an elephant house, plus a train ride for kids",
+   "gold": "zoo",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "zoo",
+    "animal-boarding",
+    "bicycle",
+    "pet",
+    "bicycle-rental"
+   ],
+   "rank_M3": 1,
+   "rank_M1": 2,
+   "rank_M2": 2
+  },
+  {
+   "id": "B47",
+   "group": "everyday",
+   "sentence": "buses leave here for Lahore and Peshawar every hour, ticket counters and a waiting hall",
+   "gold": "bus-station",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "bus-station",
+    "city-gate",
+    "subway-entrance",
+    "railway-station",
+    "train-station"
+   ],
+   "rank_M3": 1,
+   "rank_M1": 2,
+   "rank_M2": 2
+  },
+  {
+   "id": "B48",
+   "group": "tourism",
+   "sentence": "an old stone stable and a rest house for travellers with a wide view over the plain",
+   "gold": "attraction",
+   "gold_in_vocabulary": true,
+   "top5_M3": [
+    "path",
+    "viewpoint",
+    "memorial",
+    "house",
+    "hotel"
+   ],
+   "rank_M3": 38,
+   "rank_M1": 33,
+   "rank_M2": 115
+  }
+ ]
+}

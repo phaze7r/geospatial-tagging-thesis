@@ -1,0 +1,781 @@
+{
+ "dev_n": 9042,
+ "arms": {
+  "M1 base paper: nouns only (w2v)": {
+   "backbone": "w2v",
+   "similarity": "nouns",
+   "lambda": 0.0,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.07398805573988056,
+    "Hits@2": 0.13216102632161025,
+    "Hits@3": 0.17617783676177837,
+    "Hits@5": 0.2396593673965937,
+    "Hits@10": 0.34085379340853794,
+    "Hits@20": 0.4451448794514488,
+    "nDCG@20": 0.2176644033966618,
+    "MedR": 28.0
+   }
+  },
+  "M2 adjective-noun plain (w2v)": {
+   "backbone": "w2v",
+   "similarity": "naive",
+   "lambda": 0.0,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.0687900906879009,
+    "Hits@2": 0.12408759124087591,
+    "Hits@3": 0.16898916168989161,
+    "Hits@5": 0.22937403229374032,
+    "Hits@10": 0.32691882326918825,
+    "Hits@20": 0.43574430435744305,
+    "nDCG@20": 0.2095912750412084,
+    "MedR": 29.0
+   }
+  },
+  "M3 our pipeline: conf table + numberbatch": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.45,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.21787215217872152,
+    "Hits@2": 0.3077858880778589,
+    "Hits@3": 0.3648529086485291,
+    "Hits@5": 0.4416058394160584,
+    "Hits@10": 0.5404777704047777,
+    "Hits@20": 0.6373589913735899,
+    "nDCG@20": 0.3912744833253814,
+    "MedR": 8.0
+   }
+  },
+  "M3w M3 with word2vec": {
+   "backbone": "w2v",
+   "similarity": "nouns",
+   "lambda": 0.5,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.20294182702941826,
+    "Hits@2": 0.28445034284450343,
+    "Hits@3": 0.33466047334660476,
+    "Hits@5": 0.4020128290201283,
+    "Hits@10": 0.4949126299491263,
+    "Hits@20": 0.5901349259013493,
+    "nDCG@20": 0.3612541082934419,
+    "MedR": 11.0
+   }
+  },
+  "M1n nouns only (numberbatch)": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.0,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.09223623092236231,
+    "Hits@2": 0.15649192656491925,
+    "Hits@3": 0.20681265206812652,
+    "Hits@5": 0.28511391285113913,
+    "Hits@10": 0.3971466489714665,
+    "Hits@20": 0.5134925901349259,
+    "nDCG@20": 0.25587658228729754,
+    "MedR": 19.0
+   }
+  },
+  "M2n adjective-noun plain (numberbatch)": {
+   "backbone": "numberbatch",
+   "similarity": "naive",
+   "lambda": 0.0,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.08593231585932316,
+    "Hits@2": 0.1462065914620659,
+    "Hits@3": 0.1930988719309887,
+    "Hits@5": 0.27117894271178944,
+    "Hits@10": 0.3847600088476001,
+    "Hits@20": 0.5017695200176951,
+    "nDCG@20": 0.24569112278238703,
+    "MedR": 20.0
+   }
+  },
+  "X1 frequentist EN as ranker": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.45,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.20559610705596107,
+    "Hits@2": 0.2929661579296616,
+    "Hits@3": 0.34306569343065696,
+    "Hits@5": 0.413735899137359,
+    "Hits@10": 0.5116124751161247,
+    "Hits@20": 0.6143552311435523,
+    "nDCG@20": 0.37250443537263633,
+    "MedR": 10.0
+   }
+  },
+  "X2 Bayesian EN as ranker": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.4,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.16766202167662023,
+    "Hits@2": 0.24109710241097101,
+    "Hits@3": 0.289869497898695,
+    "Hits@5": 0.3610926786109268,
+    "Hits@10": 0.4688122096881221,
+    "Hits@20": 0.570670205706702,
+    "nDCG@20": 0.32831764529893565,
+    "MedR": 13.0
+   }
+  },
+  "X3 log-lift as ranker": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.35,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.1669984516699845,
+    "Hits@2": 0.2517142225171422,
+    "Hits@3": 0.3056845830568458,
+    "Hits@5": 0.3788984737889847,
+    "Hits@10": 0.484516699845167,
+    "Hits@20": 0.5965494359654944,
+    "nDCG@20": 0.3402043699930509,
+    "MedR": 12.0
+   }
+  },
+  "final: numberbatch + conf": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.45,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.21787215217872152,
+    "Hits@2": 0.3077858880778589,
+    "Hits@3": 0.3648529086485291,
+    "Hits@5": 0.4416058394160584,
+    "Hits@10": 0.5404777704047777,
+    "Hits@20": 0.6373589913735899,
+    "nDCG@20": 0.3912744833253814,
+    "MedR": 8.0
+   }
+  },
+  "base Alg.2 + abstract removal (w2v)": {
+   "backbone": "w2v",
+   "similarity": "nouns",
+   "lambda": 0.0,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.07398805573988056,
+    "Hits@2": 0.13216102632161025,
+    "Hits@3": 0.17617783676177837,
+    "Hits@5": 0.2396593673965937,
+    "Hits@10": 0.34085379340853794,
+    "Hits@20": 0.4451448794514488,
+    "nDCG@20": 0.2176644033966618,
+    "MedR": 28.0
+   }
+  },
+  "A0 base Alg.2, abstract nouns kept (w2v)": {
+   "backbone": "w2v",
+   "similarity": "keep_abstract",
+   "lambda": 0.0,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.0756469807564698,
+    "Hits@2": 0.13227162132271622,
+    "Hits@3": 0.17772616677726166,
+    "Hits@5": 0.24131829241318292,
+    "Hits@10": 0.3417385534173855,
+    "Hits@20": 0.4506746295067463,
+    "nDCG@20": 0.22004582873946102,
+    "MedR": 27.0
+   }
+  },
+  "A2 + adjectives appended to the query (w2v)": {
+   "backbone": "w2v",
+   "similarity": "naive",
+   "lambda": 0.0,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.0687900906879009,
+    "Hits@2": 0.12408759124087591,
+    "Hits@3": 0.16898916168989161,
+    "Hits@5": 0.22937403229374032,
+    "Hits@10": 0.32691882326918825,
+    "Hits@20": 0.43574430435744305,
+    "nDCG@20": 0.2095912750412084,
+    "MedR": 29.0
+   }
+  },
+  "A3 + adjective patterns only, conf (w2v)": {
+   "backbone": "w2v",
+   "similarity": "nouns",
+   "lambda": 0.45,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.18712674187126743,
+    "Hits@2": 0.2644326476443265,
+    "Hits@3": 0.3192877681928777,
+    "Hits@5": 0.3873036938730369,
+    "Hits@10": 0.47976111479761113,
+    "Hits@20": 0.5757575757575758,
+    "nDCG@20": 0.3456226001979128,
+    "MedR": 12.0
+   }
+  },
+  "A4 + adjective-noun pairs = all patterns (w2v)": {
+   "backbone": "w2v",
+   "similarity": "nouns",
+   "lambda": 0.5,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.20294182702941826,
+    "Hits@2": 0.28445034284450343,
+    "Hits@3": 0.33466047334660476,
+    "Hits@5": 0.4020128290201283,
+    "Hits@10": 0.4949126299491263,
+    "Hits@20": 0.5901349259013493,
+    "nDCG@20": 0.3612541082934419,
+    "MedR": 11.0
+   }
+  },
+  "B1 final, adjective patterns only": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.4,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.2074762220747622,
+    "Hits@2": 0.29462508294625084,
+    "Hits@3": 0.3519132935191329,
+    "Hits@5": 0.4239106392391064,
+    "Hits@10": 0.5284229152842291,
+    "Hits@20": 0.6290643662906437,
+    "nDCG@20": 0.3801660516326466,
+    "MedR": 9.0
+   }
+  },
+  "B2 final, pair patterns only": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.6,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.17772616677726166,
+    "Hits@2": 0.25082946250829463,
+    "Hits@3": 0.30269851802698516,
+    "Hits@5": 0.3732581287325813,
+    "Hits@10": 0.4726830347268303,
+    "Hits@20": 0.575204600752046,
+    "nDCG@20": 0.3368682602831256,
+    "MedR": 13.0
+   }
+  },
+  "B3 final, log-lift instead of confidence": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.35,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.1669984516699845,
+    "Hits@2": 0.2517142225171422,
+    "Hits@3": 0.3056845830568458,
+    "Hits@5": 0.3788984737889847,
+    "Hits@10": 0.484516699845167,
+    "Hits@20": 0.5965494359654944,
+    "nDCG@20": 0.3402043699930509,
+    "MedR": 12.0
+   }
+  },
+  "B4 final, frequentist EN (C=0.5)": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.45,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.20559610705596107,
+    "Hits@2": 0.2929661579296616,
+    "Hits@3": 0.34306569343065696,
+    "Hits@5": 0.413735899137359,
+    "Hits@10": 0.5116124751161247,
+    "Hits@20": 0.6143552311435523,
+    "nDCG@20": 0.37250443537263633,
+    "MedR": 10.0
+   }
+  },
+  "B5 final, Bayesian EN": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.4,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.16766202167662023,
+    "Hits@2": 0.24109710241097101,
+    "Hits@3": 0.289869497898695,
+    "Hits@5": 0.3610926786109268,
+    "Hits@10": 0.4688122096881221,
+    "Hits@20": 0.570670205706702,
+    "nDCG@20": 0.32831764529893565,
+    "MedR": 13.0
+   }
+  },
+  "B6 final, nouns only (no table)": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.0,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.09223623092236231,
+    "Hits@2": 0.15649192656491925,
+    "Hits@3": 0.20681265206812652,
+    "Hits@5": 0.28511391285113913,
+    "Hits@10": 0.3971466489714665,
+    "Hits@20": 0.5134925901349259,
+    "nDCG@20": 0.25587658228729754,
+    "MedR": 19.0
+   }
+  },
+  "B7 final, adjectives appended instead of table": {
+   "backbone": "numberbatch",
+   "similarity": "naive",
+   "lambda": 0.0,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.08593231585932316,
+    "Hits@2": 0.1462065914620659,
+    "Hits@3": 0.1930988719309887,
+    "Hits@5": 0.27117894271178944,
+    "Hits@10": 0.3847600088476001,
+    "Hits@20": 0.5017695200176951,
+    "nDCG@20": 0.24569112278238703,
+    "MedR": 20.0
+   }
+  },
+  "C support 0.002": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.4,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.15848263658482636,
+    "Hits@2": 0.23888520238885202,
+    "Hits@3": 0.2951780579517806,
+    "Hits@5": 0.36850254368502544,
+    "Hits@10": 0.47777040477770405,
+    "Hits@20": 0.5867064808670648,
+    "nDCG@20": 0.3307348526323301,
+    "MedR": 12.0
+   }
+  },
+  "C support 0.001": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.4,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.17872152178721523,
+    "Hits@2": 0.26100420261004204,
+    "Hits@3": 0.31873479318734793,
+    "Hits@5": 0.3907321389073214,
+    "Hits@10": 0.49856226498562267,
+    "Hits@20": 0.6058394160583942,
+    "nDCG@20": 0.35155149022509685,
+    "MedR": 11.0
+   }
+  },
+  "C support 0.0005": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.4,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.19542136695421367,
+    "Hits@2": 0.2796947577969476,
+    "Hits@3": 0.336208803362088,
+    "Hits@5": 0.41008626410086263,
+    "Hits@10": 0.5142667551426675,
+    "Hits@20": 0.617120106171201,
+    "nDCG@20": 0.36729233008424933,
+    "MedR": 10.0
+   }
+  },
+  "C support 0.0002": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.5,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.20249944702499448,
+    "Hits@2": 0.2913072329130723,
+    "Hits@3": 0.354014598540146,
+    "Hits@5": 0.43331121433311215,
+    "Hits@10": 0.5382658703826587,
+    "Hits@20": 0.6366954213669542,
+    "nDCG@20": 0.38133117266612926,
+    "MedR": 8.0
+   }
+  },
+  "C support 0.0001": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.45,
+   "osm_dev": {
+    "n": 9042,
+    "Hits@1": 0.21787215217872152,
+    "Hits@2": 0.3077858880778589,
+    "Hits@3": 0.3648529086485291,
+    "Hits@5": 0.4416058394160584,
+    "Hits@10": 0.5404777704047777,
+    "Hits@20": 0.6373589913735899,
+    "nDCG@20": 0.3912744833253814,
+    "MedR": 8.0
+   }
+  }
+ },
+ "gates": [
+  {
+   "gate": "adjectives in the query vs nouns only (w2v): M2 vs M1",
+   "delta_hits3": -0.007188675071886752,
+   "ci95": [
+    -0.0117230701172307,
+    -0.0026542800265428046
+   ],
+   "a_only": 187,
+   "b_only": 252,
+   "p": 0.002217657551213558,
+   "verdict": "KEEP second"
+  },
+  {
+   "gate": "tables at all: M3 conf vs nouns only (numberbatch)",
+   "delta_hits3": 0.15804025658040258,
+   "ci95": [
+    0.14908206149082062,
+    0.1672196416721964
+   ],
+   "a_only": 1673,
+   "b_only": 244,
+   "p": 1.2197735272078572e-261,
+   "verdict": "KEEP first"
+  },
+  {
+   "gate": "tables vs adjectives in the query: M3 vs M2 (numberbatch)",
+   "delta_hits3": 0.1717540367175404,
+   "ci95": [
+    0.1624612917496129,
+    0.18104401681044016
+   ],
+   "a_only": 1796,
+   "b_only": 243,
+   "p": 2.915100025570014e-292,
+   "verdict": "KEEP first"
+  },
+  {
+   "gate": "backbone: numberbatch vs w2v (conf)",
+   "delta_hits3": 0.030192435301924336,
+   "ci95": [
+    0.023777925237779274,
+    0.036717540367175394
+   ],
+   "a_only": 595,
+   "b_only": 322,
+   "p": 1.4371801640808937e-19,
+   "verdict": "KEEP first"
+  },
+  {
+   "gate": "selection: frequentist EN vs conf (numberbatch)",
+   "delta_hits3": -0.021787215217872136,
+   "ci95": [
+    -0.027980535279805374,
+    -0.015372705153727073
+   ],
+   "a_only": 329,
+   "b_only": 526,
+   "p": 1.6698074870713714e-11,
+   "verdict": "KEEP second"
+  },
+  {
+   "gate": "selection: Bayesian EN vs conf (numberbatch)",
+   "delta_hits3": -0.07498341074983411,
+   "ci95": [
+    -0.08217208582172081,
+    -0.0679053306790533
+   ],
+   "a_only": 227,
+   "b_only": 905,
+   "p": 3.1675088046686623e-96,
+   "verdict": "KEEP second"
+  }
+ ],
+ "ablation_dev": [
+  {
+   "comparison": "A1 abstract-noun removal",
+   "set": "osm_dev",
+   "a": "base Alg.2 + abstract removal (w2v)",
+   "b": "A0 base Alg.2, abstract nouns kept (w2v)",
+   "delta_hits3": -0.0015483300154832957,
+   "ci95": [
+    -0.0037602300376023134,
+    0.000774165007741634
+   ],
+   "a_only": 48,
+   "b_only": 62,
+   "p": 0.21497653774329664,
+   "p_holm": 0.21497653774329664
+  },
+  {
+   "comparison": "A2 adjectives appended to query",
+   "set": "osm_dev",
+   "a": "A2 + adjectives appended to the query (w2v)",
+   "b": "base Alg.2 + abstract removal (w2v)",
+   "delta_hits3": -0.007188675071886752,
+   "ci95": [
+    -0.0117230701172307,
+    -0.0026542800265428046
+   ],
+   "a_only": 187,
+   "b_only": 252,
+   "p": 0.002217657551213558,
+   "p_holm": 0.004435315102427116
+  },
+  {
+   "comparison": "A3 adjective patterns (table)",
+   "set": "osm_dev",
+   "a": "A3 + adjective patterns only, conf (w2v)",
+   "b": "A2 + adjectives appended to the query (w2v)",
+   "delta_hits3": 0.15029860650298607,
+   "ci95": [
+    0.14156160141561602,
+    0.15914620659146203
+   ],
+   "a_only": 1600,
+   "b_only": 241,
+   "p": 8.351335400144687e-246,
+   "p_holm": 8.351335400144687e-245
+  },
+  {
+   "comparison": "A4 + pair patterns",
+   "set": "osm_dev",
+   "a": "A4 + adjective-noun pairs = all patterns (w2v)",
+   "b": "A3 + adjective patterns only, conf (w2v)",
+   "delta_hits3": 0.015372705153727073,
+   "ci95": [
+    0.011170095111700917,
+    0.019685910196859113
+   ],
+   "a_only": 260,
+   "b_only": 121,
+   "p": 8.706616457162213e-13,
+   "p_holm": 4.353308228581106e-12
+  },
+  {
+   "comparison": "A5 Numberbatch backbone",
+   "set": "osm_dev",
+   "a": "final: numberbatch + conf",
+   "b": "A4 + adjective-noun pairs = all patterns (w2v)",
+   "delta_hits3": 0.030192435301924336,
+   "ci95": [
+    0.023777925237779274,
+    0.036717540367175394
+   ],
+   "a_only": 595,
+   "b_only": 322,
+   "p": 1.4371801640808937e-19,
+   "p_holm": 8.623080984485362e-19
+  },
+  {
+   "comparison": "A total: final vs base Alg.2",
+   "set": "osm_dev",
+   "a": "final: numberbatch + conf",
+   "b": "base Alg.2 + abstract removal (w2v)",
+   "delta_hits3": 0.18867507188675073,
+   "ci95": [
+    0.17861092678610924,
+    0.19907100199071004
+   ],
+   "a_only": 2100,
+   "b_only": 394,
+   "p": 3.4392484665198526e-280,
+   "p_holm": 4.127098159823823e-279
+  },
+  {
+   "comparison": "B1 drop pair patterns",
+   "set": "osm_dev",
+   "a": "B1 final, adjective patterns only",
+   "b": "final: numberbatch + conf",
+   "delta_hits3": -0.012939615129396176,
+   "ci95": [
+    -0.017252820172528216,
+    -0.008626410086264136
+   ],
+   "a_only": 136,
+   "b_only": 253,
+   "p": 3.119549983920079e-09,
+   "p_holm": 9.358649951760238e-09
+  },
+  {
+   "comparison": "B2 drop adjective patterns",
+   "set": "osm_dev",
+   "a": "B2 final, pair patterns only",
+   "b": "final: numberbatch + conf",
+   "delta_hits3": -0.06215439062154393,
+   "ci95": [
+    -0.06923247069232469,
+    -0.05496571554965718
+   ],
+   "a_only": 268,
+   "b_only": 830,
+   "p": 2.469411957779721e-67,
+   "p_holm": 1.9755295662237767e-66
+  },
+  {
+   "comparison": "B3 log-lift weighting",
+   "set": "osm_dev",
+   "a": "B3 final, log-lift instead of confidence",
+   "b": "final: numberbatch + conf",
+   "delta_hits3": -0.05916832559168328,
+   "ci95": [
+    -0.06657819066578191,
+    -0.05186905551869059
+   ],
+   "a_only": 313,
+   "b_only": 848,
+   "p": 2.0449527539501366e-57,
+   "p_holm": 1.4314669277650957e-56
+  },
+  {
+   "comparison": "B4 frequentist EN selection",
+   "set": "osm_dev",
+   "a": "B4 final, frequentist EN (C=0.5)",
+   "b": "final: numberbatch + conf",
+   "delta_hits3": -0.021787215217872136,
+   "ci95": [
+    -0.027980535279805374,
+    -0.015372705153727073
+   ],
+   "a_only": 329,
+   "b_only": 526,
+   "p": 1.6698074870713714e-11,
+   "p_holm": 6.679229948285486e-11
+  },
+  {
+   "comparison": "B5 Bayesian EN selection",
+   "set": "osm_dev",
+   "a": "B5 final, Bayesian EN",
+   "b": "final: numberbatch + conf",
+   "delta_hits3": -0.07498341074983411,
+   "ci95": [
+    -0.08217208582172081,
+    -0.0679053306790533
+   ],
+   "a_only": 227,
+   "b_only": 905,
+   "p": 3.1675088046686623e-96,
+   "p_holm": 2.850757924201796e-95
+  },
+  {
+   "comparison": "B6 drop the table",
+   "set": "osm_dev",
+   "a": "B6 final, nouns only (no table)",
+   "b": "final: numberbatch + conf",
+   "delta_hits3": -0.15804025658040258,
+   "ci95": [
+    -0.1672196416721964,
+    -0.14908206149082062
+   ],
+   "a_only": 244,
+   "b_only": 1673,
+   "p": 1.2197735272078572e-261,
+   "p_holm": 1.3417508799286428e-260
+  },
+  {
+   "comparison": "B7 naive adjectives, no table",
+   "set": "osm_dev",
+   "a": "B7 final, adjectives appended instead of table",
+   "b": "final: numberbatch + conf",
+   "delta_hits3": -0.1717540367175404,
+   "ci95": [
+    -0.18104401681044016,
+    -0.16246129174961296
+   ],
+   "a_only": 243,
+   "b_only": 1796,
+   "p": 2.915100025570014e-292,
+   "p_holm": 3.789630033241018e-291
+  }
+ ],
+ "support": {
+  "C support 0.002": {
+   "min_support": 0.002,
+   "patterns": 148,
+   "adjectives": 140,
+   "pairs": 8,
+   "vs_used": {
+    "delta_hits3": -0.0696748506967485,
+    "ci95": [
+     -0.07664233576642338,
+     -0.06270736562707369
+    ],
+    "a_only": 214,
+    "b_only": 844,
+    "p": 6.119170877713165e-89
+   }
+  },
+  "C support 0.001": {
+   "min_support": 0.001,
+   "patterns": 337,
+   "adjectives": 293,
+   "pairs": 44,
+   "vs_used": {
+    "delta_hits3": -0.046118115461181164,
+    "ci95": [
+     -0.05220084052200841,
+     -0.04003539040035392
+    ],
+    "a_only": 195,
+    "b_only": 612,
+    "p": 7.072189803199494e-51
+   }
+  },
+  "C support 0.0005": {
+   "min_support": 0.0005,
+   "patterns": 680,
+   "adjectives": 517,
+   "pairs": 163,
+   "vs_used": {
+    "delta_hits3": -0.02864410528644107,
+    "ci95": [
+     -0.03384207033842074,
+     -0.02333554523335546
+    ],
+    "a_only": 166,
+    "b_only": 425,
+    "p": 3.736529452934526e-27
+   }
+  },
+  "C support 0.0002": {
+   "min_support": 0.0002,
+   "patterns": 1578,
+   "adjectives": 941,
+   "pairs": 637,
+   "vs_used": {
+    "delta_hits3": -0.010838310108383098,
+    "ci95": [
+     -0.014819730148197319,
+     -0.006746295067462991
+    ],
+    "a_only": 123,
+    "b_only": 221,
+    "p": 1.4074368673947316e-07
+   }
+  },
+  "C support 0.0001": {
+   "min_support": 0.0001,
+   "patterns": 2916,
+   "adjectives": 1393,
+   "pairs": 1523
+  }
+ },
+ "support_used_in_step6": 0.0001
+}

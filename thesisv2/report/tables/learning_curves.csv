@@ -1,0 +1,16 @@
+Model,Training rows,Train Hits@3,Dev Hits@3,Gap (train minus dev)
+Confidence table,"5,000",0.615,0.294,+0.321
+Confidence table,"10,000",0.562,0.320,+0.242
+Confidence table,"20,000",0.507,0.339,+0.168
+Confidence table,"40,000",0.458,0.356,+0.103
+Confidence table,"71,784",0.428,0.365,+0.063
+Frequentist elastic net,"5,000",0.388,0.276,+0.112
+Frequentist elastic net,"10,000",0.397,0.294,+0.103
+Frequentist elastic net,"20,000",0.398,0.316,+0.082
+Frequentist elastic net,"40,000",0.401,0.332,+0.069
+Frequentist elastic net,"71,784",0.398,0.343,+0.055
+Bayesian elastic net,"5,000",0.206,0.207,-0.001
+Bayesian elastic net,"10,000",0.221,0.221,+0.000
+Bayesian elastic net,"20,000",0.232,0.230,+0.001
+Bayesian elastic net,"40,000",0.254,0.254,+0.000
+Bayesian elastic net,"71,784",0.289,0.290,-0.001

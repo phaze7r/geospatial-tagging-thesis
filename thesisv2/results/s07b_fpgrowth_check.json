@@ -1,0 +1,82 @@
+[
+ {
+  "transactions": 5000,
+  "min_support": 0.0005,
+  "guided": {
+   "seconds": 0.16433469300045545,
+   "peak_mb": 1.6224594116210938,
+   "pattern_tag_itemsets": 378
+  },
+  "extended": {
+   "seconds": 588.8980538690003,
+   "peak_mb": 153.97885990142822,
+   "frequent_itemsets": 4447,
+   "pattern_tag_itemsets": 378
+  },
+  "identical": true
+ },
+ {
+  "transactions": 10000,
+  "min_support": 0.0005,
+  "guided": {
+   "seconds": 0.3168946229998255,
+   "peak_mb": 3.26861572265625,
+   "pattern_tag_itemsets": 359
+  },
+  "extended": {
+   "seconds": 747.3373336149998,
+   "peak_mb": 309.44022846221924,
+   "frequent_itemsets": 3643,
+   "pattern_tag_itemsets": 359
+  },
+  "identical": true
+ },
+ {
+  "transactions": 20000,
+  "min_support": 0.0005,
+  "guided": {
+   "seconds": 0.6211044140000013,
+   "peak_mb": 4.521034240722656,
+   "pattern_tag_itemsets": 307
+  },
+  "extended": {
+   "seconds": 854.2758369150015,
+   "peak_mb": 544.9329557418823,
+   "frequent_itemsets": 2709,
+   "pattern_tag_itemsets": 307
+  },
+  "identical": true
+ },
+ {
+  "transactions": 40000,
+  "min_support": 0.0005,
+  "guided": {
+   "seconds": 1.2257209750005131,
+   "peak_mb": 7.356147766113281,
+   "pattern_tag_itemsets": 253
+  },
+  "extended": {
+   "seconds": 1329.9774385199999,
+   "peak_mb": 1048.2398300170898,
+   "frequent_itemsets": 2359,
+   "pattern_tag_itemsets": 253
+  },
+  "identical": true
+ },
+ {
+  "transactions": 71784,
+  "min_support": 0.0005,
+  "guided": {
+   "seconds": 3.222466735000012,
+   "peak_mb": 13.998908996582031,
+   "pattern_tag_itemsets": 242
+  },
+  "extended": {
+   "seconds": 2403.388500541,
+   "peak_mb": 1834.6962938308716,
+   "frequent_itemsets": 2235,
+   "pattern_tag_itemsets": 242
+  },
+  "identical": true
+ }
+]

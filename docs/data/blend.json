@@ -1,0 +1,917 @@
+{
+ "lambda": 0.45,
+ "vocabulary": 404,
+ "examples": [
+  {
+   "text": "a quiet spot in F-7 with good cold coffee and free wifi",
+   "nouns": [
+    "coffee",
+    "f-7",
+    "spot",
+    "wifi"
+   ],
+   "adjectives": [
+    "cold",
+    "free",
+    "good",
+    "quiet"
+   ],
+   "unused": [
+    "spot"
+   ],
+   "patterns": [
+    {
+     "pattern": "cold",
+     "points_to": [
+      {
+       "tag": "cafe",
+       "confidence": 0.171
+      },
+      {
+       "tag": "camp-site",
+       "confidence": 0.078
+      },
+      {
+       "tag": "restaurant",
+       "confidence": 0.07
+      }
+     ]
+    },
+    {
+     "pattern": "free",
+     "points_to": [
+      {
+       "tag": "hotel",
+       "confidence": 0.248
+      },
+      {
+       "tag": "parking",
+       "confidence": 0.059
+      },
+      {
+       "tag": "camp-site",
+       "confidence": 0.049
+      }
+     ]
+    },
+    {
+     "pattern": "good",
+     "points_to": [
+      {
+       "tag": "restaurant",
+       "confidence": 0.116
+      },
+      {
+       "tag": "camp-site",
+       "confidence": 0.07
+      },
+      {
+       "tag": "viewpoint",
+       "confidence": 0.052
+      }
+     ]
+    },
+    {
+     "pattern": "quiet",
+     "points_to": [
+      {
+       "tag": "hotel",
+       "confidence": 0.188
+      },
+      {
+       "tag": "camp-site",
+       "confidence": 0.159
+      },
+      {
+       "tag": "guest-house",
+       "confidence": 0.159
+      }
+     ]
+    },
+    {
+     "pattern": "free wifi",
+     "points_to": [
+      {
+       "tag": "hotel",
+       "confidence": 0.358
+      },
+      {
+       "tag": "guest-house",
+       "confidence": 0.113
+      },
+      {
+       "tag": "cafe",
+       "confidence": 0.104
+      }
+     ]
+    },
+    {
+     "pattern": "good coffee",
+     "points_to": [
+      {
+       "tag": "cafe",
+       "confidence": 0.714
+      },
+      {
+       "tag": "bakery",
+       "confidence": 0.071
+      },
+      {
+       "tag": "restaurant",
+       "confidence": 0.071
+      }
+     ]
+    }
+   ],
+   "tags": [
+    {
+     "tag": "cafe",
+     "sim": 0.9843,
+     "pat": 1.0,
+     "from": [
+      [
+       "good coffee",
+       0.714
+      ],
+      [
+       "cold",
+       0.171
+      ],
+      [
+       "free wifi",
+       0.104
+      ],
+      [
+       "quiet",
+       0.058
+      ],
+      [
+       "good",
+       0.041
+      ],
+      [
+       "free",
+       0.031
+      ]
+     ]
+    },
+    {
+     "tag": "hotel",
+     "sim": 0.5809,
+     "pat": 0.7635,
+     "from": [
+      [
+       "free wifi",
+       0.358
+      ],
+      [
+       "free",
+       0.248
+      ],
+      [
+       "quiet",
+       0.188
+      ],
+      [
+       "good",
+       0.043
+      ],
+      [
+       "cold",
+       0.016
+      ]
+     ]
+    },
+    {
+     "tag": "internet-cafe",
+     "sim": 1.0,
+     "pat": 0.0009,
+     "from": [
+      [
+       "free",
+       0.001
+      ]
+     ]
+    },
+    {
+     "tag": "coffee",
+     "sim": 0.9264,
+     "pat": 0.0307,
+     "from": [
+      [
+       "free wifi",
+       0.019
+      ],
+      [
+       "cold",
+       0.008
+      ],
+      [
+       "good",
+       0.006
+      ],
+      [
+       "free",
+       0.002
+      ]
+     ]
+    },
+    {
+     "tag": "restaurant",
+     "sim": 0.6524,
+     "pat": 0.3025,
+     "from": [
+      [
+       "good",
+       0.116
+      ],
+      [
+       "good coffee",
+       0.071
+      ],
+      [
+       "cold",
+       0.07
+      ],
+      [
+       "quiet",
+       0.043
+      ],
+      [
+       "free",
+       0.028
+      ],
+      [
+       "free wifi",
+       0.009
+      ]
+     ]
+    },
+    {
+     "tag": "bar",
+     "sim": 0.6898,
+     "pat": 0.0711,
+     "from": [
+      [
+       "cold",
+       0.023
+      ],
+      [
+       "good",
+       0.019
+      ],
+      [
+       "free wifi",
+       0.019
+      ],
+      [
+       "free",
+       0.011
+      ],
+      [
+       "quiet",
+       0.007
+      ]
+     ]
+    },
+    {
+     "tag": "computer",
+     "sim": 0.7191,
+     "pat": 0.0,
+     "from": []
+    },
+    {
+     "tag": "guest-house",
+     "sim": 0.4447,
+     "pat": 0.3327,
+     "from": [
+      [
+       "quiet",
+       0.159
+      ],
+      [
+       "free wifi",
+       0.113
+      ],
+      [
+       "cold",
+       0.054
+      ],
+      [
+       "free",
+       0.029
+      ],
+      [
+       "good",
+       0.016
+      ]
+     ]
+    },
+    {
+     "tag": "aerodrome",
+     "sim": 0.7092,
+     "pat": 0.0,
+     "from": []
+    },
+    {
+     "tag": "atm",
+     "sim": 0.6659,
+     "pat": 0.0043,
+     "from": [
+      [
+       "free",
+       0.005
+      ]
+     ]
+    },
+    {
+     "tag": "terminal",
+     "sim": 0.6682,
+     "pat": 0.0009,
+     "from": [
+      [
+       "free",
+       0.001
+      ]
+     ]
+    },
+    {
+     "tag": "fast-food",
+     "sim": 0.5361,
+     "pat": 0.1377,
+     "from": [
+      [
+       "good coffee",
+       0.071
+      ],
+      [
+       "cold",
+       0.039
+      ],
+      [
+       "free",
+       0.024
+      ],
+      [
+       "good",
+       0.02
+      ]
+     ]
+    },
+    {
+     "tag": "hostel",
+     "sim": 0.4601,
+     "pat": 0.1285,
+     "from": [
+      [
+       "free wifi",
+       0.085
+      ],
+      [
+       "free",
+       0.023
+      ],
+      [
+       "cold",
+       0.016
+      ],
+      [
+       "quiet",
+       0.014
+      ],
+      [
+       "good",
+       0.006
+      ]
+     ]
+    },
+    {
+     "tag": "camp-site",
+     "sim": 0.2396,
+     "pat": 0.3434,
+     "from": [
+      [
+       "quiet",
+       0.159
+      ],
+      [
+       "cold",
+       0.078
+      ],
+      [
+       "good",
+       0.07
+      ],
+      [
+       "free",
+       0.049
+      ],
+      [
+       "free wifi",
+       0.028
+      ]
+     ]
+    },
+    {
+     "tag": "park",
+     "sim": 0.3257,
+     "pat": 0.1281,
+     "from": [
+      [
+       "quiet",
+       0.094
+      ],
+      [
+       "good",
+       0.022
+      ],
+      [
+       "free",
+       0.019
+      ],
+      [
+       "cold",
+       0.008
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "text": "cheapest children clothing with best quality",
+   "nouns": [
+    "clothing",
+    "quality"
+   ],
+   "adjectives": [
+    "cheap",
+    "good"
+   ],
+   "unused": [],
+   "patterns": [
+    {
+     "pattern": "cheap",
+     "points_to": [
+      {
+       "tag": "restaurant",
+       "confidence": 0.145
+      },
+      {
+       "tag": "bar",
+       "confidence": 0.081
+      },
+      {
+       "tag": "guest-house",
+       "confidence": 0.081
+      }
+     ]
+    },
+    {
+     "pattern": "good",
+     "points_to": [
+      {
+       "tag": "restaurant",
+       "confidence": 0.116
+      },
+      {
+       "tag": "camp-site",
+       "confidence": 0.07
+      },
+      {
+       "tag": "viewpoint",
+       "confidence": 0.052
+      }
+     ]
+    }
+   ],
+   "tags": [
+    {
+     "tag": "restaurant",
+     "sim": 0.3369,
+     "pat": 1.0,
+     "from": [
+      [
+       "cheap",
+       0.145
+      ],
+      [
+       "good",
+       0.116
+      ]
+     ]
+    },
+    {
+     "tag": "convenience",
+     "sim": 0.9044,
+     "pat": 0.2073,
+     "from": [
+      [
+       "cheap",
+       0.048
+      ],
+      [
+       "good",
+       0.006
+      ]
+     ]
+    },
+    {
+     "tag": "clothes",
+     "sim": 1.0,
+     "pat": 0.0706,
+     "from": [
+      [
+       "cheap",
+       0.016
+      ],
+      [
+       "good",
+       0.002
+      ]
+     ]
+    },
+    {
+     "tag": "medical-supply",
+     "sim": 0.9301,
+     "pat": 0.0,
+     "from": []
+    },
+    {
+     "tag": "fabric",
+     "sim": 0.9092,
+     "pat": 0.0,
+     "from": []
+    },
+    {
+     "tag": "wholesale",
+     "sim": 0.8944,
+     "pat": 0.0,
+     "from": []
+    },
+    {
+     "tag": "jewelry",
+     "sim": 0.831,
+     "pat": 0.0089,
+     "from": [
+      [
+       "good",
+       0.002
+      ]
+     ]
+    },
+    {
+     "tag": "variety-store",
+     "sim": 0.8343,
+     "pat": 0.0,
+     "from": []
+    },
+    {
+     "tag": "retail",
+     "sim": 0.7426,
+     "pat": 0.075,
+     "from": [
+      [
+       "cheap",
+       0.016
+      ],
+      [
+       "good",
+       0.003
+      ]
+     ]
+    },
+    {
+     "tag": "viewpoint",
+     "sim": 0.6282,
+     "pat": 0.2001,
+     "from": [
+      [
+       "good",
+       0.052
+      ]
+     ]
+    },
+    {
+     "tag": "artwork",
+     "sim": 0.7624,
+     "pat": 0.0178,
+     "from": [
+      [
+       "good",
+       0.005
+      ]
+     ]
+    },
+    {
+     "tag": "hotel",
+     "sim": 0.4199,
+     "pat": 0.2879,
+     "from": [
+      [
+       "good",
+       0.043
+      ],
+      [
+       "cheap",
+       0.032
+      ]
+     ]
+    },
+    {
+     "tag": "guest-house",
+     "sim": 0.3308,
+     "pat": 0.3707,
+     "from": [
+      [
+       "cheap",
+       0.081
+      ],
+      [
+       "good",
+       0.016
+      ]
+     ]
+    },
+    {
+     "tag": "bar",
+     "sim": 0.3235,
+     "pat": 0.3796,
+     "from": [
+      [
+       "cheap",
+       0.081
+      ],
+      [
+       "good",
+       0.019
+      ]
+     ]
+    },
+    {
+     "tag": "fast-food",
+     "sim": 0.341,
+     "pat": 0.3224,
+     "from": [
+      [
+       "cheap",
+       0.065
+      ],
+      [
+       "good",
+       0.02
+      ]
+     ]
+    },
+    {
+     "tag": "cafe",
+     "sim": 0.2048,
+     "pat": 0.4024,
+     "from": [
+      [
+       "cheap",
+       0.065
+      ],
+      [
+       "good",
+       0.041
+      ]
+     ]
+    },
+    {
+     "tag": "camp-site",
+     "sim": 0.196,
+     "pat": 0.3286,
+     "from": [
+      [
+       "good",
+       0.07
+      ],
+      [
+       "cheap",
+       0.016
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "text": "a huge walled enclosure where Mughal rulers built their imperial quarters",
+   "nouns": [
+    "enclosure",
+    "quarter",
+    "ruler"
+   ],
+   "adjectives": [
+    "huge",
+    "imperial",
+    "mughal",
+    "walled"
+   ],
+   "unused": [],
+   "patterns": [
+    {
+     "pattern": "huge",
+     "points_to": [
+      {
+       "tag": "ruins",
+       "confidence": 0.05
+      },
+      {
+       "tag": "attraction",
+       "confidence": 0.05
+      },
+      {
+       "tag": "artwork",
+       "confidence": 0.05
+      }
+     ]
+    },
+    {
+     "pattern": "walled",
+     "points_to": [
+      {
+       "tag": "archaeological-site",
+       "confidence": 0.189
+      },
+      {
+       "tag": "museum",
+       "confidence": 0.081
+      },
+      {
+       "tag": "ruins",
+       "confidence": 0.081
+      }
+     ]
+    }
+   ],
+   "tags": [
+    {
+     "tag": "archaeological-site",
+     "sim": 0.2909,
+     "pat": 1.0,
+     "from": [
+      [
+       "walled",
+       0.189
+      ]
+     ]
+    },
+    {
+     "tag": "city-gate",
+     "sim": 0.7856,
+     "pat": 0.2857,
+     "from": [
+      [
+       "walled",
+       0.054
+      ]
+     ]
+    },
+    {
+     "tag": "quarter",
+     "sim": 1.0,
+     "pat": 0.0,
+     "from": []
+    },
+    {
+     "tag": "castle",
+     "sim": 0.8395,
+     "pat": 0.1429,
+     "from": [
+      [
+       "walled",
+       0.027
+      ]
+     ]
+    },
+    {
+     "tag": "ruins",
+     "sim": 0.3457,
+     "pat": 0.6929,
+     "from": [
+      [
+       "walled",
+       0.081
+      ],
+      [
+       "huge",
+       0.05
+      ]
+     ]
+    },
+    {
+     "tag": "residential",
+     "sim": 0.621,
+     "pat": 0.3518,
+     "from": [
+      [
+       "walled",
+       0.054
+      ],
+      [
+       "huge",
+       0.013
+      ]
+     ]
+    },
+    {
+     "tag": "square",
+     "sim": 0.898,
+     "pat": 0.0,
+     "from": []
+    },
+    {
+     "tag": "temple",
+     "sim": 0.6008,
+     "pat": 0.3518,
+     "from": [
+      [
+       "walled",
+       0.054
+      ],
+      [
+       "huge",
+       0.013
+      ]
+     ]
+    },
+    {
+     "tag": "attraction",
+     "sim": 0.3932,
+     "pat": 0.55,
+     "from": [
+      [
+       "walled",
+       0.054
+      ],
+      [
+       "huge",
+       0.05
+      ]
+     ]
+    },
+    {
+     "tag": "government",
+     "sim": 0.8374,
+     "pat": 0.0,
+     "from": []
+    },
+    {
+     "tag": "zoo",
+     "sim": 0.7733,
+     "pat": 0.0,
+     "from": []
+    },
+    {
+     "tag": "border-control",
+     "sim": 0.7669,
+     "pat": 0.0,
+     "from": []
+    },
+    {
+     "tag": "gate",
+     "sim": 0.7637,
+     "pat": 0.0,
+     "from": []
+    },
+    {
+     "tag": "museum",
+     "sim": 0.3952,
+     "pat": 0.4286,
+     "from": [
+      [
+       "walled",
+       0.081
+      ]
+     ]
+    },
+    {
+     "tag": "restaurant",
+     "sim": 0.3731,
+     "pat": 0.3518,
+     "from": [
+      [
+       "walled",
+       0.054
+      ],
+      [
+       "huge",
+       0.013
+      ]
+     ]
+    },
+    {
+     "tag": "farmland",
+     "sim": 0.3691,
+     "pat": 0.2857,
+     "from": [
+      [
+       "walled",
+       0.054
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+Step,Rows remaining
+OSM element-key rows in the harvest,"2,875,608"
+Rows whose key and value map to a vocabulary tag,"1,540,161"
+"Elements with exactly one tag (75,983 ambiguous elements dropped)","1,377,786"
+"Descriptions identified as English (py3langid, p ≥ 0.6)","150,225"
+At least four content words after masking the type words,"145,179"
+After exact and template duplicates are removed,"92,961"
+"After the cap of 3,000 per tag and the floor of 10 rows per tag","89,702"

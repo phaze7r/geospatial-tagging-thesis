@@ -1,0 +1,9 @@
+Input,Method,n,English original,After translation,Change
+"Urdu (author-written), 157 rows",M1 base method (nouns),157,0.331,0.287,-0.045
+"Urdu (author-written), 157 rows",M3 this work,157,0.490,0.471,-0.019
+"Roman Urdu, 300 rows",M1 base method (nouns),300,0.287,0.283,-0.003
+"Roman Urdu, 300 rows",M3 this work,300,0.473,0.443,-0.030
+"Roman Urdu written by the author, 60 rows",M1 base method (nouns),60,0.400,0.350,-0.050
+"Roman Urdu written by the author, 60 rows",M3 this work,60,0.717,0.583,-0.133
+"Roman Urdu drafted from English and checked, 240 rows",M1 base method (nouns),240,0.258,0.267,+0.008
+"Roman Urdu drafted from English and checked, 240 rows",M3 this work,240,0.412,0.408,-0.004

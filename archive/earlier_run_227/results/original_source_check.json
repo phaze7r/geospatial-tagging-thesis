@@ -1,0 +1,80 @@
+{
+ "wikivoyage_rows": 164,
+ "wikivoyage_source_in_weak": 67,
+ "wikivoyage_source_in_weak_train": 60,
+ "n3_rows_dropped": 47,
+ "dropped_rows": [
+  1,
+  2,
+  6,
+  8,
+  11,
+  14,
+  15,
+  22,
+  24,
+  26,
+  27,
+  40,
+  44,
+  45,
+  46,
+  49,
+  50,
+  55,
+  61,
+  68,
+  72,
+  76,
+  82,
+  86,
+  89,
+  90,
+  96,
+  100,
+  102,
+  104,
+  107,
+  109,
+  110,
+  112,
+  123,
+  125,
+  130,
+  133,
+  135,
+  138,
+  139,
+  140,
+  143,
+  148,
+  151,
+  154,
+  178
+ ],
+ "full_157": {
+  "W2V + table": 0.6178343949044586,
+  "W2V nouns only": 0.5095541401273885,
+  "Numberbatch + table": 0.6242038216560509
+ },
+ "without_dropped": {
+  "W2V + table": 0.6090909090909091,
+  "W2V nouns only": 0.5363636363636364,
+  "Numberbatch + table": 0.6545454545454545
+ },
+ "transfer_vs_base_rest": {
+  "delta": 0.07272727272727275,
+  "improved": 13,
+  "worsened": 5,
+  "p": 0.09625244140625
+ },
+ "osm_rows_in_final_corpus": [
+  {
+   "row": 160,
+   "gold": "hotel",
+   "n3": true,
+   "in_corpus": "train"
+  }
+ ],
+ "method": "venue name matched (normalised) against place_name of weak-labelled rows on Pakistani pages (results_m/pk_from_corpus); OSM by element id. Name matching is a lower bound."
+}

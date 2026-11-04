@@ -1,0 +1,11 @@
+Quantity,Value
+Training rows with at least one pattern,"46,443"
+Patterns × tags,"2,916 × 384"
+"Chains, warm-up, retained draws per chain","2, 1,000, 1,000"
+Fit time,"8,803 s"
+Divergent transitions,0
+"R̂ over the 200 strongest patterns, median / maximum",1.000 / 1.006
+"Effective sample size, median","2,838"
+Credible coefficients (94% interval excludes zero),0.04%
+Patterns with at least one credible tag,"286 of 2,916"
+Median interval width,1.17

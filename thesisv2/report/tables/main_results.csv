@@ -1,0 +1,10 @@
+Set,n,Method,Hits@1,Hits@3,Hits@5,nDCG@20
+OSM test,"8,876",M1 base method (nouns),0.077,0.175,0.238,0.220
+OSM test,"8,876",M2 adjectives in the query,0.072,0.161,0.224,0.209
+OSM test,"8,876",M3 this work,0.214,0.357,0.428,0.386
+Base-paper set,106,M1 base method (nouns),0.104,0.236,0.340,0.318
+Base-paper set,106,M2 adjectives in the query,0.047,0.151,0.264,0.259
+Base-paper set,106,M3 this work,0.255,0.415,0.547,0.487
+Pakistan set,528,M1 base method (nouns),0.116,0.286,0.386,0.336
+Pakistan set,528,M2 adjectives in the query,0.095,0.244,0.371,0.319
+Pakistan set,528,M3 this work,0.326,0.509,0.585,0.532

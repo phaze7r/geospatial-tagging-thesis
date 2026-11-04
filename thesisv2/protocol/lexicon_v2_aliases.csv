@@ -1,0 +1,10 @@
+kind,alias,canonical
+merge,apotheke,pharmacy
+merge,bakehouse,bakery
+merge,food-market,marketplace
+merge,garten,garden
+merge,grave-yard,cemetery
+merge,market,marketplace
+merge,rathaus,townhall
+merge,retail-area,retail
+merge,schloss,castle

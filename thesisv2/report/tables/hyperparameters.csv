@@ -1,0 +1,17 @@
+Stage,Setting,Value
+Extraction,Parser,spaCy en_core_web_trf (RoBERTa-base); adjectives via amod / compound / predicative links; participles keep surface form
+Extraction,Abstract nouns removed,"area, bit, day, kind, location, lot, place, position, site, sort, spot, thing, time, way"
+Vocabulary,Tags,408 OSM place tags (Section 4.9); 384 with training rows
+Pattern mining,Transactions,"71,784 training descriptions → items {adjective, adjective–noun pair, compound, type word, tag}"
+Pattern mining,Minimum support,"0.0001 (chosen on the development set from 0.002, 0.001, 0.0005, 0.0002, 0.0001) → 1,393 adjectives + 1,523 adjective–noun pairs"
+Weighting,Confidence table,P(tag | pattern) counted on the training split (adopted ranker)
+Feature selection (frequentist),Model,"multinomial logistic regression, elastic-net penalty, l1 ratio 0.5, C = 0.5, saga, max 200 iterations, tol 1e-3, all training rows"
+Feature selection (Bayesian),Prior and sampler,"scale-mixture prior (Section 4.5.2); NUTS, 2 chains × 1,000 warm-up + 1,000 draws, tree depth 10, target acceptance 0.8, λ₂ = 0.5; 46,443 rows with a pattern"
+Ranking,Embeddings,Word2Vec GoogleNews-300 (base-paper faithful); ConceptNet Numberbatch 17.06 (final)
+Ranking,Out-of-vocabulary ladder,"surface variants (case, joined, squashed) → mean of constituent-word vectors → term dropped"
+Ranking,Similarity score,"per noun: cosine to all tags, min–max normalised, summed over nouns"
+Ranking,Blend,"score = (1 − λ)·similarity + λ·pattern score; λ chosen on the development set over 0 to 0.8 in steps of 0.05: 0.45 (final), 0.5 (Word2Vec), 0.45 (frequentist EN), 0.4 (Bayesian EN), 0.35 (log-lift)"
+Evaluation,Tie rule,worst case: rank = number of tags scoring ≥ the gold tag
+Evaluation,Metrics,"Hits@{1,2,3,5,10,20}, nDCG@20; Hits@3 is the headline (k = number of OSM queries)"
+Evaluation,Statistics,"paired bootstrap (10,000 resamples, shared indices), McNemar exact test, Holm correction within each family of comparisons"
+Classifier ablation (preliminary study),DistilBERT,"distilbert-base-uncased fine-tuned on 150,000 weakly-labelled rows, 1 epoch, batch 64, max length 64, lr 5e-5, fp16"

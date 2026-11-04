@@ -1,0 +1,7 @@
+Step,OSM dev,Base-paper set,Pakistan set
+"A0 Base method, abstract nouns kept",0.178,0.217,0.280
+A1 + abstract-noun removal,0.176,0.236,0.286
+A2 + adjectives added to the query (control),0.169,0.151,0.244
+A3 abstract removal + adjective-pattern table,0.319,0.396,0.475
+A4 + adjective-noun pair patterns,0.335,0.387,0.475
+A5 with Numberbatch (final configuration),0.365,0.415,0.509

@@ -1,0 +1,290 @@
+[
+ {
+  "id": "B01",
+  "sentence": "cheapest children clothing with best quality",
+  "gold_tag": "clothes",
+  "group": "everyday"
+ },
+ {
+  "id": "B02",
+  "sentence": "racks of stitched shalwar kameez and bridal wear, they will alter the fit while you wait",
+  "gold_tag": "tailor",
+  "group": "everyday"
+ },
+ {
+  "id": "B03",
+  "sentence": "you can get a haircut and a beard trim here for very little and the wait is short",
+  "gold_tag": "hairdresser",
+  "group": "everyday"
+ },
+ {
+  "id": "B04",
+  "sentence": "sells soap, biscuits, cold drinks and phone credit and stays open late at night",
+  "gold_tag": "convenience",
+  "group": "everyday"
+ },
+ {
+  "id": "B05",
+  "sentence": "they fix flat tyres and change the oil, and the mechanics are honest about the price",
+  "gold_tag": "car-repair",
+  "group": "everyday"
+ },
+ {
+  "id": "B06",
+  "sentence": "the shelves are full of screws, paint and pipes and the owner knows where everything is",
+  "gold_tag": "hardware",
+  "group": "everyday"
+ },
+ {
+  "id": "B07",
+  "sentence": "fresh mutton and beef cut to order, open early in the morning before the heat",
+  "gold_tag": "butcher",
+  "group": "everyday"
+ },
+ {
+  "id": "B08",
+  "sentence": "cracked screens repaired in an hour and second hand handsets sold at fair prices",
+  "gold_tag": "mobile-phone",
+  "group": "everyday"
+ },
+ {
+  "id": "B09",
+  "sentence": "sofas, beds and wardrobes made from sheesham wood, delivery included",
+  "gold_tag": "furniture",
+  "group": "everyday"
+ },
+ {
+  "id": "B10",
+  "sentence": "gold bangles and diamond rings, with a certificate for every piece",
+  "gold_tag": "jewelry",
+  "group": "everyday"
+ },
+ {
+  "id": "B11",
+  "sentence": "leather sandals and sports sneakers in all sizes, sale prices at the end of the month",
+  "gold_tag": "shoes",
+  "group": "everyday"
+ },
+ {
+  "id": "B12",
+  "sentence": "bunches of roses and marigolds, they also arrange wedding stage decorations",
+  "gold_tag": "florist",
+  "group": "everyday"
+ },
+ {
+  "id": "B13",
+  "sentence": "wash and fold service by the kilo, ready the next day, shirts pressed on request",
+  "gold_tag": "laundry",
+  "group": "everyday"
+ },
+ {
+  "id": "B14",
+  "sentence": "handmade souvenirs, truck art and carved wooden boxes for visitors to take home",
+  "gold_tag": "gift",
+  "group": "everyday"
+ },
+ {
+  "id": "B15",
+  "sentence": "they stock almost every medicine and a pharmacist is always on hand to help",
+  "gold_tag": "pharmacy",
+  "group": "everyday"
+ },
+ {
+  "id": "B16",
+  "sentence": "diesel and petrol pumps, a tyre air station and a small shop open all night",
+  "gold_tag": "fuel",
+  "group": "everyday"
+ },
+ {
+  "id": "B17",
+  "sentence": "a clean clinic where the doctor listens and the fees are fair",
+  "gold_tag": "doctors",
+  "group": "everyday"
+ },
+ {
+  "id": "B18",
+  "sentence": "fresh bread, cakes and cookies baked every morning, the smell reaches the street",
+  "gold_tag": "bakery",
+  "group": "everyday"
+ },
+ {
+  "id": "B19",
+  "sentence": "huge aisles with groceries, frozen food and household goods and a big car park",
+  "gold_tag": "supermarket",
+  "group": "everyday"
+ },
+ {
+  "id": "B20",
+  "sentence": "used and new novels, textbooks and magazines stacked to the ceiling",
+  "gold_tag": "bookshop",
+  "group": "everyday"
+ },
+ {
+  "id": "B21",
+  "sentence": "spicy karahi and fresh naan cooked in a clay oven, always crowded on weekends",
+  "gold_tag": "restaurant",
+  "group": "everyday"
+ },
+ {
+  "id": "B22",
+  "sentence": "excellent chai and sandwiches in a calm corner with fast internet",
+  "gold_tag": "cafe",
+  "group": "everyday"
+ },
+ {
+  "id": "B23",
+  "sentence": "simple clean rooms with a hot shower and a rooftop breakfast, popular with backpackers",
+  "gold_tag": "guest-house",
+  "group": "tourism"
+ },
+ {
+  "id": "B24",
+  "sentence": "cheap dorm beds, a shared kitchen and a common room where travellers swap stories",
+  "gold_tag": "hostel",
+  "group": "tourism"
+ },
+ {
+  "id": "B25",
+  "sentence": "a short climb ends at a ledge with a sweeping view of the snow capped peaks at sunset",
+  "gold_tag": "viewpoint",
+  "group": "tourism"
+ },
+ {
+  "id": "B26",
+  "sentence": "a small kiosk with maps and brochures where staff suggest treks and give directions",
+  "gold_tag": "information",
+  "group": "tourism"
+ },
+ {
+  "id": "B27",
+  "sentence": "pitch a tent on the grass beside the river, fire pits, toilets and stunning stars at night",
+  "gold_tag": "camp-site",
+  "group": "tourism"
+ },
+ {
+  "id": "B28",
+  "sentence": "massive brick walls, bastions and a vast courtyard built by the Mughals",
+  "gold_tag": "fort",
+  "group": "tourism"
+ },
+ {
+  "id": "B29",
+  "sentence": "ancient stupas and monasteries from the Gandhara era with carved stone remains",
+  "gold_tag": "archaeological-site",
+  "group": "tourism"
+ },
+ {
+  "id": "B30",
+  "sentence": "galleries with Gandhara sculptures, old coins and manuscripts explained in English and Urdu",
+  "gold_tag": "museum",
+  "group": "tourism"
+ },
+ {
+  "id": "B31",
+  "sentence": "white marble domes, four tall minarets and a vast courtyard that holds thousands for prayer",
+  "gold_tag": "mosque",
+  "group": "tourism"
+ },
+ {
+  "id": "B32",
+  "sentence": "a tiled blue dome where pilgrims leave rose petals and the qawwali starts after sunset",
+  "gold_tag": "shrine",
+  "group": "tourism"
+ },
+ {
+  "id": "B33",
+  "sentence": "an ornate burial chamber with fine tilework from the Mughal era in a quiet garden",
+  "gold_tag": "tomb",
+  "group": "tourism"
+ },
+ {
+  "id": "B34",
+  "sentence": "the water thunders down a rocky cliff into a cold green pool and the spray cools the trail",
+  "gold_tag": "waterfall",
+  "group": "tourism"
+ },
+ {
+  "id": "B35",
+  "sentence": "calm turquoise water ringed by mountains, you can hire a small boat and watch eagles",
+  "gold_tag": "lake",
+  "group": "tourism"
+ },
+ {
+  "id": "B36",
+  "sentence": "a huge river of ice that you reach after a long trek, with crevasses and blue ice walls",
+  "gold_tag": "glacier",
+  "group": "tourism"
+ },
+ {
+  "id": "B37",
+  "sentence": "steaming water bubbles out of the rock into stone pools, people soak here after the hike",
+  "gold_tag": "hot-spring",
+  "group": "tourism"
+ },
+ {
+  "id": "B38",
+  "sentence": "soft sand, gentle waves and camels for hire, crowded at sunset",
+  "gold_tag": "beach",
+  "group": "tourism"
+ },
+ {
+  "id": "B39",
+  "sentence": "luxury cottages with a pool, a spa and views of the valley, price includes all meals",
+  "gold_tag": "resort",
+  "group": "tourism"
+ },
+ {
+  "id": "B40",
+  "sentence": "a protected forest with pine trees, wild goats and rangers who guide walks",
+  "gold_tag": "nature-reserve",
+  "group": "tourism"
+ },
+ {
+  "id": "B41",
+  "sentence": "narrow lanes with spice sellers, carpet shops and street food, loud and colourful until late",
+  "gold_tag": "marketplace",
+  "group": "tourism"
+ },
+ {
+  "id": "B42",
+  "sentence": "an old walled city with a famous gate, mosques and bazaars",
+  "gold_tag": "city-gate",
+  "group": "tourism"
+ },
+ {
+  "id": "B43",
+  "sentence": "a stay near the Karakoram highway with comfortable rooms, a restaurant and mountain views",
+  "gold_tag": "hotel",
+  "group": "tourism"
+ },
+ {
+  "id": "B44",
+  "sentence": "shady lawns, a small lake with boats, jogging tracks and picnics for families",
+  "gold_tag": "park",
+  "group": "tourism"
+ },
+ {
+  "id": "B45",
+  "sentence": "neat flower beds and fountains with marble walkways, a calm place to stroll in the evening",
+  "gold_tag": "garden",
+  "group": "tourism"
+ },
+ {
+  "id": "B46",
+  "sentence": "giraffes, lions and an elephant house, plus a train ride for kids",
+  "gold_tag": "zoo",
+  "group": "tourism"
+ },
+ {
+  "id": "B47",
+  "sentence": "buses leave here for Lahore and Peshawar every hour, ticket counters and a waiting hall",
+  "gold_tag": "bus-station",
+  "group": "everyday"
+ },
+ {
+  "id": "B48",
+  "sentence": "an old stone stable and a rest house for travellers with a wide view over the plain",
+  "gold_tag": "attraction",
+  "group": "tourism"
+ }
+]

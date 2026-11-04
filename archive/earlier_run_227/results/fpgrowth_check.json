@@ -1,0 +1,100 @@
+{
+ "min_support": 0.0005,
+ "runs": [
+  {
+   "transactions": 5000,
+   "guided": {
+    "seconds": 0.0815613449999546,
+    "peak_mb": 1.623291015625,
+    "pattern_tag_itemsets": 470
+   },
+   "extended": {
+    "seconds": 447.261457745,
+    "peak_mb": 151.40185546875,
+    "frequent_items": 1212,
+    "frequent_itemsets": 4157,
+    "pattern_tag_itemsets": 470
+   },
+   "identical": true,
+   "only_guided": 0,
+   "only_extended": 0,
+   "speedup": 5483.743037161157
+  },
+  {
+   "transactions": 10000,
+   "guided": {
+    "seconds": 0.1551299120000067,
+    "peak_mb": 2.0257797241210938,
+    "pattern_tag_itemsets": 451
+   },
+   "extended": {
+    "seconds": 897.143140806,
+    "peak_mb": 295.286808013916,
+    "frequent_items": 1182,
+    "frequent_itemsets": 4168,
+    "pattern_tag_itemsets": 451
+   },
+   "identical": true,
+   "only_guided": 0,
+   "only_extended": 0,
+   "speedup": 5783.173143332675
+  },
+  {
+   "transactions": 20000,
+   "guided": {
+    "seconds": 0.3227943540000524,
+    "peak_mb": 4.402162551879883,
+    "pattern_tag_itemsets": 398
+   },
+   "extended": {
+    "seconds": 1299.282862928,
+    "peak_mb": 534.6202898025513,
+    "frequent_items": 1070,
+    "frequent_itemsets": 3135,
+    "pattern_tag_itemsets": 398
+   },
+   "identical": true,
+   "only_guided": 0,
+   "only_extended": 0,
+   "speedup": 4025.1102500008074
+  },
+  {
+   "transactions": 40000,
+   "guided": {
+    "seconds": 0.6291628310000306,
+    "peak_mb": 6.978707313537598,
+    "pattern_tag_itemsets": 357
+   },
+   "extended": {
+    "seconds": 1825.7287856840003,
+    "peak_mb": 988.8117771148682,
+    "frequent_items": 991,
+    "frequent_itemsets": 2540,
+    "pattern_tag_itemsets": 357
+   },
+   "identical": true,
+   "only_guided": 0,
+   "only_extended": 0,
+   "speedup": 2901.8382773535322
+  },
+  {
+   "transactions": 55897,
+   "guided": {
+    "seconds": 1.035130286999447,
+    "peak_mb": 9.137927055358887,
+    "pattern_tag_itemsets": 353
+   },
+   "extended": {
+    "seconds": 2575.963115648,
+    "peak_mb": 1374.509009361267,
+    "frequent_items": 985,
+    "frequent_itemsets": 2534,
+    "pattern_tag_itemsets": 353
+   },
+   "identical": true,
+   "only_guided": 0,
+   "only_extended": 0,
+   "speedup": 2488.539991535748
+  }
+ ]
+}

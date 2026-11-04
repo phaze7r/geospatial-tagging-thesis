@@ -1,0 +1,1385 @@
+{
+ "status": "post-hoc ablation, not pre-registered; the OSM test split was not read",
+ "lambda_rule": "per arm, chosen on OSM dev by Hits@3 then nDCG@20 (R5a); dev metrics are at that lambda, so optimistic for every arm alike; 106 and PK n>=3 use the dev-chosen lambda unchanged",
+ "sets": {
+  "osm_dev": 6981,
+  "eval_106": 106,
+  "pk_n3": 157
+ },
+ "arms": {
+  "final: numberbatch + conf (657)": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.5,
+   "osm_dev": {
+    "Hits@1": 0.2122905027932961,
+    "Hits@3": 0.3807477438762355,
+    "nDCG@20": 0.4053103442308693
+   },
+   "eval_106": {
+    "Hits@1": 0.2641509433962264,
+    "Hits@3": 0.5471698113207547,
+    "nDCG@20": 0.539352487556016
+   },
+   "pk_n3": {
+    "Hits@1": 0.28662420382165604,
+    "Hits@3": 0.6178343949044586,
+    "nDCG@20": 0.5674353346090145
+   }
+  },
+  "base Alg.2 + abstract removal (w2v)": {
+   "backbone": "w2v",
+   "similarity": "nouns",
+   "lambda": 0.0,
+   "osm_dev": {
+    "Hits@1": 0.086377309840997,
+    "Hits@3": 0.19767941555651053,
+    "nDCG@20": 0.23838350279909648
+   },
+   "eval_106": {
+    "Hits@1": 0.22641509433962265,
+    "Hits@3": 0.4339622641509434,
+    "nDCG@20": 0.4615398170505286
+   },
+   "pk_n3": {
+    "Hits@1": 0.21019108280254778,
+    "Hits@3": 0.5095541401273885,
+    "nDCG@20": 0.4871198602138882
+   }
+  },
+  "A0 base Alg.2, abstract nouns kept (w2v)": {
+   "backbone": "w2v",
+   "similarity": "keep_abstract",
+   "lambda": 0.0,
+   "osm_dev": {
+    "Hits@1": 0.086377309840997,
+    "Hits@3": 0.1989686291362269,
+    "nDCG@20": 0.24106943384996427
+   },
+   "eval_106": {
+    "Hits@1": 0.1792452830188679,
+    "Hits@3": 0.41509433962264153,
+    "nDCG@20": 0.4276201173676335
+   },
+   "pk_n3": {
+    "Hits@1": 0.21019108280254778,
+    "Hits@3": 0.5095541401273885,
+    "nDCG@20": 0.4871198602138882
+   }
+  },
+  "A2 + adjectives appended to the query (w2v)": {
+   "backbone": "w2v",
+   "similarity": "naive",
+   "lambda": 0.0,
+   "osm_dev": {
+    "Hits@1": 0.07849878240939694,
+    "Hits@3": 0.1816358687867068,
+    "nDCG@20": 0.22853551193539545
+   },
+   "eval_106": {
+    "Hits@1": 0.11320754716981132,
+    "Hits@3": 0.3584905660377358,
+    "nDCG@20": 0.39227778095291976
+   },
+   "pk_n3": {
+    "Hits@1": 0.1592356687898089,
+    "Hits@3": 0.36942675159235666,
+    "nDCG@20": 0.42502792946000173
+   }
+  },
+  "A3 + adjective patterns only, conf (w2v)": {
+   "backbone": "w2v",
+   "similarity": "nouns",
+   "lambda": 0.45,
+   "osm_dev": {
+    "Hits@1": 0.19323879100415414,
+    "Hits@3": 0.34293081220455524,
+    "nDCG@20": 0.36550790304157016
+   },
+   "eval_106": {
+    "Hits@1": 0.24528301886792453,
+    "Hits@3": 0.5377358490566038,
+    "nDCG@20": 0.5188058153291222
+   },
+   "pk_n3": {
+    "Hits@1": 0.2611464968152866,
+    "Hits@3": 0.5796178343949044,
+    "nDCG@20": 0.533180902444567
+   }
+  },
+  "A4 + adjective-noun pairs = 657 patterns (w2v)": {
+   "backbone": "w2v",
+   "similarity": "nouns",
+   "lambda": 0.55,
+   "osm_dev": {
+    "Hits@1": 0.19209282337773959,
+    "Hits@3": 0.3493768801031371,
+    "nDCG@20": 0.3720914373378849
+   },
+   "eval_106": {
+    "Hits@1": 0.2358490566037736,
+    "Hits@3": 0.4811320754716981,
+    "nDCG@20": 0.4975884357194569
+   },
+   "pk_n3": {
+    "Hits@1": 0.2229299363057325,
+    "Hits@3": 0.535031847133758,
+    "nDCG@20": 0.5010103818599956
+   }
+  },
+  "B1 final, adjective patterns only": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.45,
+   "osm_dev": {
+    "Hits@1": 0.21343647041971064,
+    "Hits@3": 0.37444492193095547,
+    "nDCG@20": 0.4022482026721646
+   },
+   "eval_106": {
+    "Hits@1": 0.29245283018867924,
+    "Hits@3": 0.5566037735849056,
+    "nDCG@20": 0.5503570051026343
+   },
+   "pk_n3": {
+    "Hits@1": 0.35668789808917195,
+    "Hits@3": 0.6305732484076433,
+    "nDCG@20": 0.6076211411209018
+   }
+  },
+  "B2 final, pair patterns only": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.6,
+   "osm_dev": {
+    "Hits@1": 0.15971923793152842,
+    "Hits@3": 0.2949434178484458,
+    "nDCG@20": 0.3324783128210263
+   },
+   "eval_106": {
+    "Hits@1": 0.20754716981132076,
+    "Hits@3": 0.4716981132075472,
+    "nDCG@20": 0.4728882793596611
+   },
+   "pk_n3": {
+    "Hits@1": 0.3248407643312102,
+    "Hits@3": 0.5286624203821656,
+    "nDCG@20": 0.5679413561839151
+   }
+  },
+  "B3 final, log-lift instead of confidence": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.35,
+   "osm_dev": {
+    "Hits@1": 0.1660220598768085,
+    "Hits@3": 0.31256267010456956,
+    "nDCG@20": 0.349426009349036
+   },
+   "eval_106": {
+    "Hits@1": 0.2641509433962264,
+    "Hits@3": 0.46226415094339623,
+    "nDCG@20": 0.49547026964734037
+   },
+   "pk_n3": {
+    "Hits@1": 0.3630573248407643,
+    "Hits@3": 0.5286624203821656,
+    "nDCG@20": 0.5717420732890728
+   }
+  },
+  "B4 final, frequentist EN (C=0.5)": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.45,
+   "osm_dev": {
+    "Hits@1": 0.2117175189800888,
+    "Hits@3": 0.35797163730124626,
+    "nDCG@20": 0.3876511151083719
+   },
+   "eval_106": {
+    "Hits@1": 0.3018867924528302,
+    "Hits@3": 0.5849056603773585,
+    "nDCG@20": 0.5468469296227252
+   },
+   "pk_n3": {
+    "Hits@1": 0.3885350318471338,
+    "Hits@3": 0.6560509554140127,
+    "nDCG@20": 0.6188276779626166
+   }
+  },
+  "B5 final, Bayesian EN": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.45,
+   "osm_dev": {
+    "Hits@1": 0.19624695602349235,
+    "Hits@3": 0.3437902879243661,
+    "nDCG@20": 0.37241320072927303
+   },
+   "eval_106": {
+    "Hits@1": 0.25471698113207547,
+    "Hits@3": 0.49056603773584906,
+    "nDCG@20": 0.5036040342637156
+   },
+   "pk_n3": {
+    "Hits@1": 0.34394904458598724,
+    "Hits@3": 0.5859872611464968,
+    "nDCG@20": 0.5906161801184533
+   }
+  },
+  "B6 final, nouns only (no table)": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.0,
+   "osm_dev": {
+    "Hits@1": 0.10528577567683713,
+    "Hits@3": 0.2362125769946999,
+    "nDCG@20": 0.28297294033447495
+   },
+   "eval_106": {
+    "Hits@1": 0.2169811320754717,
+    "Hits@3": 0.4811320754716981,
+    "nDCG@20": 0.48504676641284344
+   },
+   "pk_n3": {
+    "Hits@1": 0.29936305732484075,
+    "Hits@3": 0.5477707006369427,
+    "nDCG@20": 0.5583821452518944
+   }
+  },
+  "B7 final, adjectives appended instead of table": {
+   "backbone": "numberbatch",
+   "similarity": "naive",
+   "lambda": 0.0,
+   "osm_dev": {
+    "Hits@1": 0.10213436470419711,
+    "Hits@3": 0.2221744735711216,
+    "nDCG@20": 0.27418884215425515
+   },
+   "eval_106": {
+    "Hits@1": 0.1320754716981132,
+    "Hits@3": 0.4056603773584906,
+    "nDCG@20": 0.4091925499879275
+   },
+   "pk_n3": {
+    "Hits@1": 0.2356687898089172,
+    "Hits@3": 0.4012738853503185,
+    "nDCG@20": 0.4872751791871271
+   }
+  },
+  "C support 0.002": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.45,
+   "osm_dev": {
+    "Hits@1": 0.1767655063744449,
+    "Hits@3": 0.33591176049276605,
+    "nDCG@20": 0.3682905246372184
+   },
+   "eval_106": {
+    "Hits@1": 0.22641509433962265,
+    "Hits@3": 0.5566037735849056,
+    "nDCG@20": 0.5132535298637757
+   },
+   "pk_n3": {
+    "Hits@1": 0.33121019108280253,
+    "Hits@3": 0.5987261146496815,
+    "nDCG@20": 0.5871227529345288
+   }
+  },
+  "C support 0.001": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.45,
+   "osm_dev": {
+    "Hits@1": 0.19782266150981234,
+    "Hits@3": 0.36169603208709356,
+    "nDCG@20": 0.3891115598366427
+   },
+   "eval_106": {
+    "Hits@1": 0.27358490566037735,
+    "Hits@3": 0.5660377358490566,
+    "nDCG@20": 0.542108663492297
+   },
+   "pk_n3": {
+    "Hits@1": 0.3503184713375796,
+    "Hits@3": 0.6114649681528662,
+    "nDCG@20": 0.6044189042256145
+   }
+  },
+  "C support 0.0005": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.5,
+   "osm_dev": {
+    "Hits@1": 0.2122905027932961,
+    "Hits@3": 0.3807477438762355,
+    "nDCG@20": 0.4053103442308693
+   },
+   "eval_106": {
+    "Hits@1": 0.2641509433962264,
+    "Hits@3": 0.5471698113207547,
+    "nDCG@20": 0.539352487556016
+   },
+   "pk_n3": {
+    "Hits@1": 0.28662420382165604,
+    "Hits@3": 0.6178343949044586,
+    "nDCG@20": 0.5674353346090145
+   }
+  },
+  "C support 0.0002": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.5,
+   "osm_dev": {
+    "Hits@1": 0.23449362555507808,
+    "Hits@3": 0.4022346368715084,
+    "nDCG@20": 0.42367597277979296
+   },
+   "eval_106": {
+    "Hits@1": 0.2830188679245283,
+    "Hits@3": 0.5943396226415094,
+    "nDCG@20": 0.5590169493228307
+   },
+   "pk_n3": {
+    "Hits@1": 0.3057324840764331,
+    "Hits@3": 0.6178343949044586,
+    "nDCG@20": 0.5723776534499528
+   }
+  },
+  "C support 0.0001": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.55,
+   "osm_dev": {
+    "Hits@1": 0.25039392637158,
+    "Hits@3": 0.41555651052857756,
+    "nDCG@20": 0.4373501130947165
+   },
+   "eval_106": {
+    "Hits@1": 0.2830188679245283,
+    "Hits@3": 0.5566037735849056,
+    "nDCG@20": 0.552402901086629
+   },
+   "pk_n3": {
+    "Hits@1": 0.2802547770700637,
+    "Hits@3": 0.535031847133758,
+    "nDCG@20": 0.5504044853508212
+   }
+  },
+  "D final, small parser (en_core_web_sm)": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.45,
+   "osm_dev": {
+    "Hits@1": 0.21558515971923792,
+    "Hits@3": 0.36928806761208993,
+    "nDCG@20": 0.3993691830956721
+   },
+   "eval_106": {
+    "Hits@1": 0.27358490566037735,
+    "Hits@3": 0.5471698113207547,
+    "nDCG@20": 0.5464674653366091
+   },
+   "pk_n3": {
+    "Hits@1": 0.3375796178343949,
+    "Hits@3": 0.6496815286624203,
+    "nDCG@20": 0.6009381588731401
+   }
+  },
+  "F Wikivoyage conf (966 patterns)": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.2,
+   "osm_dev": {
+    "Hits@1": 0.12004010886692451,
+    "Hits@3": 0.24967769660507091,
+    "nDCG@20": 0.29469186394129987
+   },
+   "eval_106": {
+    "Hits@1": 0.3018867924528302,
+    "Hits@3": 0.5754716981132075,
+    "nDCG@20": 0.5669775260255419
+   },
+   "pk_n3": {
+    "Hits@1": 0.42038216560509556,
+    "Hits@3": 0.6305732484076433,
+    "nDCG@20": 0.6375575095255474
+   }
+  },
+  "F Wikivoyage Bayesian EN (966)": {
+   "backbone": "numberbatch",
+   "similarity": "nouns",
+   "lambda": 0.2,
+   "osm_dev": {
+    "Hits@1": 0.11459676264145538,
+    "Hits@3": 0.24337487465979085,
+    "nDCG@20": 0.28954622219999293
+   },
+   "eval_106": {
+    "Hits@1": 0.3113207547169811,
+    "Hits@3": 0.5283018867924528,
+    "nDCG@20": 0.5450980651105308
+   },
+   "pk_n3": {
+    "Hits@1": 0.37579617834394907,
+    "Hits@3": 0.5859872611464968,
+    "nDCG@20": 0.6085411806013298
+   }
+  }
+ },
+ "support_sensitivity": {
+  "C support 0.002": {
+   "min_support": 0.002,
+   "patterns": 133,
+   "adjectives": 124,
+   "pairs": 9
+  },
+  "C support 0.001": {
+   "min_support": 0.001,
+   "patterns": 327,
+   "adjectives": 278,
+   "pairs": 49
+  },
+  "C support 0.0005": {
+   "min_support": 0.0005,
+   "patterns": 657,
+   "adjectives": 496,
+   "pairs": 161
+  },
+  "C support 0.0002": {
+   "min_support": 0.0002,
+   "patterns": 1526,
+   "adjectives": 920,
+   "pairs": 606
+  },
+  "C support 0.0001": {
+   "min_support": 0.0001,
+   "patterns": 3102,
+   "adjectives": 1426,
+   "pairs": 1676
+  }
+ },
+ "extractor": {
+  "patterns": 629,
+  "adjectives": 481,
+  "pairs": 148,
+  "dev_rows_with_pattern": 0.5716945996275605,
+  "dev_rows_with_pattern_trf": 0.5910328033233061
+ },
+ "fpgrowth": {
+  "transactions": 55897,
+  "min_support": 0.0005,
+  "guided": {
+   "seconds": 0.8738470530001905,
+   "peak_mb": 9.233896255493164,
+   "pattern_tag_itemsets": 353
+  },
+  "extended": {
+   "did_not_finish_within_s": 1200
+  }
+ },
+ "comparisons": [
+  {
+   "comparison": "A1 abstract-noun removal",
+   "set": "osm_dev",
+   "a": "base Alg.2 + abstract removal (w2v)",
+   "b": "A0 base Alg.2, abstract nouns kept (w2v)",
+   "delta_hits3": -0.0012892135797163695,
+   "ci95": [
+    -0.0038676407391491363,
+    0.0014324595330181822
+   ],
+   "a_only": 40,
+   "b_only": 49,
+   "p": 0.39657015814551616,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "A1 abstract-noun removal",
+   "set": "eval_106",
+   "a": "base Alg.2 + abstract removal (w2v)",
+   "b": "A0 base Alg.2, abstract nouns kept (w2v)",
+   "delta_hits3": 0.018867924528301883,
+   "ci95": [
+    -0.018867924528301883,
+    0.05660377358490565
+   ],
+   "a_only": 3,
+   "b_only": 1,
+   "p": 0.625,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "A1 abstract-noun removal",
+   "set": "pk_n3",
+   "a": "base Alg.2 + abstract removal (w2v)",
+   "b": "A0 base Alg.2, abstract nouns kept (w2v)",
+   "delta_hits3": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "a_only": 0,
+   "b_only": 0,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "A2 adjectives appended to query",
+   "set": "osm_dev",
+   "a": "A2 + adjectives appended to the query (w2v)",
+   "b": "base Alg.2 + abstract removal (w2v)",
+   "delta_hits3": -0.01604354676980374,
+   "ci95": [
+    -0.021630138948574712,
+    -0.010456954591032824
+   ],
+   "a_only": 138,
+   "b_only": 250,
+   "p": 1.3987438915769271e-08,
+   "p_holm": 6.294347512096172e-07
+  },
+  {
+   "comparison": "A2 adjectives appended to query",
+   "set": "eval_106",
+   "a": "A2 + adjectives appended to the query (w2v)",
+   "b": "base Alg.2 + abstract removal (w2v)",
+   "delta_hits3": -0.07547169811320759,
+   "ci95": [
+    -0.14150943396226418,
+    -0.018867924528301883
+   ],
+   "a_only": 2,
+   "b_only": 10,
+   "p": 0.03857421875,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "A2 adjectives appended to query",
+   "set": "pk_n3",
+   "a": "A2 + adjectives appended to the query (w2v)",
+   "b": "base Alg.2 + abstract removal (w2v)",
+   "delta_hits3": -0.14012738853503187,
+   "ci95": [
+    -0.20382165605095542,
+    -0.07643312101910826
+   ],
+   "a_only": 4,
+   "b_only": 26,
+   "p": 5.9476122260093696e-05,
+   "p_holm": 0.002557473257184029
+  },
+  {
+   "comparison": "A3 adjective patterns (table)",
+   "set": "osm_dev",
+   "a": "A3 + adjective patterns only, conf (w2v)",
+   "b": "base Alg.2 + abstract removal (w2v)",
+   "delta_hits3": 0.1452513966480447,
+   "ci95": [
+    0.13579716373012463,
+    0.15499570262140092
+   ],
+   "a_only": 1174,
+   "b_only": 160,
+   "p": 6.686655838265343e-191,
+   "p_holm": 3.878260386193899e-189
+  },
+  {
+   "comparison": "A3 adjective patterns (table)",
+   "set": "eval_106",
+   "a": "A3 + adjective patterns only, conf (w2v)",
+   "b": "base Alg.2 + abstract removal (w2v)",
+   "delta_hits3": 0.10377358490566035,
+   "ci95": [
+    0.018867924528301883,
+    0.18867924528301888
+   ],
+   "a_only": 17,
+   "b_only": 6,
+   "p": 0.03468966484069824,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "A3 adjective patterns (table)",
+   "set": "pk_n3",
+   "a": "A3 + adjective patterns only, conf (w2v)",
+   "b": "base Alg.2 + abstract removal (w2v)",
+   "delta_hits3": 0.07006369426751591,
+   "ci95": [
+    -0.006369426751592355,
+    0.14649681528662417
+   ],
+   "a_only": 25,
+   "b_only": 14,
+   "p": 0.10812902140605732,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "A4 + pair patterns",
+   "set": "osm_dev",
+   "a": "A4 + adjective-noun pairs = 657 patterns (w2v)",
+   "b": "A3 + adjective patterns only, conf (w2v)",
+   "delta_hits3": 0.006446067898581875,
+   "ci95": [
+    0.0017189514396218075,
+    0.011173184357541888
+   ],
+   "a_only": 164,
+   "b_only": 119,
+   "p": 0.008791301841868233,
+   "p_holm": 0.32527816814912464
+  },
+  {
+   "comparison": "A4 + pair patterns",
+   "set": "eval_106",
+   "a": "A4 + adjective-noun pairs = 657 patterns (w2v)",
+   "b": "A3 + adjective patterns only, conf (w2v)",
+   "delta_hits3": -0.05660377358490565,
+   "ci95": [
+    -0.1132075471698113,
+    0.0
+   ],
+   "a_only": 2,
+   "b_only": 8,
+   "p": 0.109375,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "A4 + pair patterns",
+   "set": "pk_n3",
+   "a": "A4 + adjective-noun pairs = 657 patterns (w2v)",
+   "b": "A3 + adjective patterns only, conf (w2v)",
+   "delta_hits3": -0.04458598726114649,
+   "ci95": [
+    -0.08917197452229297,
+    -0.006369426751592355
+   ],
+   "a_only": 2,
+   "b_only": 9,
+   "p": 0.0654296875,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "A5 Numberbatch backbone",
+   "set": "osm_dev",
+   "a": "final: numberbatch + conf (657)",
+   "b": "A4 + adjective-noun pairs = 657 patterns (w2v)",
+   "delta_hits3": 0.03137086377309839,
+   "ci95": [
+    0.023922074201403798,
+    0.03881965334479298
+   ],
+   "a_only": 468,
+   "b_only": 249,
+   "p": 2.300356812018061e-16,
+   "p_holm": 1.1041712697686693e-14
+  },
+  {
+   "comparison": "A5 Numberbatch backbone",
+   "set": "eval_106",
+   "a": "final: numberbatch + conf (657)",
+   "b": "A4 + adjective-noun pairs = 657 patterns (w2v)",
+   "delta_hits3": 0.06603773584905659,
+   "ci95": [
+    -0.009433962264150941,
+    0.14150943396226412
+   ],
+   "a_only": 13,
+   "b_only": 6,
+   "p": 0.1670684814453125,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "A5 Numberbatch backbone",
+   "set": "pk_n3",
+   "a": "final: numberbatch + conf (657)",
+   "b": "A4 + adjective-noun pairs = 657 patterns (w2v)",
+   "delta_hits3": 0.08280254777070062,
+   "ci95": [
+    0.02547770700636942,
+    0.14012738853503182
+   ],
+   "a_only": 17,
+   "b_only": 4,
+   "p": 0.007197380065917969,
+   "p_holm": 0.28789520263671875
+  },
+  {
+   "comparison": "A total: final vs base Alg.2",
+   "set": "osm_dev",
+   "a": "final: numberbatch + conf (657)",
+   "b": "A0 base Alg.2, abstract nouns kept (w2v)",
+   "delta_hits3": 0.1817791147400086,
+   "ci95": [
+    0.17017619252256122,
+    0.1935252829107578
+   ],
+   "a_only": 1594,
+   "b_only": 325,
+   "p": 1.5880845453793198e-200,
+   "p_holm": 9.528507272275918e-199
+  },
+  {
+   "comparison": "A total: final vs base Alg.2",
+   "set": "eval_106",
+   "a": "final: numberbatch + conf (657)",
+   "b": "A0 base Alg.2, abstract nouns kept (w2v)",
+   "delta_hits3": 0.13207547169811318,
+   "ci95": [
+    0.018867924528301883,
+    0.2358490566037736
+   ],
+   "a_only": 25,
+   "b_only": 11,
+   "p": 0.028816719655878845,
+   "p_holm": 0.9797684682998807
+  },
+  {
+   "comparison": "A total: final vs base Alg.2",
+   "set": "pk_n3",
+   "a": "final: numberbatch + conf (657)",
+   "b": "A0 base Alg.2, abstract nouns kept (w2v)",
+   "delta_hits3": 0.10828025477707004,
+   "ci95": [
+    0.02547770700636942,
+    0.19108280254777066
+   ],
+   "a_only": 31,
+   "b_only": 14,
+   "p": 0.016094360031274842,
+   "p_holm": 0.5793969611258943
+  },
+  {
+   "comparison": "B1 drop pair patterns",
+   "set": "osm_dev",
+   "a": "B1 final, adjective patterns only",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.006302821945280035,
+   "ci95": [
+    -0.010170462684429171,
+    -0.002435181206130954
+   ],
+   "a_only": 71,
+   "b_only": 115,
+   "p": 0.0015466250339729137,
+   "p_holm": 0.06341162639288946
+  },
+  {
+   "comparison": "B1 drop pair patterns",
+   "set": "eval_106",
+   "a": "B1 final, adjective patterns only",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": 0.009433962264150941,
+   "ci95": [
+    -0.047169811320754707,
+    0.06603773584905659
+   ],
+   "a_only": 5,
+   "b_only": 4,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "B1 drop pair patterns",
+   "set": "pk_n3",
+   "a": "B1 final, adjective patterns only",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": 0.01273885350318471,
+   "ci95": [
+    -0.02547770700636942,
+    0.05095541401273884
+   ],
+   "a_only": 5,
+   "b_only": 3,
+   "p": 0.7265625,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "B2 drop adjective patterns",
+   "set": "osm_dev",
+   "a": "B2 final, pair patterns only",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.0858043260277897,
+   "ci95": [
+    -0.09454232917920069,
+    -0.07706632287637871
+   ],
+   "a_only": 217,
+   "b_only": 816,
+   "p": 3.708482073793222e-82,
+   "p_holm": 2.0025803198483397e-80
+  },
+  {
+   "comparison": "B2 drop adjective patterns",
+   "set": "eval_106",
+   "a": "B2 final, pair patterns only",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.07547169811320753,
+   "ci95": [
+    -0.17924528301886788,
+    0.028301886792452824
+   ],
+   "a_only": 12,
+   "b_only": 20,
+   "p": 0.21532714972272515,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "B2 drop adjective patterns",
+   "set": "pk_n3",
+   "a": "B2 final, pair patterns only",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.08917197452229297,
+   "ci95": [
+    -0.16560509554140124,
+    -0.01273885350318471
+   ],
+   "a_only": 11,
+   "b_only": 25,
+   "p": 0.028816719655878845,
+   "p_holm": 0.9797684682998807
+  },
+  {
+   "comparison": "B3 log-lift weighting",
+   "set": "osm_dev",
+   "a": "B3 final, log-lift instead of confidence",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.06818507377166594,
+   "ci95": [
+    -0.07664016616530585,
+    -0.05959031657355679
+   ],
+   "a_only": 243,
+   "b_only": 719,
+   "p": 3.044852136770795e-55,
+   "p_holm": 1.6137716324885215e-53
+  },
+  {
+   "comparison": "B3 log-lift weighting",
+   "set": "eval_106",
+   "a": "B3 final, log-lift instead of confidence",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.08490566037735847,
+   "ci95": [
+    -0.16981132075471694,
+    0.0
+   ],
+   "a_only": 6,
+   "b_only": 15,
+   "p": 0.0783538818359375,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "B3 log-lift weighting",
+   "set": "pk_n3",
+   "a": "B3 final, log-lift instead of confidence",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.08917197452229297,
+   "ci95": [
+    -0.15923566878980888,
+    -0.019108280254777066
+   ],
+   "a_only": 8,
+   "b_only": 22,
+   "p": 0.016124801710247997,
+   "p_holm": 0.5793969611258943
+  },
+  {
+   "comparison": "B4 frequentist EN selection",
+   "set": "osm_dev",
+   "a": "B4 final, frequentist EN (C=0.5)",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.02277610657498924,
+   "ci95": [
+    -0.029938404240080208,
+    -0.015613808909898275
+   ],
+   "a_only": 248,
+   "b_only": 407,
+   "p": 5.527312536479514e-10,
+   "p_holm": 2.5425637667805764e-08
+  },
+  {
+   "comparison": "B4 frequentist EN selection",
+   "set": "eval_106",
+   "a": "B4 final, frequentist EN (C=0.5)",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": 0.037735849056603765,
+   "ci95": [
+    -0.028301886792452824,
+    0.10377358490566035
+   ],
+   "a_only": 9,
+   "b_only": 5,
+   "p": 0.4239501953125,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "B4 frequentist EN selection",
+   "set": "pk_n3",
+   "a": "B4 final, frequentist EN (C=0.5)",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": 0.03821656050955413,
+   "ci95": [
+    -0.019108280254777066,
+    0.09554140127388533
+   ],
+   "a_only": 14,
+   "b_only": 8,
+   "p": 0.28627872467041016,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "B5 Bayesian EN selection",
+   "set": "osm_dev",
+   "a": "B5 final, Bayesian EN",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.03695745595186939,
+   "ci95": [
+    -0.04397650766365846,
+    -0.029795158286778423
+   ],
+   "a_only": 193,
+   "b_only": 451,
+   "p": 9.759018911382943e-25,
+   "p_holm": 4.8795094556914714e-23
+  },
+  {
+   "comparison": "B5 Bayesian EN selection",
+   "set": "eval_106",
+   "a": "B5 final, Bayesian EN",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.05660377358490565,
+   "ci95": [
+    -0.13207547169811318,
+    0.009433962264150941
+   ],
+   "a_only": 5,
+   "b_only": 11,
+   "p": 0.210113525390625,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "B5 Bayesian EN selection",
+   "set": "pk_n3",
+   "a": "B5 final, Bayesian EN",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.031847133757961776,
+   "ci95": [
+    -0.10191082802547768,
+    0.03821656050955413
+   ],
+   "a_only": 12,
+   "b_only": 17,
+   "p": 0.45825831964612007,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "B6 drop the table",
+   "set": "osm_dev",
+   "a": "B6 final, nouns only (no table)",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.1445351668815356,
+   "ci95": [
+    -0.15456238361266295,
+    -0.13436470419710644
+   ],
+   "a_only": 205,
+   "b_only": 1214,
+   "p": 1.6231009765642634e-174,
+   "p_holm": 9.251675566416302e-173
+  },
+  {
+   "comparison": "B6 drop the table",
+   "set": "eval_106",
+   "a": "B6 final, nouns only (no table)",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.06603773584905659,
+   "ci95": [
+    -0.16981132075471694,
+    0.037735849056603765
+   ],
+   "a_only": 12,
+   "b_only": 19,
+   "p": 0.28104151505976915,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "B6 drop the table",
+   "set": "pk_n3",
+   "a": "B6 final, nouns only (no table)",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.07006369426751591,
+   "ci95": [
+    -0.14012738853503182,
+    0.006369426751592355
+   ],
+   "a_only": 12,
+   "b_only": 23,
+   "p": 0.08953107893466952,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "B7 naive adjectives, no table",
+   "set": "osm_dev",
+   "a": "B7 final, adjectives appended instead of table",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.1585732703051139,
+   "ci95": [
+    -0.1687473141383756,
+    -0.1482595616673829
+   ],
+   "a_only": 212,
+   "b_only": 1319,
+   "p": 2.4038978873920246e-195,
+   "p_holm": 1.4182997535612947e-193
+  },
+  {
+   "comparison": "B7 naive adjectives, no table",
+   "set": "eval_106",
+   "a": "B7 final, adjectives appended instead of table",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.14150943396226412,
+   "ci95": [
+    -0.24528301886792447,
+    -0.047169811320754707
+   ],
+   "a_only": 7,
+   "b_only": 22,
+   "p": 0.008130058646202087,
+   "p_holm": 0.3089422285556793
+  },
+  {
+   "comparison": "B7 naive adjectives, no table",
+   "set": "pk_n3",
+   "a": "B7 final, adjectives appended instead of table",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.21656050955414008,
+   "ci95": [
+    -0.29936305732484075,
+    -0.13375796178343946
+   ],
+   "a_only": 9,
+   "b_only": 43,
+   "p": 2.0377698612961126e-06,
+   "p_holm": 8.966187389702895e-05
+  },
+  {
+   "comparison": "D small parser",
+   "set": "osm_dev",
+   "a": "D final, small parser (en_core_web_sm)",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.011459676264145569,
+   "ci95": [
+    -0.01804899011602923,
+    -0.005156854318865478
+   ],
+   "a_only": 226,
+   "b_only": 306,
+   "p": 0.0006016093161523373,
+   "p_holm": 0.025267591278398165
+  },
+  {
+   "comparison": "D small parser",
+   "set": "eval_106",
+   "a": "D final, small parser (en_core_web_sm)",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": 0.0,
+   "ci95": [
+    -0.05660377358490565,
+    0.05660377358490565
+   ],
+   "a_only": 4,
+   "b_only": 4,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "D small parser",
+   "set": "pk_n3",
+   "a": "D final, small parser (en_core_web_sm)",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": 0.031847133757961776,
+   "ci95": [
+    -0.006369426751592355,
+    0.07643312101910826
+   ],
+   "a_only": 8,
+   "b_only": 3,
+   "p": 0.2265625,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "F corpus, conf",
+   "set": "osm_dev",
+   "a": "final: numberbatch + conf (657)",
+   "b": "F Wikivoyage conf (966 patterns)",
+   "delta_hits3": 0.13107004727116459,
+   "ci95": [
+    0.12118607649333907,
+    0.14109726400229194
+   ],
+   "a_only": 1136,
+   "b_only": 221,
+   "p": 1.7971195550867357e-148,
+   "p_holm": 1.006386950848572e-146
+  },
+  {
+   "comparison": "F corpus, conf",
+   "set": "eval_106",
+   "a": "final: numberbatch + conf (657)",
+   "b": "F Wikivoyage conf (966 patterns)",
+   "delta_hits3": -0.028301886792452824,
+   "ci95": [
+    -0.1132075471698113,
+    0.05660377358490565
+   ],
+   "a_only": 9,
+   "b_only": 12,
+   "p": 0.6636238098144531,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "F corpus, conf",
+   "set": "pk_n3",
+   "a": "final: numberbatch + conf (657)",
+   "b": "F Wikivoyage conf (966 patterns)",
+   "delta_hits3": -0.01273885350318471,
+   "ci95": [
+    -0.07643312101910826,
+    0.05095541401273884
+   ],
+   "a_only": 12,
+   "b_only": 14,
+   "p": 0.8450189828872681,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "F corpus, Bayesian EN",
+   "set": "osm_dev",
+   "a": "B5 final, Bayesian EN",
+   "b": "F Wikivoyage Bayesian EN (966)",
+   "delta_hits3": 0.10041541326457526,
+   "ci95": [
+    0.09153416415986246,
+    0.10915341641598625
+   ],
+   "a_only": 874,
+   "b_only": 173,
+   "p": 3.632539466360557e-113,
+   "p_holm": 1.9978967064983065e-111
+  },
+  {
+   "comparison": "F corpus, Bayesian EN",
+   "set": "eval_106",
+   "a": "B5 final, Bayesian EN",
+   "b": "F Wikivoyage Bayesian EN (966)",
+   "delta_hits3": -0.037735849056603765,
+   "ci95": [
+    -0.12264150943396224,
+    0.047169811320754707
+   ],
+   "a_only": 9,
+   "b_only": 13,
+   "p": 0.5234670639038086,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "F corpus, Bayesian EN",
+   "set": "pk_n3",
+   "a": "B5 final, Bayesian EN",
+   "b": "F Wikivoyage Bayesian EN (966)",
+   "delta_hits3": 0.0,
+   "ci95": [
+    -0.06369426751592355,
+    0.06369426751592355
+   ],
+   "a_only": 14,
+   "b_only": 14,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "C support 0.002 vs 0.0005",
+   "set": "osm_dev",
+   "a": "C support 0.002",
+   "b": "C support 0.0005",
+   "delta_hits3": -0.04483598338346945,
+   "ci95": [
+    -0.05156854318865489,
+    -0.03810342357828389
+   ],
+   "a_only": 135,
+   "b_only": 448,
+   "p": 3.672049690905594e-40,
+   "p_holm": 1.909465839270909e-38
+  },
+  {
+   "comparison": "C support 0.002 vs 0.0005",
+   "set": "eval_106",
+   "a": "C support 0.002",
+   "b": "C support 0.0005",
+   "delta_hits3": 0.009433962264150941,
+   "ci95": [
+    -0.06603773584905659,
+    0.08490566037735847
+   ],
+   "a_only": 9,
+   "b_only": 8,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "C support 0.002 vs 0.0005",
+   "set": "pk_n3",
+   "a": "C support 0.002",
+   "b": "C support 0.0005",
+   "delta_hits3": -0.019108280254777066,
+   "ci95": [
+    -0.07643312101910826,
+    0.03821656050955413
+   ],
+   "a_only": 8,
+   "b_only": 11,
+   "p": 0.6476058959960938,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "C support 0.001 vs 0.0005",
+   "set": "osm_dev",
+   "a": "C support 0.001",
+   "b": "C support 0.0005",
+   "delta_hits3": -0.019051711789141945,
+   "ci95": [
+    -0.02420856610800748,
+    -0.013894857470276467
+   ],
+   "a_only": 108,
+   "b_only": 241,
+   "p": 8.493829778714905e-13,
+   "p_holm": 3.9920999959960056e-11
+  },
+  {
+   "comparison": "C support 0.001 vs 0.0005",
+   "set": "eval_106",
+   "a": "C support 0.001",
+   "b": "C support 0.0005",
+   "delta_hits3": 0.018867924528301883,
+   "ci95": [
+    -0.037735849056603765,
+    0.07547169811320753
+   ],
+   "a_only": 6,
+   "b_only": 4,
+   "p": 0.75390625,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "C support 0.001 vs 0.0005",
+   "set": "pk_n3",
+   "a": "C support 0.001",
+   "b": "C support 0.0005",
+   "delta_hits3": -0.006369426751592355,
+   "ci95": [
+    -0.05095541401273884,
+    0.03821656050955413
+   ],
+   "a_only": 5,
+   "b_only": 6,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "C support 0.0002 vs 0.0005",
+   "set": "osm_dev",
+   "a": "C support 0.0002",
+   "b": "C support 0.0005",
+   "delta_hits3": 0.0214868929952729,
+   "ci95": [
+    0.017046268442916512,
+    0.025927517547629286
+   ],
+   "a_only": 202,
+   "b_only": 52,
+   "p": 4.712533542287761e-22,
+   "p_holm": 2.309141435721003e-20
+  },
+  {
+   "comparison": "C support 0.0002 vs 0.0005",
+   "set": "eval_106",
+   "a": "C support 0.0002",
+   "b": "C support 0.0005",
+   "delta_hits3": 0.047169811320754707,
+   "ci95": [
+    0.0,
+    0.09433962264150941
+   ],
+   "a_only": 6,
+   "b_only": 1,
+   "p": 0.125,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "C support 0.0002 vs 0.0005",
+   "set": "pk_n3",
+   "a": "C support 0.0002",
+   "b": "C support 0.0005",
+   "delta_hits3": 0.0,
+   "ci95": [
+    -0.02547770700636942,
+    0.02547770700636942
+   ],
+   "a_only": 2,
+   "b_only": 2,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "C support 0.0001 vs 0.0005",
+   "set": "osm_dev",
+   "a": "C support 0.0001",
+   "b": "C support 0.0005",
+   "delta_hits3": 0.03480876665234206,
+   "ci95": [
+    0.028505944707062025,
+    0.04096834264432031
+   ],
+   "a_only": 370,
+   "b_only": 127,
+   "p": 1.4258744932210024e-28,
+   "p_holm": 7.271959915427112e-27
+  },
+  {
+   "comparison": "C support 0.0001 vs 0.0005",
+   "set": "eval_106",
+   "a": "C support 0.0001",
+   "b": "C support 0.0005",
+   "delta_hits3": 0.009433962264150941,
+   "ci95": [
+    -0.05660377358490565,
+    0.08490566037735847
+   ],
+   "a_only": 8,
+   "b_only": 7,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "C support 0.0001 vs 0.0005",
+   "set": "pk_n3",
+   "a": "C support 0.0001",
+   "b": "C support 0.0005",
+   "delta_hits3": -0.08280254777070062,
+   "ci95": [
+    -0.14012738853503182,
+    -0.02547770700636942
+   ],
+   "a_only": 4,
+   "b_only": 17,
+   "p": 0.007197380065917969,
+   "p_holm": 0.28789520263671875
+  }
+ ],
+ "holm_family_size": 60
+}

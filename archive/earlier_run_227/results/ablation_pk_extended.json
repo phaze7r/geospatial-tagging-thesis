@@ -1,0 +1,473 @@
+{
+ "status": "post-hoc ablation on the extended Pakistan set (528 rows, extractor nouns); every arm reproduces ablation.json on OSM dev and the 106 set",
+ "lambda_rule": "per arm, chosen on OSM dev (as in ablation.json), applied unchanged to pk_ext",
+ "sets": {
+  "osm_dev": 6981,
+  "eval_106": 106,
+  "pk_ext": 528
+ },
+ "arms": {
+  "final: numberbatch + conf (657)": {
+   "lambda": 0.5,
+   "pk_ext": {
+    "Hits@1": 0.3181818181818182,
+    "Hits@3": 0.5454545454545454,
+    "nDCG@20": 0.5488349014706292
+   }
+  },
+  "base Alg.2 + abstract removal (w2v)": {
+   "lambda": 0.0,
+   "pk_ext": {
+    "Hits@1": 0.1875,
+    "Hits@3": 0.3806818181818182,
+    "nDCG@20": 0.4197387910713357
+   }
+  },
+  "A0 base Alg.2, abstract nouns kept (w2v)": {
+   "lambda": 0.0,
+   "pk_ext": {
+    "Hits@1": 0.1893939393939394,
+    "Hits@3": 0.38636363636363635,
+    "nDCG@20": 0.42423746805733875
+   }
+  },
+  "A2 + adjectives appended to the query (w2v)": {
+   "lambda": 0.0,
+   "pk_ext": {
+    "Hits@1": 0.14962121212121213,
+    "Hits@3": 0.3352272727272727,
+    "nDCG@20": 0.38872502643945517
+   }
+  },
+  "A3 + adjective patterns only, conf (w2v)": {
+   "lambda": 0.45,
+   "pk_ext": {
+    "Hits@1": 0.3068181818181818,
+    "Hits@3": 0.5303030303030303,
+    "nDCG@20": 0.5296281877676119
+   }
+  },
+  "A4 + adjective-noun pairs = 657 patterns (w2v)": {
+   "lambda": 0.55,
+   "pk_ext": {
+    "Hits@1": 0.2897727272727273,
+    "Hits@3": 0.49242424242424243,
+    "nDCG@20": 0.5133394729616576
+   }
+  },
+  "B1 final, adjective patterns only": {
+   "lambda": 0.45,
+   "pk_ext": {
+    "Hits@1": 0.3390151515151515,
+    "Hits@3": 0.5549242424242424,
+    "nDCG@20": 0.5613281429730497
+   }
+  },
+  "B2 final, pair patterns only": {
+   "lambda": 0.6,
+   "pk_ext": {
+    "Hits@1": 0.24431818181818182,
+    "Hits@3": 0.44696969696969696,
+    "nDCG@20": 0.4766774303001274
+   }
+  },
+  "B3 final, log-lift instead of confidence": {
+   "lambda": 0.35,
+   "pk_ext": {
+    "Hits@1": 0.24431818181818182,
+    "Hits@3": 0.4337121212121212,
+    "nDCG@20": 0.48003447381700864
+   }
+  },
+  "B4 final, frequentist EN (C=0.5)": {
+   "lambda": 0.45,
+   "pk_ext": {
+    "Hits@1": 0.3541666666666667,
+    "Hits@3": 0.5397727272727273,
+    "nDCG@20": 0.5584240519435171
+   }
+  },
+  "B5 final, Bayesian EN": {
+   "lambda": 0.45,
+   "pk_ext": {
+    "Hits@1": 0.32196969696969696,
+    "Hits@3": 0.5208333333333334,
+    "nDCG@20": 0.5355849119423065
+   }
+  },
+  "B6 final, nouns only (no table)": {
+   "lambda": 0.0,
+   "pk_ext": {
+    "Hits@1": 0.19507575757575757,
+    "Hits@3": 0.4109848484848485,
+    "nDCG@20": 0.43950813742541317
+   }
+  },
+  "B7 final, adjectives appended instead of table": {
+   "lambda": 0.0,
+   "pk_ext": {
+    "Hits@1": 0.17803030303030304,
+    "Hits@3": 0.38446969696969696,
+    "nDCG@20": 0.43146346549975595
+   }
+  },
+  "C support 0.002": {
+   "lambda": 0.45,
+   "pk_ext": {
+    "Hits@1": 0.2765151515151515,
+    "Hits@3": 0.5018939393939394,
+    "nDCG@20": 0.5210356662054423
+   }
+  },
+  "C support 0.001": {
+   "lambda": 0.45,
+   "pk_ext": {
+    "Hits@1": 0.3314393939393939,
+    "Hits@3": 0.5321969696969697,
+    "nDCG@20": 0.5534050112933906
+   }
+  },
+  "C support 0.0005": {
+   "lambda": 0.5,
+   "pk_ext": {
+    "Hits@1": 0.3181818181818182,
+    "Hits@3": 0.5454545454545454,
+    "nDCG@20": 0.5488349014706292
+   }
+  },
+  "C support 0.0002": {
+   "lambda": 0.5,
+   "pk_ext": {
+    "Hits@1": 0.3333333333333333,
+    "Hits@3": 0.5359848484848485,
+    "nDCG@20": 0.5536929911561741
+   }
+  },
+  "C support 0.0001": {
+   "lambda": 0.55,
+   "pk_ext": {
+    "Hits@1": 0.3314393939393939,
+    "Hits@3": 0.5189393939393939,
+    "nDCG@20": 0.5503205575576704
+   }
+  },
+  "D final, small parser (en_core_web_sm)": {
+   "lambda": 0.45,
+   "pk_ext": {
+    "Hits@1": 0.3446969696969697,
+    "Hits@3": 0.5454545454545454,
+    "nDCG@20": 0.564766202929145
+   }
+  }
+ },
+ "support_sensitivity": {
+  "C support 0.002": {
+   "min_support": 0.002,
+   "patterns": 133,
+   "adjectives": 124,
+   "pairs": 9
+  },
+  "C support 0.001": {
+   "min_support": 0.001,
+   "patterns": 327,
+   "adjectives": 278,
+   "pairs": 49
+  },
+  "C support 0.0005": {
+   "min_support": 0.0005,
+   "patterns": 657,
+   "adjectives": 496,
+   "pairs": 161
+  },
+  "C support 0.0002": {
+   "min_support": 0.0002,
+   "patterns": 1526,
+   "adjectives": 920,
+   "pairs": 606
+  },
+  "C support 0.0001": {
+   "min_support": 0.0001,
+   "patterns": 3102,
+   "adjectives": 1426,
+   "pairs": 1676
+  }
+ },
+ "comparisons": [
+  {
+   "comparison": "A1 abstract-noun removal",
+   "set": "pk_ext",
+   "a": "base Alg.2 + abstract removal (w2v)",
+   "b": "A0 base Alg.2, abstract nouns kept (w2v)",
+   "delta_hits3": -0.005681818181818177,
+   "ci95": [
+    -0.0246212121212121,
+    0.011363636363636409
+   ],
+   "a_only": 10,
+   "b_only": 13,
+   "p": 0.6776394844055176,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "A2 adjectives appended to query",
+   "set": "pk_ext",
+   "a": "A2 + adjectives appended to the query (w2v)",
+   "b": "base Alg.2 + abstract removal (w2v)",
+   "delta_hits3": -0.04545454545454547,
+   "ci95": [
+    -0.07575757575757575,
+    -0.01704545454545453
+   ],
+   "a_only": 21,
+   "b_only": 45,
+   "p": 0.004272405031651674,
+   "p_holm": 0.03845164528486507
+  },
+  {
+   "comparison": "A3 adjective patterns (table)",
+   "set": "pk_ext",
+   "a": "A3 + adjective patterns only, conf (w2v)",
+   "b": "base Alg.2 + abstract removal (w2v)",
+   "delta_hits3": 0.1496212121212121,
+   "ci95": [
+    0.10795454545454541,
+    0.19128787878787878
+   ],
+   "a_only": 111,
+   "b_only": 32,
+   "p": 2.0738656632953077e-11,
+   "p_holm": 3.7329581939315537e-10
+  },
+  {
+   "comparison": "A4 + pair patterns",
+   "set": "pk_ext",
+   "a": "A4 + adjective-noun pairs = 657 patterns (w2v)",
+   "b": "A3 + adjective patterns only, conf (w2v)",
+   "delta_hits3": -0.037878787878787845,
+   "ci95": [
+    -0.058712121212121215,
+    -0.017045454545454586
+   ],
+   "a_only": 6,
+   "b_only": 26,
+   "p": 0.0005350527353584766,
+   "p_holm": 0.005885580088943243
+  },
+  {
+   "comparison": "A5 Numberbatch backbone",
+   "set": "pk_ext",
+   "a": "final: numberbatch + conf (657)",
+   "b": "A4 + adjective-noun pairs = 657 patterns (w2v)",
+   "delta_hits3": 0.05303030303030298,
+   "ci95": [
+    0.028409090909090884,
+    0.07954545454545453
+   ],
+   "a_only": 39,
+   "b_only": 11,
+   "p": 9.021490107130603e-05,
+   "p_holm": 0.0010825788128556724
+  },
+  {
+   "comparison": "A total: final vs base Alg.2",
+   "set": "pk_ext",
+   "a": "final: numberbatch + conf (657)",
+   "b": "A0 base Alg.2, abstract nouns kept (w2v)",
+   "delta_hits3": 0.15909090909090906,
+   "ci95": [
+    0.11363636363636365,
+    0.20454545454545453
+   ],
+   "a_only": 126,
+   "b_only": 42,
+   "p": 6.009507673225859e-11,
+   "p_holm": 9.615212277161375e-10
+  },
+  {
+   "comparison": "B1 drop pair patterns",
+   "set": "pk_ext",
+   "a": "B1 final, adjective patterns only",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": 0.009469696969697017,
+   "ci95": [
+    -0.003787878787878787,
+    0.024621212121212047
+   ],
+   "a_only": 10,
+   "b_only": 5,
+   "p": 0.30175781249999994,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "B2 drop adjective patterns",
+   "set": "pk_ext",
+   "a": "B2 final, pair patterns only",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.09848484848484845,
+   "ci95": [
+    -0.1401515151515152,
+    -0.05681818181818188
+   ],
+   "a_only": 40,
+   "b_only": 92,
+   "p": 6.974666252127686e-06,
+   "p_holm": 9.067066127765992e-05
+  },
+  {
+   "comparison": "B3 log-lift weighting",
+   "set": "pk_ext",
+   "a": "B3 final, log-lift instead of confidence",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.1117424242424242,
+   "ci95": [
+    -0.1496212121212121,
+    -0.07386363636363641
+   ],
+   "a_only": 25,
+   "b_only": 84,
+   "p": 1.2159603232656297e-08,
+   "p_holm": 1.8239404848984445e-07
+  },
+  {
+   "comparison": "B4 frequentist EN selection",
+   "set": "pk_ext",
+   "a": "B4 final, frequentist EN (C=0.5)",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.005681818181818121,
+   "ci95": [
+    -0.032196969696969724,
+    0.02083333333333326
+   ],
+   "a_only": 23,
+   "b_only": 26,
+   "p": 0.7754496546815659,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "B5 Bayesian EN selection",
+   "set": "pk_ext",
+   "a": "B5 final, Bayesian EN",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.024621212121212044,
+   "ci95": [
+    -0.053030303030303094,
+    0.003787878787878787
+   ],
+   "a_only": 26,
+   "b_only": 39,
+   "p": 0.1360323948778921,
+   "p_holm": 0.9522267641452447
+  },
+  {
+   "comparison": "B6 drop the table",
+   "set": "pk_ext",
+   "a": "B6 final, nouns only (no table)",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.1344696969696969,
+   "ci95": [
+    -0.17992424242424243,
+    -0.08901515151515149
+   ],
+   "a_only": 45,
+   "b_only": 116,
+   "p": 2.056399357129551e-08,
+   "p_holm": 2.8789590999813713e-07
+  },
+  {
+   "comparison": "B7 naive adjectives, no table",
+   "set": "pk_ext",
+   "a": "B7 final, adjectives appended instead of table",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": -0.16098484848484845,
+   "ci95": [
+    -0.20643939393939387,
+    -0.11553030303030304
+   ],
+   "a_only": 41,
+   "b_only": 126,
+   "p": 2.970906241516586e-11,
+   "p_holm": 5.050540610578196e-10
+  },
+  {
+   "comparison": "D small parser",
+   "set": "pk_ext",
+   "a": "D final, small parser (en_core_web_sm)",
+   "b": "final: numberbatch + conf (657)",
+   "delta_hits3": 0.0,
+   "ci95": [
+    -0.02083333333333337,
+    0.02083333333333337
+   ],
+   "a_only": 16,
+   "b_only": 16,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "C support 0.002 vs 0.0005",
+   "set": "pk_ext",
+   "a": "C support 0.002",
+   "b": "C support 0.0005",
+   "delta_hits3": -0.043560606060605966,
+   "ci95": [
+    -0.07007575757575757,
+    -0.017045454545454586
+   ],
+   "a_only": 15,
+   "b_only": 38,
+   "p": 0.0021901868838920535,
+   "p_holm": 0.021901868838920535
+  },
+  {
+   "comparison": "C support 0.001 vs 0.0005",
+   "set": "pk_ext",
+   "a": "C support 0.001",
+   "b": "C support 0.0005",
+   "delta_hits3": -0.01325757575757569,
+   "ci95": [
+    -0.03409090909090906,
+    0.007575757575757569
+   ],
+   "a_only": 12,
+   "b_only": 19,
+   "p": 0.28104151505976915,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "C support 0.0002 vs 0.0005",
+   "set": "pk_ext",
+   "a": "C support 0.0002",
+   "b": "C support 0.0005",
+   "delta_hits3": -0.009469696969696906,
+   "ci95": [
+    -0.02840909090909094,
+    0.00757575757575768
+   ],
+   "a_only": 10,
+   "b_only": 15,
+   "p": 0.42435622215270996,
+   "p_holm": 1.0
+  },
+  {
+   "comparison": "C support 0.0001 vs 0.0005",
+   "set": "pk_ext",
+   "a": "C support 0.0001",
+   "b": "C support 0.0005",
+   "delta_hits3": -0.02651515151515149,
+   "ci95": [
+    -0.051136363636363646,
+    -0.0018939393939394478
+   ],
+   "a_only": 14,
+   "b_only": 28,
+   "p": 0.04355852192384191,
+   "p_holm": 0.34846817539073527
+  }
+ ],
+ "holm_family_size": 18,
+ "extra_query_vectors": {
+  "w2v": 132,
+  "numberbatch": 106
+ },
+ "not_scored": "F arms (Wikivoyage tables): the extended rows' source listings are in that training text"
+}

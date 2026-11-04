@@ -1,0 +1,115 @@
+{
+ "saved_original_199": {
+  "Sentences": 199,
+  "Nouns per sentence (this work)": 6.41,
+  "Adjectives found (total)": 594,
+  "Adjectives per sentence": 2.98,
+  "Sentences with ≥1 adjective": "96.0%",
+  "Adjective–noun pairs per sentence": 3.07,
+  "Sentences where a direct tag hint fires": "14.1%"
+ },
+ "fresh_original_199": {
+  "Sentences": 199,
+  "Nouns per sentence (this work)": 6.41,
+  "Adjectives found (total)": 594,
+  "Adjectives per sentence": 2.98,
+  "Sentences with ≥1 adjective": "96.0%",
+  "Adjective–noun pairs per sentence": 3.07,
+  "Sentences where a direct tag hint fires": "14.1%"
+ },
+ "fresh_new_393": {
+  "Sentences": 393,
+  "Nouns per sentence (this work)": 6.2,
+  "Adjectives found (total)": 1135,
+  "Adjectives per sentence": 2.89,
+  "Sentences with ≥1 adjective": "93.4%",
+  "Adjective–noun pairs per sentence": 2.94,
+  "Sentences where a direct tag hint fires": "16.5%"
+ },
+ "fresh_extended_592": {
+  "Sentences": 592,
+  "Nouns per sentence (this work)": 6.27,
+  "Adjectives found (total)": 1729,
+  "Adjectives per sentence": 2.92,
+  "Sentences with ≥1 adjective": "94.3%",
+  "Adjective–noun pairs per sentence": 2.98,
+  "Sentences where a direct tag hint fires": "15.7%"
+ },
+ "samples": {
+  "PK249": {
+   "gold": "artwork",
+   "sentence": "Dating back to the 8th century AD, a huge Buddha figure surrounded by small bodhisattvas, cut into the rock 3 km from Skardu across Sadpara Nullah.",
+   "nouns": [
+    "ad",
+    "bodhisattva",
+    "figure",
+    "km",
+    "nullah",
+    "rock",
+    "skardu"
+   ],
+   "adjectives": [
+    "huge",
+    "small"
+   ],
+   "pairs": [
+    "huge_figure",
+    "small_bodhisattva"
+   ]
+  },
+  "PK262": {
+   "gold": "mall",
+   "sentence": "A good place to shop and hang out, opened in November 2016, where you can eat while shopping among fast-food outlets, clothing brands and a cinema.",
+   "nouns": [
+    "brand",
+    "cinema",
+    "november",
+    "outlet",
+    "place"
+   ],
+   "adjectives": [
+    "good"
+   ],
+   "pairs": [
+    "good_place"
+   ]
+  },
+  "PK300": {
+   "gold": "museum",
+   "sentence": "More a place for school trips than a tourist destination, though there is an impressive blue whale skeleton outside.",
+   "nouns": [
+    "destination",
+    "place",
+    "skeleton",
+    "trip"
+   ],
+   "adjectives": [
+    "impressive"
+   ],
+   "pairs": [
+    "impressive_skeleton"
+   ]
+  },
+  "PK430": {
+   "gold": "retail",
+   "sentence": "The best quality of unstitched silk, cotton and printed material of all sorts.",
+   "nouns": [
+    "cotton",
+    "material",
+    "quality",
+    "silk",
+    "sort"
+   ],
+   "adjectives": [
+    "good",
+    "printed",
+    "unstitched"
+   ],
+   "pairs": [
+    "good_quality",
+    "unstitched_silk",
+    "printed_material"
+   ]
+  }
+ }
+}

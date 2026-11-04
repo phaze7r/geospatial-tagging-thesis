@@ -1,0 +1,5 @@
+Split,Descriptions
+Train,"71,784"
+Development,"9,042"
+Test (sealed until step 8),"8,876"
+Total,"89,702"

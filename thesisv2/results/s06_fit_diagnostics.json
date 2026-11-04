@@ -1,0 +1,30 @@
+{
+ "min_support": 0.0001,
+ "patterns": 2916,
+ "adjectives": 1393,
+ "pairs": 1523,
+ "classes": 384,
+ "train_rows": 71784,
+ "dev_rows": 9042,
+ "rows_with_pattern": {
+  "train": 0.6469826145101972,
+  "dev": 0.6491926564919266
+ },
+ "ben": {
+  "rows": 46443,
+  "seconds": 8803.2213037014,
+  "divergences": 0,
+  "mean_leapfrog": 383.0,
+  "b_mean": 0.06940052658319473,
+  "rhat_top200_median": 0.9996620416641235,
+  "rhat_top200_max": 1.0061430931091309,
+  "ess_top200_median": 2837.533170357723,
+  "credible_share": 0.0003902677754915409,
+  "patterns_with_credible_tag": 286,
+  "median_interval_width": 1.1683179140090942,
+  "pass_p17b": true,
+  "chains": 2,
+  "warmup": 1000,
+  "samples": 1000
+ }
+}

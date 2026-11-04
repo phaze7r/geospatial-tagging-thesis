@@ -1,0 +1,7 @@
+Set,Method,Everyday tags,Tourism and heritage tags,Forced-in tags
+OSM test,M1 base method (nouns),0.172,0.182,
+OSM test,M2 adjectives in the query,0.159,0.165,
+OSM test,M3 this work,0.356,0.360,
+Pakistan set,M1 base method (nouns),0.219,0.367,0.200
+Pakistan set,M2 adjectives in the query,0.201,0.300,0.000
+Pakistan set,M3 this work,0.431,0.613,0.000

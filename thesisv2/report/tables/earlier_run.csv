@@ -1,0 +1,4 @@
+Set,Earlier n,Earlier base,Earlier pipeline,Earlier gain,Final n,Final base (M1),Final pipeline (M3),Final gain
+OSM test,"7,017",0.189,0.380,+0.191,"8,876",0.175,0.357,+0.182
+Base-paper sentences,106,0.434,0.547,+0.113,106,0.236,0.415,+0.179
+Pakistan set (528),528,0.381,0.545,+0.165,528,0.286,0.509,+0.223

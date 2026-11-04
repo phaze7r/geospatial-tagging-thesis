@@ -1,0 +1,1475 @@
+{
+ "lambda": 0.45,
+ "coverage": {
+  "osm_dev": {
+   "n": 9042,
+   "any_pattern": 0.6491926564919266,
+   "top_has_credible": 0.32017252820172526,
+   "gold_has_credible": 0.16556071665560718,
+   "mean_credible_top": 0.4433753594337536,
+   "top1_correct": 0.21787215217872152
+  },
+  "eval_106": {
+   "n": 106,
+   "any_pattern": 0.9150943396226415,
+   "top_has_credible": 0.44339622641509435,
+   "gold_has_credible": 0.20754716981132076,
+   "mean_credible_top": 0.6037735849056604,
+   "top1_correct": 0.25471698113207547
+  },
+  "pk528": {
+   "n": 528,
+   "any_pattern": 0.9261363636363636,
+   "top_has_credible": 0.5284090909090909,
+   "gold_has_credible": 0.2859848484848485,
+   "mean_credible_top": 0.7651515151515151,
+   "top1_correct": 0.32575757575757575
+  }
+ },
+ "examples": [
+  {
+   "id": "PK012",
+   "gold": "restaurant",
+   "nouns": [
+    "cuisine",
+    "day",
+    "music",
+    "road",
+    "room",
+    "style"
+   ],
+   "adjectives": [
+    "classical",
+    "desi",
+    "dining",
+    "live"
+   ],
+   "top3": [
+    {
+     "tag": "restaurant",
+     "credible_patterns": [
+      {
+       "pattern": "live",
+       "mean": 1.0514787435531616,
+       "lo": 0.43753018975257874,
+       "hi": 1.5699567794799805
+      },
+      {
+       "pattern": "amod:live_music",
+       "mean": 0.5171909928321838,
+       "lo": 0.01753879524767399,
+       "hi": 1.2521559000015259
+      }
+     ]
+    },
+    {
+     "tag": "hotel",
+     "credible_patterns": []
+    },
+    {
+     "tag": "bar",
+     "credible_patterns": [
+      {
+       "pattern": "live",
+       "mean": 2.1557743549346924,
+       "lo": 1.4711109399795532,
+       "hi": 2.7454771995544434
+      }
+     ]
+    }
+   ],
+   "sentence": "A fine-dining room on Club Road offering desi cuisine buffet-style only, with live classical music every day."
+  },
+  {
+   "id": "PK123",
+   "gold": "park",
+   "nouns": [
+    "alley",
+    "asia",
+    "child",
+    "court",
+    "f-9",
+    "ground",
+    "jogging",
+    "playground",
+    "space"
+   ],
+   "adjectives": [
+    "big",
+    "good",
+    "green",
+    "indoor",
+    "large"
+   ],
+   "top3": [
+    {
+     "tag": "park",
+     "credible_patterns": [
+      {
+       "pattern": "green",
+       "mean": 1.3785641193389893,
+       "lo": 0.9415785074234009,
+       "hi": 1.7708539962768555
+      },
+      {
+       "pattern": "amod:green_space",
+       "mean": 1.0966500043869019,
+       "lo": 0.4517669975757599,
+       "hi": 1.7363823652267456
+      },
+      {
+       "pattern": "large",
+       "mean": 0.5099092125892639,
+       "lo": 0.2819400429725647,
+       "hi": 0.7381482124328613
+      }
+     ]
+    },
+    {
+     "tag": "playground",
+     "credible_patterns": []
+    },
+    {
+     "tag": "sports-centre",
+     "credible_patterns": [
+      {
+       "pattern": "indoor",
+       "mean": 3.0346336364746094,
+       "lo": 2.515695333480835,
+       "hi": 3.5315756797790527
+      }
+     ]
+    }
+   ],
+   "sentence": "Also known simply as F-9 and reckoned one of the largest green spaces in South Asia, good for jogging, with a cricket ground, tennis courts, a big children's playground and an indoor bowling alley."
+  },
+  {
+   "id": "PK126",
+   "gold": "park",
+   "nouns": [
+    "asia",
+    "bush",
+    "canopy",
+    "conqueror",
+    "family",
+    "hundred",
+    "memory",
+    "pond",
+    "space",
+    "thousand"
+   ],
+   "adjectives": [
+    "green",
+    "large",
+    "stone"
+   ],
+   "top3": [
+    {
+     "tag": "park",
+     "credible_patterns": [
+      {
+       "pattern": "green",
+       "mean": 1.3785641193389893,
+       "lo": 0.9415785074234009,
+       "hi": 1.7708539962768555
+      },
+      {
+       "pattern": "amod:green_space",
+       "mean": 1.0966500043869019,
+       "lo": 0.4517669975757599,
+       "hi": 1.7363823652267456
+      },
+      {
+       "pattern": "large",
+       "mean": 0.5099092125892639,
+       "lo": 0.2819400429725647,
+       "hi": 0.7381482124328613
+      }
+     ]
+    },
+    {
+     "tag": "memorial",
+     "credible_patterns": [
+      {
+       "pattern": "stone",
+       "mean": 2.221771478652954,
+       "lo": 1.889772891998291,
+       "hi": 2.542361259460449
+      }
+     ]
+    },
+    {
+     "tag": "square",
+     "credible_patterns": []
+    }
+   ],
+   "sentence": "Opened in 2007 and built in memory of an eighth-century conqueror, the largest family green space in South Asia, with a turtle pond, stone canopies and hundreds of thousands of rose bushes."
+  }
+ ],
+ "worked": {
+  "id": "PK005",
+  "gold": "restaurant",
+  "nouns": [
+   "atmosphere",
+   "chop",
+   "favourite",
+   "lassi",
+   "mughlai",
+   "naan",
+   "stadium"
+  ],
+  "adjectives": [
+   "assorted",
+   "local"
+  ],
+  "top3": [
+   {
+    "tag": "restaurant",
+    "credible_patterns": [
+     {
+      "pattern": "local",
+      "mean": 0.29385867714881897,
+      "lo": 0.06344335526227951,
+      "hi": 0.5178720951080322
+     }
+    ]
+   },
+   {
+    "tag": "cafe",
+    "credible_patterns": [
+     {
+      "pattern": "local",
+      "mean": 0.2737787365913391,
+      "lo": 0.010287637822329998,
+      "hi": 0.5876677632331848
+     }
+    ]
+   },
+   {
+    "tag": "convenience",
+    "credible_patterns": []
+   }
+  ],
+  "sentence": "Right by the stadium, sitting on a charpai and gulping lassi, you get a distinctly truck-driver atmosphere; the assorted naans, chicken mughlai and mutton chops are the local favourites.",
+  "rank_M1": 4,
+  "rank_M3": 1,
+  "weights": [
+   {
+    "pattern": "assorted",
+    "conf_to_gold": 0.0833333358168602
+   },
+   {
+    "pattern": "local",
+    "conf_to_gold": 0.06708595156669617
+   }
+  ]
+ },
+ "top_rules": [
+  {
+   "pattern": "amod:surrounding_area",
+   "tag": "restaurant",
+   "support": 0.0056001337345369445,
+   "count": 402,
+   "confidence": 0.1044776119402985,
+   "lift": 3.4387074257324106
+  },
+  {
+   "pattern": "amod:made_reservoir",
+   "tag": "water",
+   "support": 0.004778223559567592,
+   "count": 343,
+   "confidence": 0.8134110787172012,
+   "lift": 24.772974490723616
+  },
+  {
+   "pattern": "amod:free_wi",
+   "tag": "hotel",
+   "support": 0.0028279282291318398,
+   "count": 203,
+   "confidence": 0.8472906403940886,
+   "lift": 47.7784063865273
+  },
+  {
+   "pattern": "amod:wide_range",
+   "tag": "hotel",
+   "support": 0.0026607600579516325,
+   "count": 191,
+   "confidence": 0.05759162303664921,
+   "lift": 3.2475703598294006
+  },
+  {
+   "pattern": "amod:outdoor_pool",
+   "tag": "hotel",
+   "support": 0.002591106653293213,
+   "count": 186,
+   "confidence": 0.7311827956989247,
+   "lift": 41.23112789194942
+  },
+  {
+   "pattern": "amod:natural_reservoir",
+   "tag": "water",
+   "support": 0.002549314610498161,
+   "count": 183,
+   "confidence": 0.994535519125683,
+   "lift": 30.289239586303786
+  },
+  {
+   "pattern": "amod:residential_area",
+   "tag": "water",
+   "support": 0.002354285077454586,
+   "count": 169,
+   "confidence": 0.6863905325443787,
+   "lift": 20.904479417974404
+  },
+  {
+   "pattern": "amod:scattered_tree",
+   "tag": "water",
+   "support": 0.0021731862253426947,
+   "count": 156,
+   "confidence": 0.9935897435897436,
+   "lift": 30.260435364381056
+  },
+  {
+   "pattern": "amod:decimal_land",
+   "tag": "water",
+   "support": 0.0019224339685723838,
+   "count": 138,
+   "confidence": 0.3695652173913043,
+   "lift": 11.255354079430372
+  },
+  {
+   "pattern": "amod:black_text",
+   "tag": "information",
+   "support": 0.0016856123927337567,
+   "count": 121,
+   "confidence": 0.9917355371900827,
+   "lift": 30.050968257346092
+  },
+  {
+   "pattern": "amod:red_bar",
+   "tag": "information",
+   "support": 0.001671681711802073,
+   "count": 120,
+   "confidence": 0.9916666666666667,
+   "lift": 30.048881384550445
+  },
+  {
+   "pattern": "amod:small_area",
+   "tag": "park",
+   "support": 0.001671681711802073,
+   "count": 120,
+   "confidence": 0.275,
+   "lift": 8.19112033195021
+  },
+  {
+   "pattern": "amod:large_area",
+   "tag": "park",
+   "support": 0.001615958988075337,
+   "count": 116,
+   "confidence": 0.25862068965517243,
+   "lift": 7.703247961081701
+  },
+  {
+   "pattern": "amod:great_area",
+   "tag": "restaurant",
+   "support": 0.001602028307143653,
+   "count": 115,
+   "confidence": 0.11304347826086956,
+   "lift": 3.720638717780037
+  },
+  {
+   "pattern": "amod:open_space",
+   "tag": "park",
+   "support": 0.0015184442215535495,
+   "count": 109,
+   "confidence": 0.41284403669724773,
+   "lift": 12.29692793787354
+  },
+  {
+   "pattern": "amod:potable_water",
+   "tag": "camp-site",
+   "support": 0.0015184442215535495,
+   "count": 109,
+   "confidence": 0.7889908256880734,
+   "lift": 30.303326608449794
+  },
+  {
+   "pattern": "amod:public_access",
+   "tag": "nature-reserve",
+   "support": 0.0015045135406218655,
+   "count": 108,
+   "confidence": 0.12037037037037036,
+   "lift": 14.645197740112993
+  },
+  {
+   "pattern": "amod:significant_root",
+   "tag": "foot-way",
+   "support": 0.0015045135406218655,
+   "count": 108,
+   "confidence": 0.5833333333333334,
+   "lift": 17.86433447098976
+  },
+  {
+   "pattern": "amod:detached_estate",
+   "tag": "house",
+   "support": 0.0014905828596901817,
+   "count": 107,
+   "confidence": 0.9906542056074766,
+   "lift": 51.643515973367535
+  },
+  {
+   "pattern": "amod:first_floor",
+   "tag": "apartments",
+   "support": 0.0014905828596901817,
+   "count": 107,
+   "confidence": 0.06542056074766354,
+   "lift": 11.102008351560945
+  }
+ ],
+ "rules_summary": {
+  "pair_patterns_with_a_rule": 1523,
+  "lift_above_one": 1.0
+ },
+ "strongest": [
+  {
+   "pattern": "dental",
+   "tag": "dentist",
+   "mean": 6.6899237632751465,
+   "lo": 6.322237491607666,
+   "hi": 7.079894542694092,
+   "fen": 6.630865573883057
+  },
+  {
+   "pattern": "legal",
+   "tag": "lawyer",
+   "mean": 4.865605354309082,
+   "lo": 4.453800678253174,
+   "hi": 5.255743503570557,
+   "fen": 5.129359722137451
+  },
+  {
+   "pattern": "detached",
+   "tag": "house",
+   "mean": 4.435572147369385,
+   "lo": 4.040745735168457,
+   "hi": 4.822107315063477,
+   "fen": 4.046416759490967
+  },
+  {
+   "pattern": "amod:small_cave",
+   "tag": "cave-entrance",
+   "mean": 4.319973468780518,
+   "lo": 3.652423143386841,
+   "hi": 5.00929069519043,
+   "fen": 5.348845958709717
+  },
+  {
+   "pattern": "amod:supervised_time",
+   "tag": "ice-rink",
+   "mean": 4.318600654602051,
+   "lo": 3.1320157051086426,
+   "hi": 5.538604736328125,
+   "fen": 4.849818706512451
+  },
+  {
+   "pattern": "amod:man_made_reservoir",
+   "tag": "water",
+   "mean": 4.174655914306641,
+   "lo": 3.5456786155700684,
+   "hi": 4.780457019805908,
+   "fen": 4.985629558563232
+  },
+  {
+   "pattern": "uninhabited",
+   "tag": "village",
+   "mean": 4.16747522354126,
+   "lo": 3.3654465675354004,
+   "hi": 4.879506587982178,
+   "fen": 6.008633136749268
+  },
+  {
+   "pattern": "amod:natural_reservoir",
+   "tag": "water",
+   "mean": 3.9772329330444336,
+   "lo": 3.439570188522339,
+   "hi": 4.541309833526611,
+   "fen": 4.928634166717529
+  },
+  {
+   "pattern": "supervised",
+   "tag": "ice-rink",
+   "mean": 3.8615076541900635,
+   "lo": 2.626394510269165,
+   "hi": 5.046009063720703,
+   "fen": 4.285171985626221
+  },
+  {
+   "pattern": "unsanctioned",
+   "tag": "path",
+   "mean": 3.614973783493042,
+   "lo": 2.8441011905670166,
+   "hi": 4.273717403411865,
+   "fen": 4.229839324951172
+  },
+  {
+   "pattern": "amod:central_part",
+   "tag": "government",
+   "mean": 3.568673849105835,
+   "lo": 2.705087423324585,
+   "hi": 4.457192420959473,
+   "fen": 4.767536163330078
+  },
+  {
+   "pattern": "scattered",
+   "tag": "water",
+   "mean": 3.5252363681793213,
+   "lo": 2.7872304916381836,
+   "hi": 4.272919178009033,
+   "fen": 3.5223820209503174
+  },
+  {
+   "pattern": "responsible",
+   "tag": "military",
+   "mean": 3.4068946838378906,
+   "lo": 2.740757703781128,
+   "hi": 4.032844543457031,
+   "fen": 4.027617931365967
+  },
+  {
+   "pattern": "digital",
+   "tag": "advertising-agency",
+   "mean": 3.2800965309143066,
+   "lo": 2.5962424278259277,
+   "hi": 3.91523814201355,
+   "fen": 3.9659667015075684
+  },
+  {
+   "pattern": "extant",
+   "tag": "archaeological-site",
+   "mean": 3.273528814315796,
+   "lo": 2.583238363265991,
+   "hi": 3.928229808807373,
+   "fen": 4.779468059539795
+  },
+  {
+   "pattern": "contained",
+   "tag": "caravan-site",
+   "mean": 3.2255702018737793,
+   "lo": 2.555075168609619,
+   "hi": 3.869486093521118,
+   "fen": 4.368403434753418
+  },
+  {
+   "pattern": "brick",
+   "tag": "temple",
+   "mean": 3.2140276432037354,
+   "lo": 2.774827718734741,
+   "hi": 3.642552375793457,
+   "fen": 3.1893692016601562
+  },
+  {
+   "pattern": "amod:possible_use",
+   "tag": "parking",
+   "mean": 3.1804795265197754,
+   "lo": 2.4971494674682617,
+   "hi": 3.8826634883880615,
+   "fen": 4.069693565368652
+  },
+  {
+   "pattern": "amod:small_island",
+   "tag": "coastline",
+   "mean": 3.14178204536438,
+   "lo": 2.0042078495025635,
+   "hi": 4.2405195236206055,
+   "fen": 5.235629558563232
+  },
+  {
+   "pattern": "cosmetic",
+   "tag": "dentist",
+   "mean": 3.098984718322754,
+   "lo": 2.2864086627960205,
+   "hi": 3.8583788871765137,
+   "fen": 3.701401710510254
+  },
+  {
+   "pattern": "amod:left_turn",
+   "tag": "information",
+   "mean": 3.0866072177886963,
+   "lo": 2.1927831172943115,
+   "hi": 3.9456822872161865,
+   "fen": 3.9636213779449463
+  },
+  {
+   "pattern": "amod:local_office",
+   "tag": "government",
+   "mean": 3.079007148742676,
+   "lo": 2.3291397094726562,
+   "hi": 3.85396409034729,
+   "fen": 3.0423929691314697
+  },
+  {
+   "pattern": "amod:right_turn",
+   "tag": "information",
+   "mean": 3.0511510372161865,
+   "lo": 2.2060375213623047,
+   "hi": 3.919527769088745,
+   "fen": 4.053441047668457
+  },
+  {
+   "pattern": "indoor",
+   "tag": "sports-centre",
+   "mean": 3.0346336364746094,
+   "lo": 2.515695333480835,
+   "hi": 3.5315756797790527,
+   "fen": 3.5495824813842773
+  },
+  {
+   "pattern": "red",
+   "tag": "information",
+   "mean": 2.9921982288360596,
+   "lo": 2.7214245796203613,
+   "hi": 3.260033130645752,
+   "fen": 2.2571637630462646
+  }
+ ],
+ "agreement": {
+  "credible_cells": 437,
+  "fen_nonzero_cells": 18939,
+  "jaccard": 0.023020063357972544,
+  "spearman_abs": 0.7484463780614934
+ },
+ "per_tag_pk528": {
+  "attraction": {
+   "n": 5,
+   "M1": 0.0,
+   "M3": 0.0
+  },
+  "bakery": {
+   "n": 7,
+   "M1": 0.42857142857142855,
+   "M3": 0.14285714285714285
+  },
+  "beach": {
+   "n": 4,
+   "M1": 0.0,
+   "M3": 0.5
+  },
+  "building": {
+   "n": 5,
+   "M1": 0.4,
+   "M3": 0.8
+  },
+  "cafe": {
+   "n": 21,
+   "M1": 0.14285714285714285,
+   "M3": 0.6666666666666666
+  },
+  "cave-entrance": {
+   "n": 3,
+   "M1": 0.0,
+   "M3": 0.0
+  },
+  "cemetery": {
+   "n": 3,
+   "M1": 0.0,
+   "M3": 0.3333333333333333
+  },
+  "city-gate": {
+   "n": 5,
+   "M1": 0.0,
+   "M3": 0.6
+  },
+  "college": {
+   "n": 6,
+   "M1": 0.0,
+   "M3": 0.0
+  },
+  "fast-food": {
+   "n": 9,
+   "M1": 0.2222222222222222,
+   "M3": 0.6666666666666666
+  },
+  "food-court": {
+   "n": 4,
+   "M1": 0.0,
+   "M3": 0.0
+  },
+  "fort": {
+   "n": 15,
+   "M1": 0.26666666666666666,
+   "M3": 0.26666666666666666
+  },
+  "garden": {
+   "n": 4,
+   "M1": 0.5,
+   "M3": 0.25
+  },
+  "hill": {
+   "n": 6,
+   "M1": 0.3333333333333333,
+   "M3": 0.0
+  },
+  "hotel": {
+   "n": 106,
+   "M1": 0.22641509433962265,
+   "M3": 0.6415094339622641
+  },
+  "house": {
+   "n": 6,
+   "M1": 0.5,
+   "M3": 0.6666666666666666
+  },
+  "lake": {
+   "n": 9,
+   "M1": 0.5555555555555556,
+   "M3": 0.1111111111111111
+  },
+  "mall": {
+   "n": 15,
+   "M1": 0.26666666666666666,
+   "M3": 0.26666666666666666
+  },
+  "marketplace": {
+   "n": 15,
+   "M1": 0.0,
+   "M3": 0.0
+  },
+  "monument": {
+   "n": 6,
+   "M1": 0.5,
+   "M3": 0.3333333333333333
+  },
+  "mosque": {
+   "n": 16,
+   "M1": 0.3125,
+   "M3": 0.125
+  },
+  "museum": {
+   "n": 30,
+   "M1": 0.5666666666666667,
+   "M3": 0.3
+  },
+  "park": {
+   "n": 25,
+   "M1": 0.28,
+   "M3": 0.64
+  },
+  "peak": {
+   "n": 4,
+   "M1": 0.0,
+   "M3": 1.0
+  },
+  "picnic-site": {
+   "n": 3,
+   "M1": 0.3333333333333333,
+   "M3": 0.0
+  },
+  "restaurant": {
+   "n": 105,
+   "M1": 0.4380952380952381,
+   "M3": 0.9333333333333333
+  },
+  "retail": {
+   "n": 16,
+   "M1": 0.0625,
+   "M3": 0.1875
+  },
+  "ruins": {
+   "n": 24,
+   "M1": 0.08333333333333333,
+   "M3": 0.5416666666666666
+  },
+  "shrine": {
+   "n": 10,
+   "M1": 0.4,
+   "M3": 0.2
+  },
+  "stadium": {
+   "n": 4,
+   "M1": 0.5,
+   "M3": 0.5
+  },
+  "street": {
+   "n": 5,
+   "M1": 0.2,
+   "M3": 0.0
+  },
+  "temple": {
+   "n": 6,
+   "M1": 0.5,
+   "M3": 0.5
+  },
+  "tomb": {
+   "n": 5,
+   "M1": 0.0,
+   "M3": 0.0
+  },
+  "tower": {
+   "n": 3,
+   "M1": 0.3333333333333333,
+   "M3": 0.0
+  },
+  "valley": {
+   "n": 3,
+   "M1": 0.3333333333333333,
+   "M3": 0.0
+  },
+  "village": {
+   "n": 10,
+   "M1": 0.1,
+   "M3": 0.0
+  },
+  "zoo": {
+   "n": 5,
+   "M1": 0.4,
+   "M3": 0.4
+  }
+ },
+ "fixed_broken": {
+  "pk528": {
+   "fixed": 139,
+   "broken": 28,
+   "fixed_examples": [
+    {
+     "id": "PK002",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 3,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "amod:authentic_food",
+       0.7916666865348816
+      ],
+      [
+       "authentic",
+       0.5876288414001465
+      ],
+      [
+       "cooked",
+       0.4000000059604645
+      ]
+     ]
+    },
+    {
+     "id": "PK005",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 4,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "assorted",
+       0.0833333358168602
+      ],
+      [
+       "local",
+       0.06708595156669617
+      ]
+     ]
+    },
+    {
+     "id": "PK007",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 8,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "french",
+       0.20481927692890167
+      ],
+      [
+       "extensive",
+       0.1071428582072258
+      ],
+      [
+       "lit",
+       0.10000000149011612
+      ]
+     ]
+    },
+    {
+     "id": "PK008",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 2,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "large",
+       0.020915033295750618
+      ]
+     ]
+    },
+    {
+     "id": "PK012",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 3,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "amod:live_music",
+       0.3137255012989044
+      ],
+      [
+       "live",
+       0.23783783614635468
+      ],
+      [
+       "classical",
+       0.043478261679410934
+      ]
+     ]
+    },
+    {
+     "id": "PK014",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 3,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "upscale",
+       0.3235294222831726
+      ],
+      [
+       "popular",
+       0.09708737581968307
+      ],
+      [
+       "busy",
+       0.09259258955717087
+      ]
+     ]
+    },
+    {
+     "id": "PK017",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 50,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "upscale",
+       0.3235294222831726
+      ],
+      [
+       "excellent",
+       0.12878787517547607
+      ],
+      [
+       "dual",
+       0.03125
+      ]
+     ]
+    },
+    {
+     "id": "PK018",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 7,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "memorable",
+       0.2666666805744171
+      ],
+      [
+       "greek",
+       0.20930232107639313
+      ],
+      [
+       "small",
+       0.026571067050099373
+      ]
+     ]
+    },
+    {
+     "id": "PK019",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 47,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "authentic",
+       0.5876288414001465
+      ],
+      [
+       "deep",
+       0.013513513840734959
+      ]
+     ]
+    },
+    {
+     "id": "PK021",
+     "gold": "cafe",
+     "top1_M3": "cafe",
+     "rank_M1": 22,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "amod:good_coffee",
+       0.7142857313156128
+      ],
+      [
+       "proper",
+       0.06896551698446274
+      ],
+      [
+       "little",
+       0.05797101557254791
+      ]
+     ]
+    }
+   ],
+   "broken_examples": [
+    {
+     "id": "PK048",
+     "gold": "mosque",
+     "top1_M3": "city-gate",
+     "rank_M1": 1,
+     "rank_M3": 5,
+     "strongest_patterns_for_top1": [
+      [
+       "amod:old_city",
+       0.1538461595773697
+      ],
+      [
+       "old",
+       0.0013850415125489235
+      ],
+      [
+       "active",
+       0.0
+      ]
+     ]
+    },
+    {
+     "id": "PK061",
+     "gold": "temple",
+     "top1_M3": "camp-site",
+     "rank_M1": 1,
+     "rank_M3": 4,
+     "strongest_patterns_for_top1": [
+      [
+       "popular",
+       0.13106796145439148
+      ],
+      [
+       "large",
+       0.08758170157670975
+      ],
+      [
+       "busy",
+       0.07407407462596893
+      ]
+     ]
+    },
+    {
+     "id": "PK070",
+     "gold": "monument",
+     "top1_M3": "artwork",
+     "rank_M1": 1,
+     "rank_M3": 17,
+     "strongest_patterns_for_top1": [
+      [
+       "shaped",
+       0.3333333432674408
+      ],
+      [
+       "small",
+       0.021088147535920143
+      ]
+     ]
+    },
+    {
+     "id": "PK071",
+     "gold": "monument",
+     "top1_M3": "museum",
+     "rank_M1": 1,
+     "rank_M3": 3,
+     "strongest_patterns_for_top1": [
+      [
+       "islamic",
+       0.1818181872367859
+      ],
+      [
+       "known",
+       0.025974025949835777
+      ]
+     ]
+    },
+    {
+     "id": "PK078",
+     "gold": "fort",
+     "top1_M3": "path",
+     "rank_M1": 1,
+     "rank_M3": 2,
+     "strongest_patterns_for_top1": [
+      [
+       "earthen",
+       0.4615384638309479
+      ],
+      [
+       "long",
+       0.055979643017053604
+      ],
+      [
+       "high",
+       0.04869358614087105
+      ]
+     ]
+    },
+    {
+     "id": "PK094",
+     "gold": "museum",
+     "top1_M3": "artwork",
+     "rank_M1": 1,
+     "rank_M3": 3,
+     "strongest_patterns_for_top1": [
+      [
+       "musical",
+       0.1428571492433548
+      ],
+      [
+       "premier",
+       0.0
+      ]
+     ]
+    },
+    {
+     "id": "PK117",
+     "gold": "mall",
+     "top1_M3": "restaurant",
+     "rank_M1": 1,
+     "rank_M3": 2,
+     "strongest_patterns_for_top1": [
+      [
+       "big",
+       0.04436860233545303
+      ],
+      [
+       "same",
+       0.024000000208616257
+      ]
+     ]
+    },
+    {
+     "id": "PK118",
+     "gold": "mall",
+     "top1_M3": "restaurant",
+     "rank_M1": 1,
+     "rank_M3": 3,
+     "strongest_patterns_for_top1": [
+      [
+       "upscale",
+       0.3235294222831726
+      ],
+      [
+       "indoor",
+       0.061403509229421616
+      ],
+      [
+       "old",
+       0.02770083025097847
+      ]
+     ]
+    },
+    {
+     "id": "PK119",
+     "gold": "mall",
+     "top1_M3": "hotel",
+     "rank_M1": 1,
+     "rank_M3": 2,
+     "strongest_patterns_for_top1": [
+      [
+       "comfortable",
+       0.502439022064209
+      ],
+      [
+       "open",
+       0.011603375896811485
+      ],
+      [
+       "multi",
+       0.0
+      ]
+     ]
+    },
+    {
+     "id": "PK130",
+     "gold": "garden",
+     "top1_M3": "park",
+     "rank_M1": 1,
+     "rank_M3": 2,
+     "strongest_patterns_for_top1": [
+      [
+       "amod:green_space",
+       0.698113203048706
+      ],
+      [
+       "green",
+       0.2541666626930237
+      ],
+      [
+       "small",
+       0.08730493485927582
+      ]
+     ]
+    }
+   ],
+   "top1_M1": 0.11553030303030302,
+   "top1_M3": 0.32575757575757575
+  },
+  "eval_106": {
+   "fixed": 19,
+   "broken": 3,
+   "fixed_examples": [
+    {
+     "id": "11",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 9,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "delicious",
+       0.41847825050354004
+      ],
+      [
+       "beautiful",
+       0.0390455536544323
+      ]
+     ]
+    },
+    {
+     "id": "18",
+     "gold": "cafe",
+     "top1_M3": "cafe",
+     "rank_M1": 3,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "amod:good_coffee",
+       0.7142857313156128
+      ],
+      [
+       "good",
+       0.040697675198316574
+      ]
+     ]
+    },
+    {
+     "id": "22",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 12,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "homemade",
+       0.25806450843811035
+      ],
+      [
+       "healthy",
+       0.2222222238779068
+      ]
+     ]
+    },
+    {
+     "id": "24",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 8,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "delectable",
+       0.6666666865348816
+      ],
+      [
+       "cheap",
+       0.14516128599643707
+      ],
+      [
+       "strong",
+       0.07594936341047287
+      ]
+     ]
+    },
+    {
+     "id": "27",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 2,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "international",
+       0.10843373835086823
+      ],
+      [
+       "long",
+       0.027989821508526802
+      ],
+      [
+       "recent",
+       0.0
+      ]
+     ]
+    },
+    {
+     "id": "32",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 4,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "amod:traditional_food",
+       0.6363636255264282
+      ],
+      [
+       "upscale",
+       0.3235294222831726
+      ],
+      [
+       "traditional",
+       0.2952646315097809
+      ]
+     ]
+    },
+    {
+     "id": "34",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 5,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "amod:vegetarian_dish",
+       0.7777777910232544
+      ],
+      [
+       "vegetarian",
+       0.550000011920929
+      ],
+      [
+       "vegan",
+       0.426086962223053
+      ]
+     ]
+    },
+    {
+     "id": "36",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 6,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "excellent",
+       0.12878787517547607
+      ],
+      [
+       "old",
+       0.02770083025097847
+      ]
+     ]
+    },
+    {
+     "id": "42",
+     "gold": "cafe",
+     "top1_M3": "cafe",
+     "rank_M1": 15,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "baked",
+       0.36082473397254944
+      ],
+      [
+       "good",
+       0.040697675198316574
+      ],
+      [
+       "local",
+       0.03424178808927536
+      ]
+     ]
+    },
+    {
+     "id": "47",
+     "gold": "restaurant",
+     "top1_M3": "restaurant",
+     "rank_M1": 5,
+     "rank_M3": 1,
+     "strongest_patterns_for_top1": [
+      [
+       "traditional",
+       0.2952646315097809
+      ],
+      [
+       "few",
+       0.024911031126976013
+      ]
+     ]
+    }
+   ],
+   "broken_examples": [
+    {
+     "id": "37",
+     "gold": "restaurant",
+     "top1_M3": "fast-food",
+     "rank_M1": 1,
+     "rank_M3": 2,
+     "strongest_patterns_for_top1": [
+      [
+       "quick",
+       0.1489361673593521
+      ]
+     ]
+    },
+    {
+     "id": "68",
+     "gold": "museum",
+     "top1_M3": "park",
+     "rank_M1": 1,
+     "rank_M3": 4,
+     "strongest_patterns_for_top1": [
+      [
+       "gorgeous",
+       0.1111111119389534
+      ]
+     ]
+    },
+    {
+     "id": "73",
+     "gold": "mall",
+     "top1_M3": "restaurant",
+     "rank_M1": 1,
+     "rank_M3": 2,
+     "strongest_patterns_for_top1": [
+      [
+       "belgian",
+       0.31578946113586426
+      ],
+      [
+       "beautiful",
+       0.0390455536544323
+      ],
+      [
+       "more",
+       0.031141867861151695
+      ]
+     ]
+    }
+   ],
+   "top1_M1": 0.10377358490566038,
+   "top1_M3": 0.25471698113207547
+  }
+ }
+}

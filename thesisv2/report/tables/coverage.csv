@@ -1,0 +1,4 @@
+Set,n,At least one mined pattern,Top-ranked tag has a credible pattern,Gold tag has a credible pattern,Mean credible patterns for the top tag,Top-1 correct
+OSM development set,"9,042",64.9%,32.0%,16.6%,0.44,0.218
+Base-paper sentences,106,91.5%,44.3%,20.8%,0.60,0.255
+Pakistan set,528,92.6%,52.8%,28.6%,0.77,0.326
