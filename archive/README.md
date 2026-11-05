@@ -35,3 +35,5 @@ the QLever OSM planet endpoint). That harvest is made by cells R0a to R0e of
 
 Notebooks here read and write Google Drive paths of the time (`/content/drive/MyDrive/geoproject/`) and are not
 expected to run unchanged. They are kept as a record, with their outputs stripped.
+
+On Google Drive the matching run folders (results, raw, clean, annotated, models and others) were moved on 2026-11-05 into `geoproject/archive_pre_v20/`. To rerun an archived notebook, move the folder it needs back to `geoproject/`.
